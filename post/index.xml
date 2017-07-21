@@ -1,0 +1,1282 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Academic</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Academic</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Darren L Dahly - All rights reserved</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/post/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Getting the interview</title>
+      <link>/post/2017-05-09-interviews/</link>
+      <pubDate>Tue, 09 May 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-05-09-interviews/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To get a job, you have to get an interview. Who knows what will happen at that point, but securing an interview is at least partly in your own hands. Having just finished shortlisting the applicants to a postdoctoral research post I recently advertised, here are my thoughts on how to get your foot further in the door. None of this is original. It’s just fresh on my mind.&lt;/p&gt;
+
+&lt;h3 id=&#34;your-letter-must-be-well-written-and-fit-for-purpose&#34;&gt;Your letter must be well written and fit for purpose&lt;/h3&gt;
+
+&lt;p&gt;Some people seem to think the letter is just a “Hello, my name is Bob, and I am applying for this job.” I can assure you that it is so much more than that. First, I get to see if you can write. Whether you want to believe it or not, academics are professional writers. It’s a skill you will use all the time, and the letter is your best way to show me you have it. It’s not just about the grammar either. People who write well also tend to think well, organize well, and argue well.&lt;/p&gt;
+
+&lt;p&gt;Next, the letter shows me how good you are at research, which is obviously an important skill for our profession. What do you know about me? What do you know about where I work? What do you know about the job you are applying for?  If you don’t do this simple piece of research, when there so much at stake for you, why would anyone trust you to do more?&lt;/p&gt;
+
+&lt;h3 id=&#34;send-a-professional-looking-cv&#34;&gt;Send a professional looking CV&lt;/h3&gt;
+
+&lt;p&gt;Attention to detail matters. Let’s say we just completed a clinical trial. Many smart people worked hard on the project, patients took on real risks to participate, and we spent lots of somebody else’s money. Now I need you to analyse the data from that trial, and write up the results. A lot is riding on the job you do. How can I trust this to someone who can’t get the margins of their CV to line up? It’s not like your CV is something you have to write every day, so it shouldn’t be that difficult to write a nice one and update it as needed.&lt;/p&gt;
+
+&lt;h3 id=&#34;demonstrate-how-you-meet-the-criteria&#34;&gt;Demonstrate how you meet the criteria&lt;/h3&gt;
+
+&lt;p&gt;Just about every job description has a list of criteria. If you don’t appear to meet the criteria, then I can’t put you ahead of the applicants that do. Some criteria are easy to verify, such as your degree, or prior experience. Other things aren’t as obvious, so you need to make sure that you point these out in the letter. When you are done, give the job description along with your CV and letter to a friend or mentor and see if they can match it all up. If they can’t, keep working on it.&lt;/p&gt;
+
+&lt;h3 id=&#34;don-t-publish-in-dodgy-journals&#34;&gt;Don’t publish in dodgy journals&lt;/h3&gt;
+
+&lt;p&gt;I hate that academia is so focused on papers, and I could care less about impact factors - but you can’t have a CV full of papers published in the Galactic International Journal of Financial Biochemistry. It&amp;rsquo;s not always easy to know for sure that a journal is dodgy, but in some cases it is, so stay away.&lt;/p&gt;
+
+&lt;h3 id=&#34;appeal-to-the-pis-interests-and-values&#34;&gt;Appeal to the PIs interests and values&lt;/h3&gt;
+
+&lt;p&gt;As noted above, if you want to work with me, it’s a good idea to learn about me (just as I will try to learn about you). Many academics are now active on social media, so go check them out. We all publish papers, so go read some of them. If you learn that we share an interest that is relevant to the job, then make that clear in your application. This isn’t just vanity. I am looking to start a professional relationship with someone that might last a few decades, so your chances of getting an interview shoot up if we already share some common ground.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Upcoming R workshop</title>
+      <link>/post/2017-05-02-r_courses/</link>
+      <pubDate>Tue, 02 May 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-05-02-r_courses/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://www.ucc.ie/en/crfc/&#34; target=&#34;_blank&#34;&gt;Clinical Research Facility Cork&lt;/a&gt; is sponsoring a free, two-day introduction to data analysis using the R statistical programming language on June 8th and 9th (Th, F), from 09:00 to 16:00 in the &lt;a href=&#34;https://www.google.ie/maps/place/Western+Gateway,+Western+Gateway+Building,+University+College+Cork,+Western+Rd,+Mardyke,+Cork/data=!4m2!3m1!1s0x4844902fb2cfc8d3:0xbc1521a27a3ca450?sa=X&amp;amp;ved=0ahUKEwjRn-H2-pbQAhWDLMAKHStcCXwQ8gEIGzAA&#34; target=&#34;_blank&#34;&gt;Western Gateway Building&lt;/a&gt; G 15. Places are available on a first-come, first-serve basis, and there is space for 25 participants. Please email me at ddahly@ucc.ie to reserve a place.&lt;/p&gt;
+
+&lt;p&gt;The course is intended for people who are new to R, but at least somewhat familiar with other statistical software such as Stata or SPSS. It is primarily focused on the needs of academic researchers, but participants from other industries are welcome. Each participant will need to being their own laptop with R and R-Studio Desktop installed and working. Once these are installed, you will need to execute the following code: &lt;code&gt;install.packages(&amp;quot;tidyverse&amp;quot;)&lt;/code&gt;. You are also encouraged to “bring your own data” to work with (in any format).&lt;/p&gt;
+
+&lt;p&gt;We will cover the following topics:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The strengths and weaknesses of R, relative to other options for data analysis&lt;/li&gt;
+&lt;li&gt;The basics of &amp;ldquo;how R works&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Working with the R-Studio environment&lt;/li&gt;
+&lt;li&gt;Workflow and managing projects&lt;/li&gt;
+&lt;li&gt;Importing data into R (from Excel, Stata, SAS, SPSS, text files)&lt;/li&gt;
+&lt;li&gt;Working with dataframes&lt;/li&gt;
+&lt;li&gt;Data visualisation with ggplot2&lt;/li&gt;
+&lt;li&gt;Writing your own functions&lt;/li&gt;
+&lt;li&gt;Literate programming and reproducible research&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;By the end of the workshop, you will be able to import a dataset into R, manipulate it, visualize it, and then wrap everything up in a report that can be reproduced at the press of a button.&lt;/p&gt;
+
+&lt;p&gt;For more R related activities, please feel free to join the Cork R-User&amp;rsquo;s Group &lt;a href=&#34;http://www.meetup.com/Cork-Ireland-R-Users-Group/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For help installing the R statistical programming language and R-Studio, please see these links.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://swirlstats.com/&#34; target=&#34;_blank&#34;&gt;http://swirlstats.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.r-project.org/&#34; target=&#34;_blank&#34;&gt;https://www.r-project.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.rstudio.com/products/rstudio/download2/&#34; target=&#34;_blank&#34;&gt;https://www.rstudio.com/products/rstudio/download2/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/cars.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>In Defense of DAGs</title>
+      <link>/post/2017-03-30-dags/</link>
+      <pubDate>Thu, 30 Mar 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-03-30-dags/</guid>
+      <description>
+
+&lt;p&gt;Professors Nancy Krieger (NK) and George Davey Smith (GDS) recently published an editorial in the IJE titled &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/27694566&#34; target=&#34;_blank&#34;&gt;The tale wagged by the DAG: broadening the scope of causal inference and explanation for epidemiology&lt;/a&gt;. In it, they argue that causal inference in epidemiology is dominated by an approach characterised by counterfactuals (or potential outcomes) and directed acyclic graphs (DAGs); and that this hegemony is limiting the scope of our field, and preventing us from adopting a more useful, pluralistic view of causality.&lt;/p&gt;
+
+&lt;p&gt;They began their editorial with the results of a literature search of &lt;code&gt;[epidemiology AND causal AND inference]&lt;/code&gt;. They found 558 such articles, none of which were published before 1990, and half of which were published after 2010. I believe they were trying to show that causal inference is becoming a more important topic to epidemiologists. However, if that was the case, I think it makes more sense to ask how many papers mention causal inference &lt;em&gt;out of&lt;/em&gt; the papers published in our field. After all, in epidemiology, it’s all about the denominators. Once you do this, a much more important problem appears.&lt;/p&gt;
+
+&lt;p&gt;In contrast to their search, I started by looking for papers on Pubmed from the last five years that were published in the four key epidemiological journals where most of the discussion about causal inference probably takes place. These were: &lt;em&gt;Epidemiology&lt;/em&gt;, &lt;em&gt;the American Journal of Epidemiology&lt;/em&gt;, &lt;em&gt;the International Journal of Epidemiology&lt;/em&gt;, and &lt;em&gt;the Journal of Epidemiology and Community Health&lt;/em&gt;. Then, out of these papers, I alternately searched for those mentioning causal inference; those mentioning DAGs; and those mentioning counterfactuals. The results are plotted below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/img/plot.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Search 1: (&amp;quot;J Epidemiol Community Health&amp;quot; [journal] OR &amp;quot;Am J Epidemiol&amp;quot; [journal] OR &amp;quot;Int J Epidemiol&amp;quot; [journal] OR &amp;quot;Epidemiology&amp;quot; [journal])
+Search 2: Search 1 AND &amp;quot;causal inference&amp;quot;
+Search 3: Search 1 AND (causal graph* OR &amp;quot;DAGs&amp;quot; OR &amp;quot;DAG&amp;quot; OR directed acyclic graph*)
+Search 4: Search 1 AND (counterfactual OR potential outcomes) 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The plot of course supports NK and GDS’s assertion that counterfactuals and DAGs dominate our discussion of causal inference, but I am much more worried about how limited that discussion appears to be.&lt;/p&gt;
+
+&lt;p&gt;Like many others,&lt;a href=&#34;http://dantalus.github.io/2017/02/04/consequentialism/&#34; target=&#34;_blank&#34;&gt; I have previously argued that there is far too little causal thinking in epidemiology&lt;/a&gt;. The plot above is consistent with this view, and won&amp;rsquo;t allow me to accept that DAGs and counterfactuals are now pervasive enough to warrant some cautionary backlash. I instead believe that DAGs and counterfactuals, rather than displacing a more pluralistic view of causal inference, are actually &lt;em&gt;creating&lt;/em&gt; the space for it to exist.  Unfortunately, in an otherwise excellent  and informative editorial, I think that NK and GDS misrepresent counterfactuals and DAGs, and worry that this might actually discourage their use. With that in mind, I offer the following commentary.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-story-of-a-useful-wrench-denigrated-for-not-being-a-perfect-hammer&#34;&gt;The story of a useful wrench, denigrated for not being a perfect hammer&lt;/h2&gt;
+
+&lt;p&gt;Discussions of causal inference in epidemiology are often seen as “high-level”, or somehow beyond the rank-and-file epidemiologists. This is unfortunate, since drawing causal inferences from observational data is probably the biggest challenge we all regularly face. In my opinion, the single best way to help them meet this challenge is to teach them about counterfactuals and DAGs, which I have been doing for almost 10 years.&lt;/p&gt;
+
+&lt;p&gt;The most obvious value of DAGs for epidemiologists is that they facilitate a rigorous and transparent means of deciding which variables to adjust for when you hope to draw causal inferences from associations. They are especially helpfully for identifying tricky situations where adjustment for a possible confounder will actually create more bias than it resolves (e.g. collider bias).&lt;/p&gt;
+
+&lt;p&gt;Beyond this, DAGs can be used to describe competing sets of theory-based predictions that can be checked against data (Science!). They can be communicated unambiguously to others, so that disagreements about a DAG’s specific form can be debated and evaluated. &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/15308962&#34; target=&#34;_blank&#34;&gt;DAGs can be used to describe most (if not all?) of the many biases&lt;/a&gt; researchers have identified, and re-identified, over the years. They are also helpful for contrasting study designs and the different assumptions they rely on (including Mendelian randomization, which I have never successfully described to anyone without using a DAG).&lt;/p&gt;
+
+&lt;p&gt;I could go on. I love DAGs, for all the reasons above and more. But the thing I love most about DAGs is that they encourage the exact kind of pluralistic causal thinking that NK and GDS advocate for in their editorial. For example, NK and GDS say the following about an approach to causal inference they admire, inference to the best explanation:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;In brief, the essence of the IBE approach is to ‘think through inferential problems in causal rather than logical terms’ and to employ a ‘two-stage mechanism involving the generation of candidate hypotheses and then section among them’. IBE is thus driven by theory, substantive knowledge, and evidence, as opposed to being driven solely by logic or by probabilities.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When I read this, I thought it was a spot-on explanation of the kind of thinking DAGs facilitate. In fact, many of the other good ideas they shared were things that could be described and justified using counterfactuals and DAGs, &lt;a href=&#34;https://twitter.com/PophamFrank/status/846836389853511680&#34; target=&#34;_blank&#34;&gt;including each of the things listed in Textbox 3&lt;/a&gt;. While reading their editorial, I couldn’t help feeling like NK and GDS weren’t giving DAGs the credit they deserve for promoting a deeper level of causal thinking.&lt;/p&gt;
+
+&lt;p&gt;The editorial also kept pointing out things that DAGs can’t be used for, but most of it was in a “no duh” kind of way. It was like warning me my car doesn&amp;rsquo;t drive under water. Strangely though, their key example of how DAGs go wrong was instead a perfect description of how they go right. It was the bit about the birth weight paradox.&lt;/p&gt;
+
+&lt;p&gt;To summarise, maternal smoking is associated with neonatal mortality, which won’t come as a surprise to anyone. However, if you only look at very low birth weight (VLBW) infants, there seems to be a protective effect, i.e. neonatal mortality is lower among infants born to moms who smoke. However, using a DAG, one can quite easily argue that because VLBW is a consequence of maternal smoking, stratifying by birth weights (which is what happens once we look at only the VLBW infants) leads to a collider bias. The collider bias in turn suggests the following: if you take a VLBW baby, and their mom didn’t smoke, then it’s more likely they were exposed to some other nasty insult that causes their VLBW, and that this alternate exposure was even more strongly associated with mortality. I teach this example every year. It’s great.&lt;/p&gt;
+
+&lt;p&gt;Seemingly dissatisfied with this conclusion, NK and GDS go on to say that an “elaborate and biologically plausible alternative explanation exists”. However, their explanation is 100% consistent with what others have suggested based on collider bias I just described. I quote:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;It is that infants who are low-birthweight for reasons other than smoking may well have experienced harms during their fetal development unrelated to and much worse than those imposed by smoking…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;They then note that their “proposed alternative biological explanation cannot be discerned from a DAG”, but also that “the DAGs for collider bias and for heterogeneity of LBW phenotypes have a similar structure.” I found this astounding, and can’t fathom why NK and GDS don’t see that they have the exact same structure. The only difference is that they have attached biologically informed labels to the nodes of the graph. Hence, while arguing the DAG is limited, they demonstrate that it actually worked as intended. It has described a causal structure that explains an otherwise paradoxical finding, to which they have added their own expert knowledge to further increase our belief that the DAG is correctly specified.  This is how DAGs work. They are just a tool. They are not magical. Garbage-In-Garbage-Out applies.&lt;/p&gt;
+
+&lt;h2 id=&#34;back-to-counterfactuals&#34;&gt;Back to counterfactuals&lt;/h2&gt;
+
+&lt;p&gt;Returning to the plot above, I fail to see how a counterfactual view of cause threatens to narrow the scope of our field, considering that just under 1% of papers from the best epidemiological journals even mention it. Further, I don’t see where NK and GDS offer any actual evidence of this occurring. What they offer instead is a more philosophical critique of counterfactuals.&lt;/p&gt;
+
+&lt;p&gt;They focus on a particularly “alarming feature” of counterfactualism, which is the idea that race or ethnicity can’t cause poor health (or anything else) because it isn’t intervenable. They then go onto to discuss that this “belief fails to acknowledge reams of genetic evidence demonstrating that H sapiens cannot be meaningfully parsed into discrete genetically distinct races…” They go on in this vein for some time.&lt;/p&gt;
+
+&lt;p&gt;I must admit, I had to re-read all of it several times before I could allow myself to conclude the following: NK and GDS aren’t just accusing counterfactualists of holding a debateable view of causality; they are accusing them of holding a deeply offensive and ignorant view of humanity.&lt;/p&gt;
+
+&lt;p&gt;So please let me be very clear. A counterfactual view of race doesn’t mean you think that there are “fixed races.” The counterfactual view of race doesn’t say race can’t be changed, or even that it exists. It doesn’t say that race is a “natural kind”. It doesn’t say we shouldn’t study it (and thus “narrow the scope” of our field). To me, the counterfactual view simply says that race can’t be the target of intervention. It says that race doesn’t cause poor health, racism does – which is the exact point NK and GDS get to at while arguing against the counterfactual view. I hope everyone can see the distinction, and nobody is put off of  counterfactuals for fear of offending.&lt;/p&gt;
+
+&lt;p&gt;I would like to provide a less contentious example that I teach to my students, which will hopefully explain their value. Does fluoride prevent dental carries? This might seem like a straightforward causal question, but it is woefully incomplete without consideration of how we might vary exposure to fluoride. For example, we could fluoridate the water supply, dictate that manufacturers put more fluoride in toothpaste, or encourage people to brush their teeth more often. Each of these interventions represents a distinct causal question, with different sets of potential confounders, taking place at different scales, and all of them are more useful than simply asking whether fluoride prevents tooth decay. So counterfactuals are, at the very least, a useful fiction that I believe help crystalize causal questions. Even in situations where there is no possible intervention, due to ethical or other constraints, thinking about exposures as if you could intervene can be helpful.&lt;/p&gt;
+
+&lt;h2 id=&#34;in-conclusion&#34;&gt;In conclusion&lt;/h2&gt;
+
+&lt;p&gt;A colleague once told me that Jamie Robbins, when asked what a confounder was, answered, “Whatever you need to adjust for to get the right answer.” I think this answer really gets to the point of DAGs and their counterfactual foundations. It’s not about identifying what &lt;strong&gt;&lt;em&gt;A confounder&lt;/em&gt;&lt;/strong&gt; is, but rather it’s about identifying the set of things to adjust for, given a specific causal question, asked in a specific context.&lt;/p&gt;
+
+&lt;p&gt;This is in stark contrast to what I see in most health research papers. The process of covariate selection, typically the crux of the entire analysis, is often omitted. When it isn’t, it can frequently be described as a monkey-see-monkey-do approach, or even worse, by some step-wise algorithm. Then, after dancing around the causal question at hand, careful not to admit their true motives, the authors are usually quick to practically apologize for their efforts with that old falsehood, “Correlation doesn’t imply causation.” All of this reflects a deficit of causal thinking that is a drag on our profession.&lt;/p&gt;
+
+&lt;p&gt;DAGs and counterfactual thinking are currently the best tools we have to counter this. Their value seems so obvious to me, but clearly not to everyone else. Every year, a student will inevitably ask, “If DAGs are so useful, why don’t epidemiologists use them?” I still don’t have a good answer for that question. It’s been about two decades since &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/9888278&#34; target=&#34;_blank&#34;&gt;Robins, Greenland, Pearl&lt;/a&gt;, &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/15308962&#34; target=&#34;_blank&#34;&gt;Hernan&lt;/a&gt;, &lt;a href=&#34;http://publicifsv.sund.ku.dk/~nk/epiF14/Glymour_DAGs.pdf&#34; target=&#34;_blank&#34;&gt;Glymour&lt;/a&gt; and others helped to introduce DAGs to our field. It would be generous to describe their uptake as slow.  There is no denying that most “successful” epidemiologists have gotten along just fine without them, and they rarely appear in the journal articles I read or review. So please forgive any defensiveness on my part; just know that we are on an uphill climb here.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Your science is justified by the question, not the answer. </title>
+      <link>/post/2017-03-21-prereg/</link>
+      <pubDate>Tue, 21 Mar 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-03-21-prereg/</guid>
+      <description>&lt;p&gt;Registration of clinical trials, prior to any patient recruitment, is now common. Though trial registrations often omit the important details regarding their proposed analyses (despite advice to the contrary), most trialists seem to agree, at least in principle, that you should transparently describe your plans for clinical trial data before they are collected. Unfortunately, this remains a foreign concept in other areas of clinical and public health research.&lt;/p&gt;
+
+&lt;p&gt;Before I started working as a biostatistician involved in clinical trials, I worked with birth cohort studies. Whereas the vast majority of clinical trials are designed to answer a single research question (or small set of them), the prospective cohort study design allows researchers to answer many questions, even thousands, including questions that nobody envisioned at the start of the study. Given the costs of recruiting and following-up hundreds or thousands of study participants, many believe that it’s our responsibility to extract as much value from these data as we can. However, this well-intentioned mind-set can quickly be distorted to promote toxic research practices, where perverse incentives to publish, combined with the poor overall quality of peer-review, have created a body of flawed, often useless, research with results affected by various forms of p-hacking (intentional or otherwise) and file-drawer effects.&lt;/p&gt;
+
+&lt;p&gt;I imagine that most people reading this will be well aware of these issues, but the world of cohort studies has done little, in my opinion, to address them. Pre-registration of planned data analyses would go a long way to solving these problems, which has been repeatedly suggested by many others. The key questions then are where should people register their analyses, and how can we realistically compel them to do so?&lt;/p&gt;
+
+&lt;p&gt;Research funders have played an important role in the open access research movement, through decree, and by covering the costs of open access publishing. They must play a similar role in the pre-registration of data analyses. I believe that any new cohort study should be required by the funder to maintain a transparent, current list of the analyses they plan to conduct. Many studies already use some form of a publication committee to plan research outputs, so this would be a natural extension of their work. These study-specific registries could be hosted using a variety of online, easy to use, low-cost tools that provide a timestamp and DOI. Most importantly, funders should then require researchers to update progress on the registered analyses as a part of their regular reporting processes (hopefully replacing the less useful information that is often asked for). Subsequent manuscripts should then reference the respective analysis registration(s), and take the opportunity to justify any departures in the supplemental material. I also suspect such public registries would help identify helpful collaborators, and justify when researchers might prefer to not yet share the study data.&lt;/p&gt;
+
+&lt;p&gt;While I don’t see a substantial logistical challenge to cohort studies maintaining their own registry of planned data analyses, I suspect that many reading this will think that it’s impossible none-the-less.&lt;/p&gt;
+
+&lt;p&gt;This is why: I continue to collaborate on cohort studies that I didn’t design, where my involvement is typically sought long after the data have been collected. I will typically ask my colleagues to first send me a draft of the introduction and the methods of recruitment and measurement, as if we were preparing a manuscript. I then tell them that I will add the appropriate statistical methods and a dispassionate summary of the results, including the tables and plots, after which we will plan to meet minds, outline the discussion, and start editing the paper. This request almost always causes discomfort, even when everyone acknowledges it’s just a process to move things along. People always want to see the results first. In my opinion, this is because we have adopted a view of science where the justification for a research project is given by the results. But this is completely backwards! It’s the question that drives us. Is it important enough to answer? And can it be answered in a scientific manner?&lt;/p&gt;
+
+&lt;p&gt;In other words, you should be able to start drafting a manuscript before the data are collected, much less analysed (using exactly what went into your grant and/or ethics application). This shouldn’t cause any discomfort at all. This is the standard we should all strive to attain. This propensity to want to see the results first and then spin the paper (and that’s exactly what it is – spin) is harming science, and those who want to discredit science are starting to exploit it.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;It is difficult to get a man to understand something, when his salary depends upon his not understanding it!&amp;rdquo; – Upton Sinclair&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Upcoming R workshop</title>
+      <link>/post/2017-03-13-r_courses/</link>
+      <pubDate>Mon, 13 Mar 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-03-13-r_courses/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://www.ucc.ie/en/crfc/&#34; target=&#34;_blank&#34;&gt;Clinical Research Facility Cork&lt;/a&gt; is sponsoring a free, two-day introduction to data analysis using the R statistical programming language on March 30th and 31st (Th, F), from 09:30 to 16:30 in the &lt;a href=&#34;https://www.google.ie/maps/place/Western+Gateway,+Western+Gateway+Building,+University+College+Cork,+Western+Rd,+Mardyke,+Cork/data=!4m2!3m1!1s0x4844902fb2cfc8d3:0xbc1521a27a3ca450?sa=X&amp;amp;ved=0ahUKEwjRn-H2-pbQAhWDLMAKHStcCXwQ8gEIGzAA&#34; target=&#34;_blank&#34;&gt;Western Gateway Building&lt;/a&gt; 3.71. Places are available on a first-come, first-serve basis, and there is space for 10 participants. Please email me at ddahly@ucc.ie to reserve a place.&lt;/p&gt;
+
+&lt;p&gt;The course is intended for people who are new to R, but at least somewhat familiar with other statistical software such as Stata or SPSS. Each participant will need to being their own laptop with R and R-Studio Desktop installed and working. Once these are installed, you will need to execute the following code: &lt;code&gt;install.packages(&amp;quot;tidyverse&amp;quot;)&lt;/code&gt;. You are also encouraged to “bring your own data” to work with (in any format).&lt;/p&gt;
+
+&lt;p&gt;We will cover the following topics:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The strengths and weaknesses of R, relative to other options for data analysis&lt;/li&gt;
+&lt;li&gt;The basics of &amp;ldquo;how R works&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Working with the R-Studio environment&lt;/li&gt;
+&lt;li&gt;Workflow and managing projects&lt;/li&gt;
+&lt;li&gt;Importing data into R (from Excel, Stata, SAS, SPSS, text files)&lt;/li&gt;
+&lt;li&gt;Working with dataframes&lt;/li&gt;
+&lt;li&gt;Data visualisation with ggplot2&lt;/li&gt;
+&lt;li&gt;Writing your own functions&lt;/li&gt;
+&lt;li&gt;Literate programming and reproducible research&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;By the end of the workshop, you will be able to import a dataset into R, manipulate it, visualize it, and then wrap everything up in a report that can be reproduced at the press of a button.&lt;/p&gt;
+
+&lt;p&gt;For more R related activities, please feel free to join the Cork R-User&amp;rsquo;s Group &lt;a href=&#34;http://www.meetup.com/Cork-Ireland-R-Users-Group/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For help installing the R statistical programming language and R-Studio, please see these links.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://swirlstats.com/&#34; target=&#34;_blank&#34;&gt;http://swirlstats.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.r-project.org/&#34; target=&#34;_blank&#34;&gt;https://www.r-project.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.rstudio.com/products/rstudio/download2/&#34; target=&#34;_blank&#34;&gt;https://www.rstudio.com/products/rstudio/download2/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/cars.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Postdoctoral Position</title>
+      <link>/post/2017-02-09-postdoc/</link>
+      <pubDate>Thu, 09 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-02-09-postdoc/</guid>
+      <description>
+
+&lt;p&gt;I will soon be advertising for a Postdoctoral Researcher in Biostatistics/Epidemiology/Data Science (3 years) to come work with me in the HRB Clinical Research Facility Cork (CRF-C). The official job description should be online in the next two weeks. In the meantime, I wanted to take the opportunity to explain the work of the CRF-C, my expectations for the role, and what the person filling to role can expect of me.&lt;/p&gt;
+
+&lt;p&gt;NOTE: None of the information below constitutes a formal, binding description of the role, which will instead be communicated via the formal hiring processes of UCC HR. You are welcome to get in touch with any queries, but I may not respond until after the post is formally advertised.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-crf-c&#34;&gt;The CRF-C&lt;/h2&gt;
+
+&lt;p&gt;The CRF-C is funded by the Irish Health Research Board to support patient-focused research conducted at University College Cork (UCC), its associated hospitals, and other healthcare facilities in and around Cork. The support offered by the CRF-C includes space to conduct clinical investigations, research nurses, research assistants, a pharmacy, sample storage facilities, study monitors, regulatory expertise, data management, and what I do - study design, data analysis, and methodological research.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-sdau&#34;&gt;The SDAU&lt;/h2&gt;
+
+&lt;p&gt;You will be working in the Statistics and Data Analysis Unit (SDAU), which currently includes one member of staff – me! So you can perhaps imagine how happy I am to double its size. So what are “we” responsible for? First, we consult or collaborate on a varied portfolio of patient-focused research projects. More specifically, we contribute to the design of studies and data management processes; we write statistical analysis plans; we tidy and analyse data from studies; and we report the results. Further, we conduct multiple training events each year, in both statistical programming and statistics. Lastly, and most importantly from an academic standpoint, we conduct methodological research aimed at improving patient-focused research.&lt;/p&gt;
+
+&lt;p&gt;The SDAU’s remit is to contribute broadly across the patient-focused research community in and around Cork. However, we primarily contribute through collaboration. Importantly, we don’t run a consultancy service. What this means for you is that you won’t be expected to spend your time calculating sample sizes for studies you didn’t help design.&lt;/p&gt;
+
+&lt;p&gt;Unlike many academic units, we run the SDAU like a business that we are trying to grow. We are expected to recoup our costs each year, typically through research funding. This means we bill our collaborators for our contributions to research. This means that our collaborators are also our clients. We conduct our business accordingly, though we never shy away from hard truths or support wrong-headed choices.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-candidate&#34;&gt;The Candidate&lt;/h2&gt;
+
+&lt;p&gt;The ideal candidate will be experienced with statistical programming (R or SAS), have a good understanding of statistics/biostatistics (with expertise in least one method or model), have experience with experimental study designs, and have an academic interest in methodological research. While the last characteristic is an absolute must, I am happy to bring on someone who is lacking in another area. In other words, if you have a strong background in biostatistics, but little programming experience, that’s ok, you will learn. Conversely, if you are an experienced programmer and want to improve your statistical skills in a clinical research environment, I can train you. However, you have to be trainable, which means that you must be mathematically inclined and very comfortable working with numbers. Regarding methodological research, your interests can be in applied methods (i.e. how can we improve the use of existing methods) or in the development of novel methods, or in meta-research.&lt;/p&gt;
+
+&lt;p&gt;What can you expect to gain through the post?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You will have access to lots of data, from a wide variety of research projects. This means you should have ample opportunity to identify and develop an area of methodological research that you will lead, with my support. You will also have access to a variety of experienced researchers to collaborate with and learn from.&lt;/li&gt;
+&lt;li&gt;You will gain experience working in both academic and industry-led patient-focused research, and working in a regulated research environment.&lt;/li&gt;
+&lt;li&gt;You will gain experience working on multiple projects at any one time.&lt;/li&gt;
+&lt;li&gt;You will develop professional skills (time management, communication, etc.).&lt;/li&gt;
+&lt;li&gt;You will develop consultancy skills (e.g. talking clinicians off the ledge when their study doesn’t go as planned).&lt;/li&gt;
+&lt;li&gt;You will have opportunities to improve your teaching and public speaking.&lt;/li&gt;
+&lt;li&gt;You will have opportunities to improve your writing.&lt;/li&gt;
+&lt;li&gt;You will gain experience applying for grants.&lt;/li&gt;
+&lt;li&gt;At the end of 3 years (if not sooner), you should be prepared to continue along an academic career track. However, you will also be skilled enough to be employable outside of academia if you so choose.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;about-me&#34;&gt;About me&lt;/h2&gt;
+
+&lt;p&gt;Opportunities  aside, you will still be stuck working with me on a day to day basis. So what’s that like?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;I am primarily motivated by the enormous amount of research waste that is generated every day, much of which is caused by poor data handling and analytical practice. So while the researchers I work with get up every day hoping to improve human health, I get up every day hoping to improve their research practices and inferences. I have no interest in inventing the next great statistical method (nor the capability) – I just want to help as many people as possible correctly apply existing methods. Further, I think the best way to improve research quality is to shine a light on it, and so I do my best to work in a transparent manner, and will expect you to do the same. I develop workflows and processes that that contribute to the quality of my work. I don’t make things up as I go (anymore…), but rather I design and manage analyses. This will be a somewhat foreign way of working for some academics, but a valuable one, for both the quality of the research you conduct, and your own career development.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;While I want to conduct high-quality, impactful research, I don’t care about the optics of publication. This might be good or bad for you. The good is that I won’t view your career as a means of advancing my career, but if you want or need someone to push you to publish for the sake of publishing, I’m not going to be very helpful for you.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;I don’t have a particular research project in mind for you. This isn’t to say that I don’t have ideas for you to run with, it’s just that I am happy for you to make your own path. This is very different from many postdoctoral positions that are funded by a specific research grant. This is great if you have your own ideas to explore (which, as an academic, you should), but there is more risk for you.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;I will put your career development first. Your Postdoc is your window to think and conduct research without the looming pressures of lecturing, marking, committees, reviewing, editing, and so on. It’s also your opportunity to further develop skills that you might not have time to devote to later.  I was lucky enough to have mentors early in my early career to let me grow my own way, and so I will do the same for you. So I won’t expect you to work on things that don’t build your skills or contribute to your intellectual development. In fact, nothing would make me happier for you to focus on your big ideas so I can ride your coat-tails to fame and riches. The success of the post, from my point of view, is reflected more in the job you land next than in the number of posters you stand next to.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Cork is great (I’m not from here, but I love it). UCC is nice. Both the CRF-C and the Department of Epidemiology and Public Health are packed with nice, smart, competent people, which counts for a lot. If you want to know anything else about me, it’s all on twitter.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cause vs. Consequence</title>
+      <link>/post/2017-02-04-consequentialism/</link>
+      <pubDate>Sat, 04 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-02-04-consequentialism/</guid>
+      <description>&lt;p&gt;I have, for some time, wanted to respond to Sandro Galea&amp;rsquo;s &lt;a href=&#34;https://academic.oup.com/aje/article/178/8/1185/84205/An-Argument-for-a-Consequentialist-Epidemiology&#34; target=&#34;_blank&#34;&gt;essay on a Consequentialist Epidemiology&lt;/a&gt;, published in 2013 (!) in the American Journal of Epidemiology. It is hard to argue against the importance of consequentialism for academic epidemiology. It is equally hard to dismiss Galea&amp;rsquo;s concerns about our lack of influence with funders and policy makers. However, my views beyond this diverge from Professor Galea&amp;rsquo;s, and in the spirit of his &amp;ldquo;provocation,&amp;rdquo; I would like to respectfully offer an alternate perspective.&lt;/p&gt;
+
+&lt;p&gt;Galea seems primarily concerned that academic epidemiology is focused too much on identifying causes of disease, and not enough on actual intervention. He further worries that &amp;ldquo;our focus on causal rather than pragmatic thinking&amp;rdquo; risks marginalizing us with funders and policy makers. His solution to this problem is to promote a &amp;ldquo;consequentialist epidemiology&amp;rdquo; that is intensely focused on improving health outcomes, even &amp;ldquo;at the expense of the development of epidemiological methods and novel approaches.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Setting up the need for a consequentialist epidemiology, Galea points to key epidemiological textbooks and journals as evidence that we are too focused on etiology and not focused enough on intervention. The former, he observes, don&amp;rsquo;t teach students how to intervene, and the latter are too focused on etiological research and publish relatively few papers about actual interventions. Though his observations are surely accurate, I think they reflect too narrow a view of academic epidemiology.&lt;/p&gt;
+
+&lt;p&gt;We train in schools of public health, where we are expected to study a range of topics that often includes intervention design and evaluation. We typically work in the same, or similarly diverse, institutions, where our expertise contributes to a variety of public health research programs, and is published widely. The interventions we contribute to have a better chance of appearing in &amp;ldquo;high impact&amp;rdquo; journals, while our etiological research and innovative methods are appropriately showcased for our peers in the &amp;ldquo;core epidemiological&amp;rdquo; journals. It is thus no suprise that &amp;ldquo;our&amp;rdquo; journals are focused on method, and in no way does this reflect a lack of consequentialism.&lt;/p&gt;
+
+&lt;p&gt;All of that being said, of course we are preoccupied with etiology and cause! Definitive answers to causal questions are rare, but if we want to intelligently inform intervention efforts, we must continue to pursue them - even in observational data, and even in the face of heroic assumptions.  The only alternative is to say nothing at all. We are not content to simply describe the world we live in. We want to overcome these barriers to causal inference, as best as possible. Consequently, epidemiologists have built tools for causal inference that are improving applied research, even in &amp;ldquo;gold-standard&amp;rdquo; RCTs. Causal thinking is thus not a detraction to pragmatic thinking – it is a consequence of it.&lt;/p&gt;
+
+&lt;p&gt;Cause is our niche. Successful public health interventions are born of long, complex processes. A different expertise is required at each step in this process, and no person, or academic discipline, can master them all.  Thus, if an academic discipline is going to contribute to this process, it must occupy a useful space. The application of causal thinking is ours.&lt;/p&gt;
+
+&lt;p&gt;From this perspective, I am troubled that we would sacrifice the continued development of epidemiological methods, especially those aimed at improving our causal inferences. I believe that any sacrifice to methodological rigour and innovation will do nothing but hasten us down the path to irrelevance. The solutions to our problems lie in more causal thinking, not less.&lt;/p&gt;
+
+&lt;p&gt;Galea provides examples of the kind of intervention research he would like to see published more often in our core journals. I believe that it is facile to say that we should engage more with interventions without clarifying our contribution.  At a glance, we can see that Galea&amp;rsquo;s examples ask fundamentally causal questions; and even though these papers are about interventions, the questions being asked are about relationships in observational data. A better goal then would be to bring our expertise to intervention research, or, if needed, to show interventionists what we bring to the table. Consequently, any sacrifice of our method would be counter-productive.&lt;/p&gt;
+
+&lt;p&gt;I also fail to see how reducing methodological rigor and innovation will cure external dissatisfaction with &amp;ldquo;epidemiologic description and correlation&amp;rdquo;.  Most of this dissatisfaction has to do with the never-ending reporting of weak, often conflicting associations among every exposure/disease dyad under the sun (see the &lt;a href=&#34;http://journals.lww.com/epidem/Citation/1993/05000/The_Hypothesis_Generating_Machine.12.aspx&#34; target=&#34;_blank&#34;&gt;Hypothesis Generating Machine&lt;/a&gt;). But this situation isn’t the result of obsession with cause, but rather the opposite (combined with perverse incentives to publish, and poor application of tools for statistical inference). Surely we should instead respond to our critics by continuing to improve the way we make inferences about correlations, and apply those methods more consistently as a profession. This of course requires more causal thinking, not less.&lt;/p&gt;
+
+&lt;p&gt;I also strongly disagree that the lack of &amp;ldquo;big wins&amp;rdquo; is an indictment of causal thinking. I offer a more likely explanation: we have already picked the low hanging fruit. All the big risk-ratios have been found, simply because they are the easiest to find. Now we are looking for needles in haystacks, and our necessary search for small effect sizes means that we should be striving for more methodological rigour, not less. If funders are walking away because we haven&amp;rsquo;t found the next tobacco-sized health risk, whom will they turn to? And how long will it take them to return once they realize poorer methodological rigour leads to even more ghost chases?&lt;/p&gt;
+
+&lt;p&gt;If the funders and policy makers do not appreciate our contributions, perhaps we must instead strive to help them appreciate what it is that we do. The field of economics doesn&amp;rsquo;t seem to have produced any big wins as of late, but they do undoubtedly have more sway with policy makers. Perhaps this is simply because more people know, or at least think they know, what an economist is. Conversely, my own mother still suspects that I am &amp;ldquo;some kind of skin doctor&amp;rdquo;. &lt;em&gt;This&lt;/em&gt; is our problem.&lt;/p&gt;
+
+&lt;p&gt;Finally, I too agree that we must change the way we train epidemiologists, but what does an outcome orientated epidemiology training program look like? Which outcomes will programs focus on? How will these decisions be made? The beauty of training students on &amp;ldquo;our methods as tools&amp;rdquo; is that these can be applied to a variety of problems. I would argue instead for a greater emphasis on causal thinking at all levels of epidemiological training.&lt;/p&gt;
+
+&lt;p&gt;To this point I have argued that epidemiology in practice is already consequentialist in nature, and that our embrace of causal thinking and continued investment in methodological innovation is a reflection of this. Though I must agree with Professor Galea that our field faces important challenges, following from my position, I see no solutions in the dulling of our expertise. Quite the opposite. So in epidemiology, just like in life, there is no consequence without cause.&lt;/p&gt;
+
+&lt;p&gt;[First draft,  Feb 06, 2017]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Stata Workshop</title>
+      <link>/post/2017-04-13-stata_workshop/</link>
+      <pubDate>Sat, 04 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-04-13-stata_workshop/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction-to-data-analysis-with-stata&#34;&gt;Introduction to data analysis with Stata&lt;/h2&gt;
+
+&lt;p&gt;On May 24, 2017, the Clinical Research Facility Cork will host a one-day workshop featuring Stata data analysis and statistical software. It will take place in the Brookfield Health Sciences Building (G07) at University College Cork. The workshop will be led by Dr Darren Dahly, the Principal Statistician at the CRF-C.&lt;/p&gt;
+
+&lt;p&gt;The workshop is free for registered PhD students. Otherwise, the cost is 75 EUR and can be paid by credit card or purchase order (for UCC based attendees). To sign up, please email Darren (ddahly@ucc.ie). You will then be given payment details.&lt;/p&gt;
+
+&lt;p&gt;The workshop (9:45 to 16:15) will introduce Stata to researchers with little or no experience using it. Participants will learn how to load data and produce descriptive summaries, including tables and graphs, how to edit and modify data, and how to carry out analyses such as t-tests, chi-square tests, ANOVA and regression. We will also demonstrate how Stata can be used to support reproducible research practices.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The perils of exploratory data analysis</title>
+      <link>/post/2017-02-03-exploratory/</link>
+      <pubDate>Fri, 03 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-02-03-exploratory/</guid>
+      <description>&lt;p&gt;Is it ever ok to conduct an exploratory data analysis, for the purpose of &amp;ldquo;generating hypotheses&amp;rdquo;?&lt;/p&gt;
+
+&lt;p&gt;This question was motivated by a new Retraction Watch piece, &lt;a href=&#34;http://retractionwatch.com/2017/02/02/backlash-prompts-prominent-nutrition-researcher-reanalyze-multiple-papers/&#34; target=&#34;_blank&#34;&gt;Backlash prompts prominent nutrition researcher to reanalyze multiple papers&lt;/a&gt;. It covers the backlash to an earlier blog post by &lt;a href=&#34;https://twitter.com/BrianWansink&#34; target=&#34;_blank&#34;&gt;Brian Wansink&lt;/a&gt;, who wrote about two early career researchers, one of whom took on several &amp;ldquo;extra&amp;rdquo; projects, vs. another who refused (&lt;a href=&#34;http://www.brianwansink.com/phd-advice/the-grad-student-who-never-said-no&#34; target=&#34;_blank&#34;&gt;The Grad student who never said no&lt;/a&gt;). The former managed to turn the &amp;ldquo;opportunity&amp;rdquo; into a small handful of publications, and Wansink&amp;rsquo;s thesis was that this is how you get ahead in academia. However, in writing the blog post, its author revealed a concerning approach to statistical inference, not to mention a cavalier attitude to the exploitation of early career scientists, both of which were quickly noted on twitter and in the blog&amp;rsquo;s comments.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/statsepi/status/809479929435979776&#34; target=&#34;_blank&#34;&gt;You can find the relevant tweets here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I am not here to pile on, but in the RW article, there was a quote from Professor Wansink that I couldn&amp;rsquo;t believe.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;P-hacking shouldn’t be confused with deep data dives – with figuring out why our results don’t look as perfect as we want.&lt;/p&gt;
+
+&lt;p&gt;With field studies, hypotheses usually don’t “come out” on the first data run.  But instead of dropping the study, a person contributes more to science by figuring out when the hypo worked and when it didn’t.  This is Plan B.  Perhaps your hypo worked during lunches but not dinners, or with small groups but not large groups. You don’t change your hypothesis, but you figure out where it worked and where it didn’t.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/statsepi/status/827456005084704769&#34; target=&#34;_blank&#34;&gt;I of course turned to twitter to express my outrage&lt;/a&gt;, and was suprised to find people supporting the idea that exploratory analyses were perfectly acceptable for &amp;ldquo;generating hypotheses&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;I immediately thought of this great paper by Philip Cole, titled &lt;a href=&#34;http://journals.lww.com/epidem/Citation/1993/05000/The_Hypothesis_Generating_Machine_.12.aspx&#34; target=&#34;_blank&#34;&gt;The Hypothesis Generating Machine&lt;/a&gt;, in which he humourously claims to have compiled a list that contains every possible &amp;ldquo;X is associated with Y&amp;rdquo; hypothesis, making it pointless to try and identify any new ones.  It&amp;rsquo;s a short and entertaining read, and I encourage you to have a look for yourself.&lt;/p&gt;
+
+&lt;p&gt;People also seemed to think that exploratory analyses are ok in principle, but only if your explorations, regardless of their outcome, are reported. Obviously we can’t selectively report our &amp;ldquo;successful&amp;rdquo; explorations, and hide away the others (see the Texas sharpshooter fallacy; the garden of forking paths; file-dawer effects; and publication bias).  However,  I think people are missing the point that there aren&amp;rsquo;t enough hours in the day to actually do this. Even if you were just sharing summaries of your explorations, the time it would take to write them up would take up more time than the analyses themselves. Given that most of these analyses would lead nowhere, this would be a remarkable waste of researcher time, which is often publicly funded. So sure, exploratory analyses aren’t the end of the world - unless you take the point about selective reporting seriously.&lt;/p&gt;
+
+&lt;p&gt;I want to be clear about one last thing. I agree with &lt;a href=&#34;https://twitter.com/f2harrell&#34; target=&#34;_blank&#34;&gt;Frank Harell&amp;rsquo;s&lt;/a&gt; point that &lt;a href=&#34;https://twitter.com/robertstats/status/774112526489440256&#34; target=&#34;_blank&#34;&gt;&amp;ldquo;Using the data to guide the analysis is almost as dangerous as not doing so.&amp;rdquo;&lt;/a&gt;. We should certainly use the data in front of us to guide modelling decisions, but this is &lt;em&gt;within the context of the scientific question at hand&lt;/em&gt; (unless I am misunderstanding Harell&amp;rsquo;s point). However, it is completely unscientific to suggest that you should look for subgroups for which you your &amp;ldquo;hypothesis works&amp;rdquo; if it didn&amp;rsquo;t work in the full sample. It&amp;rsquo;s exactly the logic that practitioners of so called alternative medicine use, when they point out that the treatment didn&amp;rsquo;t work, except in the people that it worked in.&lt;/p&gt;
+
+&lt;p&gt;These problems aren’t trivial. This kind of thinking is damaging science. It has contributed to a bloated, garbage heap of published research. Most importantly, these problems are no longer just fodder for scientists to discuss over cocktails at international conferences. There are plenty of actors with a vested interest in eliminating the role science &lt;strong&gt;must&lt;/strong&gt; play in public decision making, and those people are now actively using our methodological errors against us.&lt;/p&gt;
+
+&lt;p&gt;[First draft,  Feb 03, 2017]&lt;/p&gt;
+
+&lt;p&gt;[Second draft, Feb 05, 2017]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Upcoming R workshop</title>
+      <link>/post/2016-11-07-r_courses/</link>
+      <pubDate>Mon, 07 Nov 2016 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2016-11-07-r_courses/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://www.ucc.ie/en/crfc/&#34; target=&#34;_blank&#34;&gt;Clinical Research Facility Cork&lt;/a&gt; is sponsoring a free, two-day introduction to the R statistical programming language on Dec 8 and 9 (Th, F), from 09:00 to 17:00 in the &lt;a href=&#34;https://www.google.ie/maps/place/Western+Gateway,+Western+Gateway+Building,+University+College+Cork,+Western+Rd,+Mardyke,+Cork/data=!4m2!3m1!1s0x4844902fb2cfc8d3:0xbc1521a27a3ca450?sa=X&amp;amp;ved=0ahUKEwjRn-H2-pbQAhWDLMAKHStcCXwQ8gEIGzAA&#34; target=&#34;_blank&#34;&gt;Western Gateway Building&lt;/a&gt; G.04. Places are available on a first-come, first-serve basis, and there is space for 15 participants. To attend, please email me at ddahly@ucc.ie.&lt;/p&gt;
+
+&lt;p&gt;The course is intended for people who are new to R, but at least somewhat experienced with other statistical software such as Stata or SPSS. Each participant will need to being their own laptop with R and R-Studio Desktop installed and working. You are also encouraged to “bring your own data” to work with (in any format). I will send additional details to participants as the date approaches.&lt;/p&gt;
+
+&lt;p&gt;We will cover the following topics:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Strengths and weaknesses of R, relative to other options for data analysis&lt;/li&gt;
+&lt;li&gt;Working with the R-Studio environment&lt;/li&gt;
+&lt;li&gt;Importing data into R (from Excel, Stata, SAS, SPSS, text files)&lt;/li&gt;
+&lt;li&gt;R workflow I: objects and functions&lt;/li&gt;
+&lt;li&gt;R workflow II: coding, scripts, and projects&lt;/li&gt;
+&lt;li&gt;R workflow III: &lt;a href=&#34;https://blog.rstudio.org/2016/09/15/tidyverse-1-0-0/&#34; target=&#34;_blank&#34;&gt;tidyverse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Data visualisation with ggplot2&lt;/li&gt;
+&lt;li&gt;Introduction to linear regression with R&lt;/li&gt;
+&lt;li&gt;Literate programming and reproducible research with R&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;By the end of the workshop, you will be able to import a dataset into R, manipulate it, visualize it, analyse it, and then wrap everything up in a report that can be reproduced at the press of a button.&lt;/p&gt;
+
+&lt;p&gt;For more R related activities, please feel free to join the Cork R-User&amp;rsquo;s Group &lt;a href=&#34;http://www.meetup.com/Cork-Ireland-R-Users-Group/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For help installing the R statistical programming language and R-Studio, please see these links.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://swirlstats.com/&#34; target=&#34;_blank&#34;&gt;http://swirlstats.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.r-project.org/&#34; target=&#34;_blank&#34;&gt;https://www.r-project.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.rstudio.com/products/rstudio/download2/&#34; target=&#34;_blank&#34;&gt;https://www.rstudio.com/products/rstudio/download2/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/cars.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Workshop on Structural Equation Models for Longitudinal Data (July 13-15, Cork, Ireland)</title>
+      <link>/post/2016-04-25-sem_workshop/</link>
+      <pubDate>Mon, 25 Apr 2016 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2016-04-25-sem_workshop/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Clinical Research Facility in Cork will be hosting a three-day workshop on &lt;strong&gt;Structural Equation Models for Longitudinal Data&lt;/strong&gt;, July 13-15th, 2016.&lt;/p&gt;
+
+&lt;p&gt;The workshop will cover unconditional, conditional and multivariate latent curve models; models for non-normal and discrete outcomes; and modeling observed and unobserved heterogeneity (more details below). Models will be demonstrated with &lt;a href=&#34;https://www.statmodel.com/&#34; target=&#34;_blank&#34;&gt;Mplus&lt;/a&gt;. There will be no formal tutorials, but participants are encouraged to being their own laptops with Mplus. Participants should be comfortable with standard statistical methods, including multiple linear regression. Familiarity with path analysis, factor analysis, or structural equation modelling will be helpful, but not necessary.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The three-day course fee is 600 EURO&lt;/strong&gt;, and includes a full set of printed course materials, lunch each day, and tea and coffee throughout. There are also a limited number of 1-day registrations available for 250 EURO per day. The fee is already discounted for all participants, and there are no additional discounts available.&lt;/p&gt;
+
+&lt;p&gt;To register, please contact Dr Darren Dahly (ddahly@ucc.ie), who will then send you information on how to pay by credit card or purchase order. We kindly ask that attendees pay within 10 working days of registering to guarantee their place on the course. &lt;strong&gt;The registration deadline is the 6th of July&lt;/strong&gt;. Refunds will be made at the discretion of the course organisers, and will not be possible under any circumstance after the 8th of July.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Title:            Structural Equation Models for Longitudinal Data
+Dates:            July 13-15, 2016
+Location:         Western Gateway Building, Room 107 
+Max participants: 30
+Fees:             Three-day course: 600 EUROS 
+                  Single day(s): 250 EUROS per day
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The workshop will be led by &lt;strong&gt;Professor Patrick Curran&lt;/strong&gt;, Department of Psychology, University of North Carolina (UNC). Professor Curran is the Director of the L.L. Thurstone Psychometric Laboratory in the Department of Psychology and Neuroscience at the UNC. Patrick has dedicated much of his career to the teaching and dissemination of advanced quantitative methods and has won teaching awards from UNC and the American Psychological Association. Over the past 20 years he has taught over 50 national and international workshops on structural equation modeling, multilevel modeling, latent curve analysis, longitudinal data analysis, and general linear modeling. He draws on his experiences from his own program of research on high risk child development to guide and inform his quantitative teaching.&lt;/p&gt;
+
+&lt;p&gt;Patrick’s program of research is primarily focused on the development and evaluation of statistical models of change over time, particularly as applied to studies of adolescent substance use. He has published over 70 scientific papers and chapters and has co-authored a text book on latent curve modeling with Ken Bollen. Patrick has served as Associate Editor for Psychological Methods and currently serves on the editorial boards of seven scientific journals. For more details on Professor Curran&amp;rsquo;s work, see &lt;a href=&#34;http://curran.web.unc.edu/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. More information on his workshops can be found &lt;a href=&#34;http://www.curranbauer.org/training/&#34; target=&#34;_blank&#34;&gt;here:&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;workshop-overview&#34;&gt;Workshop overview&lt;/h2&gt;
+
+&lt;h2 id=&#34;day-1&#34;&gt;DAY 1&lt;/h2&gt;
+
+&lt;h3 id=&#34;chapter-1-the-unconditional-linear-latent-curve-model&#34;&gt;Chapter 1: The Unconditional Linear Latent Curve Model&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1.1          Introduction and Organization of the Workshop&lt;/li&gt;
+&lt;li&gt;1.2          Defining a Latent Growth Curve&lt;/li&gt;
+&lt;li&gt;1.3          Latent Growth Curves as a Confirmatory Factor Model&lt;/li&gt;
+&lt;li&gt;1.4          Thinking More Closely About Time&lt;/li&gt;
+&lt;li&gt;1.5          Demonstration: Linear Trajectories of Negative Affect&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;chapter-2-nonlinear-and-conditional-latent-curve-models&#34;&gt;Chapter 2: Nonlinear and Conditional Latent Curve Models&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2.1          Modeling Nonlinear Trajectories&lt;/li&gt;
+&lt;li&gt;2.2          Demonstration: Seasonal Trajectories of Crime&lt;/li&gt;
+&lt;li&gt;2.3          Time-Invariant Covariates&lt;/li&gt;
+&lt;li&gt;2.4          Demonstration: Conditional LCM for Negative Affect&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;day-2&#34;&gt;DAY 2&lt;/h2&gt;
+
+&lt;h3 id=&#34;chapter-3-multivariate-latent-curve-models&#34;&gt;Chapter 3: Multivariate Latent Curve Models&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;3.1          Time-Varying Covariates&lt;/li&gt;
+&lt;li&gt;3.2          Demonstration: Simulated Math and Reading, Part 1&lt;/li&gt;
+&lt;li&gt;3.3          The Multivariate Latent Curve Model&lt;/li&gt;
+&lt;li&gt;3.4          Demonstration: Simulated Math and Reading, Part 2&lt;/li&gt;
+&lt;li&gt;3.5          Advanced Multivariate LCMs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;chapter-4-lcms-with-non-normal-and-discrete-outcomes&#34;&gt;Chapter 4: LCMs with Non-normal and Discrete Outcomes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;4.1          Outcomes that are Continuous but Non-Normal&lt;/li&gt;
+&lt;li&gt;4.2          LCMs with Binary and Ordinal Outcomes: Concepts&lt;/li&gt;
+&lt;li&gt;4.3          LCMs with Binary and Ordinal Outcomes: Estimation&lt;/li&gt;
+&lt;li&gt;4.4          Demonstration: Parental Conflict During Adolescence&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;day-3&#34;&gt;DAY 3&lt;/h2&gt;
+
+&lt;h3 id=&#34;chapter-5-modeling-population-heterogeneity-part-1&#34;&gt;Chapter 5: Modeling Population Heterogeneity: Part 1&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;5.1          Population Heterogeneity in the Conventional LCM&lt;/li&gt;
+&lt;li&gt;5.2          The Multiple Groups Model&lt;/li&gt;
+&lt;li&gt;5.3          Demonstration: Development of Antisocial Behavior&lt;/li&gt;
+&lt;li&gt;5.4          Extensions of Multiple Groups LCM&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;chapter-6-modeling-population-heterogeneity-part-2&#34;&gt;Chapter 6: Modeling Population Heterogeneity: Part 2&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;6.1          Growth Mixture Models: Theory&lt;/li&gt;
+&lt;li&gt;6.2          Growth Mixture Models: Specification&lt;/li&gt;
+&lt;li&gt;6.3          Class Enumeration&lt;/li&gt;
+&lt;li&gt;6.4          Model Sensitivity&lt;/li&gt;
+&lt;li&gt;6.5          Demonstration: Developmental Taxonomy for Negative Affect?&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Getting started with the Academic framework for Hugo</title>
+      <link>/post/getting-started/</link>
+      <pubDate>Wed, 20 Apr 2016 12:00:00 +0000</pubDate>
+      
+      <guid>/post/getting-started/</guid>
+      <description>
+
+&lt;p&gt;The Academic framework enables you to easily create a beautifully simple personal or academic website using the &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt; static site generator.&lt;/p&gt;
+
+&lt;p&gt;Key features:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Easily manage your homepage, blog posts, publications, talks, and projects&lt;/li&gt;
+&lt;li&gt;Configurable widgets available for Biography, Publications, Projects, News/Blog, Talks, and Contact&lt;/li&gt;
+&lt;li&gt;Need a different section? Just use the Custom widget!&lt;/li&gt;
+&lt;li&gt;Write in &lt;a href=&#34;/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;Markdown&lt;/a&gt; for easy formatting and code highlighting, with &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34;&gt;LaTeX&lt;/a&gt; for mathematical expressions&lt;/li&gt;
+&lt;li&gt;Social/academic network linking, &lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34;&gt;Google Analytics&lt;/a&gt;, and &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt; comments&lt;/li&gt;
+&lt;li&gt;Responsive and mobile friendly&lt;/li&gt;
+&lt;li&gt;Simple and refreshing one page design&lt;/li&gt;
+&lt;li&gt;Easy to customize&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://georgecushen.com/create-your-website-with-hugo/#installing-hugo&#34; target=&#34;_blank&#34;&gt;Install Hugo&lt;/a&gt; and create a new website by typing the following commands in your &lt;em&gt;Terminal&lt;/em&gt; or &lt;em&gt;Command Prompt&lt;/em&gt; app:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new site my_website
+cd my_website
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Install Academic with &lt;a href=&#34;https://help.github.com/articles/set-up-git/&#34; target=&#34;_blank&#34;&gt;git&lt;/a&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/gcushen/hugo-academic.git themes/academic
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or alternatively, &lt;a href=&#34;https://github.com/gcushen/hugo-academic/archive/master.zip&#34; target=&#34;_blank&#34;&gt;download Academic&lt;/a&gt; and extract it into a &lt;code&gt;themes/academic&lt;/code&gt; folder within your Hugo website.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you are creating a new website, copy the contents of the &lt;code&gt;exampleSite&lt;/code&gt; folder to your website root folder, overwriting existing files if necessary. The &lt;code&gt;exampleSite&lt;/code&gt; folder contains an example config file and content to help you get started.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cp -av themes/academic/exampleSite/* .
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Start the Hugo server from your website root folder:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo server --watch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you can go to &lt;a href=&#34;http://localhost:1313&#34; target=&#34;_blank&#34;&gt;localhost:1313&lt;/a&gt; and your new Academic powered website should appear.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Customize your website - refer to the &lt;em&gt;Getting Started&lt;/em&gt; section below&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Build your site by running the &lt;code&gt;hugo&lt;/code&gt; command. Then &lt;a href=&#34;https://georgecushen.com/create-your-website-with-hugo/&#34; target=&#34;_blank&#34;&gt;host it for free using Github Pages&lt;/a&gt;. Or alternatively, copy the generated &lt;code&gt;public/&lt;/code&gt; directory (by FTP, Rsync, etc.) to your production web server (such as your university&amp;rsquo;s hosting service).&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+
+&lt;p&gt;Assuming you created a new website with the example content following the installation steps above, this section explores just a few more steps in order to customize it.&lt;/p&gt;
+
+&lt;h3 id=&#34;core-parameters&#34;&gt;Core parameters&lt;/h3&gt;
+
+&lt;p&gt;The core parameters for the website can be edited in the &lt;code&gt;config.toml&lt;/code&gt; configuration file:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Set &lt;code&gt;baseurl&lt;/code&gt; to your website URL (we recommend &lt;a href=&#34;https://georgecushen.com/create-your-website-with-hugo/&#34; target=&#34;_blank&#34;&gt;GitHub Pages&lt;/a&gt; for free hosting)&lt;/li&gt;
+&lt;li&gt;Set &lt;code&gt;title&lt;/code&gt; to your desired website title such as your name&lt;/li&gt;
+&lt;li&gt;The example Disqus commenting variable should be cleared (e.g. &lt;code&gt;disqusShortname = &amp;quot;&amp;quot;&lt;/code&gt;) or set to your own &lt;a href=&#34;https://disqus.com/&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt; shortname to enable commenting&lt;/li&gt;
+&lt;li&gt;Edit your details under &lt;code&gt;[params]&lt;/code&gt;; these will be displayed mainly in the homepage &lt;em&gt;about&lt;/em&gt; and &lt;em&gt;contact&lt;/em&gt; widgets (if used). To disable a contact field, simply clear the value to &lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Place a square cropped portrait photo named &lt;code&gt;portrait.jpg&lt;/code&gt; into the &lt;code&gt;static/img/&lt;/code&gt; folder, overwriting any defaults. Alternatively, you can edit the &lt;code&gt;avatar&lt;/code&gt; filepath to point to a different image name or clear the value to disable the avatar feature.&lt;/li&gt;
+&lt;li&gt;To enable LaTeX math for your site, set &lt;code&gt;math = true&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Social/academic networking links are defined as multiples of &lt;code&gt;[[params.social]]&lt;/code&gt;. They can be created or deleted as necessary.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;introduce-yourself&#34;&gt;Introduce yourself&lt;/h3&gt;
+
+&lt;p&gt;Edit your biography in the &lt;em&gt;about&lt;/em&gt; widget &lt;code&gt;content/home/about.md&lt;/code&gt; that you copied across from the &lt;code&gt;themes/academic/exampleSite/&lt;/code&gt; folder. The research interests and qualifications are stored as &lt;code&gt;interests&lt;/code&gt; and &lt;code&gt;education&lt;/code&gt; variables. The academic qualifications are defined as multiples of &lt;code&gt;[[education.courses]]&lt;/code&gt; and can be created or deleted as necessary. It&amp;rsquo;s possible to completely hide the interests and education lists by deleting their respective variables.&lt;/p&gt;
+
+&lt;h3 id=&#34;customize-the-homepage&#34;&gt;Customize the homepage&lt;/h3&gt;
+
+&lt;p&gt;Refer to our guide on using &lt;a href=&#34;/post/widgets/&#34; target=&#34;_blank&#34;&gt;widgets&lt;/a&gt; to customize your homepage.&lt;/p&gt;
+
+&lt;h3 id=&#34;add-your-content&#34;&gt;Add your content&lt;/h3&gt;
+
+&lt;p&gt;Refer to our guide on &lt;a href=&#34;/post/managing-content/&#34; target=&#34;_blank&#34;&gt;managing content&lt;/a&gt; to create your own publications, blog posts, talks, and projects.&lt;/p&gt;
+
+&lt;h3 id=&#34;remove-unused-widgets-and-pages&#34;&gt;Remove unused widgets and pages&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;/post/managing-content/#removing-content&#34; target=&#34;_blank&#34;&gt;How to remove unused widgets and content pages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;customization-upgrading&#34;&gt;Customization &amp;amp; Upgrading&lt;/h3&gt;
+
+&lt;p&gt;Continue reading below for advanced customization tips and instructions for keeping the framework up-to-date with any improvements that become available.&lt;/p&gt;
+
+&lt;h2 id=&#34;advanced-customization&#34;&gt;Advanced customization&lt;/h2&gt;
+
+&lt;p&gt;It is possible to carry out many customizations without touching any files in &lt;code&gt;themes/academic&lt;/code&gt;, making it easier to upgrade the framework in the future.&lt;/p&gt;
+
+&lt;h3 id=&#34;navigation-menu&#34;&gt;Navigation menu&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code&gt;[[menu.main]]&lt;/code&gt; entries towards the bottom of &lt;code&gt;config.toml&lt;/code&gt; define the navigation links at the top of the website. They can be added or removed as desired.&lt;/p&gt;
+
+&lt;p&gt;To create a dropdown sub-menu, add &lt;code&gt;identifier = &amp;quot;something&amp;quot;&lt;/code&gt; to the parent item and &lt;code&gt;parent = &amp;quot;something&amp;quot;&lt;/code&gt; to the child item.&lt;/p&gt;
+
+&lt;h3 id=&#34;website-icon&#34;&gt;Website icon&lt;/h3&gt;
+
+&lt;p&gt;Save your main icon and mobile icon as square PNG images named &lt;code&gt;icon.png&lt;/code&gt; and &lt;code&gt;apple-touch-icon.png&lt;/code&gt;, respectively. Place them in your root &lt;code&gt;static/img/&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;h3 id=&#34;theme-color-css&#34;&gt;Theme color (CSS)&lt;/h3&gt;
+
+&lt;p&gt;You can link custom CSS assets (relative to your root &lt;code&gt;static/css&lt;/code&gt;) from your &lt;code&gt;config.toml&lt;/code&gt; using &lt;code&gt;custom_css = [&amp;quot;custom.css&amp;quot;]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;For example, lets make a green theme. First, define &lt;code&gt;custom_css = [&amp;quot;green.css&amp;quot;]&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;. Then we can download the example &lt;a href=&#34;https://gist.github.com/gcushen/d5525a4506b9ccf83f2bce592a895495&#34; target=&#34;_blank&#34;&gt;green theme&lt;/a&gt; and save it as &lt;code&gt;static/css/green.css&lt;/code&gt;, relative to your website root (i.e. &lt;strong&gt;not&lt;/strong&gt; in the &lt;code&gt;themes&lt;/code&gt; directory).&lt;/p&gt;
+
+&lt;h3 id=&#34;analytics&#34;&gt;Analytics&lt;/h3&gt;
+
+&lt;p&gt;To enable &lt;a href=&#34;http://www.google.com/analytics&#34; target=&#34;_blank&#34;&gt;Google Analytics&lt;/a&gt;, add your tracking code in &lt;code&gt;config.toml&lt;/code&gt; similarly to &lt;code&gt;googleAnalytics = &amp;quot;UA-12345678-9&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;third-party-and-local-scripts-js&#34;&gt;Third party and local scripts (JS)&lt;/h3&gt;
+
+&lt;p&gt;To add a third party script, create a file named &lt;code&gt;head_custom.html&lt;/code&gt; in a &lt;code&gt;layouts/partials/&lt;/code&gt; folder at the root of your website (not in the &lt;code&gt;themes&lt;/code&gt; folder). Any HTML code added to this file will be included within your website&amp;rsquo;s &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;. Therefore, it&amp;rsquo;s suitable for adding custom metadata or third party scripts specified with the &lt;em&gt;async&lt;/em&gt; attribute.&lt;/p&gt;
+
+&lt;p&gt;Whereas for your own local scripts, you can link your local JS assets (relative to your root &lt;code&gt;static/js&lt;/code&gt;) from your &lt;code&gt;config.toml&lt;/code&gt; using &lt;code&gt;custom_js  = [&amp;quot;custom.js&amp;quot;]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;language-and-translation&#34;&gt;Language and translation&lt;/h3&gt;
+
+&lt;p&gt;The interface text (e.g. buttons) is stored in language files which are collected from Academic&amp;rsquo;s &lt;code&gt;themes/academic/i18n/&lt;/code&gt; folder, as well as an &lt;code&gt;i18n/&lt;/code&gt; folder at the root of your project.&lt;/p&gt;
+
+&lt;p&gt;To edit the interface text, copy &lt;code&gt;themes/academic/i18n/en.yaml&lt;/code&gt; to &lt;code&gt;i18n/en.yaml&lt;/code&gt; (relative to the root of your website). Open the new file and make any desired changes to the text appearing after &lt;code&gt;translation:&lt;/code&gt;. Note that the language files are formatted in YAML syntax.&lt;/p&gt;
+
+&lt;p&gt;To translate the interface text to another language, follow the above instructions, but name the new file in the form &lt;code&gt;i18n/X.yaml&lt;/code&gt; where &lt;code&gt;X&lt;/code&gt; is the appropriate &lt;a href=&#34;http://www.w3schools.com/tags/ref_language_codes.asp&#34; target=&#34;_blank&#34;&gt;ISO/RFC5646 language identifier&lt;/a&gt; for the translation. Then follow the brief instructions in the &lt;em&gt;Language&lt;/em&gt; section at the bottom of your &lt;code&gt;config.toml&lt;/code&gt;. To change the default language used by Academic, set &lt;code&gt;defaultContentLanguage&lt;/code&gt; to the desired language identifier in your configuration file.&lt;/p&gt;
+
+&lt;p&gt;To translate the navigation bar, you can edit the default &lt;code&gt;[[menu.main]]&lt;/code&gt; instances in &lt;code&gt;config.toml&lt;/code&gt;. However, for a multilingual site, you will need to duplicate all of the &lt;code&gt;[[menu.main]]&lt;/code&gt; instances and rename the new instances from &lt;code&gt;[[menu.main]]&lt;/code&gt; to &lt;code&gt;[[languages.X.menu.main]]&lt;/code&gt;, where &lt;code&gt;X&lt;/code&gt; is the language identifier (e.g. &lt;code&gt;[[languages.zh.menu.main]]&lt;/code&gt; for Simplified Chinese). Thus, the navigation bar can be displayed in multiple languages.&lt;/p&gt;
+
+&lt;p&gt;To translate a content file in your &lt;code&gt;content/&lt;/code&gt; folder into another language, copy the file to &lt;code&gt;filename.X.md&lt;/code&gt; where &lt;code&gt;filename&lt;/code&gt; is your existing filename and &lt;code&gt;X&lt;/code&gt; is the appropriate &lt;a href=&#34;http://www.w3schools.com/tags/ref_language_codes.asp&#34; target=&#34;_blank&#34;&gt;ISO/RFC5646 language identifier&lt;/a&gt; for the translation. Then translate the content in the new file to the specified language.&lt;/p&gt;
+
+&lt;p&gt;For further details on Hugo&amp;rsquo;s internationalization and multilingual features, refer to the &lt;a href=&#34;https://gohugo.io/content/multilingual/&#34; target=&#34;_blank&#34;&gt;associated Hugo documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;permalinks&#34;&gt;Permalinks&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Permalinks&lt;/em&gt;, or &lt;em&gt;permanent links&lt;/em&gt;, are URLs to individual pages and posts on your website. They are permanent web addresses which can be used to link to your content. Using Hugo&amp;rsquo;s &lt;em&gt;permalinks&lt;/em&gt; option these can be easily customized. For example, the blog post URL can be changed to the form &lt;em&gt;yourURL/2016/05/01/my-post-slug&lt;/em&gt; by adding the following near the top of your &lt;code&gt;config.toml&lt;/code&gt; (before &lt;code&gt;[params]&lt;/code&gt; settings):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[permalinks]
+    post = &amp;quot;/:year/:month/:day/:slug&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Where &lt;code&gt;:slug&lt;/code&gt; defaults to the filename of the post, excluding the file extension. However, slug may be overridden on a per post basis if desired, simply by setting &lt;code&gt;slug = &amp;quot;my-short-post-title&amp;quot;&lt;/code&gt; in your post preamble.&lt;/p&gt;
+
+&lt;h2 id=&#34;upgrading&#34;&gt;Upgrading&lt;/h2&gt;
+
+&lt;p&gt;Feel free to &lt;em&gt;star&lt;/em&gt; the project on &lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt; and monitor the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/commits/master&#34; target=&#34;_blank&#34;&gt;commits&lt;/a&gt; for updates.&lt;/p&gt;
+
+&lt;p&gt;Before upgrading the framework, it is recommended to make a backup of your entire website directory, or at least your &lt;code&gt;themes/academic&lt;/code&gt; directory. You can also read about the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/releases&#34; target=&#34;_blank&#34;&gt;most recent milestones&lt;/a&gt; (but this doesn&amp;rsquo;t necessarily reflect the latest &lt;em&gt;master&lt;/em&gt; release).&lt;/p&gt;
+
+&lt;p&gt;Before upgrading for the first time, the remote &lt;em&gt;origin&lt;/em&gt; repository should be renamed to &lt;em&gt;upstream&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd themes/academic
+$ git remote rename origin upstream
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To list available updates:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd themes/academic
+$ git fetch upstream
+$ git log --pretty=oneline --abbrev-commit --decorate HEAD..upstream/master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, upgrade by running:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git pull upstream
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you have modified files in &lt;code&gt;themes/academic&lt;/code&gt;, git will attempt to auto-merge changes. If conflicts are reported, you will need to manually edit the files with conflicts and add them back (&lt;code&gt;git add &amp;lt;filename&amp;gt;&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;If there are any issues after upgrading, you may wish to compare your site with the latest &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite&#34; target=&#34;_blank&#34;&gt;example site&lt;/a&gt; to check if any settings changed.&lt;/p&gt;
+
+&lt;h2 id=&#34;feedback-contributing&#34;&gt;Feedback &amp;amp; Contributing&lt;/h2&gt;
+
+&lt;p&gt;Please use the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34; target=&#34;_blank&#34;&gt;issue tracker&lt;/a&gt; to let me know about any bugs or feature requests, or alternatively make a pull request.&lt;/p&gt;
+
+&lt;p&gt;For general questions about Hugo, there is a &lt;a href=&#34;http://discuss.gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo discussion forum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;Copyright 2016 &lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34; target=&#34;_blank&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Customizing the homepage with widgets</title>
+      <link>/post/widgets/</link>
+      <pubDate>Wed, 20 Apr 2016 11:00:00 +0000</pubDate>
+      
+      <guid>/post/widgets/</guid>
+      <description>
+
+&lt;p&gt;Homepage widgets display as sections on the homepage. They can be enabled/disabled and configured as desired. Academic has the following widgets available to use:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;About/biography&lt;/li&gt;
+&lt;li&gt;Selected publications&lt;/li&gt;
+&lt;li&gt;Recent publications&lt;/li&gt;
+&lt;li&gt;Recent news/blog posts&lt;/li&gt;
+&lt;li&gt;Projects&lt;/li&gt;
+&lt;li&gt;Selected talks&lt;/li&gt;
+&lt;li&gt;Recent talks&lt;/li&gt;
+&lt;li&gt;Contact&lt;/li&gt;
+&lt;li&gt;Custom widget (demonstrated with the &lt;em&gt;teaching&lt;/em&gt; example)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The example site that you copied to create your site uses all the different types of widget (except talks), so you can generally just delete the widgets you don&amp;rsquo;t need and customize the parameters of the widgets you wish to keep.&lt;/p&gt;
+
+&lt;p&gt;The parameters for each widget vary. They can be found in the preamble/frontmatter (between the pair of &lt;code&gt;+++&lt;/code&gt;) for each widget installed in the &lt;code&gt;content/home/&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;By default, publications will be displayed in a simple list. If you prefer a more detailed list with abstract and image, you can enable the detailed publication list on the homepage by setting &lt;code&gt;detailed_list = true&lt;/code&gt; in &lt;code&gt;content/home/publications.md&lt;/code&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;add-a-widget-to-the-homepage&#34;&gt;Add a widget to the homepage&lt;/h2&gt;
+
+&lt;p&gt;To add a widget manually, copy the relevant widget from &lt;code&gt;themes/academic/exampleSite/content/home/&lt;/code&gt; to your &lt;code&gt;content/home/&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;Widget identifiers are set to their respective filenames, so a &lt;code&gt;content/home/about.md&lt;/code&gt; widget can be linked from the navigation bar by setting the relevant URL as &lt;code&gt;&amp;quot;#about&amp;quot;&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This means that if you want to use multiple instances of a widget, each widget will be assigned a unique ID based on the filename that you set. You can then use that ID for linking, like in the above example.&lt;/p&gt;
+
+&lt;h2 id=&#34;using-the-custom-widget&#34;&gt;Using the custom widget&lt;/h2&gt;
+
+&lt;p&gt;You can use the custom widget to create your own home page sections.&lt;/p&gt;
+
+&lt;p&gt;Simply duplicate (copy/paste) and rename the example &lt;em&gt;teaching&lt;/em&gt; file at &lt;code&gt;content/home/teaching.md&lt;/code&gt;. Then edit the section title, weight (refer to &lt;em&gt;Ordering sections&lt;/em&gt; below), and content as desired.&lt;/p&gt;
+
+&lt;p&gt;You may also wish to add a navigation link to the top of the page that points to the new section. This can be achieved by adding something similar to the following lines to your &lt;code&gt;config.toml&lt;/code&gt;, where the URL will consist of the first title word in lowercase:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[[menu.main]]
+    name = &amp;quot;Research&amp;quot;
+    url = &amp;quot;#research&amp;quot;
+    weight = 10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;remove-a-widget-from-the-homepage&#34;&gt;Remove a widget from the homepage&lt;/h2&gt;
+
+&lt;p&gt;If you do not require a particular widget, you can simply delete any associated files from the &lt;code&gt;content/home/&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;To remove a navigation link from the top of the page, remove the associated &lt;code&gt;[[menu.main]]&lt;/code&gt; entry in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;ordering-widgets&#34;&gt;Ordering widgets&lt;/h2&gt;
+
+&lt;p&gt;The order that the homepage widgets are displayed in is defined by the &lt;code&gt;weight&lt;/code&gt; parameter in each of the files in the &lt;code&gt;content/home/&lt;/code&gt; directory. The widgets are displayed in ascending order of their &lt;code&gt;weight&lt;/code&gt;, so you can simply edit the &lt;code&gt;weight&lt;/code&gt; parameters as desired.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Managing content</title>
+      <link>/post/managing-content/</link>
+      <pubDate>Wed, 20 Apr 2016 11:00:00 +0000</pubDate>
+      
+      <guid>/post/managing-content/</guid>
+      <description>&lt;p&gt;This is a brief guide to managing content with the Academic framework. Content can include publications, projects, talks, and news/blog articles. After you have read this guide about creating and managing content, you may also be interested to learn about &lt;a href=&#34;/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;writing content with Markdown, LaTeX, and Shortcodes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To enable LaTeX math rendering for a page, you should include &lt;code&gt;math = true&lt;/code&gt; in the page&amp;rsquo;s &lt;code&gt;+++&lt;/code&gt; preamble, as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set &lt;code&gt;math = true&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To disable source code highlighting by default for all pages, set &lt;code&gt;highlight = false&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;. You can then enable source code highlighting only on pages that need it by setting &lt;code&gt;highlight = true&lt;/code&gt; in that page&amp;rsquo;s preamble. See the &lt;a href=&#34;/post/writing-markdown-latex/#code-highlighting&#34; target=&#34;_blank&#34;&gt;code-highlighting docs&lt;/a&gt; for more details.&lt;/p&gt;
+
+&lt;p&gt;To display a featured image in content page headers, the parameters below can be inserted towards the end of a page&amp;rsquo;s &lt;code&gt;+++&lt;/code&gt; preamble. It is assumed that the image is located in your &lt;code&gt;static/img/&lt;/code&gt; folder, so the full path in the example below will be &lt;code&gt;static/img/headers/getting-started.png&lt;/code&gt;. The &lt;code&gt;caption&lt;/code&gt; parameter can be used to write an image caption or credit.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[header]
+image = &amp;quot;headers/getting-started.png&amp;quot;
+caption = &amp;quot;Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;If you wish to prevent a featured image automatically being used for a post&amp;rsquo;s thumbnail on the homepage, the &lt;code&gt;preview = false&lt;/code&gt; parameter can be added to &lt;code&gt;[header]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;create-a-publication&#34;&gt;Create a publication&lt;/h2&gt;
+
+&lt;p&gt;To create a new publication:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new publication/my-paper-name.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then edit the default variables at the top of &lt;code&gt;content/publication/my-paper-name.md&lt;/code&gt; to include the details of your publication. The &lt;code&gt;url_&lt;/code&gt; variables are used to generate links associated with your publication, such as for viewing PDFs of papers. Here is an example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+++
+abstract = &amp;quot;An abstract...&amp;quot;
+authors = [&amp;quot;First author&#39;s name&amp;quot;, &amp;quot;Second author&#39;s name&amp;quot;]
+date = &amp;quot;2013-07-01&amp;quot;
+image = &amp;quot;&amp;quot;
+image_preview = &amp;quot;&amp;quot;
+math = false
+publication = &amp;quot;The publishing part of the citation goes here. You may use *Markdown* for italics etc.&amp;quot;
+title = &amp;quot;A publication title, such as title of a paper&amp;quot;
+url_code = &amp;quot;&amp;quot;
+url_dataset = &amp;quot;&amp;quot;
+url_pdf = &amp;quot;pdf/my-paper-name.pdf&amp;quot;
+url_project = &amp;quot;&amp;quot;
+url_slides = &amp;quot;&amp;quot;
+url_video = &amp;quot;&amp;quot;
++++
+
+Further details on your publication can be written here using *Markdown* for formatting. This text will be displayed on the Publication Detail page.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;url_&lt;/code&gt; links can either point to local or web content. Associated local publication content, such as PDFs, may be copied to a &lt;code&gt;static/pdf/&lt;/code&gt; folder and referenced like &lt;code&gt;url_pdf = &amp;quot;pdf/my-paper-name.pdf&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can also associate custom link buttons with the publication by adding the following block(s) within the variable preamble above, which is denoted by &lt;code&gt;+++&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[[url_custom]]
+    name = &amp;quot;Custom Link&amp;quot;
+    url = &amp;quot;http://www.example.org&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you enabled &lt;code&gt;detailed_list&lt;/code&gt; for publications in &lt;code&gt;config.toml&lt;/code&gt;, then there are a few more optional variables that you can include in the publication page preamble. You may use &lt;code&gt;abstract_short = &amp;quot;friendly summary of abstract&amp;quot;&lt;/code&gt; and &lt;code&gt;publication_short = &amp;quot;abbreviated publication details&amp;quot;&lt;/code&gt; to display a friendly summary of the abstract and abbreviate the publication details, respectively. Furthermore, there is the option to display a different image on the homepage to the publication detail page by setting &lt;code&gt;image_preview = &amp;quot;my-image.jpg&amp;quot;&lt;/code&gt;. This can be useful if you wish to scale down the image for the homepage or simply if you just wish to show a different image for the preview.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;p&gt;Any double quotes (&lt;code&gt;&amp;quot;&lt;/code&gt;) or backslashes (e.g. LaTeX &lt;code&gt;\times&lt;/code&gt;) occurring within the value of any frontmatter parameter (such as the &lt;em&gt;abstract&lt;/em&gt;) should be escaped with a backslash (&lt;code&gt;\&lt;/code&gt;). For example, the symbol &lt;code&gt;&amp;quot;&lt;/code&gt; and LaTeX text &lt;code&gt;\times&lt;/code&gt; become &lt;code&gt;\&amp;quot;&lt;/code&gt; and &lt;code&gt;\\times&lt;/code&gt;, respectively. Refer to the &lt;a href=&#34;https://github.com/toml-lang/toml#user-content-string&#34; target=&#34;_blank&#34;&gt;TOML documentation&lt;/a&gt; for more info.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;post-an-article&#34;&gt;Post an article&lt;/h2&gt;
+
+&lt;p&gt;To create a blog/news article:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new post/my-article-name.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then edit the newly created file &lt;code&gt;content/post/my-article-name.md&lt;/code&gt; with your full title and content.&lt;/p&gt;
+
+&lt;p&gt;Hugo will automatically generate summaries of posts that appear on the homepage. If you are dissatisfied with an automated summary, you can either limit the summary length by appropriately placing &lt;code&gt;&amp;#60;&amp;#33;&amp;#45;&amp;#45;more&amp;#45;&amp;#45;&amp;#62;&lt;/code&gt; in the article body, or completely override the automated summary by adding a &lt;code&gt;summary&lt;/code&gt; parameter to the &lt;code&gt;+++&lt;/code&gt; preamble such that:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;summary = &amp;quot;Summary of my post.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To disable commenting for a specific post, you can add &lt;code&gt;disable_comments = true&lt;/code&gt; to the post &lt;code&gt;+++&lt;/code&gt; preamble. Or to disable commenting for all posts, you can either set &lt;code&gt;disqusShortname = &amp;quot;&amp;quot;&lt;/code&gt; or &lt;code&gt;disable_comments = true&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;create-a-project&#34;&gt;Create a project&lt;/h2&gt;
+
+&lt;p&gt;To create a project:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new project/my-project-name.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then edit the newly created file &lt;code&gt;content/project/my-project-name.md&lt;/code&gt;. Either you can link the project to an external project website by setting the &lt;code&gt;external_link = &amp;quot;http://external-project.com&amp;quot;&lt;/code&gt; variable at the top of the file, or you can add content (below the final &lt;code&gt;+++&lt;/code&gt;) in order to render a project page on your website.&lt;/p&gt;
+
+&lt;h2 id=&#34;create-a-talk&#34;&gt;Create a talk&lt;/h2&gt;
+
+&lt;p&gt;To create a talk:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new talk/my-talk-name.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then edit the newly created file &lt;code&gt;content/talk/my-talk-name.md&lt;/code&gt; with your full talk title and details. Note that many of the talk parameters are similar to the publication parameters.&lt;/p&gt;
+
+&lt;h2 id=&#34;manage-node-index-pages&#34;&gt;Manage node index pages&lt;/h2&gt;
+
+&lt;p&gt;The node index pages (e.g. &lt;code&gt;/post/&lt;/code&gt;) are the special pages which list all of your content. They can exist for blog posts, publications, and talks. The homepage widgets will automatically link to the node index pages when you have more items of content than can be displayed in the widget. Therefore, if you don&amp;rsquo;t have much content, you may not see the automatic links yet - but you can also manually link to them using a normal Markdown formatted link in your content.&lt;/p&gt;
+
+&lt;p&gt;You can edit the title and add your own content, such as an introduction, by creating and editing the following content files for the node indexes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new post/_index.md
+hugo new publication/_index.md
+hugo new talk/_index.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then remove all parameters except for &lt;code&gt;title&lt;/code&gt;, &lt;code&gt;math&lt;/code&gt;, &lt;code&gt;highlight&lt;/code&gt;, and &lt;code&gt;date&lt;/code&gt;. Edit the &lt;code&gt;title&lt;/code&gt; parameter as desired and add any content after the &lt;code&gt;+++&lt;/code&gt; preamble/frontmatter ends. For example, you should have something similar to:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;+++
+title = &amp;quot;List of my posts&amp;quot;
+date = &amp;quot;2017-01-01T00:00:00Z&amp;quot;
+math = false
+highlight = false
++++
+
+Below is an automatically generated list of all my blog posts!
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;removing-content&#34;&gt;Removing content&lt;/h2&gt;
+
+&lt;p&gt;Generally, to remove content, simply delete the relevant file from your &lt;code&gt;content/post&lt;/code&gt;, &lt;code&gt;content/publication&lt;/code&gt;, &lt;code&gt;content/project&lt;/code&gt;, or &lt;code&gt;content/talk&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;h2 id=&#34;view-your-updated-site&#34;&gt;View your updated site&lt;/h2&gt;
+
+&lt;p&gt;After you have made changes to your site, you can view it by running the &lt;code&gt;hugo server --watch&lt;/code&gt; command and then opening &lt;a href=&#34;http://localhost:1313&#34; target=&#34;_blank&#34;&gt;localhost:1313&lt;/a&gt; in your web browser.&lt;/p&gt;
+
+&lt;h2 id=&#34;deploy-your-site&#34;&gt;Deploy your site&lt;/h2&gt;
+
+&lt;p&gt;Finally, you can build the static website to a &lt;code&gt;public/&lt;/code&gt; folder ready for deployment using the &lt;code&gt;hugo&lt;/code&gt; command.&lt;/p&gt;
+
+&lt;p&gt;You may then deploy your site by copying the &lt;code&gt;public/&lt;/code&gt; directory (by FTP, SFTP, WebDAV, Rsync, git push, etc.) to your production web server.&lt;/p&gt;
+
+&lt;p&gt;Note that running &lt;code&gt;hugo&lt;/code&gt; does not remove any previously generated files before building. Therefore, it&amp;rsquo;s best practice to delete your &lt;code&gt;public/&lt;/code&gt; directory prior to running &lt;code&gt;hugo&lt;/code&gt; to ensure no old or interim files are deployed to your server.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Writing content with Markdown, LaTeX, and Shortcodes</title>
+      <link>/post/writing-markdown-latex/</link>
+      <pubDate>Wed, 20 Apr 2016 10:00:00 +0000</pubDate>
+      
+      <guid>/post/writing-markdown-latex/</guid>
+      <description>&lt;p&gt;Content can be written using &lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34; target=&#34;_blank&#34;&gt;Markdown&lt;/a&gt;, &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34;&gt;LaTeX math&lt;/a&gt;, and &lt;a href=&#34;http://gohugo.io/extras/shortcodes/&#34; target=&#34;_blank&#34;&gt;Hugo Shortcodes&lt;/a&gt;. Additionally, HTML may be used for advanced formatting. This article gives an overview of the most common formatting options.&lt;/p&gt;
+
+&lt;h2 id=&#34;sub-headings&#34;&gt;Sub-headings&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;emphasis&#34;&gt;Emphasis&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;Italics with *asterisks* or _underscores_.
+
+Bold with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough with ~~two tildes~~.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;ordered-lists&#34;&gt;Ordered lists&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;1. First item
+2. Another item
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;unordered-lists&#34;&gt;Unordered lists&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;* First item
+* Another item
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;images&#34;&gt;Images&lt;/h2&gt;
+
+&lt;p&gt;Images may be added to a page by placing them in your &lt;code&gt;static/img/&lt;/code&gt; folder and referencing them using one of the following two notations:&lt;/p&gt;
+
+&lt;p&gt;A general image:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;![alternative text for search engines](/img/screenshot.png)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A numbered figure with caption:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; figure src=&amp;quot;/img/screenshot.png&amp;quot; title=&amp;quot;Figure Caption&amp;quot; &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;[I&#39;m a link](https://www.google.com)
+[A post]({{&amp;lt; ref &amp;quot;post/hi.md&amp;quot; &amp;gt;}})
+[A publication]({{&amp;lt; ref &amp;quot;publication/hi.md&amp;quot; &amp;gt;}})
+[A project]({{&amp;lt; ref &amp;quot;project/hi.md&amp;quot; &amp;gt;}})
+[Another section]({{&amp;lt; relref &amp;quot;hi.md#who&amp;quot; &amp;gt;}})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;emojis&#34;&gt;Emojis&lt;/h2&gt;
+
+&lt;p&gt;See the &lt;a href=&#34;http://www.webpagefx.com/tools/emoji-cheat-sheet/&#34; target=&#34;_blank&#34;&gt;Emoji cheat sheet&lt;/a&gt; for available emoticons. The following serves as an example, but you should remove the spaces between each emoji name and pair of semicolons:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;I : heart : Academic : smile :
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I ❤️ Academic 😄&lt;/p&gt;
+
+&lt;h2 id=&#34;blockquote&#34;&gt;Blockquote&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; This is a blockquote.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;footnotes&#34;&gt;Footnotes&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;I have more [^1] to say.
+
+[^1]: Footnote example.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I have more &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; to say.&lt;/p&gt;
+
+&lt;h2 id=&#34;code-highlighting&#34;&gt;Code highlighting&lt;/h2&gt;
+
+&lt;p&gt;Pass the &lt;em&gt;language&lt;/em&gt; of the code, such as &lt;code&gt;python&lt;/code&gt;, as a parameter after three backticks:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;```python
+# Example of code highlighting
+input_string_var = input(&amp;quot;Enter some data: &amp;quot;)
+print(&amp;quot;You entered: {}&amp;quot;.format(input_string_var))
+```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Example of code highlighting
+input_string_var = input(&amp;quot;Enter some data: &amp;quot;)
+print(&amp;quot;You entered: {}&amp;quot;.format(input_string_var))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;highlighting-options&#34;&gt;Highlighting options&lt;/h3&gt;
+
+&lt;p&gt;The Academic theme uses &lt;a href=&#34;https://highlightjs.org&#34; target=&#34;_blank&#34;&gt;highlight.js&lt;/a&gt; for source code highlighting, and highlighting is enabled by default for all pages. However, several configuration options are supported that allow finer-grained control over highlight.js.&lt;/p&gt;
+
+&lt;p&gt;The following table lists the supported options for configuring highlight.js, along with their expected type and a short description. A &amp;ldquo;yes&amp;rdquo; in the &lt;strong&gt;config.toml&lt;/strong&gt; column means the value can be set globally in &lt;code&gt;config.toml&lt;/code&gt;, and a &amp;ldquo;yes&amp;rdquo; in the &lt;strong&gt;preamble&lt;/strong&gt; column means that the value can be set locally in a particular page&amp;rsquo;s preamble.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;option&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;description&lt;/th&gt;
+&lt;th&gt;config.toml&lt;/th&gt;
+&lt;th&gt;preamble&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;highlight&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;td&gt;enable/disable highlighting&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;highlight_languages&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;slice&lt;/td&gt;
+&lt;td&gt;choose additional languages&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;highlight_style&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;choose a highlighting style&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;highlight_version&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;choose the highlight.js version&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;option-highlight&#34;&gt;Option &lt;code&gt;highlight&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;highlight&lt;/code&gt; option allows enabling or disabling the inclusion of highlight.js, either globally or for a particular page. If the option is unset, it has the same effect as if you had specified &lt;code&gt;highlight = true&lt;/code&gt;. That is, the highlight.js javascript and css files will be included in every page. If you&amp;rsquo;d like to only include highlight.js files on pages that actually require source code highlighting, you can set &lt;code&gt;highlight = false&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;, and then override it by setting &lt;code&gt;highlight = true&lt;/code&gt; in the preamble of any pages that require source code highlighting. Conversely, you could enable highlighting globally, and disable it locally for pages that do not require it. Here is a table that shows whether highlighting will be enabled for a page, based on the values of &lt;code&gt;highlight&lt;/code&gt; set in &lt;code&gt;config.toml&lt;/code&gt; and/or the page&amp;rsquo;s preamble.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;config.toml&lt;/th&gt;
+&lt;th&gt;page preamble&lt;/th&gt;
+&lt;th&gt;highlighting enabled for page?&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;unset or true&lt;/td&gt;
+&lt;td&gt;unset or true&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;unset or true&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;td&gt;unset or false&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;option-highlight-languages&#34;&gt;Option &lt;code&gt;highlight_languages&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;highlight_languages&lt;/code&gt; option allows you to specify additional languages that are supported by highlight.js, but are not considered &amp;ldquo;common&amp;rdquo; and therefore are not supported by default. For example, if you want source code highlighting for Go and clojure in all pages, set &lt;code&gt;highlight_languages = [&amp;quot;go&amp;quot;, &amp;quot;clojure&amp;quot;]&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;. If, on the other hand, you want to enable a language only for a specific page, you can set &lt;code&gt;highlight_languages&lt;/code&gt; in that page&amp;rsquo;s preamble.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;highlight_languages&lt;/code&gt; options specified in &lt;code&gt;config.toml&lt;/code&gt; and in a page&amp;rsquo;s preamble are additive. That is, if &lt;code&gt;config.toml&lt;/code&gt; contains, &lt;code&gt;highlight_languages = [&amp;quot;go&amp;quot;]&lt;/code&gt; and the page&amp;rsquo;s preamble contains &lt;code&gt;highlight_languages = [&amp;quot;ocaml&amp;quot;]&lt;/code&gt;, then javascript files for &lt;em&gt;both&lt;/em&gt; go and ocaml will be included for that page.&lt;/p&gt;
+
+&lt;p&gt;If the &lt;code&gt;highlight_languages&lt;/code&gt; option is set, then the corresponding javascript files will be served from the &lt;a href=&#34;https://cdnjs.com/libraries/highlight.js/&#34; target=&#34;_blank&#34;&gt;cdnjs server&lt;/a&gt;. To see a list of available languages, visit the &lt;a href=&#34;https://cdnjs.com/libraries/highlight.js/&#34; target=&#34;_blank&#34;&gt;cdnjs page&lt;/a&gt; and search for links with the word &amp;ldquo;languages&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;highlight_languages&lt;/code&gt; option provides an easy and convenient way to include support for additional languages to be severed from a CDN. If serving unmodified files from cdnjs doesn&amp;rsquo;t meet your needs, you can include javascript files for additional language support via one of the methods described in the &lt;a href=&#34;/post/getting-started/#third-party-and-local-scripts-js&#34; target=&#34;_blank&#34;&gt;getting started guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;option-highlight-style&#34;&gt;Option &lt;code&gt;highlight_style&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;highlight_style&lt;/code&gt; option allows you to select an alternate css style for highlighted code. For example, if you wanted to use the solarized-dark style, you could set &lt;code&gt;highlight_style = &amp;quot;solarized-dark&amp;quot;&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If the &lt;code&gt;highlight_style&lt;/code&gt; option is unset, the default is to use the file &lt;code&gt;/css/highlight.min.css&lt;/code&gt;, either the one provided by the Academic theme, or else the one in your local &lt;code&gt;static&lt;/code&gt; directory.  The &lt;code&gt;/css/highlight.min.css&lt;/code&gt; file provided by Academic is equivalent to the &lt;code&gt;github&lt;/code&gt; style from highlight.js.&lt;/p&gt;
+
+&lt;p&gt;If the &lt;code&gt;highlight_style&lt;/code&gt; option &lt;em&gt;is&lt;/em&gt; set, then &lt;code&gt;/css/highlight.min.css&lt;/code&gt; is ignored, and the corresponding css file will be served from the &lt;a href=&#34;https://cdnjs.com/libraries/highlight.js/&#34; target=&#34;_blank&#34;&gt;cdnjs server&lt;/a&gt;. To see a list of available styles, visit the &lt;a href=&#34;https://cdnjs.com/libraries/highlight.js/&#34; target=&#34;_blank&#34;&gt;cdnjs page&lt;/a&gt; and search for links with the word &amp;ldquo;styles&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;See the &lt;a href=&#34;https://highlightjs.org/static/demo/&#34; target=&#34;_blank&#34;&gt;highlight.js demo page&lt;/a&gt; for examples of available styles.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;Not all styles listed on the &lt;a href=&#34;https://highlightjs.org/static/demo/&#34; target=&#34;_blank&#34;&gt;highlight.js demo page&lt;/a&gt; are available from the &lt;a href=&#34;https://cdnjs.com/libraries/highlight.js/&#34; target=&#34;_blank&#34;&gt;cdnjs server&lt;/a&gt;. If you want to use a style that is not served by cdnjs, just leave &lt;code&gt;highlight_style&lt;/code&gt; unset, and place the corresponding css file in &lt;code&gt;/static/css/highlight.min.css&lt;/code&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;If you don&amp;rsquo;t want to change the default style that ships with Academic but you do want the style file served from the &lt;a href=&#34;https://cdnjs.com/libraries/highlight.js/&#34; target=&#34;_blank&#34;&gt;cdnjs server&lt;/a&gt;, set &lt;code&gt;highlight_style = &amp;quot;github&amp;quot;&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;The &lt;code&gt;highlight_style&lt;/code&gt; option is only recognized when set in &lt;code&gt;config.toml&lt;/code&gt;. Setting &lt;code&gt;highlight_style&lt;/code&gt; in your page&amp;rsquo;s preamble has no effect.&lt;/p&gt;
+
+&lt;h4 id=&#34;option-highlight-version&#34;&gt;Option &lt;code&gt;highlight_version&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;highlight_version&lt;/code&gt; option, as the name implies, allows you to select the version of highlight.js you want to use. The default value is &amp;ldquo;9.9.0&amp;rdquo;. The &lt;code&gt;highlight_version&lt;/code&gt; option is only recognized when set in &lt;code&gt;config.toml&lt;/code&gt;. Setting &lt;code&gt;highlight_version&lt;/code&gt; in your page&amp;rsquo;s preamble has no effect.&lt;/p&gt;
+
+&lt;h2 id=&#34;twitter-tweet&#34;&gt;Twitter tweet&lt;/h2&gt;
+
+&lt;p&gt;To include a single tweet, pass the tweet’s ID from the tweet&amp;rsquo;s URL as parameter to the shortcode:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; tweet 666616452582129664 &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;youtube&#34;&gt;Youtube&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; youtube w7Ft2ymGmfc &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;vimeo&#34;&gt;Vimeo&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; vimeo 146022717 &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;github-gist&#34;&gt;GitHub gist&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; gist USERNAME GIST-ID  &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;speaker-deck&#34;&gt;Speaker Deck&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; speakerdeck 4e8126e72d853c0060001f97 &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;rm-latex-math&#34;&gt;$\rm \LaTeX$ math&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-TeX&#34;&gt;$$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;$$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$&lt;/p&gt;
+
+&lt;p&gt;Alternatively, inline math can be written by wrapping the formula with only a single &lt;code&gt;$&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$&lt;/p&gt;
+
+&lt;h2 id=&#34;table&#34;&gt;Table&lt;/h2&gt;
+
+&lt;p&gt;Code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;| Command           | Description                    |
+| ------------------| ------------------------------ |
+| `hugo`            | Build your website.            |
+| `hugo serve -w`   | View your website.             |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;hugo&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Build your website.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;hugo serve -w&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;View your website.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;alerts&#34;&gt;Alerts&lt;/h2&gt;
+
+&lt;p&gt;Alerts are a useful feature that add side content such as tips, notes, or warnings to your articles. They are especially handy when writing educational tutorial-style articles. Use the corresponding shortcodes to enable alerts inside your content:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{% alert note %}}
+Here&#39;s a tip or note...
+{{% /alert %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will display the following &lt;em&gt;note&lt;/em&gt; block:&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;Here&amp;rsquo;s a tip or note&amp;hellip;&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;pre&gt;&lt;code&gt;{{% alert warning %}}
+Here&#39;s some important information...
+{{% /alert %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will display the following &lt;em&gt;warning&lt;/em&gt; block:&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;p&gt;Here&amp;rsquo;s some important information&amp;hellip;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Footnote example.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
