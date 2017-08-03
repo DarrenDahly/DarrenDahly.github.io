@@ -1,13 +1,13 @@
-+++
-date = "2017-08-03T12:00:00"
-draft = false
-tags = ["academic"]
-title = "Should I log transform my data?"
-math = true
-summary = """
-Many people seem to think that any non-Gaussian, continuous variables should be transformed so that the data "look more normal." Linear regression does in fact assume the errors are normally distributed, but it is fairly robust to violations of this assumption, and there are no such assumptions regarding the predictor variables. What is often ignored or misunderstood is the impact that variable transformations have on the linearity assumption of regression models, and on coefficient interpretation.
-"""
-+++
+---
+title: "Log Log Regression"
+author: "Darren Dahly"
+date: "2017-08-03"
+output:
+  blogdown::html_page:
+    toc: true
+    fig_width: 6
+    dev: "svg"
+---
 
 ```{r setup, include=FALSE}
 

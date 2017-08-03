@@ -11,6 +11,167 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Log Log Regression</title>
+      <link>/post/loglog/</link>
+      <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/loglog/</guid>
+      <description>&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#log-log-linear-regression&#34;&gt;Log-Log Linear Regression&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data&#34;&gt;Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#variables&#34;&gt;Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#linearity&#34;&gt;Linearity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#linear-regression&#34;&gt;Linear regression&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#base-r-diagnostic-plots&#34;&gt;Base R diagnostic plots&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#log-transformed-variables&#34;&gt;Log transformed variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#log-log-linear-regression-1&#34;&gt;Log-Log linear regression&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#base-r-diagnostic-plots-1&#34;&gt;Base R diagnostic plots&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ploting-the-results-in-the-original-scales&#34;&gt;Ploting the results in the original scales&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#model-interpretation&#34;&gt;Model interpretation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;log-log-linear-regression&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Log-Log Linear Regression&lt;/h1&gt;
+&lt;p&gt;When using linear regression, when should you log-transform your data?&lt;/p&gt;
+&lt;p&gt;Many people seem to think that any non-Gaussian, continuous variables should be transformed so that the data “look more normal.” Linear regression does in fact assume the errors are normally distributed, but it is fairly robust to violations of this assumption, and there are no such assumptions regarding the predictor variables. What is often ignored or misunderstood is the impact that variable transformations have on the linearity assumption of regression models, and on coefficient interpretation.&lt;/p&gt;
+&lt;p&gt;The are a variety of options for transforming data, and simply taking the logarithim may be the most popular, given that your data doesn’t include values equal to zero. We will thus focus on linear regression when the outcome and one predictor are both log transformed.&lt;/p&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data&lt;/h2&gt;
+&lt;p&gt;The data for this exercise are from a small sample of older, in-hospital patients with information on average daily step count (measured over 5 days with a pedometer) and their length of stay in the hospital. The data can be down loaded from github.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  data &amp;lt;- read_csv(&amp;quot;https://dantalus.github.io/public/steps.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Variables&lt;/h2&gt;
+&lt;p&gt;The distributions for average daily step count (Steps) and hospital length of stay (LOS) and their repective log transformed values are plotted below. The original values are right skewed and bounded on the left side at zero. As expected, the log transformed values are more symetrical.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  gather(data, variable, value, avg.steps, los,  log.avg.steps, log.los) %&amp;gt;%
+  mutate(variable = factor(variable, levels = c(&amp;quot;avg.steps&amp;quot;, 
+                                                &amp;quot;log.avg.steps&amp;quot;, 
+                                                &amp;quot;los&amp;quot;, 
+                                                &amp;quot;log.los&amp;quot;))) %&amp;gt;%
+  ggplot(aes(x = value, fill = variable)) +
+    geom_bkde() +
+    geom_rug() +
+    scale_fill_viridis(guide = FALSE, discrete = TRUE) +
+    facet_wrap(~variable, scales = &amp;quot;free&amp;quot;) +
+    theme_base()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-2-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;linearity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Linearity&lt;/h2&gt;
+&lt;p&gt;The real challenge however is that the relationship between Steps and LOS is clearly not linear. This is illustrated in the plot below, where the solid line is from the linear regression of LOS on Steps, and the dashed line is from a loess smoother.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(data, aes(x = avg.steps, y = los)) +
+    geom_jitter() +
+    geom_smooth(method = &amp;quot;lm&amp;quot;, color = viridis(1, begin = 1),   se = FALSE) +
+    geom_smooth(span   = 1,    color = viridis(1, begin = 0.6), se = FALSE, linetype =
+                &amp;quot;dashed&amp;quot;) +
+    theme_base()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-3-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;linear-regression&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Linear regression&lt;/h2&gt;
+&lt;p&gt;We can estimate the linear regression shown in the previous plot as follows:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  lr &amp;lt;- lm(los ~ avg.steps, data)
+  
+  summary(lr)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = los ~ avg.steps, data = data)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -7.632 -3.650 -1.227  1.623 19.275 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept)  9.4672380  0.6484016  14.601  &amp;lt; 2e-16 ***
+## avg.steps   -0.0017605  0.0006241  -2.821  0.00546 ** 
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 5.342 on 146 degrees of freedom
+##   (6 observations deleted due to missingness)
+## Multiple R-squared:  0.05168,    Adjusted R-squared:  0.04518 
+## F-statistic: 7.956 on 1 and 146 DF,  p-value: 0.00546&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;base-r-diagnostic-plots&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Base R diagnostic plots&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  plot(lr)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-5-1.svg&#34; width=&#34;576&#34; /&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-5-2.svg&#34; width=&#34;576&#34; /&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-5-3.svg&#34; width=&#34;576&#34; /&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-5-4.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;log-transformed-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Log transformed variables&lt;/h2&gt;
+&lt;p&gt;As we saw above, the distributions of Steps and LOS “look more normal” after transformation. More importantly however, the relationship between the log transformed variables is also linear.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(data, aes(x = log.avg.steps, y = log.los, group)) +
+    geom_jitter(alpha = 0.5) +
+    geom_smooth(method = &amp;quot;lm&amp;quot;, color = viridis(1, begin = 1),   se = FALSE) +
+    geom_smooth(span   = 1,    color = viridis(1, begin = 0.6), se = FALSE, 
+                linetype = &amp;quot;dashed&amp;quot;) +
+    theme_base()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-6-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Note that the extreme outlier in the first scatter plot is not an outlier in log-log space.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;log-log-linear-regression-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Log-Log linear regression&lt;/h2&gt;
+&lt;p&gt;A regression model where the outcome and at least one predictor are log transformed is called a log-log linear model. Here are the model and results:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  log.log.lr &amp;lt;- lm(log.los ~ log.avg.steps, data)
+  
+  summary(log.log.lr)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = log.los ~ log.avg.steps, data = data)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1.92304 -0.44851  0.00306  0.32693  1.39440 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept)    3.01997    0.29400  10.272  &amp;lt; 2e-16 ***
+## log.avg.steps -0.17800    0.04653  -3.825 0.000193 ***
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 0.5748 on 146 degrees of freedom
+##   (6 observations deleted due to missingness)
+## Multiple R-squared:  0.09109,    Adjusted R-squared:  0.08486 
+## F-statistic: 14.63 on 1 and 146 DF,  p-value: 0.0001931&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;base-r-diagnostic-plots-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Base R diagnostic plots&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  plot(log.log.lr)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-8-1.svg&#34; width=&#34;576&#34; /&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-8-2.svg&#34; width=&#34;576&#34; /&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-8-3.svg&#34; width=&#34;576&#34; /&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-8-4.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ploting-the-results-in-the-original-scales&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Ploting the results in the original scales&lt;/h2&gt;
+&lt;p&gt;We will again scatter plot the Steps and LOS variables with fit lines, but this time we will add the line from the log-log linear regression model we just estimated. Importantly, the regression line in log-log space is straight (see above), but in the space defined by the original scales, it’s curved, as shown by the purple line below.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(data, aes(x = avg.steps, y = los)) +
+    geom_jitter(alpha = 0.5) +
+    geom_smooth(method = &amp;quot;lm&amp;quot;, color = viridis(1, begin = 1), se = FALSE, 
+                linetype = &amp;quot;dashed&amp;quot;) +
+    geom_line(data = data.frame(x = exp(log.log.lr$model$log.avg.steps),
+                                y = exp(predict(log.log.lr))),
+              aes(x = x, y = y),
+              color = viridis(1, end = 0), size = 0.7) +
+    geom_smooth(span = 1, color = viridis(1, begin = 0.6), size = 0.7, linetype = &amp;quot;dashed&amp;quot;,
+                se = FALSE) +
+    theme_base()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-9-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;model-interpretation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Model interpretation&lt;/h2&gt;
+&lt;p&gt;So how do we interpret the regression coefficients from a log-log model? The best explanation I have found for interpreting the regression coefficients can be found here: &lt;a href=&#34;http://www.kenbenoit.net/courses/ME104/logmodels2.pdf&#34; class=&#34;uri&#34;&gt;http://www.kenbenoit.net/courses/ME104/logmodels2.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In a nutshell, a 1% increase in the predictor is associated with a Beta% change in the outcome. This is an approximation however. To be exact, we can say that an x% increase in the predictor is associated with a change in the outcome equivalent to multiplying it by 2.71^((log((100+x)/100)) * Beta)). For the model above, the approximation is a 1% increase in Steps is associated with an approximately 0.18% decrease in LOS. Using the exact method, we can calculate the a 50% increase in Steps is associated with a 2.71^((log((100 + 50)/100)) * -0.18)) = 0.93 * LOS = a 7% decrease in LOS.&lt;/p&gt;
+&lt;p&gt;The important thing to understand is that by working with logarithms, we have moved from talking about absolute differences (e.g. 600 steps = 1 less day in the hospital) to relative differences (given a 1% increase in Steps, we would expect an 0.18% decrease in hospital length of stay). Why is this? Remember from math class that adding log(x) + log(y) = log(x * y)? When we start adding things in log space, we are multiplying them in absolute space. This is the same reason that a one-unit increase in log(odds) space results in an odds-ratio after exponentiation in logistic regression models. This shift from thinking in absolute to thinking in relative terms is important for understanding a number of analytical techniques (e.g. what is the difference between an additive and a multiplicative interaction?). Here is a entertaining introduction to the topic: &lt;a href=&#34;https://www.youtube.com/watch?v=Pxb5lSPLy9c&#34; class=&#34;uri&#34;&gt;https://www.youtube.com/watch?v=Pxb5lSPLy9c&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One last, critical point we must consider is whether the proportional interpretation is reasonable for each variable. In the case of Steps, it makes sense to me that an increase of 50 steps per day would mean something different for a completely sedentary patient vs. a very active patient. How to think about LOS is less obvious to me. Do I expect a change in Steps to be associated with same amount of change in LOS regardless of how long the stay would have been otherwise? Oh dear, I’ll have to ask the physiotherapist this one.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Getting an interview</title>
       <link>/post/2017-05-09-interviews/</link>
       <pubDate>Tue, 09 May 2017 12:00:00 +0000</pubDate>
@@ -575,42 +736,6 @@ Z and W a greater risk factor for Y&amp;hellip;.etc.”&lt;/p&gt;
 &lt;p&gt;I think I may be pasting this into the occasional review from now on.&lt;/p&gt;
 
 &lt;p&gt;If you really want to tuck into this topic, see &lt;a href=&#34;http://arxiv.org/pdf/1101.0891.pdf&#34; target=&#34;_blank&#34;&gt;To Explain or to Predict?&lt;/a&gt; by &lt;a href=&#34;http://galitshmueli.com/&#34; target=&#34;_blank&#34;&gt;Galit Shmueli&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/gshmueli&#34; target=&#34;_blank&#34;&gt;@gshmueli&lt;/a&gt;), posted on &lt;a href=&#34;http://arxiv.org/&#34; target=&#34;_blank&#34;&gt;arxiv.org&lt;/a&gt;. It&amp;rsquo;s a clear, comprehensive overview of the topic.  There is also this paper in the AJE, &lt;a href=&#34;http://aje.oxfordjournals.org/content/159/9/882.full&#34; target=&#34;_blank&#34;&gt;Limitations of the Odds Ratio in Gauging the Performance of a Diagnostic, Prognostic, or Screening Marker&lt;/a&gt;, which clearly demonstrates that big odds ratios don&amp;rsquo;t always lead to useful classifications (predictions).&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Where “Hunter-Gatherer Energetics and Human Obesity” gets it wrong</title>
-      <link>/post/2012-08-31-hunter-gatherer/</link>
-      <pubDate>Fri, 31 Aug 2012 12:00:00 +0000</pubDate>
-      
-      <guid>/post/2012-08-31-hunter-gatherer/</guid>
-      <description>
-
-&lt;p&gt;There is a recent PLoS ONE article on obesity getting quite a bit of attention. The article, &lt;a href=&#34;http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0040503&amp;amp;annotationId=52325&#34; target=&#34;_blank&#34;&gt;Hunter-Gatherer Energetics and Human Obesity&lt;/a&gt;, reports research looking at total energy expenditure in a sample of adults from a  Tanzanian hunter-gatherer tribe, the Hadza.  Given their “traditional physically active lifestyle” the authors expected that Hadza to have lower body fat and to expend more energy than modern, Western populations, and the aim the research was to see if this was in fact true.&lt;/p&gt;
-
-&lt;p&gt;They key result they focus on was that the mean total energy expenditure, adjusted for body size (hint: more on this soon), was similar to that seen in Western populations. They concluded that this result challenges “current models of obesity suggesting that Western lifestyles lead to decreased energy expenditure.” The broader take home message spreading across social and traditional media is this: obesity is caused by poor diet, not a lack of exercise. Here is the lead author’s summary of the research in the &lt;a href=&#34;http://www.nytimes.com/2012/08/26/opinion/sunday/debunking-the-hunter-gatherer-workout.html?_r=1&#34; target=&#34;_blank&#34;&gt;New York Times&lt;/a&gt;; and here is a growing list of &lt;a href=&#34;http://www.plosone.org/annotation/listThread.action?root=52325&#34; target=&#34;_blank&#34;&gt;news articles&lt;/a&gt; about the research.&lt;/p&gt;
-
-&lt;p&gt;Let me go ahead and say that I think the conclusions drawn from this study are completely wrong, and I am deeply troubled by the message being communicated (whether intentional or otherwise). Below are my reasons why. It is entirely possible that I am missing something here. If so, please feel free to email me.&lt;/p&gt;
-
-&lt;h3 id=&#34;total-energy-expenditure-total-energy-intake&#34;&gt;Total Energy Expenditure = Total Energy Intake&lt;/h3&gt;
-
-&lt;p&gt;The conclusion that obesity is result of poor diet, not less activity, appears to be based on the result that total energy expenditure (TEE) was the same for the Hadza and the Western populations studied. The logic seems to be that that people who are more active will expend more energy, so if we observe that a group of thin people and a group of fat people have the same energy expenditure, then the difference in body size must be due to something other than physical activity. Presumably, if the study had measured total energy intake and found a similar result, we could draw the exact opposite conclusion - that obesity is a result of less activity, not a poor diet.&lt;/p&gt;
-
-&lt;p&gt;As it turns out, they actually did measure energy intake and found no difference between the populations. In this study they measured TEE with a gold standard measure, &lt;a href=&#34;http://en.wikipedia.org/wiki/Doubly_labeled_water&#34; target=&#34;_blank&#34;&gt;doubly labeled water&lt;/a&gt;. Interestingly, doubly labeled water is also used to measure energy intake (or &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/8315169&#34; target=&#34;_blank&#34;&gt;validate other measures of energy intake&lt;/a&gt;). Wait, what? That’s right, doubly labeled water is used as a measure of both energy intake and expenditure. Why? Because humans are in energy balance most of the time. It’s true that obesity is the result of energy imbalance, when energy intake exceeds expenditure and gets stored in adipose cells, but this usually describes very small energy imbalances that accumulate over a long period of time. If you eat an additional 5000 kcals tomorrow, your body doesn’t just immediately store that as fat. Your body finds other ways to compensate, by increasing expenditure and decreasing subsequent intake. In fact, &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/22065844&#34; target=&#34;_blank&#34;&gt;your body is hard wired to maintain energy balance within a fairly small range&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;total-energy-intake-actually-was-much-lower-for-the-hadza&#34;&gt;Total Energy Intake actually was much lower for the Hadza&lt;/h3&gt;
-
-&lt;p&gt;If you still buy that comparing total energy expenditures is a good way to explain why one group if fatter than another, then you’ll need to explain why the TEE of the Hadza was in fact much lower than that of the Western populations. It’s right there in table 1. The mean TEEs were 1877 and 2649 in Hadza females and males respectively, compared to 2347 and 3053 in the Western populations.&lt;/p&gt;
-
-&lt;p&gt;Remember, the paper hypothesized that TEE would be higher in the Hadza due to their very active lifestyle, but instead concluded there was no difference between the Hadza and Western groups studied. So how did the authors make this conclusion, given than the crude differences in TEEs are so large?&lt;/p&gt;
-
-&lt;p&gt;The answer is that they used generalized linear models to adjust TEE for fat-free mass (FFM), age, and “other variables”. You need to go to the &lt;a href=&#34;http://www.plosone.org/article/fetchSingleRepresentation.action?uri=info:doi/10.1371/journal.pone.0040503.s004&#34; target=&#34;_blank&#34;&gt;supplemental table 1&lt;/a&gt; to actually see the models, and even then they only report the statistical significance of estimates, and no actual parameter values. From these models you can see that the variable “lifestyle”, which is there to reflect group differences  (Hadza vs. Western) in TEE, adjusted for the other covariates is “not significant”.&lt;/p&gt;
-
-&lt;p&gt;This is quite simply because they adjusted for body size, which is strongly correlated with energy expenditure. Their models tell us that if we looked at two similarly aged Hadza and Western males with the same amount of FFM, we would expect their TEE to be the same. If you are surprised by this result, you shouldn’t be. Smaller people expend much less energy. This is simple physics. The Hadza, despite their active life styles, expend much less energy than Westerners because they are much smaller people. This difference isn’t just about lean and fat mass either. The Hadza males, for example, are 0.2 meters shorter (that’s almost 8 inches!) than the Western males (something you need to extract for yourself from &lt;a href=&#34;http://www.plosone.org/article/info:doi/10.1371/journal.pone.0040503?imageURI=info:doi/10.1371/journal.pone.0040503.t001&#34; target=&#34;_blank&#34;&gt;table 1&lt;/a&gt;). This size difference certainly exists from birth and is a simple biological adaptation to living in a relatively energy scarce environment.&lt;/p&gt;
-
-&lt;h3 id=&#34;what-debate&#34;&gt;What debate?&lt;/h3&gt;
-
-&lt;p&gt;Obesity is a public health problem broadly attributed to dramatic changes diet and physical activity behaviors that some populations have experienced over the past several decades.  One reason that this paper seems to be getting so much attention is that it plugs into a debate  over  which set of behaviors , dietary or physical activity, are the key explanation for obesity (another reason is that is reports data from some mysterious group of humans who somehow represent the human evolutionary process – nonsense that I expect other anthropologists to angrily descend upon any day now) . My opinion is that this debate is meaningless and that both matter, for both individuals and populations.  Weight loss intervention trials have illustrated the beneficial effects of increasing physical activity levels, and reviews support the idea that interventions which include both dietary and physical activity components are the most effective. Further, the benefits of physical activity extend beyond weight/fat loss – more active people are healthier in a variety of ways. How any responsible scientist could risk sending the message that physical activity isn’t important – and that is exactly the message that many will take away from the headlines – is simply beyond me.&lt;/p&gt;
 </description>
     </item>
     
