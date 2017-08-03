@@ -207,26 +207,7 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <div id="TOC">
-<ul>
-<li><a href="#log-log-linear-regression">Log-Log Linear Regression</a><ul>
-<li><a href="#data">Data</a></li>
-<li><a href="#variables">Variables</a></li>
-<li><a href="#linearity">Linearity</a></li>
-<li><a href="#linear-regression">Linear regression</a></li>
-<li><a href="#base-r-diagnostic-plots">Base R diagnostic plots</a></li>
-<li><a href="#log-transformed-variables">Log transformed variables</a></li>
-<li><a href="#log-log-linear-regression-1">Log-Log linear regression</a></li>
-<li><a href="#base-r-diagnostic-plots-1">Base R diagnostic plots</a></li>
-<li><a href="#ploting-the-results-in-the-original-scales">Ploting the results in the original scales</a></li>
-<li><a href="#model-interpretation">Model interpretation</a></li>
-</ul></li>
-</ul>
-</div>
-
-<div id="log-log-linear-regression" class="section level1">
-<h1>Log-Log Linear Regression</h1>
-<p>When using linear regression, when should you log-transform your data?</p>
+      <p>When using linear regression, when should you log-transform your data?</p>
 <p>Many people seem to think that any non-Gaussian, continuous variables should be transformed so that the data “look more normal.” Linear regression does in fact assume the errors are normally distributed, but it is fairly robust to violations of this assumption, and there are no such assumptions regarding the predictor variables. What is often ignored or misunderstood is the impact that variable transformations have on the linearity assumption of regression models, and on coefficient interpretation.</p>
 <p>The are a variety of options for transforming data, and simply taking the logarithim may be the most popular, given that your data doesn’t include values equal to zero. We will thus focus on linear regression when the outcome and one predictor are both log transformed.</p>
 <div id="data" class="section level2">
@@ -304,7 +285,7 @@
 <p><img src="/post/loglog_files/figure-html/unnamed-chunk-6-1.svg" width="576" /></p>
 <p>Note that the extreme outlier in the first scatter plot is not an outlier in log-log space.</p>
 </div>
-<div id="log-log-linear-regression-1" class="section level2">
+<div id="log-log-linear-regression" class="section level2">
 <h2>Log-Log linear regression</h2>
 <p>A regression model where the outcome and at least one predictor are log transformed is called a log-log linear model. Here are the model and results:</p>
 <pre class="r"><code>  log.log.lr &lt;- lm(log.los ~ log.avg.steps, data)
@@ -357,7 +338,6 @@
 <p>In a nutshell, a 1% increase in the predictor is associated with a Beta% change in the outcome. This is an approximation however. To be exact, we can say that an x% increase in the predictor is associated with a change in the outcome equivalent to multiplying it by 2.71^((log((100+x)/100)) * Beta)). For the model above, the approximation is a 1% increase in Steps is associated with an approximately 0.18% decrease in LOS. Using the exact method, we can calculate the a 50% increase in Steps is associated with a 2.71^((log((100 + 50)/100)) * -0.18)) = 0.93 * LOS = a 7% decrease in LOS.</p>
 <p>The important thing to understand is that by working with logarithms, we have moved from talking about absolute differences (e.g. 600 steps = 1 less day in the hospital) to relative differences (given a 1% increase in Steps, we would expect an 0.18% decrease in hospital length of stay). Why is this? Remember from math class that adding log(x) + log(y) = log(x * y)? When we start adding things in log space, we are multiplying them in absolute space. This is the same reason that a one-unit increase in log(odds) space results in an odds-ratio after exponentiation in logistic regression models. This shift from thinking in absolute to thinking in relative terms is important for understanding a number of analytical techniques (e.g. what is the difference between an additive and a multiplicative interaction?). Here is a entertaining introduction to the topic: <a href="https://www.youtube.com/watch?v=Pxb5lSPLy9c" class="uri">https://www.youtube.com/watch?v=Pxb5lSPLy9c</a>.</p>
 <p>One last, critical point we must consider is whether the proportional interpretation is reasonable for each variable. In the case of Steps, it makes sense to me that an increase of 50 steps per day would mean something different for a completely sedentary patient vs. a very active patient. How to think about LOS is less obvious to me. Do I expect a change in Steps to be associated with same amount of change in LOS regardless of how long the stay would have been otherwise? Oh dear, I’ll have to ask the physiotherapist this one.</p>
-</div>
 </div>
 
     </div>

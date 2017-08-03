@@ -4,7 +4,7 @@ author: "Darren Dahly"
 date: "2017-08-03"
 output:
   blogdown::html_page:
-    toc: true
+    toc: FALSE
     fig_width: 6
     dev: "svg"
 ---
@@ -26,7 +26,6 @@ output:
   library(car)
 
 ```
-# Log-Log Linear Regression
 
 When using linear regression, when should you log-transform your data?
 
