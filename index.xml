@@ -120,7 +120,7 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
 
 &lt;p&gt;DAGs and counterfactual thinking are currently the best tools we have to counter this. Their value seems so obvious to me, but clearly not to everyone else. Every year, a student will inevitably ask, “If DAGs are so useful, why don’t epidemiologists use them?” I still don’t have a good answer for that question. It’s been about two decades since &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/9888278&#34; target=&#34;_blank&#34;&gt;Robins, Greenland, Pearl&lt;/a&gt;, &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/15308962&#34; target=&#34;_blank&#34;&gt;Hernan&lt;/a&gt;, &lt;a href=&#34;http://publicifsv.sund.ku.dk/~nk/epiF14/Glymour_DAGs.pdf&#34; target=&#34;_blank&#34;&gt;Glymour&lt;/a&gt; and others helped to introduce DAGs to our field. It would be generous to describe their uptake as slow.  There is no denying that most “successful” epidemiologists have gotten along just fine without them, and they rarely appear in the journal articles I read or review. So please forgive any defensiveness on my part; just know that we are on an uphill climb here.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -289,24 +289,6 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
       
       <guid>/talk/example-talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Deep Learning</title>
-      <link>/project/deep-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/project/deep-learning/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
 </description>
     </item>
     
@@ -490,7 +472,108 @@ I successfully applied for a Medical Research Council fellowship. I had only bee
       <guid>/post/2014-12-17-infant-body-composition/</guid>
       <description>&lt;p&gt;Click to download the &lt;a href=&#34;http://darrendahly.github.io/img/bodycomp.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://darrendahly.github.io/public/img/bodycomp.pdf&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://http://darrendahly.github.io/img/bodycomp.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://darrendahly.github.io/public/img/bodycomp.pdf&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://darrendahly.github.io/img/bodycomp.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>River Plots</title>
+      <link>/post/2014-11-25-river-plots/</link>
+      <pubDate>Tue, 25 Nov 2014 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2014-11-25-river-plots/</guid>
+      <description>&lt;p&gt;There are many ways to look at the relationship between two categorical variables.&lt;/p&gt;
+
+&lt;p&gt;A simple contingency table will often do the job.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;library(gmodels)
+
+macroTable &amp;lt;- (data$macro, data$macroCust, 
+               dnn = c(&amp;quot;Birth Weight&amp;quot;, &amp;quot;Customised Centile&amp;quot;)
+
+CrossTable(macroTable, digits = 2, prop.t = F, prop.chisq = F) 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/macroTable.png&#34; alt=&#34;macroTable&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mosaic plots are pretty cool.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;library(vcd)
+
+mosaic(macroTable, 
+       labeling = labeling_list(sep = &amp;quot;, &amp;quot;, cols = 1), 
+       margins  = c(bottom = 7),
+       legend   = T, 
+       shade    = T)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/macroMosaic.png&#34; alt=&#34;macroMosaic&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, something I&amp;rsquo;ve really come to appreciate is the &lt;em&gt;&lt;a href=&#34;http://logfc.wordpress.com/2014/02/27/riverplot/&#34; target=&#34;_blank&#34;&gt;river plot&lt;/a&gt;&lt;/em&gt;. For example:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/macroRiver.png&#34; alt=&#34;macroRiver&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can make these using the R &lt;a href=&#34;http://cran.r-project.org/web/packages/riverplot/index.html&#34; target=&#34;_blank&#34;&gt;library(riverplot)&lt;/a&gt;, but you have to do a bit of data wrangling first. I have written a function to help with this when I am working from a data frame where the two factor variables are in separate columns, and the rows are observations.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;data &amp;lt;- data.frame(&amp;quot;ID&amp;quot; = c(1:500), 
+                   &amp;quot;A&amp;quot;  = factor(sample(c(1:4), 500, replace = T), 
+                                 labels = c(&amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;, &amp;quot;C&amp;quot;, &amp;quot;D&amp;quot;)),
+                   &amp;quot;B&amp;quot;  = factor(sample(c(1:3), 500, replace = T), 
+                                 labels = c(&amp;quot;Big&amp;quot;, &amp;quot;Mid&amp;quot;, &amp;quot;Small&amp;quot;)))
+
+makeRivPlot(data, &amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/dataRiver.png&#34; alt=&#34;dataRiver&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is the function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;makeRivPlot &amp;lt;- function(data, var1, var2) {
+
+  require(dplyr)          # Needed for the count function
+  require(riverplot)      # Does all the real work
+  require(RColorBrewer)   # To assign nice colours
+
+  names1 &amp;lt;- levels(data[, var1])
+  names2 &amp;lt;- levels(data[, var2])
+
+  var1   &amp;lt;- as.numeric(data[, var1])
+  var2   &amp;lt;- as.numeric(data[, var2])
+
+  edges  &amp;lt;- data.frame(var1, var2 + max(var1, na.rm = T))
+  edges  &amp;lt;- count(edges)
+
+  colnames(edges) &amp;lt;- c(&amp;quot;N1&amp;quot;, &amp;quot;N2&amp;quot;, &amp;quot;Value&amp;quot;)
+
+  nodes &amp;lt;- data.frame(
+           ID     = c(1:(max(var1, na.rm = T) + 
+                         max(var2, na.rm = T))),  
+           x      =  c(rep(1, times = max(var1, na.rm = T)), 
+                       rep(2, times = max(var2, na.rm = T))),       
+           labels = c(names1, names2) , 
+           col    = c(brewer.pal(max(var1, na.rm = T), &amp;quot;Set1&amp;quot;), 
+                      brewer.pal(max(var2, na.rm = T), &amp;quot;Set1&amp;quot;)),
+           stringsAsFactors = FALSE)
+
+  nodes$col &amp;lt;- paste(nodes$col, 95, sep = &amp;quot;&amp;quot;)
+
+  river &amp;lt;- makeRiver(nodes, edges)
+
+  return(plot(river))
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Related Links:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.exegetic.biz/blog/2014/08/plotting-flows-with-riverplot/?utm_source=rss&amp;amp;utm_medium=rss&amp;amp;utm_campaign=plotting-flows-with-riverplot&#34; target=&#34;_blank&#34;&gt;Plotting Flows with riverplot&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://stats.stackexchange.com/questions/87132/what-is-the-proper-name-for-a-river-plot-visualisation&#34; target=&#34;_blank&#34;&gt;Cross Validated Thread&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://cran.r-project.org/web/packages/riverplot/index.html&#34; target=&#34;_blank&#34;&gt;CRAN for library(riverplot)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://logfc.wordpress.com/2014/02/27/riverplot/&#34; target=&#34;_blank&#34;&gt;From the author of library(riverplot)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.ouseful.info/2013/07/23/generating-sankey-diagrams-from-rcharts/&#34; target=&#34;_blank&#34;&gt;Generating Sankey Diagrams from rCharts&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
