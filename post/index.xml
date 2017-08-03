@@ -11,14 +11,14 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Getting the interview</title>
+      <title>Getting an interview</title>
       <link>/post/2017-05-09-interviews/</link>
       <pubDate>Tue, 09 May 2017 12:00:00 +0000</pubDate>
       
       <guid>/post/2017-05-09-interviews/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/public/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;To get a job, you have to get an interview. Who knows what will happen at that point, but securing an interview is at least partly in your own hands. Having just finished shortlisting the applicants to a postdoctoral research post I recently advertised, here are my thoughts on how to get your foot further in the door. None of this is original. It’s just fresh on my mind.&lt;/p&gt;
 
@@ -47,48 +47,6 @@
     </item>
     
     <item>
-      <title>Upcoming R workshop</title>
-      <link>/post/2017-05-02-r_courses/</link>
-      <pubDate>Tue, 02 May 2017 12:00:00 +0000</pubDate>
-      
-      <guid>/post/2017-05-02-r_courses/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&#34;https://www.ucc.ie/en/crfc/&#34; target=&#34;_blank&#34;&gt;Clinical Research Facility Cork&lt;/a&gt; is sponsoring a free, two-day introduction to data analysis using the R statistical programming language on June 8th and 9th (Th, F), from 09:00 to 16:00 in the &lt;a href=&#34;https://www.google.ie/maps/place/Western+Gateway,+Western+Gateway+Building,+University+College+Cork,+Western+Rd,+Mardyke,+Cork/data=!4m2!3m1!1s0x4844902fb2cfc8d3:0xbc1521a27a3ca450?sa=X&amp;amp;ved=0ahUKEwjRn-H2-pbQAhWDLMAKHStcCXwQ8gEIGzAA&#34; target=&#34;_blank&#34;&gt;Western Gateway Building&lt;/a&gt; G 15. Places are available on a first-come, first-serve basis, and there is space for 25 participants. Please email me at ddahly@ucc.ie to reserve a place.&lt;/p&gt;
-
-&lt;p&gt;The course is intended for people who are new to R, but at least somewhat familiar with other statistical software such as Stata or SPSS. It is primarily focused on the needs of academic researchers, but participants from other industries are welcome. Each participant will need to being their own laptop with R and R-Studio Desktop installed and working. Once these are installed, you will need to execute the following code: &lt;code&gt;install.packages(&amp;quot;tidyverse&amp;quot;)&lt;/code&gt;. You are also encouraged to “bring your own data” to work with (in any format).&lt;/p&gt;
-
-&lt;p&gt;We will cover the following topics:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;The strengths and weaknesses of R, relative to other options for data analysis&lt;/li&gt;
-&lt;li&gt;The basics of &amp;ldquo;how R works&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Working with the R-Studio environment&lt;/li&gt;
-&lt;li&gt;Workflow and managing projects&lt;/li&gt;
-&lt;li&gt;Importing data into R (from Excel, Stata, SAS, SPSS, text files)&lt;/li&gt;
-&lt;li&gt;Working with dataframes&lt;/li&gt;
-&lt;li&gt;Data visualisation with ggplot2&lt;/li&gt;
-&lt;li&gt;Writing your own functions&lt;/li&gt;
-&lt;li&gt;Literate programming and reproducible research&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;By the end of the workshop, you will be able to import a dataset into R, manipulate it, visualize it, and then wrap everything up in a report that can be reproduced at the press of a button.&lt;/p&gt;
-
-&lt;p&gt;For more R related activities, please feel free to join the Cork R-User&amp;rsquo;s Group &lt;a href=&#34;http://www.meetup.com/Cork-Ireland-R-Users-Group/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;For help installing the R statistical programming language and R-Studio, please see these links.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://swirlstats.com/&#34; target=&#34;_blank&#34;&gt;http://swirlstats.com/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.r-project.org/&#34; target=&#34;_blank&#34;&gt;https://www.r-project.org/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.rstudio.com/products/rstudio/download2/&#34; target=&#34;_blank&#34;&gt;https://www.rstudio.com/products/rstudio/download2/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/cars.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>In Defense of DAGs</title>
       <link>/post/2017-03-30-dags/</link>
       <pubDate>Thu, 30 Mar 2017 12:00:00 +0000</pubDate>
@@ -102,7 +60,7 @@
 
 &lt;p&gt;In contrast to their search, I started by looking for papers on Pubmed from the last five years that were published in the four key epidemiological journals where most of the discussion about causal inference probably takes place. These were: &lt;em&gt;Epidemiology&lt;/em&gt;, &lt;em&gt;the American Journal of Epidemiology&lt;/em&gt;, &lt;em&gt;the International Journal of Epidemiology&lt;/em&gt;, and &lt;em&gt;the Journal of Epidemiology and Community Health&lt;/em&gt;. Then, out of these papers, I alternately searched for those mentioning causal inference; those mentioning DAGs; and those mentioning counterfactuals. The results are plotted below.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/img/plot.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://DarrenDahly.github.io/img/plot.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Search 1: (&amp;quot;J Epidemiol Community Health&amp;quot; [journal] OR &amp;quot;Am J Epidemiol&amp;quot; [journal] OR &amp;quot;Int J Epidemiol&amp;quot; [journal] OR &amp;quot;Epidemiology&amp;quot; [journal])
 Search 2: Search 1 AND &amp;quot;causal inference&amp;quot;
@@ -162,12 +120,12 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
 
 &lt;p&gt;DAGs and counterfactual thinking are currently the best tools we have to counter this. Their value seems so obvious to me, but clearly not to everyone else. Every year, a student will inevitably ask, “If DAGs are so useful, why don’t epidemiologists use them?” I still don’t have a good answer for that question. It’s been about two decades since &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/9888278&#34; target=&#34;_blank&#34;&gt;Robins, Greenland, Pearl&lt;/a&gt;, &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/15308962&#34; target=&#34;_blank&#34;&gt;Hernan&lt;/a&gt;, &lt;a href=&#34;http://publicifsv.sund.ku.dk/~nk/epiF14/Glymour_DAGs.pdf&#34; target=&#34;_blank&#34;&gt;Glymour&lt;/a&gt; and others helped to introduce DAGs to our field. It would be generous to describe their uptake as slow.  There is no denying that most “successful” epidemiologists have gotten along just fine without them, and they rarely appear in the journal articles I read or review. So please forgive any defensiveness on my part; just know that we are on an uphill climb here.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Your science is justified by the question, not the answer. </title>
+      <title>Your science is justified by the question, not the answer</title>
       <link>/post/2017-03-21-prereg/</link>
       <pubDate>Tue, 21 Mar 2017 12:00:00 +0000</pubDate>
       
@@ -196,7 +154,7 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
       <pubDate>Mon, 13 Mar 2017 12:00:00 +0000</pubDate>
       
       <guid>/post/2017-03-13-r_courses/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&#34;https://www.ucc.ie/en/crfc/&#34; target=&#34;_blank&#34;&gt;Clinical Research Facility Cork&lt;/a&gt; is sponsoring a free, two-day introduction to data analysis using the R statistical programming language on March 30th and 31st (Th, F), from 09:30 to 16:30 in the &lt;a href=&#34;https://www.google.ie/maps/place/Western+Gateway,+Western+Gateway+Building,+University+College+Cork,+Western+Rd,+Mardyke,+Cork/data=!4m2!3m1!1s0x4844902fb2cfc8d3:0xbc1521a27a3ca450?sa=X&amp;amp;ved=0ahUKEwjRn-H2-pbQAhWDLMAKHStcCXwQ8gEIGzAA&#34; target=&#34;_blank&#34;&gt;Western Gateway Building&lt;/a&gt; 3.71. Places are available on a first-come, first-serve basis, and there is space for 10 participants. Please email me at ddahly@ucc.ie to reserve a place.&lt;/p&gt;
 
@@ -229,66 +187,6 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
 &lt;p&gt;&lt;a href=&#34;https://www.rstudio.com/products/rstudio/download2/&#34; target=&#34;_blank&#34;&gt;https://www.rstudio.com/products/rstudio/download2/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/cars.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Postdoctoral Position</title>
-      <link>/post/2017-02-09-postdoc/</link>
-      <pubDate>Thu, 09 Feb 2017 12:00:00 +0000</pubDate>
-      
-      <guid>/post/2017-02-09-postdoc/</guid>
-      <description>
-
-&lt;p&gt;I will soon be advertising for a Postdoctoral Researcher in Biostatistics/Epidemiology/Data Science (3 years) to come work with me in the HRB Clinical Research Facility Cork (CRF-C). The official job description should be online in the next two weeks. In the meantime, I wanted to take the opportunity to explain the work of the CRF-C, my expectations for the role, and what the person filling to role can expect of me.&lt;/p&gt;
-
-&lt;p&gt;NOTE: None of the information below constitutes a formal, binding description of the role, which will instead be communicated via the formal hiring processes of UCC HR. You are welcome to get in touch with any queries, but I may not respond until after the post is formally advertised.&lt;/p&gt;
-
-&lt;h2 id=&#34;the-crf-c&#34;&gt;The CRF-C&lt;/h2&gt;
-
-&lt;p&gt;The CRF-C is funded by the Irish Health Research Board to support patient-focused research conducted at University College Cork (UCC), its associated hospitals, and other healthcare facilities in and around Cork. The support offered by the CRF-C includes space to conduct clinical investigations, research nurses, research assistants, a pharmacy, sample storage facilities, study monitors, regulatory expertise, data management, and what I do - study design, data analysis, and methodological research.&lt;/p&gt;
-
-&lt;h2 id=&#34;the-sdau&#34;&gt;The SDAU&lt;/h2&gt;
-
-&lt;p&gt;You will be working in the Statistics and Data Analysis Unit (SDAU), which currently includes one member of staff – me! So you can perhaps imagine how happy I am to double its size. So what are “we” responsible for? First, we consult or collaborate on a varied portfolio of patient-focused research projects. More specifically, we contribute to the design of studies and data management processes; we write statistical analysis plans; we tidy and analyse data from studies; and we report the results. Further, we conduct multiple training events each year, in both statistical programming and statistics. Lastly, and most importantly from an academic standpoint, we conduct methodological research aimed at improving patient-focused research.&lt;/p&gt;
-
-&lt;p&gt;The SDAU’s remit is to contribute broadly across the patient-focused research community in and around Cork. However, we primarily contribute through collaboration. Importantly, we don’t run a consultancy service. What this means for you is that you won’t be expected to spend your time calculating sample sizes for studies you didn’t help design.&lt;/p&gt;
-
-&lt;p&gt;Unlike many academic units, we run the SDAU like a business that we are trying to grow. We are expected to recoup our costs each year, typically through research funding. This means we bill our collaborators for our contributions to research. This means that our collaborators are also our clients. We conduct our business accordingly, though we never shy away from hard truths or support wrong-headed choices.&lt;/p&gt;
-
-&lt;h2 id=&#34;the-candidate&#34;&gt;The Candidate&lt;/h2&gt;
-
-&lt;p&gt;The ideal candidate will be experienced with statistical programming (R or SAS), have a good understanding of statistics/biostatistics (with expertise in least one method or model), have experience with experimental study designs, and have an academic interest in methodological research. While the last characteristic is an absolute must, I am happy to bring on someone who is lacking in another area. In other words, if you have a strong background in biostatistics, but little programming experience, that’s ok, you will learn. Conversely, if you are an experienced programmer and want to improve your statistical skills in a clinical research environment, I can train you. However, you have to be trainable, which means that you must be mathematically inclined and very comfortable working with numbers. Regarding methodological research, your interests can be in applied methods (i.e. how can we improve the use of existing methods) or in the development of novel methods, or in meta-research.&lt;/p&gt;
-
-&lt;p&gt;What can you expect to gain through the post?&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;You will have access to lots of data, from a wide variety of research projects. This means you should have ample opportunity to identify and develop an area of methodological research that you will lead, with my support. You will also have access to a variety of experienced researchers to collaborate with and learn from.&lt;/li&gt;
-&lt;li&gt;You will gain experience working in both academic and industry-led patient-focused research, and working in a regulated research environment.&lt;/li&gt;
-&lt;li&gt;You will gain experience working on multiple projects at any one time.&lt;/li&gt;
-&lt;li&gt;You will develop professional skills (time management, communication, etc.).&lt;/li&gt;
-&lt;li&gt;You will develop consultancy skills (e.g. talking clinicians off the ledge when their study doesn’t go as planned).&lt;/li&gt;
-&lt;li&gt;You will have opportunities to improve your teaching and public speaking.&lt;/li&gt;
-&lt;li&gt;You will have opportunities to improve your writing.&lt;/li&gt;
-&lt;li&gt;You will gain experience applying for grants.&lt;/li&gt;
-&lt;li&gt;At the end of 3 years (if not sooner), you should be prepared to continue along an academic career track. However, you will also be skilled enough to be employable outside of academia if you so choose.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;about-me&#34;&gt;About me&lt;/h2&gt;
-
-&lt;p&gt;Opportunities  aside, you will still be stuck working with me on a day to day basis. So what’s that like?&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;I am primarily motivated by the enormous amount of research waste that is generated every day, much of which is caused by poor data handling and analytical practice. So while the researchers I work with get up every day hoping to improve human health, I get up every day hoping to improve their research practices and inferences. I have no interest in inventing the next great statistical method (nor the capability) – I just want to help as many people as possible correctly apply existing methods. Further, I think the best way to improve research quality is to shine a light on it, and so I do my best to work in a transparent manner, and will expect you to do the same. I develop workflows and processes that that contribute to the quality of my work. I don’t make things up as I go (anymore…), but rather I design and manage analyses. This will be a somewhat foreign way of working for some academics, but a valuable one, for both the quality of the research you conduct, and your own career development.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;While I want to conduct high-quality, impactful research, I don’t care about the optics of publication. This might be good or bad for you. The good is that I won’t view your career as a means of advancing my career, but if you want or need someone to push you to publish for the sake of publishing, I’m not going to be very helpful for you.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;I don’t have a particular research project in mind for you. This isn’t to say that I don’t have ideas for you to run with, it’s just that I am happy for you to make your own path. This is very different from many postdoctoral positions that are funded by a specific research grant. This is great if you have your own ideas to explore (which, as an academic, you should), but there is more risk for you.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;I will put your career development first. Your Postdoc is your window to think and conduct research without the looming pressures of lecturing, marking, committees, reviewing, editing, and so on. It’s also your opportunity to further develop skills that you might not have time to devote to later.  I was lucky enough to have mentors early in my early career to let me grow my own way, and so I will do the same for you. So I won’t expect you to work on things that don’t build your skills or contribute to your intellectual development. In fact, nothing would make me happier for you to focus on your big ideas so I can ride your coat-tails to fame and riches. The success of the post, from my point of view, is reflected more in the job you land next than in the number of posters you stand next to.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Cork is great (I’m not from here, but I love it). UCC is nice. Both the CRF-C and the Department of Epidemiology and Public Health are packed with nice, smart, competent people, which counts for a lot. If you want to know anything else about me, it’s all on twitter.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     
@@ -329,14 +227,14 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
     </item>
     
     <item>
-      <title>Stata Workshop</title>
+      <title>Stata Workshop (2016)</title>
       <link>/post/2017-04-13-stata_workshop/</link>
       <pubDate>Sat, 04 Feb 2017 12:00:00 +0000</pubDate>
       
       <guid>/post/2017-04-13-stata_workshop/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;introduction-to-data-analysis-with-stata&#34;&gt;Introduction to data analysis with Stata&lt;/h2&gt;
 
@@ -381,183 +279,6 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
 &lt;p&gt;[First draft,  Feb 03, 2017]&lt;/p&gt;
 
 &lt;p&gt;[Second draft, Feb 05, 2017]&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Upcoming R workshop</title>
-      <link>/post/2016-11-07-r_courses/</link>
-      <pubDate>Mon, 07 Nov 2016 12:00:00 +0000</pubDate>
-      
-      <guid>/post/2016-11-07-r_courses/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&#34;https://www.ucc.ie/en/crfc/&#34; target=&#34;_blank&#34;&gt;Clinical Research Facility Cork&lt;/a&gt; is sponsoring a free, two-day introduction to the R statistical programming language on Dec 8 and 9 (Th, F), from 09:00 to 17:00 in the &lt;a href=&#34;https://www.google.ie/maps/place/Western+Gateway,+Western+Gateway+Building,+University+College+Cork,+Western+Rd,+Mardyke,+Cork/data=!4m2!3m1!1s0x4844902fb2cfc8d3:0xbc1521a27a3ca450?sa=X&amp;amp;ved=0ahUKEwjRn-H2-pbQAhWDLMAKHStcCXwQ8gEIGzAA&#34; target=&#34;_blank&#34;&gt;Western Gateway Building&lt;/a&gt; G.04. Places are available on a first-come, first-serve basis, and there is space for 15 participants. To attend, please email me at ddahly@ucc.ie.&lt;/p&gt;
-
-&lt;p&gt;The course is intended for people who are new to R, but at least somewhat experienced with other statistical software such as Stata or SPSS. Each participant will need to being their own laptop with R and R-Studio Desktop installed and working. You are also encouraged to “bring your own data” to work with (in any format). I will send additional details to participants as the date approaches.&lt;/p&gt;
-
-&lt;p&gt;We will cover the following topics:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Strengths and weaknesses of R, relative to other options for data analysis&lt;/li&gt;
-&lt;li&gt;Working with the R-Studio environment&lt;/li&gt;
-&lt;li&gt;Importing data into R (from Excel, Stata, SAS, SPSS, text files)&lt;/li&gt;
-&lt;li&gt;R workflow I: objects and functions&lt;/li&gt;
-&lt;li&gt;R workflow II: coding, scripts, and projects&lt;/li&gt;
-&lt;li&gt;R workflow III: &lt;a href=&#34;https://blog.rstudio.org/2016/09/15/tidyverse-1-0-0/&#34; target=&#34;_blank&#34;&gt;tidyverse&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Data visualisation with ggplot2&lt;/li&gt;
-&lt;li&gt;Introduction to linear regression with R&lt;/li&gt;
-&lt;li&gt;Literate programming and reproducible research with R&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;By the end of the workshop, you will be able to import a dataset into R, manipulate it, visualize it, analyse it, and then wrap everything up in a report that can be reproduced at the press of a button.&lt;/p&gt;
-
-&lt;p&gt;For more R related activities, please feel free to join the Cork R-User&amp;rsquo;s Group &lt;a href=&#34;http://www.meetup.com/Cork-Ireland-R-Users-Group/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;For help installing the R statistical programming language and R-Studio, please see these links.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://swirlstats.com/&#34; target=&#34;_blank&#34;&gt;http://swirlstats.com/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.r-project.org/&#34; target=&#34;_blank&#34;&gt;https://www.r-project.org/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.rstudio.com/products/rstudio/download2/&#34; target=&#34;_blank&#34;&gt;https://www.rstudio.com/products/rstudio/download2/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/cars.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Workshop on Structural Equation Models for Longitudinal Data (July 13-15, Cork, Ireland)</title>
-      <link>/post/2016-04-25-sem_workshop/</link>
-      <pubDate>Mon, 25 Apr 2016 12:00:00 +0000</pubDate>
-      
-      <guid>/post/2016-04-25-sem_workshop/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The Clinical Research Facility in Cork will be hosting a three-day workshop on &lt;strong&gt;Structural Equation Models for Longitudinal Data&lt;/strong&gt;, July 13-15th, 2016.&lt;/p&gt;
-
-&lt;p&gt;The workshop will cover unconditional, conditional and multivariate latent curve models; models for non-normal and discrete outcomes; and modeling observed and unobserved heterogeneity (more details below). Models will be demonstrated with &lt;a href=&#34;https://www.statmodel.com/&#34; target=&#34;_blank&#34;&gt;Mplus&lt;/a&gt;. There will be no formal tutorials, but participants are encouraged to being their own laptops with Mplus. Participants should be comfortable with standard statistical methods, including multiple linear regression. Familiarity with path analysis, factor analysis, or structural equation modelling will be helpful, but not necessary.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The three-day course fee is 600 EURO&lt;/strong&gt;, and includes a full set of printed course materials, lunch each day, and tea and coffee throughout. There are also a limited number of 1-day registrations available for 250 EURO per day. The fee is already discounted for all participants, and there are no additional discounts available.&lt;/p&gt;
-
-&lt;p&gt;To register, please contact Dr Darren Dahly (ddahly@ucc.ie), who will then send you information on how to pay by credit card or purchase order. We kindly ask that attendees pay within 10 working days of registering to guarantee their place on the course. &lt;strong&gt;The registration deadline is the 6th of July&lt;/strong&gt;. Refunds will be made at the discretion of the course organisers, and will not be possible under any circumstance after the 8th of July.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Title:            Structural Equation Models for Longitudinal Data
-Dates:            July 13-15, 2016
-Location:         Western Gateway Building, Room 107 
-Max participants: 30
-Fees:             Three-day course: 600 EUROS 
-                  Single day(s): 250 EUROS per day
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The workshop will be led by &lt;strong&gt;Professor Patrick Curran&lt;/strong&gt;, Department of Psychology, University of North Carolina (UNC). Professor Curran is the Director of the L.L. Thurstone Psychometric Laboratory in the Department of Psychology and Neuroscience at the UNC. Patrick has dedicated much of his career to the teaching and dissemination of advanced quantitative methods and has won teaching awards from UNC and the American Psychological Association. Over the past 20 years he has taught over 50 national and international workshops on structural equation modeling, multilevel modeling, latent curve analysis, longitudinal data analysis, and general linear modeling. He draws on his experiences from his own program of research on high risk child development to guide and inform his quantitative teaching.&lt;/p&gt;
-
-&lt;p&gt;Patrick’s program of research is primarily focused on the development and evaluation of statistical models of change over time, particularly as applied to studies of adolescent substance use. He has published over 70 scientific papers and chapters and has co-authored a text book on latent curve modeling with Ken Bollen. Patrick has served as Associate Editor for Psychological Methods and currently serves on the editorial boards of seven scientific journals. For more details on Professor Curran&amp;rsquo;s work, see &lt;a href=&#34;http://curran.web.unc.edu/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. More information on his workshops can be found &lt;a href=&#34;http://www.curranbauer.org/training/&#34; target=&#34;_blank&#34;&gt;here:&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;workshop-overview&#34;&gt;Workshop overview&lt;/h2&gt;
-
-&lt;h2 id=&#34;day-1&#34;&gt;DAY 1&lt;/h2&gt;
-
-&lt;h3 id=&#34;chapter-1-the-unconditional-linear-latent-curve-model&#34;&gt;Chapter 1: The Unconditional Linear Latent Curve Model&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1.1          Introduction and Organization of the Workshop&lt;/li&gt;
-&lt;li&gt;1.2          Defining a Latent Growth Curve&lt;/li&gt;
-&lt;li&gt;1.3          Latent Growth Curves as a Confirmatory Factor Model&lt;/li&gt;
-&lt;li&gt;1.4          Thinking More Closely About Time&lt;/li&gt;
-&lt;li&gt;1.5          Demonstration: Linear Trajectories of Negative Affect&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;chapter-2-nonlinear-and-conditional-latent-curve-models&#34;&gt;Chapter 2: Nonlinear and Conditional Latent Curve Models&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2.1          Modeling Nonlinear Trajectories&lt;/li&gt;
-&lt;li&gt;2.2          Demonstration: Seasonal Trajectories of Crime&lt;/li&gt;
-&lt;li&gt;2.3          Time-Invariant Covariates&lt;/li&gt;
-&lt;li&gt;2.4          Demonstration: Conditional LCM for Negative Affect&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;day-2&#34;&gt;DAY 2&lt;/h2&gt;
-
-&lt;h3 id=&#34;chapter-3-multivariate-latent-curve-models&#34;&gt;Chapter 3: Multivariate Latent Curve Models&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;3.1          Time-Varying Covariates&lt;/li&gt;
-&lt;li&gt;3.2          Demonstration: Simulated Math and Reading, Part 1&lt;/li&gt;
-&lt;li&gt;3.3          The Multivariate Latent Curve Model&lt;/li&gt;
-&lt;li&gt;3.4          Demonstration: Simulated Math and Reading, Part 2&lt;/li&gt;
-&lt;li&gt;3.5          Advanced Multivariate LCMs&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;chapter-4-lcms-with-non-normal-and-discrete-outcomes&#34;&gt;Chapter 4: LCMs with Non-normal and Discrete Outcomes&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;4.1          Outcomes that are Continuous but Non-Normal&lt;/li&gt;
-&lt;li&gt;4.2          LCMs with Binary and Ordinal Outcomes: Concepts&lt;/li&gt;
-&lt;li&gt;4.3          LCMs with Binary and Ordinal Outcomes: Estimation&lt;/li&gt;
-&lt;li&gt;4.4          Demonstration: Parental Conflict During Adolescence&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;day-3&#34;&gt;DAY 3&lt;/h2&gt;
-
-&lt;h3 id=&#34;chapter-5-modeling-population-heterogeneity-part-1&#34;&gt;Chapter 5: Modeling Population Heterogeneity: Part 1&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;5.1          Population Heterogeneity in the Conventional LCM&lt;/li&gt;
-&lt;li&gt;5.2          The Multiple Groups Model&lt;/li&gt;
-&lt;li&gt;5.3          Demonstration: Development of Antisocial Behavior&lt;/li&gt;
-&lt;li&gt;5.4          Extensions of Multiple Groups LCM&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;chapter-6-modeling-population-heterogeneity-part-2&#34;&gt;Chapter 6: Modeling Population Heterogeneity: Part 2&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;6.1          Growth Mixture Models: Theory&lt;/li&gt;
-&lt;li&gt;6.2          Growth Mixture Models: Specification&lt;/li&gt;
-&lt;li&gt;6.3          Class Enumeration&lt;/li&gt;
-&lt;li&gt;6.4          Model Sensitivity&lt;/li&gt;
-&lt;li&gt;6.5          Demonstration: Developmental Taxonomy for Negative Affect?&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Stata Workshop</title>
-      <link>/post/2016-02-29-stata_workshop/</link>
-      <pubDate>Mon, 29 Feb 2016 12:00:00 +0000</pubDate>
-      
-      <guid>/post/2016-02-29-stata_workshop/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The Clinical Research Facility Cork will host two workshops featuring Stata data analysis and statistical software on March 10, 2016. These will cover introductory and intermediate level material, and will take place in the Brookfield Health Sciences Building at University College Cork. The workshops will be led by &lt;a href=&#34;http://www.ul.ie/artsoc/faculty-research/dr-brendan-halpin&#34; target=&#34;_blank&#34;&gt;Dr Brendan Halpin&lt;/a&gt; from the Department of Sociology at the University of Limerick.&lt;/p&gt;
-
-&lt;p&gt;Details for each workshop are given below. We encourage participants in the introductory workshop to also sign up for the afternoon session. The cost for each workshop is 50 EUR and can be paid by credit card or purchase order (for UCC based attendees). To sign up, please email Dr Darren Dahly (ddahly@ucc.ie) to indicate which workshop(s) you would like to attend. You will then be given payment details. We ask that participants pay promptly. Anyone who has not paid by Friday, March 4th will be removed from the participant list to make room for another. There are 20 available spots for each workshop.&lt;/p&gt;
-
-&lt;h1 id=&#34;workshop-details&#34;&gt;Workshop Details&lt;/h1&gt;
-
-&lt;h3 id=&#34;introduction-to-stata-data-analysis-and-statistical-software&#34;&gt;Introduction to Stata Data Analysis and Statistical Software&lt;/h3&gt;
-
-&lt;p&gt;The session will introduce Stata to researchers with little or no experience with it. Participants will learn how to load data and produce descriptive summaries including tables and graphs, how to edit and modify data, and how to carry out analyses such as t-tests, chi-square texts, ANOVA and regression.&lt;/p&gt;
-
-&lt;p&gt;Date: 10th March, 2016&lt;/p&gt;
-
-&lt;p&gt;Time: 10:00 to 13:00&lt;/p&gt;
-
-&lt;p&gt;Location: G07 Brookfield Health Sciences Building, UCC&lt;/p&gt;
-
-&lt;h3 id=&#34;intermediate-topics-for-stata-data-analysis-and-statistical-software&#34;&gt;Intermediate Topics for Stata Data Analysis and Statistical Software&lt;/h3&gt;
-
-&lt;p&gt;This session is aimed at researchers with some exposure to Stata. Stata offers a very wide range of up-to-the-minute analytical tools, in a coherent and user-friendly framework. It is also programmable and highly extensible, which makes it valuable for complex data preparation and analysis tasks. This session will demonstrate more of its descriptive and analytical capabilities, and focus on some of its more advanced characteristics, including scripting analyses and accessing user-written add-ons. A quick overview will be given of Stata’s range of analytical tools such as ANOVA and linear regression; logistic regression (binary, multinomial, ordinal); models for count data, time-series data, survival data; tools for complex data (robust standard errors, cross-sectional time-series or “panel” models, multi-level models, structural equation modelling).&lt;/p&gt;
-
-&lt;p&gt;Date: 10th March, 2016&lt;/p&gt;
-
-&lt;p&gt;Time: 14:00 to 17:00&lt;/p&gt;
-
-&lt;p&gt;Location: G07 Brookfield Health Sciences Building, UCC&lt;/p&gt;
 </description>
     </item>
     
@@ -693,6 +414,203 @@ I successfully applied for a Medical Research Council fellowship. I had only bee
 &lt;p&gt;&lt;a href=&#34;http://scholarlykitchen.sspnet.org/2014/11/11/to-share-or-not-to-share-that-is-the-research-data-question/&#34; target=&#34;_blank&#34;&gt;To Share or not to Share? That is the (Research Data) Question…    &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.esajournals.org/doi/full/10.1890/ES14-00402.1&#34; target=&#34;_blank&#34;&gt;The Tao of open science for ecology&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What is overweight, really?</title>
+      <link>/post/2015-01-05-who-obesity-infographic/</link>
+      <pubDate>Mon, 05 Jan 2015 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2015-01-05-who-obesity-infographic/</guid>
+      <description>&lt;p&gt;The image below is from the WHO, and I don&amp;rsquo;t like it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/whoOwOb.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The top figure represents both &lt;em&gt;overweight&lt;/em&gt; and &lt;em&gt;obese&lt;/em&gt; people. &lt;a href=&#34;http://www.who.int/mediacentre/factsheets/fs311/en/&#34; target=&#34;_blank&#34;&gt;According to the WHO&lt;/a&gt;, a person with a &lt;a href=&#34;http://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm&#34; target=&#34;_blank&#34;&gt;body mass index&lt;/a&gt; (BMI) of 25 or greater is overweight, while a person with a BMI of 30 or more is obese. The &lt;a href=&#34;http://whqlibdoc.who.int/trs/WHO_TRS_894_(part1).pdf&#34; target=&#34;_blank&#34;&gt;WHO arrived at these numbers&lt;/a&gt; partly due to research comparing health outcomes across people with different BMIs. &lt;a href=&#34;http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(09)60318-4/fulltext?_eventId=logout&#34; target=&#34;_blank&#34;&gt;These studies&lt;/a&gt; produce graphs like this one, which looks at mortality rate as a function of BMI.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/bmiMortality.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Risk of death starts to rise rapidly as BMI increases beyond 30, thus the WHO definition of obesity. But what about a BMI of 25, which the WHO defines as overweight? Your risk of death is almost as low as it can go!&lt;/p&gt;
+
+&lt;p&gt;Having a BMI of 25.7 is clearly very different than having a BMI of 33.1 in terms of health risks. So why do we so often see prevalence figures for obesity and overweight combined, as they are in the infographic above? Because it results in a bigger number, which makes your problem sound more important. Cynical, but true.&lt;/p&gt;
+
+&lt;p&gt;I am an obesity researcher, and I think it&amp;rsquo;s important to draw attention to the problem, but we need to be careful and honest about how we do it. If I am a healthy person with a BMI of 25.5 and see this infographic, I&amp;rsquo;m probably scratching my head looking at that first figure, who has a BMI of about 42 by my estimation. Then I&amp;rsquo;m probably ignoring everything else I ever hear about the dangers of obesity, because I know that I&amp;rsquo;m not anything like &lt;em&gt;that thing&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is unfortunate, because knowing you are overweight is useful, despite the fact it isn&amp;rsquo;t strongly related to poor health. This is because many people gain fat slowly across adulthood, and few experience sustained fat loss. As you continue to gain beyond a BMI of 25, health risks increase, slowly at first, and then more rapidly. Thus overweight is like a yellow traffic light, warning you that the path ahead is risky. It would be great if people better understood this, but in my opinion infographics like the one above undermine this understanding. (Side note: this perspective is very clearly outlined in a &lt;a href=&#34;http://whqlibdoc.who.int/trs/WHO_TRS_854.pdf?ua=1&#34; target=&#34;_blank&#34;&gt;1995 technical report from the WHO on anthropometry&lt;/a&gt;. Just scroll down to the section on overweight adults.)&lt;/p&gt;
+
+&lt;p&gt;Now what if I have a BMI of 32 (which is about right in my case) and see this infographic? Again, I&amp;rsquo;m looking at that bottom figure and completely discounting that it has anything to do with me. It&amp;rsquo;s ridiculous, it&amp;rsquo;s &lt;a href=&#34;http://www.psychologytoday.com/blog/wiring-the-mind/201501/whats-wrong-fat-shaming&#34; target=&#34;_blank&#34;&gt;fat shaming&lt;/a&gt;, and it&amp;rsquo;s likely counter-productive.&lt;/p&gt;
+
+&lt;p&gt;What would I like to see instead? If I had the skills to make a decent infographic, I would start with the BMI/mortality graph above, add some traffic lights, and depict a person traveling along the path from better to poorer health as their BMI increases. I would also make sure to emphasize the health risks and other costs of &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3527647/&#34; target=&#34;_blank&#34;&gt;morbid obesity&lt;/a&gt; which is becoming all &lt;a href=&#34;http://www.worldobesity.org/site_media/library/resource_images/Trends_in_morbid_obesity_adults_Oct_2014.pdf&#34; target=&#34;_blank&#34;&gt;too common&lt;/a&gt; in many places.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What do we know about body composition in healthy infants?</title>
+      <link>/post/2014-12-17-infant-body-composition/</link>
+      <pubDate>Wed, 17 Dec 2014 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2014-12-17-infant-body-composition/</guid>
+      <description>&lt;p&gt;Click to download the &lt;a href=&#34;http://darrendahly.github.io/img/bodycomp.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://darrendahly.github.io/public/img/bodycomp.pdf&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://http://darrendahly.github.io/img/bodycomp.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>River Plots</title>
+      <link>/post/2014-11-25-river-plots/</link>
+      <pubDate>Tue, 25 Nov 2014 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2014-11-25-river-plots/</guid>
+      <description>&lt;p&gt;There are many ways to look at the relationship between two categorical variables.&lt;/p&gt;
+
+&lt;p&gt;A simple contingency table will often do the job.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;library(gmodels)
+
+macroTable &amp;lt;- (data$macro, data$macroCust, 
+               dnn = c(&amp;quot;Birth Weight&amp;quot;, &amp;quot;Customised Centile&amp;quot;)
+
+CrossTable(macroTable, digits = 2, prop.t = F, prop.chisq = F) 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/macroTable.png&#34; alt=&#34;macroTable&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mosaic plots are pretty cool.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;library(vcd)
+
+mosaic(macroTable, 
+       labeling = labeling_list(sep = &amp;quot;, &amp;quot;, cols = 1), 
+       margins  = c(bottom = 7),
+       legend   = T, 
+       shade    = T)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/macroMosaic.png&#34; alt=&#34;macroMosaic&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, something I&amp;rsquo;ve really come to appreciate is the &lt;em&gt;&lt;a href=&#34;http://logfc.wordpress.com/2014/02/27/riverplot/&#34; target=&#34;_blank&#34;&gt;river plot&lt;/a&gt;&lt;/em&gt;. For example:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/macroRiver.png&#34; alt=&#34;macroRiver&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can make these using the R &lt;a href=&#34;http://cran.r-project.org/web/packages/riverplot/index.html&#34; target=&#34;_blank&#34;&gt;library(riverplot)&lt;/a&gt;, but you have to do a bit of data wrangling first. I have written a function to help with this when I am working from a data frame where the two factor variables are in separate columns, and the rows are observations.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;data &amp;lt;- data.frame(&amp;quot;ID&amp;quot; = c(1:500), 
+                   &amp;quot;A&amp;quot;  = factor(sample(c(1:4), 500, replace = T), 
+                                 labels = c(&amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;, &amp;quot;C&amp;quot;, &amp;quot;D&amp;quot;)),
+                   &amp;quot;B&amp;quot;  = factor(sample(c(1:3), 500, replace = T), 
+                                 labels = c(&amp;quot;Big&amp;quot;, &amp;quot;Mid&amp;quot;, &amp;quot;Small&amp;quot;)))
+
+makeRivPlot(data, &amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/dataRiver.png&#34; alt=&#34;dataRiver&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is the function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;makeRivPlot &amp;lt;- function(data, var1, var2) {
+
+  require(dplyr)          # Needed for the count function
+  require(riverplot)      # Does all the real work
+  require(RColorBrewer)   # To assign nice colours
+
+  names1 &amp;lt;- levels(data[, var1])
+  names2 &amp;lt;- levels(data[, var2])
+
+  var1   &amp;lt;- as.numeric(data[, var1])
+  var2   &amp;lt;- as.numeric(data[, var2])
+
+  edges  &amp;lt;- data.frame(var1, var2 + max(var1, na.rm = T))
+  edges  &amp;lt;- count(edges)
+
+  colnames(edges) &amp;lt;- c(&amp;quot;N1&amp;quot;, &amp;quot;N2&amp;quot;, &amp;quot;Value&amp;quot;)
+
+  nodes &amp;lt;- data.frame(
+           ID     = c(1:(max(var1, na.rm = T) + 
+                         max(var2, na.rm = T))),  
+           x      =  c(rep(1, times = max(var1, na.rm = T)), 
+                       rep(2, times = max(var2, na.rm = T))),       
+           labels = c(names1, names2) , 
+           col    = c(brewer.pal(max(var1, na.rm = T), &amp;quot;Set1&amp;quot;), 
+                      brewer.pal(max(var2, na.rm = T), &amp;quot;Set1&amp;quot;)),
+           stringsAsFactors = FALSE)
+
+  nodes$col &amp;lt;- paste(nodes$col, 95, sep = &amp;quot;&amp;quot;)
+
+  river &amp;lt;- makeRiver(nodes, edges)
+
+  return(plot(river))
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Related Links:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.exegetic.biz/blog/2014/08/plotting-flows-with-riverplot/?utm_source=rss&amp;amp;utm_medium=rss&amp;amp;utm_campaign=plotting-flows-with-riverplot&#34; target=&#34;_blank&#34;&gt;Plotting Flows with riverplot&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://stats.stackexchange.com/questions/87132/what-is-the-proper-name-for-a-river-plot-visualisation&#34; target=&#34;_blank&#34;&gt;Cross Validated Thread&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://cran.r-project.org/web/packages/riverplot/index.html&#34; target=&#34;_blank&#34;&gt;CRAN for library(riverplot)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://logfc.wordpress.com/2014/02/27/riverplot/&#34; target=&#34;_blank&#34;&gt;From the author of library(riverplot)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.ouseful.info/2013/07/23/generating-sankey-diagrams-from-rcharts/&#34; target=&#34;_blank&#34;&gt;Generating Sankey Diagrams from rCharts&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Prediction vs Risk Factors</title>
+      <link>/post/2014-11-11-prediction-vs-risk-factors/</link>
+      <pubDate>Tue, 11 Nov 2014 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2014-11-11-prediction-vs-risk-factors/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.ucc.ie/en/epid/people/estaff/smillar/&#34; target=&#34;_blank&#34;&gt;Seán Millar&lt;/a&gt; and I were recently asked to review a paper. In his review, he pointed out the difference in predicting an outcome vs. identifying risk factors for an outcome. It is an important point I have clumsily tried to convey in other reviews, but he put it so nicely I asked if I could quote him here (I&amp;rsquo;ve made a few small editorial changes, mainly intended to generalize what he wrote).&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The authors state, “This study found that X predicts risk of Y better than Z and W in this population.” Technically, this analysis demonstrates that X is more strongly &lt;em&gt;associated&lt;/em&gt; with Y, but not that it is more &lt;em&gt;predictive&lt;/em&gt;. Although terms such as association/risk and prediction are used interchangeably within epidemiological research, they are quite different, and even strong associations do not necessarily indicate increased predictive ability. There are statistical methods which may be employed to evaluate discrimination, but these have not been used in this paper. I would suggest that the authors may wish to use terms such as association, risk, or relationship, rather than prediction within the
+manuscript. The title should also possibly be amended, i.e. “Is X or
+Z and W a greater risk factor for Y&amp;hellip;.etc.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I think I may be pasting this into the occasional review from now on.&lt;/p&gt;
+
+&lt;p&gt;If you really want to tuck into this topic, see &lt;a href=&#34;http://arxiv.org/pdf/1101.0891.pdf&#34; target=&#34;_blank&#34;&gt;To Explain or to Predict?&lt;/a&gt; by &lt;a href=&#34;http://galitshmueli.com/&#34; target=&#34;_blank&#34;&gt;Galit Shmueli&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/gshmueli&#34; target=&#34;_blank&#34;&gt;@gshmueli&lt;/a&gt;), posted on &lt;a href=&#34;http://arxiv.org/&#34; target=&#34;_blank&#34;&gt;arxiv.org&lt;/a&gt;. It&amp;rsquo;s a clear, comprehensive overview of the topic.  There is also this paper in the AJE, &lt;a href=&#34;http://aje.oxfordjournals.org/content/159/9/882.full&#34; target=&#34;_blank&#34;&gt;Limitations of the Odds Ratio in Gauging the Performance of a Diagnostic, Prognostic, or Screening Marker&lt;/a&gt;, which clearly demonstrates that big odds ratios don&amp;rsquo;t always lead to useful classifications (predictions).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Where “Hunter-Gatherer Energetics and Human Obesity” gets it wrong</title>
+      <link>/post/2012-08-31-hunter-gatherer/</link>
+      <pubDate>Fri, 31 Aug 2012 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2012-08-31-hunter-gatherer/</guid>
+      <description>
+
+&lt;p&gt;There is a recent PLoS ONE article on obesity getting quite a bit of attention. The article, &lt;a href=&#34;http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0040503&amp;amp;annotationId=52325&#34; target=&#34;_blank&#34;&gt;Hunter-Gatherer Energetics and Human Obesity&lt;/a&gt;, reports research looking at total energy expenditure in a sample of adults from a  Tanzanian hunter-gatherer tribe, the Hadza.  Given their “traditional physically active lifestyle” the authors expected that Hadza to have lower body fat and to expend more energy than modern, Western populations, and the aim the research was to see if this was in fact true.&lt;/p&gt;
+
+&lt;p&gt;They key result they focus on was that the mean total energy expenditure, adjusted for body size (hint: more on this soon), was similar to that seen in Western populations. They concluded that this result challenges “current models of obesity suggesting that Western lifestyles lead to decreased energy expenditure.” The broader take home message spreading across social and traditional media is this: obesity is caused by poor diet, not a lack of exercise. Here is the lead author’s summary of the research in the &lt;a href=&#34;http://www.nytimes.com/2012/08/26/opinion/sunday/debunking-the-hunter-gatherer-workout.html?_r=1&#34; target=&#34;_blank&#34;&gt;New York Times&lt;/a&gt;; and here is a growing list of &lt;a href=&#34;http://www.plosone.org/annotation/listThread.action?root=52325&#34; target=&#34;_blank&#34;&gt;news articles&lt;/a&gt; about the research.&lt;/p&gt;
+
+&lt;p&gt;Let me go ahead and say that I think the conclusions drawn from this study are completely wrong, and I am deeply troubled by the message being communicated (whether intentional or otherwise). Below are my reasons why. It is entirely possible that I am missing something here. If so, please feel free to email me.&lt;/p&gt;
+
+&lt;h3 id=&#34;total-energy-expenditure-total-energy-intake&#34;&gt;Total Energy Expenditure = Total Energy Intake&lt;/h3&gt;
+
+&lt;p&gt;The conclusion that obesity is result of poor diet, not less activity, appears to be based on the result that total energy expenditure (TEE) was the same for the Hadza and the Western populations studied. The logic seems to be that that people who are more active will expend more energy, so if we observe that a group of thin people and a group of fat people have the same energy expenditure, then the difference in body size must be due to something other than physical activity. Presumably, if the study had measured total energy intake and found a similar result, we could draw the exact opposite conclusion - that obesity is a result of less activity, not a poor diet.&lt;/p&gt;
+
+&lt;p&gt;As it turns out, they actually did measure energy intake and found no difference between the populations. In this study they measured TEE with a gold standard measure, &lt;a href=&#34;http://en.wikipedia.org/wiki/Doubly_labeled_water&#34; target=&#34;_blank&#34;&gt;doubly labeled water&lt;/a&gt;. Interestingly, doubly labeled water is also used to measure energy intake (or &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/8315169&#34; target=&#34;_blank&#34;&gt;validate other measures of energy intake&lt;/a&gt;). Wait, what? That’s right, doubly labeled water is used as a measure of both energy intake and expenditure. Why? Because humans are in energy balance most of the time. It’s true that obesity is the result of energy imbalance, when energy intake exceeds expenditure and gets stored in adipose cells, but this usually describes very small energy imbalances that accumulate over a long period of time. If you eat an additional 5000 kcals tomorrow, your body doesn’t just immediately store that as fat. Your body finds other ways to compensate, by increasing expenditure and decreasing subsequent intake. In fact, &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/22065844&#34; target=&#34;_blank&#34;&gt;your body is hard wired to maintain energy balance within a fairly small range&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;total-energy-intake-actually-was-much-lower-for-the-hadza&#34;&gt;Total Energy Intake actually was much lower for the Hadza&lt;/h3&gt;
+
+&lt;p&gt;If you still buy that comparing total energy expenditures is a good way to explain why one group if fatter than another, then you’ll need to explain why the TEE of the Hadza was in fact much lower than that of the Western populations. It’s right there in table 1. The mean TEEs were 1877 and 2649 in Hadza females and males respectively, compared to 2347 and 3053 in the Western populations.&lt;/p&gt;
+
+&lt;p&gt;Remember, the paper hypothesized that TEE would be higher in the Hadza due to their very active lifestyle, but instead concluded there was no difference between the Hadza and Western groups studied. So how did the authors make this conclusion, given than the crude differences in TEEs are so large?&lt;/p&gt;
+
+&lt;p&gt;The answer is that they used generalized linear models to adjust TEE for fat-free mass (FFM), age, and “other variables”. You need to go to the &lt;a href=&#34;http://www.plosone.org/article/fetchSingleRepresentation.action?uri=info:doi/10.1371/journal.pone.0040503.s004&#34; target=&#34;_blank&#34;&gt;supplemental table 1&lt;/a&gt; to actually see the models, and even then they only report the statistical significance of estimates, and no actual parameter values. From these models you can see that the variable “lifestyle”, which is there to reflect group differences  (Hadza vs. Western) in TEE, adjusted for the other covariates is “not significant”.&lt;/p&gt;
+
+&lt;p&gt;This is quite simply because they adjusted for body size, which is strongly correlated with energy expenditure. Their models tell us that if we looked at two similarly aged Hadza and Western males with the same amount of FFM, we would expect their TEE to be the same. If you are surprised by this result, you shouldn’t be. Smaller people expend much less energy. This is simple physics. The Hadza, despite their active life styles, expend much less energy than Westerners because they are much smaller people. This difference isn’t just about lean and fat mass either. The Hadza males, for example, are 0.2 meters shorter (that’s almost 8 inches!) than the Western males (something you need to extract for yourself from &lt;a href=&#34;http://www.plosone.org/article/info:doi/10.1371/journal.pone.0040503?imageURI=info:doi/10.1371/journal.pone.0040503.t001&#34; target=&#34;_blank&#34;&gt;table 1&lt;/a&gt;). This size difference certainly exists from birth and is a simple biological adaptation to living in a relatively energy scarce environment.&lt;/p&gt;
+
+&lt;h3 id=&#34;what-debate&#34;&gt;What debate?&lt;/h3&gt;
+
+&lt;p&gt;Obesity is a public health problem broadly attributed to dramatic changes diet and physical activity behaviors that some populations have experienced over the past several decades.  One reason that this paper seems to be getting so much attention is that it plugs into a debate  over  which set of behaviors , dietary or physical activity, are the key explanation for obesity (another reason is that is reports data from some mysterious group of humans who somehow represent the human evolutionary process – nonsense that I expect other anthropologists to angrily descend upon any day now) . My opinion is that this debate is meaningless and that both matter, for both individuals and populations.  Weight loss intervention trials have illustrated the beneficial effects of increasing physical activity levels, and reviews support the idea that interventions which include both dietary and physical activity components are the most effective. Further, the benefits of physical activity extend beyond weight/fat loss – more active people are healthier in a variety of ways. How any responsible scientist could risk sending the message that physical activity isn’t important – and that is exactly the message that many will take away from the headlines – is simply beyond me.&lt;/p&gt;
 </description>
     </item>
     
