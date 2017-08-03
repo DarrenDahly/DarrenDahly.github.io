@@ -283,25 +283,6 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
     </item>
     
     <item>
-      <title>Example Talk</title>
-      <link>/talk/example-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/example-talk/</guid>
-      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>External Project</title>
-      <link>/project/example-external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/project/example-external-project/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>An academic career path</title>
       <link>/post/2015-08-13-career-talk/</link>
       <pubDate>Thu, 13 Aug 2015 12:00:00 +0000</pubDate>
@@ -575,6 +556,35 @@ makeRivPlot(data, &amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;)
 
 &lt;p&gt;&lt;a href=&#34;http://blog.ouseful.info/2013/07/23/generating-sankey-diagrams-from-rcharts/&#34; target=&#34;_blank&#34;&gt;Generating Sankey Diagrams from rCharts&lt;/a&gt;&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Prediction vs Risk Factors</title>
+      <link>/post/2014-11-11-prediction-vs-risk-factors/</link>
+      <pubDate>Tue, 11 Nov 2014 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2014-11-11-prediction-vs-risk-factors/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.ucc.ie/en/epid/people/estaff/smillar/&#34; target=&#34;_blank&#34;&gt;Seán Millar&lt;/a&gt; and I were recently asked to review a paper. In his review, he pointed out the difference in predicting an outcome vs. identifying risk factors for an outcome. It is an important point I have clumsily tried to convey in other reviews, but he put it so nicely I asked if I could quote him here (I&amp;rsquo;ve made a few small editorial changes, mainly intended to generalize what he wrote).&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The authors state, “This study found that X predicts risk of Y better than Z and W in this population.” Technically, this analysis demonstrates that X is more strongly &lt;em&gt;associated&lt;/em&gt; with Y, but not that it is more &lt;em&gt;predictive&lt;/em&gt;. Although terms such as association/risk and prediction are used interchangeably within epidemiological research, they are quite different, and even strong associations do not necessarily indicate increased predictive ability. There are statistical methods which may be employed to evaluate discrimination, but these have not been used in this paper. I would suggest that the authors may wish to use terms such as association, risk, or relationship, rather than prediction within the
+manuscript. The title should also possibly be amended, i.e. “Is X or
+Z and W a greater risk factor for Y&amp;hellip;.etc.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I think I may be pasting this into the occasional review from now on.&lt;/p&gt;
+
+&lt;p&gt;If you really want to tuck into this topic, see &lt;a href=&#34;http://arxiv.org/pdf/1101.0891.pdf&#34; target=&#34;_blank&#34;&gt;To Explain or to Predict?&lt;/a&gt; by &lt;a href=&#34;http://galitshmueli.com/&#34; target=&#34;_blank&#34;&gt;Galit Shmueli&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/gshmueli&#34; target=&#34;_blank&#34;&gt;@gshmueli&lt;/a&gt;), posted on &lt;a href=&#34;http://arxiv.org/&#34; target=&#34;_blank&#34;&gt;arxiv.org&lt;/a&gt;. It&amp;rsquo;s a clear, comprehensive overview of the topic.  There is also this paper in the AJE, &lt;a href=&#34;http://aje.oxfordjournals.org/content/159/9/882.full&#34; target=&#34;_blank&#34;&gt;Limitations of the Odds Ratio in Gauging the Performance of a Diagnostic, Prognostic, or Screening Marker&lt;/a&gt;, which clearly demonstrates that big odds ratios don&amp;rsquo;t always lead to useful classifications (predictions).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Associations of linear growth and relative weight gain during early life with adult health and human capital in countries of low and middle income: findings from five birth cohort studies</title>
+      <link>/publication/cohortsgrowth/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/cohortsgrowth/</guid>
+      <description></description>
     </item>
     
   </channel>
