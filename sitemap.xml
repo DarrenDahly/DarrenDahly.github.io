@@ -167,42 +167,6 @@
     
     <url>
     
-      <loc>/post/getting-started/</loc>
-      <lastmod>2016-04-20T12:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/widgets/</loc>
-      <lastmod>2016-04-20T11:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/managing-content/</loc>
-      <lastmod>2016-04-20T11:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/writing-markdown-latex/</loc>
-      <lastmod>2016-04-20T10:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/post/2016-02-29-stata_workshop/</loc>
       <lastmod>2016-02-29T12:00:00+00:00</lastmod>
     </url>
@@ -212,8 +176,8 @@
     
     <url>
     
-      <loc>/post/2015-07-23-r-rmarkdown/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+      <loc>/post/2015-08-13-career-talk/</loc>
+      <lastmod>2015-08-13T12:00:00+00:00</lastmod>
     </url>
     
   
@@ -221,8 +185,53 @@
     
     <url>
     
-      <loc>/post/migrate-from-jekyll/</loc>
-      <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+      <loc>/post/2015-08-10-first-r-users/</loc>
+      <lastmod>2015-08-10T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/2015-06-15-sharing-data/</loc>
+      <lastmod>2015-06-15T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/2015-01-05-who-obesity-infographic/</loc>
+      <lastmod>2015-01-05T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/2014-12-17-infant-body-composition/</loc>
+      <lastmod>2014-12-17T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/2014-11-25-river-plots/</loc>
+      <lastmod>2014-11-25T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/2014-11-11-prediction-vs-risk-factors/</loc>
+      <lastmod>2014-11-11T12:00:00+00:00</lastmod>
     </url>
     
   
@@ -232,6 +241,87 @@
     
       <loc>/publication/cohortsgrowth/</loc>
       <lastmod>2013-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/2012-08-31-hunter-gatherer/</loc>
+      <lastmod>2012-08-31T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/2012-07-06-statistical-rigor/</loc>
+      <lastmod>2012-07-06T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/2012-08-09-lose_weight/</loc>
+      <lastmod>2012-07-06T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/2012-06-08-catchup/</loc>
+      <lastmod>2012-06-08T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/2012-04-30-cosleeping/</loc>
+      <lastmod>2012-04-30T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/2012-04-04-fellowship-tips/</loc>
+      <lastmod>2012-04-04T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/2012-02-12-broken-publishing/</loc>
+      <lastmod>2012-02-12T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/2012-02-06-defining-obesity/</loc>
+      <lastmod>2012-02-06T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/2011-12-04-home-birth/</loc>
+      <lastmod>2011-12-04T12:00:00+00:00</lastmod>
     </url>
     
   
@@ -268,40 +358,8 @@
     
     <url>
     
-      <loc>/post/2015-08-13-career-talk/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2011-12-04-home-birth/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/categories/</loc>
       <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2015-08-10-first-r-users/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2015-09-10-ggplot2/</loc>
     </url>
     
   
@@ -319,95 +377,9 @@
     
     <url>
     
-      <loc>/post/2012-02-06-defining-obesity/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/tags/demo/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2012-04-30-cosleeping/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2014-11-06-heatmaps-in-r/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2012-07-06-statistical-rigor/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2012-02-12-broken-publishing/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2012-08-09-lose_weight/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/hugo/</loc>
-      <lastmod>2016-04-20T12:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/jekyll/</loc>
-      <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/plot/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2014-11-11-prediction-vs-risk-factors/</loc>
     </url>
     
   
@@ -435,119 +407,9 @@
     
     <url>
     
-      <loc>/categories/r/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/r-markdown/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/regression/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2015-01-13-r-tables/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2014-11-25-river-plots/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2014-11-21-scatterplot-with-densities/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2015-08-16-step-plots/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2012-06-08-catchup/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2012-04-04-fellowship-tips/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2014-12-17-infant-body-composition/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2015-01-05-who-obesity-infographic/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2012-08-31-hunter-gatherer/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/2015-06-15-sharing-data/</loc>
     </url>
     
   
