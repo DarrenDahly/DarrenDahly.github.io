@@ -209,39 +209,23 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>/post/loglog/</guid>
-      <description>&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
-  
-  library(ggfortify)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Loading required package: ggplot2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(ggplot2)
-  library(readr)
-  library(dplyr)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## 
-## Attaching package: &amp;#39;dplyr&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## The following objects are masked from &amp;#39;package:stats&amp;#39;:
-## 
-##     filter, lag&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## The following objects are masked from &amp;#39;package:base&amp;#39;:
-## 
-##     intersect, setdiff, setequal, union&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(tidyr)
-  library(viridis)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Loading required package: viridisLite&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(ggthemes)
-  library(ggalt)
-  library(car)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## 
-## Attaching package: &amp;#39;car&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## The following object is masked from &amp;#39;package:dplyr&amp;#39;:
-## 
-##     recode&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;When using linear regression, when should you log-transform your data?&lt;/p&gt;
+      <description>&lt;p&gt;When using linear regression, when should you log-transform your data?&lt;/p&gt;
 &lt;p&gt;Many people seem to think that any non-Gaussian, continuous variables should be transformed so that the data “look more normal.” Linear regression does in fact assume the errors are normally distributed, but it is fairly robust to violations of this assumption, and there are no such assumptions regarding the predictor variables. What is often ignored or misunderstood is the impact that variable transformations have on the linearity assumption of regression models, and on coefficient interpretation.&lt;/p&gt;
 &lt;p&gt;The are a variety of options for transforming data, and simply taking the logarithim may be the most popular, given that your data doesn’t include values equal to zero. We will thus focus on linear regression when the outcome and one predictor are both log transformed.&lt;/p&gt;
 &lt;div id=&#34;data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Data&lt;/h2&gt;
 &lt;p&gt;The data for this exercise are from a small sample of older, in-hospital patients with information on average daily step count (measured over 5 days with a pedometer) and their length of stay in the hospital. The data can be down loaded from github.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  data &amp;lt;- read_csv(&amp;quot;https://dantalus.github.io/public/steps.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(ggfortify)
+  library(ggplot2)
+  library(readr)
+  library(dplyr)
+  library(tidyr)
+  library(viridis)
+  library(ggthemes)
+  library(ggalt)
+  library(car)
+
+  data &amp;lt;- read_csv(&amp;quot;https://dantalus.github.io/public/steps.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;variables&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Variables&lt;/h2&gt;

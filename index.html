@@ -375,7 +375,8 @@ If you want to play along, you can download the data here:
 
   <div class="article-style" itemprop="articleBody">
     
-    knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)library(ggfortify)## Loading required package: ggplot2 library(ggplot2)library(readr)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, union library(tidyr)library(viridis)## Loading required package: viridisLite library(ggthemes)library(ggalt)library(car)## ## Attaching package: &#39;car&#39;## The following object is masked from &#39;package:dplyr&#39;:## ## recodeWhen using linear regression, when should you log-transform your data?
+    When using linear regression, when should you log-transform your data?
+Many people seem to think that any non-Gaussian, continuous variables should be transformed so that the data “look more normal.” Linear regression does in fact assume the errors are normally distributed, but it is fairly robust to violations of this assumption, and there are no such assumptions regarding the predictor variables. What is often ignored or misunderstood is the impact that variable transformations have on the linearity assumption of regression models, and on coefficient interpretation.
     
   </div>
   <p class="read-more">

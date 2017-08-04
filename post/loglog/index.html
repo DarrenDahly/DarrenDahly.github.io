@@ -207,39 +207,23 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <pre class="r"><code>  knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
-  
-  library(ggfortify)</code></pre>
-<pre><code>## Loading required package: ggplot2</code></pre>
-<pre class="r"><code>  library(ggplot2)
-  library(readr)
-  library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>  library(tidyr)
-  library(viridis)</code></pre>
-<pre><code>## Loading required package: viridisLite</code></pre>
-<pre class="r"><code>  library(ggthemes)
-  library(ggalt)
-  library(car)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;car&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
-## 
-##     recode</code></pre>
-<p>When using linear regression, when should you log-transform your data?</p>
+      <p>When using linear regression, when should you log-transform your data?</p>
 <p>Many people seem to think that any non-Gaussian, continuous variables should be transformed so that the data “look more normal.” Linear regression does in fact assume the errors are normally distributed, but it is fairly robust to violations of this assumption, and there are no such assumptions regarding the predictor variables. What is often ignored or misunderstood is the impact that variable transformations have on the linearity assumption of regression models, and on coefficient interpretation.</p>
 <p>The are a variety of options for transforming data, and simply taking the logarithim may be the most popular, given that your data doesn’t include values equal to zero. We will thus focus on linear regression when the outcome and one predictor are both log transformed.</p>
 <div id="data" class="section level2">
 <h2>Data</h2>
 <p>The data for this exercise are from a small sample of older, in-hospital patients with information on average daily step count (measured over 5 days with a pedometer) and their length of stay in the hospital. The data can be down loaded from github.</p>
-<pre class="r"><code>  data &lt;- read_csv(&quot;https://dantalus.github.io/public/steps.csv&quot;)</code></pre>
+<pre class="r"><code>  library(ggfortify)
+  library(ggplot2)
+  library(readr)
+  library(dplyr)
+  library(tidyr)
+  library(viridis)
+  library(ggthemes)
+  library(ggalt)
+  library(car)
+
+  data &lt;- read_csv(&quot;https://dantalus.github.io/public/steps.csv&quot;)</code></pre>
 </div>
 <div id="variables" class="section level2">
 <h2>Variables</h2>

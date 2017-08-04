@@ -9,19 +9,9 @@ output:
     dev: "svg"
 ---
 
-```{r}
+```{r, include = FALSE}
 
   knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
-  
-  library(ggfortify)
-  library(ggplot2)
-  library(readr)
-  library(dplyr)
-  library(tidyr)
-  library(viridis)
-  library(ggthemes)
-  library(ggalt)
-  library(car)
 
 ```
 
@@ -37,6 +27,16 @@ The are a variety of options for transforming data, and simply taking the logari
 The data for this exercise are from a small sample of older, in-hospital patients with information on average daily step count (measured over 5 days with a pedometer) and their length of stay in the hospital. The data can be down loaded from github.
 
 ```{r}
+
+  library(ggfortify)
+  library(ggplot2)
+  library(readr)
+  library(dplyr)
+  library(tidyr)
+  library(viridis)
+  library(ggthemes)
+  library(ggalt)
+  library(car)
 
   data <- read_csv("https://dantalus.github.io/public/steps.csv")
   
