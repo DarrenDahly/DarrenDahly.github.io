@@ -197,8 +197,41 @@ If you want to play along, you can download the data here:
 
     <div class="article-style"><p>
       
-      When using linear regression, when should you log-transform your data?
-Many people seem to think that any non-Gaussian, continuous variables should be transformed so that the data “look more normal.” Linear regression does in fact assume the errors are normally distributed, but it is fairly robust to violations of this assumption, and there are no such assumptions regarding the predictor variables. What is often ignored or misunderstood is the impact that variable transformations have on the linearity assumption of regression models, and on coefficient interpretation.
+      knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(ggfortify)</p>
+
+<h2 id="loading-required-package-ggplot2">Loading required package: ggplot2</h2>
+
+<p>library(ggplot2)
+library(readr)
+library(dplyr)</p>
+
+<h2 id="attaching-package-39-dplyr-39">## Attaching package: &#39;dplyr&#39;</h2>
+
+<h2 id="the-following-objects-are-masked-from-39-package-stats-39">The following objects are masked from &#39;package:stats&#39;:</h2>
+
+<h2 id="filter-lag">## filter, lag</h2>
+
+<h2 id="the-following-objects-are-masked-from-39-package-base-39">The following objects are masked from &#39;package:base&#39;:</h2>
+
+<h2 id="intersect-setdiff-setequal-union">## intersect, setdiff, setequal, union</h2>
+
+<p>library(tidyr)
+library(viridis)</p>
+
+<h2 id="loading-required-package-viridislite">Loading required package: viridisLite</h2>
+
+<p>library(ggthemes)
+library(ggalt)
+library(car)</p>
+
+<h2 id="attaching-package-39-car-39">## Attaching package: &#39;car&#39;</h2>
+
+<h2 id="the-following-object-is-masked-from-39-package-dplyr-39">The following object is masked from &#39;package:dplyr&#39;:</h2>
+
+<h2 id="recode">## recode</h2>
+
+<p>When using linear regression, when should you log-transform your data?
       
     </p></div>
   </div>

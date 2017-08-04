@@ -9,12 +9,9 @@ output:
     dev: "svg"
 ---
 
-```{r setup, include=FALSE}
+```{r}
 
   knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
-
-# install.packages(c("ggplot2", "readr", "dplyr", "tidyr", "viridis", "ggthemes",
-# "ggalt", "car"))
   
   library(ggfortify)
   library(ggplot2)
@@ -66,6 +63,7 @@ The distributions for average daily step count (Steps) and hospital length of st
 
 
 ## Linearity
+
 The real challenge however is that the relationship between Steps and LOS is clearly not linear. This is illustrated in the plot below, where the solid line is from the linear regression of LOS on Steps, and the dashed line is from a loess smoother.
 
 ```{r}
@@ -80,6 +78,7 @@ The real challenge however is that the relationship between Steps and LOS is cle
 ```
 
 ## Linear regression
+
 We can estimate the linear regression shown in the previous plot as follows:
 
 ```{r}
@@ -91,7 +90,7 @@ We can estimate the linear regression shown in the previous plot as follows:
 ```
 
 
-## Base R diagnostic plots
+## Diagnostic plots
 ```{r}
 
   autoplot(lr, which = 1:6, ncol = 3, label.size = 3)
@@ -99,6 +98,7 @@ We can estimate the linear regression shown in the previous plot as follows:
 ```
 
 ## Log transformed variables
+
 As we saw above, the distributions of Steps and LOS "look more normal" after transformation. More importantly however, the relationship between the log transformed variables is also linear.
 
 ```{r}
@@ -115,6 +115,7 @@ As we saw above, the distributions of Steps and LOS "look more normal" after tra
 Note that the extreme outlier in the first scatter plot is not an outlier in log-log space.
 
 ## Log-Log linear regression
+
 A regression model where the outcome and at least one predictor are log transformed is called a log-log linear model. Here are the model and results:
 ```{r}
   log.log.lr <- lm(log.los ~ log.avg.steps, data)
@@ -123,7 +124,7 @@ A regression model where the outcome and at least one predictor are log transfor
 ```
   
 
-## Base R diagnostic plots
+## Diagnostic plots
 ```{r}
 
   autoplot(log.log.lr, which = 1:6, ncol = 3, label.size = 3)
@@ -132,6 +133,7 @@ A regression model where the outcome and at least one predictor are log transfor
 
 
 ## Ploting the results in the original scales
+
 We will again scatter plot the Steps and LOS variables with fit lines, but this time we will add the line from the log-log linear regression model we just estimated. Importantly, the regression line in log-log space is straight (see above), but in the space defined by the original scales, it's curved, as shown by the purple line below.
 
 ```{r}
@@ -150,10 +152,11 @@ We will again scatter plot the Steps and LOS variables with fit lines, but this 
 ```
 
 ## Model interpretation
+
 So how do we interpret the regression coefficients from a log-log model? The best explanation I have found for interpreting the regression coefficients can be found here: http://www.kenbenoit.net/courses/ME104/logmodels2.pdf
 
 In a nutshell, a 1% increase in the predictor is associated with a Beta% change in the outcome. This is an approximation however. To be exact, we can say that an x% increase in the predictor is associated with a change in the outcome equivalent to multiplying it by 2.71^((log((100+x)/100)) * Beta)). For the model above, the approximation is a 1% increase in Steps is associated with an approximately 0.18% decrease in LOS. Using the exact method, we can calculate the a 50% increase in Steps is associated with a 2.71^((log((100 + 50)/100)) * -0.18)) = 0.93 * LOS = a 7% decrease in LOS.
 
 The important thing to understand is that by working with logarithms, we have moved from talking about absolute differences (e.g. 600 steps = 1 less day in the hospital) to relative differences (given a 1% increase in Steps, we would expect an 0.18% decrease in hospital length of stay). Why is this? Remember from math class that adding log(x) + log(y) = log(x * y)? When we start adding things in log space, we are multiplying them in absolute space. This is the same reason that a one-unit increase in log(odds) space results in an odds-ratio after exponentiation in logistic regression models. This shift from thinking in absolute to thinking in relative terms is important for understanding a number of analytical techniques (e.g. what is the difference between an additive and a multiplicative interaction?). Here is a entertaining introduction to the topic: https://www.youtube.com/watch?v=Pxb5lSPLy9c.
 
-One last, critical point we must consider is whether the proportional interpretation is reasonable for each variable. In the case of Steps, it makes sense to me that an increase of 50 steps per day would mean something different for a completely sedentary patient vs. a very active patient. How to think about LOS is less obvious to me. Do I expect a change in Steps to be associated with same amount of change in LOS regardless of how long the stay would have been otherwise? Oh dear, I'll have to ask the physiotherapist this one.
+One last, critical point we must consider is whether the proportional interpretation is reasonable for each variable. In the case of Steps, it makes sense to me that an increase of 50 steps per day would mean something different for a completely sedentary patient vs. a very active patient. How to think about LOS is less obvious to me. Do I expect a change in Steps to be associated with same amount of change in LOS regardless of how long the stay would have been otherwise? I'll have to ask the physiotherapist about this one.

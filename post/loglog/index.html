@@ -207,7 +207,33 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <p>When using linear regression, when should you log-transform your data?</p>
+      <pre class="r"><code>  knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+  
+  library(ggfortify)</code></pre>
+<pre><code>## Loading required package: ggplot2</code></pre>
+<pre class="r"><code>  library(ggplot2)
+  library(readr)
+  library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>  library(tidyr)
+  library(viridis)</code></pre>
+<pre><code>## Loading required package: viridisLite</code></pre>
+<pre class="r"><code>  library(ggthemes)
+  library(ggalt)
+  library(car)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;car&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     recode</code></pre>
+<p>When using linear regression, when should you log-transform your data?</p>
 <p>Many people seem to think that any non-Gaussian, continuous variables should be transformed so that the data “look more normal.” Linear regression does in fact assume the errors are normally distributed, but it is fairly robust to violations of this assumption, and there are no such assumptions regarding the predictor variables. What is often ignored or misunderstood is the impact that variable transformations have on the linearity assumption of regression models, and on coefficient interpretation.</p>
 <p>The are a variety of options for transforming data, and simply taking the logarithim may be the most popular, given that your data doesn’t include values equal to zero. We will thus focus on linear regression when the outcome and one predictor are both log transformed.</p>
 <div id="data" class="section level2">
@@ -229,7 +255,7 @@
     scale_fill_viridis(guide = FALSE, discrete = TRUE) +
     facet_wrap(~variable, scales = &quot;free&quot;) +
     theme_base()</code></pre>
-<p><img src="/post/loglog_files/figure-html/unnamed-chunk-2-1.svg" width="576" /></p>
+<p><img src="/post/loglog_files/figure-html/unnamed-chunk-3-1.svg" width="576" /></p>
 </div>
 <div id="linearity" class="section level2">
 <h2>Linearity</h2>
@@ -240,7 +266,7 @@
     geom_smooth(span   = 1,    color = viridis(1, begin = 0.6), se = FALSE, linetype =
                 &quot;dashed&quot;) +
     theme_base()</code></pre>
-<p><img src="/post/loglog_files/figure-html/unnamed-chunk-3-1.svg" width="576" /></p>
+<p><img src="/post/loglog_files/figure-html/unnamed-chunk-4-1.svg" width="576" /></p>
 </div>
 <div id="linear-regression" class="section level2">
 <h2>Linear regression</h2>
@@ -268,10 +294,10 @@
 ## Multiple R-squared:  0.05168,    Adjusted R-squared:  0.04518 
 ## F-statistic: 7.956 on 1 and 146 DF,  p-value: 0.00546</code></pre>
 </div>
-<div id="base-r-diagnostic-plots" class="section level2">
-<h2>Base R diagnostic plots</h2>
+<div id="diagnostic-plots" class="section level2">
+<h2>Diagnostic plots</h2>
 <pre class="r"><code>  autoplot(lr, which = 1:6, ncol = 3, label.size = 3)</code></pre>
-<p><img src="/post/loglog_files/figure-html/unnamed-chunk-5-1.svg" width="576" /></p>
+<p><img src="/post/loglog_files/figure-html/unnamed-chunk-6-1.svg" width="576" /></p>
 </div>
 <div id="log-transformed-variables" class="section level2">
 <h2>Log transformed variables</h2>
@@ -282,7 +308,7 @@
     geom_smooth(span   = 1,    color = viridis(1, begin = 0.6), se = FALSE, 
                 linetype = &quot;dashed&quot;) +
     theme_base()</code></pre>
-<p><img src="/post/loglog_files/figure-html/unnamed-chunk-6-1.svg" width="576" /></p>
+<p><img src="/post/loglog_files/figure-html/unnamed-chunk-7-1.svg" width="576" /></p>
 <p>Note that the extreme outlier in the first scatter plot is not an outlier in log-log space.</p>
 </div>
 <div id="log-log-linear-regression" class="section level2">
@@ -311,10 +337,10 @@
 ## Multiple R-squared:  0.09109,    Adjusted R-squared:  0.08486 
 ## F-statistic: 14.63 on 1 and 146 DF,  p-value: 0.0001931</code></pre>
 </div>
-<div id="base-r-diagnostic-plots-1" class="section level2">
-<h2>Base R diagnostic plots</h2>
+<div id="diagnostic-plots-1" class="section level2">
+<h2>Diagnostic plots</h2>
 <pre class="r"><code>  autoplot(log.log.lr, which = 1:6, ncol = 3, label.size = 3)</code></pre>
-<p><img src="/post/loglog_files/figure-html/unnamed-chunk-8-1.svg" width="576" /></p>
+<p><img src="/post/loglog_files/figure-html/unnamed-chunk-9-1.svg" width="576" /></p>
 </div>
 <div id="ploting-the-results-in-the-original-scales" class="section level2">
 <h2>Ploting the results in the original scales</h2>
@@ -330,14 +356,14 @@
     geom_smooth(span = 1, color = viridis(1, begin = 0.6), size = 0.7, linetype = &quot;dashed&quot;,
                 se = FALSE) +
     theme_base()</code></pre>
-<p><img src="/post/loglog_files/figure-html/unnamed-chunk-9-1.svg" width="576" /></p>
+<p><img src="/post/loglog_files/figure-html/unnamed-chunk-10-1.svg" width="576" /></p>
 </div>
 <div id="model-interpretation" class="section level2">
 <h2>Model interpretation</h2>
 <p>So how do we interpret the regression coefficients from a log-log model? The best explanation I have found for interpreting the regression coefficients can be found here: <a href="http://www.kenbenoit.net/courses/ME104/logmodels2.pdf" class="uri">http://www.kenbenoit.net/courses/ME104/logmodels2.pdf</a></p>
 <p>In a nutshell, a 1% increase in the predictor is associated with a Beta% change in the outcome. This is an approximation however. To be exact, we can say that an x% increase in the predictor is associated with a change in the outcome equivalent to multiplying it by 2.71^((log((100+x)/100)) * Beta)). For the model above, the approximation is a 1% increase in Steps is associated with an approximately 0.18% decrease in LOS. Using the exact method, we can calculate the a 50% increase in Steps is associated with a 2.71^((log((100 + 50)/100)) * -0.18)) = 0.93 * LOS = a 7% decrease in LOS.</p>
 <p>The important thing to understand is that by working with logarithms, we have moved from talking about absolute differences (e.g. 600 steps = 1 less day in the hospital) to relative differences (given a 1% increase in Steps, we would expect an 0.18% decrease in hospital length of stay). Why is this? Remember from math class that adding log(x) + log(y) = log(x * y)? When we start adding things in log space, we are multiplying them in absolute space. This is the same reason that a one-unit increase in log(odds) space results in an odds-ratio after exponentiation in logistic regression models. This shift from thinking in absolute to thinking in relative terms is important for understanding a number of analytical techniques (e.g. what is the difference between an additive and a multiplicative interaction?). Here is a entertaining introduction to the topic: <a href="https://www.youtube.com/watch?v=Pxb5lSPLy9c" class="uri">https://www.youtube.com/watch?v=Pxb5lSPLy9c</a>.</p>
-<p>One last, critical point we must consider is whether the proportional interpretation is reasonable for each variable. In the case of Steps, it makes sense to me that an increase of 50 steps per day would mean something different for a completely sedentary patient vs. a very active patient. How to think about LOS is less obvious to me. Do I expect a change in Steps to be associated with same amount of change in LOS regardless of how long the stay would have been otherwise? Oh dear, I’ll have to ask the physiotherapist this one.</p>
+<p>One last, critical point we must consider is whether the proportional interpretation is reasonable for each variable. In the case of Steps, it makes sense to me that an increase of 50 steps per day would mean something different for a completely sedentary patient vs. a very active patient. How to think about LOS is less obvious to me. Do I expect a change in Steps to be associated with same amount of change in LOS regardless of how long the stay would have been otherwise? I’ll have to ask the physiotherapist about this one.</p>
 </div>
 
     </div>
