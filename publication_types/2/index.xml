@@ -25,14 +25,7 @@
       <pubDate>Wed, 01 Apr 2009 00:00:00 +0000</pubDate>
       
       <guid>/publication/semsbp/</guid>
-      <description>
-
-&lt;h1 id=&#34;optional-featured-image-relative-to-static-img-folder&#34;&gt;Optional featured image (relative to &lt;code&gt;static/img/&lt;/code&gt; folder).&lt;/h1&gt;
-
-&lt;p&gt;[header]
-image = &amp;ldquo;&lt;a href=&#34;https://darrendahly.github.io/img/sem.jpg&amp;quot;&#34; target=&#34;_blank&#34;&gt;https://darrendahly.github.io/img/sem.jpg&amp;quot;&lt;/a&gt;
-caption = &amp;ldquo;My caption 😄&amp;rdquo;&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
   </channel>
