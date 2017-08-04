@@ -274,7 +274,7 @@ Distribution of the number of applicants per rater</td></tr>
       ylab(&quot;Count&quot;) +
       xlab(&quot;Score&quot;) +
       ggtitle(&quot;Marginal score distributions&quot;)</code></pre>
-<p><img src="/post/rater_effects_files/figure-html/unnamed-chunk-4-1.svg" width="576" /></p>
+<p><img src="/post/rater_effects_files/figure-html/unnamed-chunk-4-1.svg" width="768" /></p>
 <p>Given the data we have, there are three ways to explain why any particular score falls where it does along the marginal distribution: applicant effects, rater effects, and random error (which just means any other sources of variation not accounted for by the other two observed sources of variation).</p>
 <p>To get a better look at what I am talking about, let’s calculate the mean score received for each applicant, and the mean score given by each rater.</p>
 <pre class="r"><code>  data &lt;- group_by(data, app) %&gt;%
@@ -317,7 +317,7 @@ Distribution of the number of applicants per rater</td></tr>
     xlab(&quot;Rater&quot;) +
     ggtitle(&quot;Scores, by applicant, across raters&quot;,
     subtitle = &quot;Applicants and Raters sorted by their respective mean scores&quot;)</code></pre>
-<p><img src="/post/rater_effects_files/figure-html/unnamed-chunk-6-1.svg" width="576" /></p>
+<p><img src="/post/rater_effects_files/figure-html/unnamed-chunk-6-1.svg" width="768" /></p>
 <p>Next let’s highlight the raters (other wise the plots are identical).</p>
 <pre class="r"><code>  ggplot(data, aes(y = reorder(factor(app), mean_app),
                    x = reorder(factor(rater), mean_rater),
@@ -331,9 +331,9 @@ Distribution of the number of applicants per rater</td></tr>
     xlab(&quot;Rater&quot;) +
     ggtitle(&quot;Scores given by raters, across applicants&quot;,
     subtitle = &quot;Applicants and Raters sorted by their respective mean scores&quot;)</code></pre>
-<p><img src="/post/rater_effects_files/figure-html/unnamed-chunk-7-1.svg" width="576" /></p>
+<p><img src="/post/rater_effects_files/figure-html/unnamed-chunk-7-1.svg" width="768" /></p>
 <p>Do some applicants have a low score because they had tougher raters? Do some raters appear tough because they dealt with poorer applicants?</p>
-<p>To help sort this out, we will run two different xixed effects models. Both will include applicant as a random effect. Then one model will include rater as a fixed effect while the other model includes rater as a random effect.</p>
+<p>To help sort this out, we will run two different mixed effects models. Both will include applicant as a random effect. Then one model will include rater as a fixed effect while the other model includes rater as a random effect.</p>
 <pre class="r"><code>  library(lme4)
 
   fixed_rater &lt;- lmer(score ~ factor(rater) + (1 | app), data = data)
@@ -361,7 +361,7 @@ Distribution of the number of applicants per rater</td></tr>
           full_join(data, by = &quot;app&quot;) 
   
   data[] &lt;- lapply(data, round, 1)</code></pre>
-<p>Now we’ll plot the 3 rankings. We can see that after correction, 2 applicants move into the top 7, displacing 2 other applicants who would have made it in without the correction.</p>
+<p>Now we’ll plot the 3 types of rankings. We can see that after correction, 2 applicants move into the top 7, displacing 2 other applicants who would have made it in without the correction.</p>
 <pre class="r"><code>  library(ggrepel)
 
   select(data, app, raw_rank,
@@ -389,9 +389,8 @@ Distribution of the number of applicants per rater</td></tr>
     xlab(&quot;&quot;) +
     ylab(&quot;Rank&quot;) +
     ggtitle(&quot;Applicant rankings (top 20)&quot;,
-            subtitle = &quot;Raw ranks, plus rater-corrected ranks from fixed and random effects
-            models&quot;)</code></pre>
-<p><img src="/post/rater_effects_files/figure-html/unnamed-chunk-10-1.svg" width="576" /></p>
+            subtitle = &quot;Raw ranks, plus rater-corrected ranks&quot;)</code></pre>
+<p><img src="/post/rater_effects_files/figure-html/unnamed-chunk-10-1.svg" width="768" /></p>
 
     </div>
   </div>
@@ -402,8 +401,8 @@ Distribution of the number of applicants per rater</td></tr>
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="/post/rater_effects.utf8/"><span
-      aria-hidden="true">&larr;</span> Rater effects</a></li>
+    <li class="previous"><a href="/post/loglog/"><span
+      aria-hidden="true">&larr;</span> Log Log Regression</a></li>
     
 
     

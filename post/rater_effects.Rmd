@@ -5,7 +5,7 @@ date: "2017-08-04"
 output:
   blogdown::html_page:
     toc: FALSE
-    fig_width: 6
+    fig_width: 8
     dev: "svg"
 ---
 
@@ -147,7 +147,7 @@ Next let's highlight the raters (other wise the plots are identical).
 
 Do some applicants have a low score because they had tougher raters? Do some raters appear tough because they dealt with poorer applicants? 
 
-To help sort this out, we will run two different xixed effects models. Both will include applicant as a random effect. Then one model will include rater as a fixed effect while the other model includes rater as a random effect. 
+To help sort this out, we will run two different mixed effects models. Both will include applicant as a random effect. Then one model will include rater as a fixed effect while the other model includes rater as a random effect. 
 ```{r}
 
   library(lme4)
@@ -185,7 +185,7 @@ Then we'll extract new rankings for the applicants, but this time adjusted for t
   
 ```
 
-Now we'll plot the 3 rankings. We can see that after correction, 2 applicants move into the top 7, displacing 2 other applicants who would have made it in without the correction. 
+Now we'll plot the 3 types of rankings. We can see that after correction, 2 applicants move into the top 7, displacing 2 other applicants who would have made it in without the correction. 
 
 ```{r}
 
@@ -216,8 +216,7 @@ Now we'll plot the 3 rankings. We can see that after correction, 2 applicants mo
     xlab("") +
     ylab("Rank") +
     ggtitle("Applicant rankings (top 20)",
-            subtitle = "Raw ranks, plus rater-corrected ranks from fixed and random effects
-            models")
+            subtitle = "Raw ranks, plus rater-corrected ranks")
 
 ```
 
