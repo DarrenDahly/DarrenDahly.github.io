@@ -1,6 +1,6 @@
 ---
 title: "Log Log Regression"
-author: "Darren Dahly"
+author: "Darren L Dahly"
 date: "2017-08-03"
 output:
   blogdown::html_page:

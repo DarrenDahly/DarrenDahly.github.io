@@ -11,6 +11,412 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Rater effects</title>
+      <link>/post/rater_effects/</link>
+      <pubDate>Fri, 04 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/rater_effects/</guid>
+      <description>&lt;p&gt;I was recently asked to help analyze some assessment data. There were 50 people applying for seven positions. Each person’s application materials were scored (0-100) by three people, randomly chosen from a larger group of raters. I was asked to help account for the fact that some raters might have a tendency to give higher or lower than average scores.&lt;/p&gt;
+&lt;p&gt;If you want to play along, you can download the data here:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(tidyverse)
+
+  data &amp;lt;- read_csv(&amp;quot;https://dantalus.github.io/public/scores.csv&amp;quot;)
+  
+  names(data) &amp;lt;- c(&amp;quot;score&amp;quot;, &amp;quot;app&amp;quot;, &amp;quot;rater&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  head(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   score   app rater
+##   &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;
+## 1    62     1    19
+## 2    84     1    13
+## 3    78     1    10
+## 4    93     2     4
+## 5    81     2    14
+## 6    78     2    15&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A naive approach to ranking the applicants would be to calculate a summary of their scores, such as the mean. Since the raters were assigned randomly, then there can’t be any bias due to rater effects. However, unbiased only means that if we were to replicate this process many times, the average of the rater effects from each of K replications would approach zero as K increased to infinity. This is different from our actual scenario, where applicants are assessed once. In this case, it’s possible that appliants who scored well did so because, at least partly, they “got lucky” and were assigned raters that tended to give higher than average marks.&lt;/p&gt;
+&lt;p&gt;Here is the distribution of the number of applicants each rater had to deal with.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(htmlTable)
+
+  group_by(data, rater) %&amp;gt;% summarise(n = n()) %&amp;gt;%
+     summarise(mean =    mean(n),
+                min =    min(n),
+                max =    max(n),
+                lq =     quantile(n, 0.25),
+                median = quantile(n, 0.50),
+                uq =     quantile(n, 0.70)) %&amp;gt;% 
+     htmlTable(header = c(&amp;quot;Mean&amp;quot;, &amp;quot;Min&amp;quot;, &amp;quot;Max&amp;quot;, &amp;quot;25th centile&amp;quot;, &amp;quot;Median&amp;quot;, 
+                          &amp;quot;75th centile&amp;quot;), rnames = FALSE, 
+               align = &amp;quot;c&amp;quot;,
+               css.cell = &amp;quot;padding-left: 2em; padding-right: 2em;&amp;quot;, 
+               caption = &amp;quot;Distribution of the number of applicants per rater&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;table class=&#39;gmisc_table&#39; style=&#39;border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;&#39; &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;td colspan=&#39;6&#39; style=&#39;text-align: left;&#39;&gt;
+Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th style=&#39;border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;Mean&lt;/th&gt;
+&lt;th style=&#39;border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;Min&lt;/th&gt;
+&lt;th style=&#39;border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;Max&lt;/th&gt;
+&lt;th style=&#39;border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;25th centile&lt;/th&gt;
+&lt;th style=&#39;border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;Median&lt;/th&gt;
+&lt;th style=&#39;border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;75th centile&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#39;padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;&#39;&gt;6.25&lt;/td&gt;
+&lt;td style=&#39;padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;&#39;&gt;4&lt;/td&gt;
+&lt;td style=&#39;padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;&#39;&gt;11&lt;/td&gt;
+&lt;td style=&#39;padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;&#39;&gt;5&lt;/td&gt;
+&lt;td style=&#39;padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;&#39;&gt;6&lt;/td&gt;
+&lt;td style=&#39;padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;&#39;&gt;7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;To address this problem, we have to first think about the overall distribution of the 150 scores (3 for each of 50 applicants).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(ggthemes)
+  library(viridis)
+
+  ggplot(data, aes(x = score, fill = score)) +
+      geom_bar(fill = viridis(1)) +
+      theme_base() +
+      ylab(&amp;quot;Count&amp;quot;) +
+      xlab(&amp;quot;Score&amp;quot;) +
+      ggtitle(&amp;quot;Marginal score distributions&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-4-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Given the data we have, there are three ways to explain why any particular score falls where it does along the marginal distribution: applicant effects, rater effects, and random error (which just means any other sources of variation not accounted for by the other two observed sources of variation).&lt;/p&gt;
+&lt;p&gt;To get a better look at what I am talking about, let’s calculate the mean score received for each applicant, and the mean score given by each rater.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  data &amp;lt;- group_by(data, app) %&amp;gt;%
+          summarise(mean_app = mean(score)) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;)
+
+  data &amp;lt;- group_by(data, rater) %&amp;gt;%
+          summarise(mean_rater = mean(score)) %&amp;gt;%
+          full_join(data, by = &amp;quot;rater&amp;quot;)
+
+  data &amp;lt;- select(data, app, mean_app) %&amp;gt;%
+          distinct() %&amp;gt;%
+          mutate(raw_rank = min_rank(desc(mean_app))) %&amp;gt;%
+          select(-mean_app) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;) %&amp;gt;%
+          arrange(raw_rank)
+  
+  data[] &amp;lt;- lapply(data, round, 0)
+  
+  head(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 6
+##     app raw_rank rater mean_rater mean_app score
+##   &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1    20        1     2         79      101    94
+## 2    20        1    13         80      101   100
+## 3    20        1    20        100      101   109
+## 4    17        2     6         74       98    97
+## 5    17        2    16         82       98    97
+## 6    17        2    24         86       98   101&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s plot the data twice. First, let’s highlight the applicants.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(data, aes(y = reorder(factor(app), mean_app),
+                   x = reorder(factor(rater), mean_rater),
+                   color = score)) +
+    geom_point(size = 3) +
+    geom_line(aes(group = app), color = &amp;quot;grey50&amp;quot;) +
+    scale_color_viridis() +
+    theme_base() +
+    theme(axis.text.y = element_text(size = 8)) +
+    ylab(&amp;quot;Applicant&amp;quot;) +
+    xlab(&amp;quot;Rater&amp;quot;) +
+    ggtitle(&amp;quot;Scores, by applicant, across raters&amp;quot;,
+    subtitle = &amp;quot;Applicants and Raters sorted by their respective mean scores&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-6-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Next let’s highlight the raters (other wise the plots are identical).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(data, aes(y = reorder(factor(app), mean_app),
+                   x = reorder(factor(rater), mean_rater),
+                   color = score)) +
+    geom_point(size = 3) +
+    geom_line(aes(group = rater), color = &amp;quot;grey50&amp;quot;) +
+    scale_color_viridis() +
+    theme_base() +
+    theme(axis.text.y = element_text(size = 8)) +
+    ylab(&amp;quot;Applicant&amp;quot;) +
+    xlab(&amp;quot;Rater&amp;quot;) +
+    ggtitle(&amp;quot;Scores given by raters, across applicants&amp;quot;,
+    subtitle = &amp;quot;Applicants and Raters sorted by their respective mean scores&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-7-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Do some applicants have a low score because they had tougher raters? Do some raters appear tough because they dealt with poorer applicants?&lt;/p&gt;
+&lt;p&gt;To help sort this out, we will run two different xixed effects models. Both will include applicant as a random effect. Then one model will include rater as a fixed effect while the other model includes rater as a random effect.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(lme4)
+
+  fixed_rater &amp;lt;- lmer(score ~ factor(rater) + (1 | app), data = data)
+
+  random_rater &amp;lt;- lmer(score ~ (1 | app) + (1 | rater), data = data)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then we’ll extract new rankings for the applicants, but this time adjusted for the rater effects.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  data &amp;lt;- data_frame(adjusted_fe = ranef(fixed_rater)$app[[1]],
+                     app = c(1:50)) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;)
+
+  data &amp;lt;- select(data, app, adjusted_fe) %&amp;gt;%
+          distinct() %&amp;gt;%
+          mutate(adjust_fe_rank = min_rank(desc(adjusted_fe))) %&amp;gt;%
+          select(-adjusted_fe) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;) 
+
+  data &amp;lt;- data_frame(adjusted_re = ranef(random_rater)$app[[1]],
+                     app = c(1:50)) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;)
+
+  data &amp;lt;- select(data, app, adjusted_re) %&amp;gt;%
+          distinct() %&amp;gt;%
+          mutate(adjust_re_rank = min_rank(desc(adjusted_re))) %&amp;gt;%
+          select(-adjusted_re) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;) 
+  
+  data[] &amp;lt;- lapply(data, round, 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we’ll plot the 3 rankings. We can see that after correction, 2 applicants move into the top 7, displacing 2 other applicants who would have made it in without the correction.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(ggrepel)
+
+  select(data, app, raw_rank,
+         adjust_re_rank, adjust_fe_rank) %&amp;gt;%
+    mutate(app = reorder(factor(app), adjust_re_rank)) %&amp;gt;%
+    filter(adjust_re_rank &amp;lt; 21) %&amp;gt;%
+    gather(rank.type, rank, -app) %&amp;gt;%
+    distinct() %&amp;gt;%
+  ggplot(aes(x = app, y = rank,
+               color = rank.type)) +
+    geom_line(aes(group = app)) +
+    geom_hline(yintercept = 7, linetype = &amp;quot;dashed&amp;quot;, color = &amp;quot;grey&amp;quot;) +
+    geom_point(alpha = 0.5, size = 4) +
+    scale_color_viridis(discrete = TRUE) +
+    theme_base() +
+    geom_text_repel(data = select(data, app, adjust_re_rank) %&amp;gt;%
+                           filter(adjust_re_rank &amp;lt; 21) %&amp;gt;%
+                           mutate(app = reorder(factor(app), adjust_re_rank)) %&amp;gt;%
+                           distinct(),
+                    aes(label = app, x = app, y = adjust_re_rank),
+                    color = &amp;quot;black&amp;quot;) +
+    scale_y_reverse(breaks = c(1, seq(5, 50, by = 5))) +
+    theme(axis.ticks.x = element_blank(),
+          axis.text.x = element_blank()) +
+    xlab(&amp;quot;&amp;quot;) +
+    ylab(&amp;quot;Rank&amp;quot;) +
+    ggtitle(&amp;quot;Applicant rankings (top 20)&amp;quot;,
+            subtitle = &amp;quot;Raw ranks, plus rater-corrected ranks from fixed and random effects
+            models&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-10-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rater effects</title>
+      <link>/post/rater_effects.utf8/</link>
+      <pubDate>Fri, 04 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/rater_effects.utf8/</guid>
+      <description>&lt;p&gt;I was recently asked to help analyze some assessment data. There were 50 people applying for seven positions. Each person&amp;rsquo;s application materials were scored (0-100) by three people, randomly chosen from a larger group of raters. I was asked to help account for the fact that some raters might have a tendency to give higher or lower than average scores.&lt;/p&gt;
+
+&lt;p&gt;If you want to play along, you can download the data here:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;  library(tidyverse)
+
+  data &amp;lt;- read_csv(&amp;quot;https://dantalus.github.io/public/scores.csv&amp;quot;)
+  
+  names(data) &amp;lt;- c(&amp;quot;score&amp;quot;, &amp;quot;app&amp;quot;, &amp;quot;rater&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;  head(data)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   score   app rater
+##   &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;
+## 1    62     1    19
+## 2    84     1    13
+## 3    78     1    10
+## 4    93     2     4
+## 5    81     2    14
+## 6    78     2    15
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A naive approach to ranking the applicants would be to calculate a summary of their scores, such as the mean. Since the raters were assigned randomly, then there can&amp;rsquo;t be any bias due to rater effects. However, unbiased only means that if we were to replicate this process many times, the average of the rater effects from each of K replications would approach zero as K increased to infinity. This is different from our actual scenario, where applicants are assessed once. In this case, it&amp;rsquo;s possible that appliants who scored well did so because, at least partly, they &amp;ldquo;got lucky&amp;rdquo; and were assigned raters that tended to give higher than average marks.&lt;/p&gt;
+
+&lt;p&gt;Here is the distribution of the number of applicants each rater had to deal with.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;  library(htmlTable)
+
+  group_by(data, rater) %&amp;gt;% summarise(n = n()) %&amp;gt;%
+     summarise(mean =    mean(n),
+                min =    min(n),
+                max =    max(n),
+                lq =     quantile(n, 0.25),
+                median = quantile(n, 0.50),
+                uq =     quantile(n, 0.70)) %&amp;gt;% 
+     htmlTable(header = c(&amp;quot;Mean&amp;quot;, &amp;quot;Min&amp;quot;, &amp;quot;Max&amp;quot;, &amp;quot;25th centile&amp;quot;, &amp;quot;Median&amp;quot;, 
+                          &amp;quot;75th centile&amp;quot;), rnames = FALSE, 
+               align = &amp;quot;c&amp;quot;,
+               css.cell = &amp;quot;padding-left: 2em; padding-right: 2em;&amp;quot;, 
+               caption = &amp;quot;Distribution of the number of applicants per rater&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;preserve2b17e11e1a5dc80d&lt;/p&gt;
+
+&lt;p&gt;To address this problem, we have to first think about the overall distribution of the 150 scores (3 for each of 50 applicants).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;  library(ggthemes)
+  library(viridis)
+
+  ggplot(data, aes(x = score, fill = score)) +
+      geom_bar(fill = viridis(1)) +
+      theme_base() +
+      ylab(&amp;quot;Count&amp;quot;) +
+      xlab(&amp;quot;Score&amp;quot;) +
+      ggtitle(&amp;quot;Marginal score distributions&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;rater_effects_files/figure-html/unnamed-chunk-4-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Given the data we have, there are three ways to explain why any particular score falls where it does along the marginal distribution: applicant effects, rater effects, and random error (which just means any other sources of variation not accounted for by the other two observed sources of variation).&lt;/p&gt;
+
+&lt;p&gt;To get a better look at what I am talking about, let&amp;rsquo;s calculate the mean score received for each applicant, and the mean score given by each rater.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;  data &amp;lt;- group_by(data, app) %&amp;gt;%
+          summarise(mean_app = mean(score)) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;)
+
+  data &amp;lt;- group_by(data, rater) %&amp;gt;%
+          summarise(mean_rater = mean(score)) %&amp;gt;%
+          full_join(data, by = &amp;quot;rater&amp;quot;)
+
+  data &amp;lt;- select(data, app, mean_app) %&amp;gt;%
+          distinct() %&amp;gt;%
+          mutate(raw_rank = min_rank(desc(mean_app))) %&amp;gt;%
+          select(-mean_app) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;) %&amp;gt;%
+          arrange(raw_rank)
+  
+  data[] &amp;lt;- lapply(data, round, 0)
+  
+  head(data)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 6
+##     app raw_rank rater mean_rater mean_app score
+##   &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1    20        1     2         79      101    94
+## 2    20        1    13         80      101   100
+## 3    20        1    20        100      101   109
+## 4    17        2     6         74       98    97
+## 5    17        2    16         82       98    97
+## 6    17        2    24         86       98   101
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let&amp;rsquo;s plot the data twice. First, let&amp;rsquo;s highlight the applicants.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;  ggplot(data, aes(y = reorder(factor(app), mean_app),
+                   x = reorder(factor(rater), mean_rater),
+                   color = score)) +
+    geom_point(size = 3) +
+    geom_line(aes(group = app), color = &amp;quot;grey50&amp;quot;) +
+    scale_color_viridis() +
+    theme_base() +
+    theme(axis.text.y = element_text(size = 8)) +
+    ylab(&amp;quot;Applicant&amp;quot;) +
+    xlab(&amp;quot;Rater&amp;quot;) +
+    ggtitle(&amp;quot;Scores, by applicant, across raters&amp;quot;,
+    subtitle = &amp;quot;Applicants and Raters sorted by their respective mean scores&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;rater_effects_files/figure-html/unnamed-chunk-6-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next let&amp;rsquo;s highlight the raters (other wise the plots are identical).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;  ggplot(data, aes(y = reorder(factor(app), mean_app),
+                   x = reorder(factor(rater), mean_rater),
+                   color = score)) +
+    geom_point(size = 3) +
+    geom_line(aes(group = rater), color = &amp;quot;grey50&amp;quot;) +
+    scale_color_viridis() +
+    theme_base() +
+    theme(axis.text.y = element_text(size = 8)) +
+    ylab(&amp;quot;Applicant&amp;quot;) +
+    xlab(&amp;quot;Rater&amp;quot;) +
+    ggtitle(&amp;quot;Scores given by raters, across applicants&amp;quot;,
+    subtitle = &amp;quot;Applicants and Raters sorted by their respective mean scores&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;rater_effects_files/figure-html/unnamed-chunk-7-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Do some applicants have a low score because they had tougher raters? Do some raters appear tough because they dealt with poorer applicants?&lt;/p&gt;
+
+&lt;p&gt;To help sort this out, we will run two different xixed effects models. Both will include applicant as a random effect. Then one model will include rater as a fixed effect while the other model includes rater as a random effect.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;  library(lme4)
+
+  fixed_rater &amp;lt;- lmer(score ~ factor(rater) + (1 | app), data = data)
+
+  random_rater &amp;lt;- lmer(score ~ (1 | app) + (1 | rater), data = data)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then we&amp;rsquo;ll extract new rankings for the applicants, but this time adjusted for the rater effects.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;  data &amp;lt;- data_frame(adjusted_fe = ranef(fixed_rater)$app[[1]],
+                     app = c(1:50)) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;)
+
+  data &amp;lt;- select(data, app, adjusted_fe) %&amp;gt;%
+          distinct() %&amp;gt;%
+          mutate(adjust_fe_rank = min_rank(desc(adjusted_fe))) %&amp;gt;%
+          select(-adjusted_fe) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;) 
+
+  data &amp;lt;- data_frame(adjusted_re = ranef(random_rater)$app[[1]],
+                     app = c(1:50)) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;)
+
+  data &amp;lt;- select(data, app, adjusted_re) %&amp;gt;%
+          distinct() %&amp;gt;%
+          mutate(adjust_re_rank = min_rank(desc(adjusted_re))) %&amp;gt;%
+          select(-adjusted_re) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;) 
+  
+  data[] &amp;lt;- lapply(data, round, 1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we&amp;rsquo;ll plot the 3 rankings. We can see that after correction, 2 applicants move into the top 7, displacing 2 other applicants who would have made it in without the correction.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;  library(ggrepel)
+
+  select(data, app, raw_rank,
+         adjust_re_rank, adjust_fe_rank) %&amp;gt;%
+    mutate(app = reorder(factor(app), adjust_re_rank)) %&amp;gt;%
+    filter(adjust_re_rank &amp;lt; 21) %&amp;gt;%
+    gather(rank.type, rank, -app) %&amp;gt;%
+    distinct() %&amp;gt;%
+  ggplot(aes(x = app, y = rank,
+               color = rank.type)) +
+    geom_line(aes(group = app)) +
+    geom_hline(yintercept = 7, linetype = &amp;quot;dashed&amp;quot;, color = &amp;quot;grey&amp;quot;) +
+    geom_point(alpha = 0.5, size = 4) +
+    scale_color_viridis(discrete = TRUE) +
+    theme_base() +
+    geom_text_repel(data = select(data, app, adjust_re_rank) %&amp;gt;%
+                           filter(adjust_re_rank &amp;lt; 21) %&amp;gt;%
+                           mutate(app = reorder(factor(app), adjust_re_rank)) %&amp;gt;%
+                           distinct(),
+                    aes(label = app, x = app, y = adjust_re_rank),
+                    color = &amp;quot;black&amp;quot;) +
+    scale_y_reverse(breaks = c(1, seq(5, 50, by = 5))) +
+    theme(axis.ticks.x = element_blank(),
+          axis.text.x = element_blank()) +
+    xlab(&amp;quot;&amp;quot;) +
+    ylab(&amp;quot;Rank&amp;quot;) +
+    ggtitle(&amp;quot;Applicant rankings (top 20)&amp;quot;,
+            subtitle = &amp;quot;Raw ranks, plus rater-corrected ranks from fixed and random effects
+            models&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;rater_effects_files/figure-html/unnamed-chunk-10-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Log Log Regression</title>
       <link>/post/loglog/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
@@ -595,127 +1001,6 @@ I successfully applied for a Medical Research Council fellowship. I had only bee
       <description>&lt;p&gt;Click to download the &lt;a href=&#34;http://darrendahly.github.io/img/bodycomp.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://darrendahly.github.io/public/img/bodycomp.pdf&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://darrendahly.github.io/img/bodycomp.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>River Plots</title>
-      <link>/post/2014-11-25-river-plots/</link>
-      <pubDate>Tue, 25 Nov 2014 12:00:00 +0000</pubDate>
-      
-      <guid>/post/2014-11-25-river-plots/</guid>
-      <description>&lt;p&gt;There are many ways to look at the relationship between two categorical variables.&lt;/p&gt;
-
-&lt;p&gt;A simple contingency table will often do the job.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;library(gmodels)
-
-macroTable &amp;lt;- (data$macro, data$macroCust, 
-               dnn = c(&amp;quot;Birth Weight&amp;quot;, &amp;quot;Customised Centile&amp;quot;)
-
-CrossTable(macroTable, digits = 2, prop.t = F, prop.chisq = F) 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/macroTable.png&#34; alt=&#34;macroTable&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Mosaic plots are pretty cool.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;library(vcd)
-
-mosaic(macroTable, 
-       labeling = labeling_list(sep = &amp;quot;, &amp;quot;, cols = 1), 
-       margins  = c(bottom = 7),
-       legend   = T, 
-       shade    = T)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/macroMosaic.png&#34; alt=&#34;macroMosaic&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;However, something I&amp;rsquo;ve really come to appreciate is the &lt;em&gt;&lt;a href=&#34;http://logfc.wordpress.com/2014/02/27/riverplot/&#34; target=&#34;_blank&#34;&gt;river plot&lt;/a&gt;&lt;/em&gt;. For example:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/macroRiver.png&#34; alt=&#34;macroRiver&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can make these using the R &lt;a href=&#34;http://cran.r-project.org/web/packages/riverplot/index.html&#34; target=&#34;_blank&#34;&gt;library(riverplot)&lt;/a&gt;, but you have to do a bit of data wrangling first. I have written a function to help with this when I am working from a data frame where the two factor variables are in separate columns, and the rows are observations.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;data &amp;lt;- data.frame(&amp;quot;ID&amp;quot; = c(1:500), 
-                   &amp;quot;A&amp;quot;  = factor(sample(c(1:4), 500, replace = T), 
-                                 labels = c(&amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;, &amp;quot;C&amp;quot;, &amp;quot;D&amp;quot;)),
-                   &amp;quot;B&amp;quot;  = factor(sample(c(1:3), 500, replace = T), 
-                                 labels = c(&amp;quot;Big&amp;quot;, &amp;quot;Mid&amp;quot;, &amp;quot;Small&amp;quot;)))
-
-makeRivPlot(data, &amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/dataRiver.png&#34; alt=&#34;dataRiver&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here is the function.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;makeRivPlot &amp;lt;- function(data, var1, var2) {
-
-  require(dplyr)          # Needed for the count function
-  require(riverplot)      # Does all the real work
-  require(RColorBrewer)   # To assign nice colours
-
-  names1 &amp;lt;- levels(data[, var1])
-  names2 &amp;lt;- levels(data[, var2])
-
-  var1   &amp;lt;- as.numeric(data[, var1])
-  var2   &amp;lt;- as.numeric(data[, var2])
-
-  edges  &amp;lt;- data.frame(var1, var2 + max(var1, na.rm = T))
-  edges  &amp;lt;- count(edges)
-
-  colnames(edges) &amp;lt;- c(&amp;quot;N1&amp;quot;, &amp;quot;N2&amp;quot;, &amp;quot;Value&amp;quot;)
-
-  nodes &amp;lt;- data.frame(
-           ID     = c(1:(max(var1, na.rm = T) + 
-                         max(var2, na.rm = T))),  
-           x      =  c(rep(1, times = max(var1, na.rm = T)), 
-                       rep(2, times = max(var2, na.rm = T))),       
-           labels = c(names1, names2) , 
-           col    = c(brewer.pal(max(var1, na.rm = T), &amp;quot;Set1&amp;quot;), 
-                      brewer.pal(max(var2, na.rm = T), &amp;quot;Set1&amp;quot;)),
-           stringsAsFactors = FALSE)
-
-  nodes$col &amp;lt;- paste(nodes$col, 95, sep = &amp;quot;&amp;quot;)
-
-  river &amp;lt;- makeRiver(nodes, edges)
-
-  return(plot(river))
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Related Links:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.exegetic.biz/blog/2014/08/plotting-flows-with-riverplot/?utm_source=rss&amp;amp;utm_medium=rss&amp;amp;utm_campaign=plotting-flows-with-riverplot&#34; target=&#34;_blank&#34;&gt;Plotting Flows with riverplot&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://stats.stackexchange.com/questions/87132/what-is-the-proper-name-for-a-river-plot-visualisation&#34; target=&#34;_blank&#34;&gt;Cross Validated Thread&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://cran.r-project.org/web/packages/riverplot/index.html&#34; target=&#34;_blank&#34;&gt;CRAN for library(riverplot)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://logfc.wordpress.com/2014/02/27/riverplot/&#34; target=&#34;_blank&#34;&gt;From the author of library(riverplot)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://blog.ouseful.info/2013/07/23/generating-sankey-diagrams-from-rcharts/&#34; target=&#34;_blank&#34;&gt;Generating Sankey Diagrams from rCharts&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Prediction vs Risk Factors</title>
-      <link>/post/2014-11-11-prediction-vs-risk-factors/</link>
-      <pubDate>Tue, 11 Nov 2014 12:00:00 +0000</pubDate>
-      
-      <guid>/post/2014-11-11-prediction-vs-risk-factors/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.ucc.ie/en/epid/people/estaff/smillar/&#34; target=&#34;_blank&#34;&gt;Seán Millar&lt;/a&gt; and I were recently asked to review a paper. In his review, he pointed out the difference in predicting an outcome vs. identifying risk factors for an outcome. It is an important point I have clumsily tried to convey in other reviews, but he put it so nicely I asked if I could quote him here (I&amp;rsquo;ve made a few small editorial changes, mainly intended to generalize what he wrote).&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The authors state, “This study found that X predicts risk of Y better than Z and W in this population.” Technically, this analysis demonstrates that X is more strongly &lt;em&gt;associated&lt;/em&gt; with Y, but not that it is more &lt;em&gt;predictive&lt;/em&gt;. Although terms such as association/risk and prediction are used interchangeably within epidemiological research, they are quite different, and even strong associations do not necessarily indicate increased predictive ability. There are statistical methods which may be employed to evaluate discrimination, but these have not been used in this paper. I would suggest that the authors may wish to use terms such as association, risk, or relationship, rather than prediction within the
-manuscript. The title should also possibly be amended, i.e. “Is X or
-Z and W a greater risk factor for Y&amp;hellip;.etc.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I think I may be pasting this into the occasional review from now on.&lt;/p&gt;
-
-&lt;p&gt;If you really want to tuck into this topic, see &lt;a href=&#34;http://arxiv.org/pdf/1101.0891.pdf&#34; target=&#34;_blank&#34;&gt;To Explain or to Predict?&lt;/a&gt; by &lt;a href=&#34;http://galitshmueli.com/&#34; target=&#34;_blank&#34;&gt;Galit Shmueli&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/gshmueli&#34; target=&#34;_blank&#34;&gt;@gshmueli&lt;/a&gt;), posted on &lt;a href=&#34;http://arxiv.org/&#34; target=&#34;_blank&#34;&gt;arxiv.org&lt;/a&gt;. It&amp;rsquo;s a clear, comprehensive overview of the topic.  There is also this paper in the AJE, &lt;a href=&#34;http://aje.oxfordjournals.org/content/159/9/882.full&#34; target=&#34;_blank&#34;&gt;Limitations of the Odds Ratio in Gauging the Performance of a Diagnostic, Prognostic, or Screening Marker&lt;/a&gt;, which clearly demonstrates that big odds ratios don&amp;rsquo;t always lead to useful classifications (predictions).&lt;/p&gt;
 </description>
     </item>
     
