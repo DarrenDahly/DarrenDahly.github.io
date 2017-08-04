@@ -16,6 +16,7 @@ output:
 # install.packages(c("ggplot2", "readr", "dplyr", "tidyr", "viridis", "ggthemes",
 # "ggalt", "car"))
   
+  library(ggfortify)
   library(ggplot2)
   library(readr)
   library(dplyr)
@@ -93,7 +94,7 @@ We can estimate the linear regression shown in the previous plot as follows:
 ## Base R diagnostic plots
 ```{r}
 
-  plot(lr)
+  autoplot(lr, which = 1:6, ncol = 3, label.size = 3)
 
 ```
 
@@ -125,7 +126,7 @@ A regression model where the outcome and at least one predictor are log transfor
 ## Base R diagnostic plots
 ```{r}
 
-  plot(log.log.lr)
+  autoplot(log.log.lr, which = 1:6, ncol = 3, label.size = 3)
  
 ```
 
