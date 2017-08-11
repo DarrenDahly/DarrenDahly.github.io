@@ -11,6 +11,56 @@
     <atom:link href="/tags/academic/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Response Heterogenity</title>
+      <link>/post/2017-08-11-response-heterogeneity/</link>
+      <pubDate>Fri, 11 Aug 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-08-11-response-heterogeneity/</guid>
+      <description>&lt;p&gt;A colleague in food science recently sent me a narrative review outlining some of the challenges in their field (1). One of these was “extensive heterogeneity in the response to increased intake [of flavonoids]”. So-called response heterogeneity is often highlighted to justify the need for precision medicine, but there is a problem with this: the studies that are used to demonstrate response heterogeneity simply don’t.&lt;/p&gt;
+
+&lt;p&gt;Have a look at the figure below. The data are from a randomized controlled trial of a 1-year flavonoid intervention. More specifically, each data-point in the plot is one of the participants that was randomized to the intervention arm of the trial. You can see that the mean 12-month change in fasting insulin was -0.72 mU/L in those participants (the dash-dot horizontal line). You will also notice how variable those changes are: they range from -8 to +6 mU/L, and almost half of participants actually experienced an increase in fasting insult over the course of the study.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/hetero.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Can we learn anything else from this plot? Not really, as I’ll explain below. However, some people look at it and see differences amongst participants in how they respond to treatment. For example, Cassidy and Minihane interpret it as demonstrating “a large variability in the physiologic &lt;strong&gt;response&lt;/strong&gt; to flavonoid intake” and that the figure above “shows the insulin &lt;strong&gt;response&lt;/strong&gt; to the previously mentioned 1-y intervention” [emphasis mine]. Unfortunately, at least for proponents of personalized medicine, it does no such thing, which I will now try to explain.&lt;/p&gt;
+
+&lt;p&gt;The most important thing missing from the plot above is any information about the control group. At a glance you might be tempted to conclude that the treatment had the effect of lowering fasting insulin by 0.72 mU/L. But what if we saw the exact same thing in the control group? What would you conclude then? This is the fundamental point of an RCT – our inferences about treatment effects are based on &lt;a href=&#34;ttp://www.jameslindlibrary.org/research-topics/fair-tests-of-treatments/treatment-comparisons-are-essential/&#34; target=&#34;_blank&#34;&gt;treatment comparisons&lt;/a&gt;, so we can’t say anything about the effect of the treatment without reference to what happened in the control group.&lt;/p&gt;
+
+&lt;p&gt;This logic applies to what we can say about individual participant response. If I want to ask if the treatment worked for a particular patient, then I need to see what happened to their alternatively-treated control. So where would we get this control from?&lt;/p&gt;
+
+&lt;p&gt;If I wanted to demonstrate how a particular patient responded to a given treatment, I would need to need to give it to them, observe the outcome, and then reset the entire universe to the exact condition it was in when I gave them the treatment. Then I would simply skip giving them the treatment, and observe the outcome again. The effect of the treatment for that patient would then be apparent in the difference in the outcomes measured under the two conditions.&lt;/p&gt;
+
+&lt;p&gt;This kind of mental experiment reflects the counterfactual interpretation of causality. It “works” because if we see a difference in outcomes, it could only be explained the difference in treatment conditions, since everything else is exactly the same.&lt;/p&gt;
+
+&lt;p&gt;Thankfully we can relax this scenario a bit - we don’t actually need both universes to be exactly the same in every way, since there will be lots of things that don’t have any influence on the outcome. For example, the position of Jupiter could vary between the two universes and we would still get the same difference in outcomes. While this updated scenario would mean less work for an all-powerful deity capable of doing all of this, it remains well out of our reach.&lt;/p&gt;
+
+&lt;p&gt;Moving back into reality, we could take two people, give the treatment to one but not the other, and then compare their outcomes. Would you believe that the difference in their outcomes was a measurement of the treatment effect? Of course not, because it’s a near certainty that the two people will differ in important ways that influence the outcome, irrespective of their treatment condition.&lt;/p&gt;
+
+&lt;p&gt;Since this can’t work with just two people, let’s give the different treatments to different groups of people. If I then then compared the average outcome in each group, should you then accept that it’s a good estimate of the treatment effect?&lt;/p&gt;
+
+&lt;p&gt;The answer depends on your opinion about the exchangeability of the two groups. By exchangeability, I mean that the distribution of future outcomes under the control condition is the same in both groups. Importantly, I don’t need everything about the two groups to be identical (or balanced), just like the two universes example above. Just the distribution of future outcomes.&lt;/p&gt;
+
+&lt;p&gt;Since we can’t know the future outcome for each person, we can’t directly create exchangeable groups. However, through clever study design we can often create groups that we are happy to assume are exchangeable by controlling for the factors we expect to affect the outcome.  For example, in study of mice we might use genetically identical animals, keep them in the exact same environment, feed them the exact same food, etc.&lt;/p&gt;
+
+&lt;p&gt;It’s clearly trickier in humans. Thankfully we have a good way to create exchangeable groups of humans – randomization. As people enter the trial, we randomly allocate them to treatment arms, with no consideration of patient/clinician/clinic or other characteristics. If we have a good idea of how the eventual outcomes might be distributed under the different conditions (e.g. what is the distribution of fasting glucose in the types of patients being recruited into the trial?), we can randomize enough people to feel confident that the groups will indeed be exchangeable.&lt;/p&gt;
+
+&lt;p&gt;So where does this leave us with our initial question: Who/what is the control for a given individual study participant? For the vast majority of study designs, including the parallel arm trial described above, there simply isn’t one. The randomized controlled trial result is  our best guess at what the average treatment effect is, and we are forced to act as if all patients will similarly experience that effect, even though we know they won’t. It’s simply the best we can do, for the reasons described above.&lt;/p&gt;
+
+&lt;p&gt;Proponents of personalized medicine would like to find a way to move beyond this dissatisfying situation. Unfortunately, they will need to face some hard truths. As far as I can see, there are only two ways to scientifically demonstrate something close to response heterogeneity.&lt;/p&gt;
+
+&lt;p&gt;The first will hinge on our ability to identify and recruit large enough groups of patients that share the characteristics we suspect are driving response heterogeneity (i.e. gene X). The challenge however is getting enough people who meet the necessary conditions, when they are going to be quite rare by definition. To put this challenge in context, trials are often criticized for not being large enough to estimate subgroup specific effects. Well, if we can’t often run studies that let us estimate the effect of a treatment in a subgroup that makes up 30% of possible patients, for example, how are we going to run studies in subgroups that make up fewer than 0.01% of those patients?&lt;/p&gt;
+
+&lt;p&gt;The other option is to run repeated-crossover and N-of-1 trials where individuals are repeatedly exposed to the different treatments. However, that’s only possible for particular combinations of interventions and outcomes.&lt;/p&gt;
+
+&lt;p&gt;(1) &lt;a href=&#34;http://ajcn.nutrition.org/content/early/2016/11/23/ajcn.116.136051&#34; target=&#34;_blank&#34;&gt;The role of metabolism (and the microbiome) in defining the clinical efficacy of dietary flavonoids (Cassidy and Minihane, 2017, Am J Clin Nutr)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;(2) - I was introduced to this problem though the work of Professor Stephen Senn. To learn more, see this &lt;a href=&#34;https://vimeo.com/208150991&#34; target=&#34;_blank&#34;&gt;video.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Getting an interview</title>
       <link>/post/2017-05-09-interviews/</link>
       <pubDate>Tue, 09 May 2017 12:00:00 +0000</pubDate>
@@ -575,42 +625,6 @@ Z and W a greater risk factor for Y&amp;hellip;.etc.”&lt;/p&gt;
 &lt;p&gt;I think I may be pasting this into the occasional review from now on.&lt;/p&gt;
 
 &lt;p&gt;If you really want to tuck into this topic, see &lt;a href=&#34;http://arxiv.org/pdf/1101.0891.pdf&#34; target=&#34;_blank&#34;&gt;To Explain or to Predict?&lt;/a&gt; by &lt;a href=&#34;http://galitshmueli.com/&#34; target=&#34;_blank&#34;&gt;Galit Shmueli&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/gshmueli&#34; target=&#34;_blank&#34;&gt;@gshmueli&lt;/a&gt;), posted on &lt;a href=&#34;http://arxiv.org/&#34; target=&#34;_blank&#34;&gt;arxiv.org&lt;/a&gt;. It&amp;rsquo;s a clear, comprehensive overview of the topic.  There is also this paper in the AJE, &lt;a href=&#34;http://aje.oxfordjournals.org/content/159/9/882.full&#34; target=&#34;_blank&#34;&gt;Limitations of the Odds Ratio in Gauging the Performance of a Diagnostic, Prognostic, or Screening Marker&lt;/a&gt;, which clearly demonstrates that big odds ratios don&amp;rsquo;t always lead to useful classifications (predictions).&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Where “Hunter-Gatherer Energetics and Human Obesity” gets it wrong</title>
-      <link>/post/2012-08-31-hunter-gatherer/</link>
-      <pubDate>Fri, 31 Aug 2012 12:00:00 +0000</pubDate>
-      
-      <guid>/post/2012-08-31-hunter-gatherer/</guid>
-      <description>
-
-&lt;p&gt;There is a recent PLoS ONE article on obesity getting quite a bit of attention. The article, &lt;a href=&#34;http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0040503&amp;amp;annotationId=52325&#34; target=&#34;_blank&#34;&gt;Hunter-Gatherer Energetics and Human Obesity&lt;/a&gt;, reports research looking at total energy expenditure in a sample of adults from a  Tanzanian hunter-gatherer tribe, the Hadza.  Given their “traditional physically active lifestyle” the authors expected that Hadza to have lower body fat and to expend more energy than modern, Western populations, and the aim the research was to see if this was in fact true.&lt;/p&gt;
-
-&lt;p&gt;They key result they focus on was that the mean total energy expenditure, adjusted for body size (hint: more on this soon), was similar to that seen in Western populations. They concluded that this result challenges “current models of obesity suggesting that Western lifestyles lead to decreased energy expenditure.” The broader take home message spreading across social and traditional media is this: obesity is caused by poor diet, not a lack of exercise. Here is the lead author’s summary of the research in the &lt;a href=&#34;http://www.nytimes.com/2012/08/26/opinion/sunday/debunking-the-hunter-gatherer-workout.html?_r=1&#34; target=&#34;_blank&#34;&gt;New York Times&lt;/a&gt;; and here is a growing list of &lt;a href=&#34;http://www.plosone.org/annotation/listThread.action?root=52325&#34; target=&#34;_blank&#34;&gt;news articles&lt;/a&gt; about the research.&lt;/p&gt;
-
-&lt;p&gt;Let me go ahead and say that I think the conclusions drawn from this study are completely wrong, and I am deeply troubled by the message being communicated (whether intentional or otherwise). Below are my reasons why. It is entirely possible that I am missing something here. If so, please feel free to email me.&lt;/p&gt;
-
-&lt;h3 id=&#34;total-energy-expenditure-total-energy-intake&#34;&gt;Total Energy Expenditure = Total Energy Intake&lt;/h3&gt;
-
-&lt;p&gt;The conclusion that obesity is result of poor diet, not less activity, appears to be based on the result that total energy expenditure (TEE) was the same for the Hadza and the Western populations studied. The logic seems to be that that people who are more active will expend more energy, so if we observe that a group of thin people and a group of fat people have the same energy expenditure, then the difference in body size must be due to something other than physical activity. Presumably, if the study had measured total energy intake and found a similar result, we could draw the exact opposite conclusion - that obesity is a result of less activity, not a poor diet.&lt;/p&gt;
-
-&lt;p&gt;As it turns out, they actually did measure energy intake and found no difference between the populations. In this study they measured TEE with a gold standard measure, &lt;a href=&#34;http://en.wikipedia.org/wiki/Doubly_labeled_water&#34; target=&#34;_blank&#34;&gt;doubly labeled water&lt;/a&gt;. Interestingly, doubly labeled water is also used to measure energy intake (or &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/8315169&#34; target=&#34;_blank&#34;&gt;validate other measures of energy intake&lt;/a&gt;). Wait, what? That’s right, doubly labeled water is used as a measure of both energy intake and expenditure. Why? Because humans are in energy balance most of the time. It’s true that obesity is the result of energy imbalance, when energy intake exceeds expenditure and gets stored in adipose cells, but this usually describes very small energy imbalances that accumulate over a long period of time. If you eat an additional 5000 kcals tomorrow, your body doesn’t just immediately store that as fat. Your body finds other ways to compensate, by increasing expenditure and decreasing subsequent intake. In fact, &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/22065844&#34; target=&#34;_blank&#34;&gt;your body is hard wired to maintain energy balance within a fairly small range&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;total-energy-intake-actually-was-much-lower-for-the-hadza&#34;&gt;Total Energy Intake actually was much lower for the Hadza&lt;/h3&gt;
-
-&lt;p&gt;If you still buy that comparing total energy expenditures is a good way to explain why one group if fatter than another, then you’ll need to explain why the TEE of the Hadza was in fact much lower than that of the Western populations. It’s right there in table 1. The mean TEEs were 1877 and 2649 in Hadza females and males respectively, compared to 2347 and 3053 in the Western populations.&lt;/p&gt;
-
-&lt;p&gt;Remember, the paper hypothesized that TEE would be higher in the Hadza due to their very active lifestyle, but instead concluded there was no difference between the Hadza and Western groups studied. So how did the authors make this conclusion, given than the crude differences in TEEs are so large?&lt;/p&gt;
-
-&lt;p&gt;The answer is that they used generalized linear models to adjust TEE for fat-free mass (FFM), age, and “other variables”. You need to go to the &lt;a href=&#34;http://www.plosone.org/article/fetchSingleRepresentation.action?uri=info:doi/10.1371/journal.pone.0040503.s004&#34; target=&#34;_blank&#34;&gt;supplemental table 1&lt;/a&gt; to actually see the models, and even then they only report the statistical significance of estimates, and no actual parameter values. From these models you can see that the variable “lifestyle”, which is there to reflect group differences  (Hadza vs. Western) in TEE, adjusted for the other covariates is “not significant”.&lt;/p&gt;
-
-&lt;p&gt;This is quite simply because they adjusted for body size, which is strongly correlated with energy expenditure. Their models tell us that if we looked at two similarly aged Hadza and Western males with the same amount of FFM, we would expect their TEE to be the same. If you are surprised by this result, you shouldn’t be. Smaller people expend much less energy. This is simple physics. The Hadza, despite their active life styles, expend much less energy than Westerners because they are much smaller people. This difference isn’t just about lean and fat mass either. The Hadza males, for example, are 0.2 meters shorter (that’s almost 8 inches!) than the Western males (something you need to extract for yourself from &lt;a href=&#34;http://www.plosone.org/article/info:doi/10.1371/journal.pone.0040503?imageURI=info:doi/10.1371/journal.pone.0040503.t001&#34; target=&#34;_blank&#34;&gt;table 1&lt;/a&gt;). This size difference certainly exists from birth and is a simple biological adaptation to living in a relatively energy scarce environment.&lt;/p&gt;
-
-&lt;h3 id=&#34;what-debate&#34;&gt;What debate?&lt;/h3&gt;
-
-&lt;p&gt;Obesity is a public health problem broadly attributed to dramatic changes diet and physical activity behaviors that some populations have experienced over the past several decades.  One reason that this paper seems to be getting so much attention is that it plugs into a debate  over  which set of behaviors , dietary or physical activity, are the key explanation for obesity (another reason is that is reports data from some mysterious group of humans who somehow represent the human evolutionary process – nonsense that I expect other anthropologists to angrily descend upon any day now) . My opinion is that this debate is meaningless and that both matter, for both individuals and populations.  Weight loss intervention trials have illustrated the beneficial effects of increasing physical activity levels, and reviews support the idea that interventions which include both dietary and physical activity components are the most effective. Further, the benefits of physical activity extend beyond weight/fat loss – more active people are healthier in a variety of ways. How any responsible scientist could risk sending the message that physical activity isn’t important – and that is exactly the message that many will take away from the headlines – is simply beyond me.&lt;/p&gt;
 </description>
     </item>
     
