@@ -16,7 +16,7 @@
       <pubDate>Fri, 11 Aug 2017 12:00:00 +0000</pubDate>
       
       <guid>/post/2017-08-11-response-heterogeneity/</guid>
-      <description>&lt;p&gt;A colleague in food science recently sent me a narrative review outlining some of the challenges in their field (1). One of these was “extensive heterogeneity in the response to increased intake [of flavonoids]”. So-called response heterogeneity is often highlighted to justify the need for precision medicine, but there is a problem with this: the studies that are used to demonstrate response heterogeneity simply don’t.&lt;/p&gt;
+      <description>&lt;p&gt;A colleague in food science recently sent me a narrative review outlining some of the challenges in their field (&lt;a href=&#34;http://ajcn.nutrition.org/content/early/2016/11/23/ajcn.116.136051&#34; target=&#34;_blank&#34;&gt;Cassidy and Minihane, 2017, Am J Clin Nutr&lt;/a&gt;). One of these was “extensive heterogeneity in the response to increased intake [of flavonoids]”. So-called response heterogeneity is often highlighted to justify the need for precision medicine, but there is a problem with this: the studies that are used to demonstrate response heterogeneity simply don’t.&lt;/p&gt;
 
 &lt;p&gt;Have a look at the figure below. The data are from a randomized controlled trial of a 1-year flavonoid intervention. More specifically, each data-point in the plot is one of the participants that was randomized to the intervention arm of the trial. You can see that the mean 12-month change in fasting insulin was -0.72 mU/L in those participants (the dash-dot horizontal line). You will also notice how variable those changes are: they range from -8 to +6 mU/L, and almost half of participants actually experienced an increase in fasting insult over the course of the study.&lt;/p&gt;
 
@@ -26,9 +26,7 @@
 
 &lt;p&gt;The most important thing missing from the plot above is any information about the control group. At a glance you might be tempted to conclude that the treatment had the effect of lowering fasting insulin by 0.72 mU/L. But what if we saw the exact same thing in the control group? What would you conclude then? This is the fundamental point of an RCT – our inferences about treatment effects are based on &lt;a href=&#34;ttp://www.jameslindlibrary.org/research-topics/fair-tests-of-treatments/treatment-comparisons-are-essential/&#34; target=&#34;_blank&#34;&gt;treatment comparisons&lt;/a&gt;, so we can’t say anything about the effect of the treatment without reference to what happened in the control group.&lt;/p&gt;
 
-&lt;p&gt;This logic applies to what we can say about individual participant response. If I want to ask if the treatment worked for a particular patient, then I need to see what happened to their alternatively-treated control. So where would we get this control from?&lt;/p&gt;
-
-&lt;p&gt;If I wanted to demonstrate how a particular patient responded to a given treatment, I would need to need to give it to them, observe the outcome, and then reset the entire universe to the exact condition it was in when I gave them the treatment. Then I would simply skip giving them the treatment, and observe the outcome again. The effect of the treatment for that patient would then be apparent in the difference in the outcomes measured under the two conditions.&lt;/p&gt;
+&lt;p&gt;If I wanted to demonstrate how a &lt;strong&gt;particular patient&lt;/strong&gt; responded to a given treatment, I would need to need to give it to them, observe the outcome, and then reset the entire universe to the exact condition it was in when I gave them the treatment. Then I would simply skip giving them the treatment, and observe the outcome again. The effect of the treatment for that patient would then be apparent in the difference in the outcomes measured under the two conditions.&lt;/p&gt;
 
 &lt;p&gt;This kind of mental experiment reflects the counterfactual interpretation of causality. It “works” because if we see a difference in outcomes, it could only be explained the difference in treatment conditions, since everything else is exactly the same.&lt;/p&gt;
 
@@ -52,9 +50,7 @@
 
 &lt;p&gt;The other option is to run repeated-crossover and N-of-1 trials where individuals are repeatedly exposed to the different treatments. However, that’s only possible for particular combinations of interventions and outcomes.&lt;/p&gt;
 
-&lt;p&gt;(1) &lt;a href=&#34;http://ajcn.nutrition.org/content/early/2016/11/23/ajcn.116.136051&#34; target=&#34;_blank&#34;&gt;The role of metabolism (and the microbiome) in defining the clinical efficacy of dietary flavonoids (Cassidy and Minihane, 2017, Am J Clin Nutr)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;(2) - I was introduced to this problem though the work of Professor Stephen Senn. To learn more, see this &lt;a href=&#34;https://vimeo.com/208150991&#34; target=&#34;_blank&#34;&gt;video.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;NOTE - I was introduced to this problem though the work of Professor Stephen Senn. To learn more, see this &lt;a href=&#34;https://vimeo.com/208150991&#34; target=&#34;_blank&#34;&gt;video.&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
