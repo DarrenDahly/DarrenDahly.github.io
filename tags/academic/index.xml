@@ -48,7 +48,9 @@
 
 &lt;p&gt;The other option is to run repeated-crossover and N-of-1 trials where individuals are repeatedly exposed to the different treatments. However, that’s only possible for particular combinations of interventions and outcomes.&lt;/p&gt;
 
-&lt;p&gt;NOTE - I was introduced to this problem though the work of Professor Stephen Senn. To learn more, see this &lt;a href=&#34;https://vimeo.com/208150991&#34; target=&#34;_blank&#34;&gt;video.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;NOTES&lt;/p&gt;
+
+&lt;p&gt;I was introduced to this problem though the work of Professor Stephen Senn. To learn more, see this &lt;a href=&#34;https://vimeo.com/208150991&#34; target=&#34;_blank&#34;&gt;video,&lt;/a&gt; and this excellent paper in Statistics in Medicine, &lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1002/sim.6739/full&#34; target=&#34;_blank&#34;&gt;Mastering variation: variance components and personalised medicine.&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;(1) - Thankfully we can relax this scenario a bit - we don’t actually need both universes to be exactly the same in every way, since there will be lots of things that don’t have any influence on the outcome. For example, the position of Jupiter could vary between the two universes and we would still get the same difference in outcomes. While this updated scenario would mean less work for an all-powerful deity capable of doing all of this, it remains well out of our reach.&lt;/p&gt;
 
