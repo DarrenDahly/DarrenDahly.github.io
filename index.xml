@@ -43,7 +43,7 @@
 
 &lt;p&gt;In mathematical terms, the normal distribution is defined as:&lt;/p&gt;
 
-&lt;p&gt;$$ y = \frac{1} {\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2} {2\sigma^2} $$&lt;/p&gt;
+&lt;p&gt;$ y = \frac{1} {\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2} {2\sigma^2} $&lt;/p&gt;
 
 &lt;p&gt;It has just two parameters: its mean ($\mu$) and its standard deviation ($\sigma$). The first parameter, the mean, is pretty easy to understand for most people (it’s just the average value). The SD is a bit trickier. To calculate it, you subtract the mean from each person’s observation (i.e. how different they are from the average); square those values (so positive and negative differences have the same value); take the average of these values (this is called the variance); and then take the square root of the result so you are back on the same scale as the mean. The SD (or the variance) then gives a sense of the dispersion of the sample.&lt;/p&gt;
 
@@ -52,9 +52,9 @@
 &lt;p&gt;Figure 2.
  &lt;center&gt;&lt;img src=&#34;https://darrendahly.github.io/img/fig2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;Importantly, we can calculate the % of people we expect to have a value of X or more, which is critical for what follows. For example, the plot below also divides the distribution at +2 SD. The left side of the divide then contains about 95% of the sample (i.e. 95% of total space under the curve), and the right side (which we might call the right tail of the distribution) includes the other 5%. In words, only about 5% of the people will have a value of 2 or more SDs.&lt;/p&gt;
+&lt;p&gt;Importantly, we can calculate the % of people we expect to have a value of X or more, which is critical for what follows. For example, the plot above also divides the distribution at +2 SD. The left side of the divide then contains about 95% of the sample (i.e. 95% of total space under the curve), and the right side (which we might call the right tail of the distribution) includes the other 5%. In words, only about 5% of the people will have a value of 2 or more SDs.&lt;/p&gt;
 
-&lt;p&gt;The right tail of the distribution is particularly important to this exercise. That’s because any differences in the sex-specific distributions of our Techiness variable will be more obvious out in the tails of the distribution (which we will demonstrate); and because Google only hires people with the highest Techiness scores. Their pool of potential applicants is the right tail of the distribution.&lt;/p&gt;
+&lt;p&gt;The right tail of the distribution is particularly important to this exercise. That’s because any differences in the sex-specific distributions of our Techiness variable will be more obvious out in the tails of the distribution (which we will demonstrate); and because Google only hires people with the highest Techiness scores - their pool of potential applicants &lt;em&gt;is&lt;/em&gt; the right tail of the distribution.&lt;/p&gt;
 
 &lt;h2 id=&#34;back-to-the-question&#34;&gt;Back to the question&lt;/h2&gt;
 
@@ -72,8 +72,11 @@
 &lt;p&gt;Figure 4.
 &lt;center&gt;&lt;img src=&#34;https://darrendahly.github.io/img/fig4.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;Following from this plot, Stevens and Haidt make the following conclusion.
-“Thus, if males are overrepresented in the upper tail of the distributions for spatial abilities, mechanical reasoning, and mathematics, it would be possible for Google to end up hiring more males and, at the same time, not be discriminatory in their hiring practices.  This is because the pool of potentially qualified applicants may contain more males.”&lt;/p&gt;
+&lt;p&gt;Following from this plot, Stevens and Haidt make the following conclusion:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Thus, if males are overrepresented in the upper tail of the distributions for spatial abilities, mechanical reasoning, and mathematics, it would be possible for Google to end up hiring more males and, at the same time, not be discriminatory in their hiring practices.  This is because the pool of potentially qualified applicants may contain more males.”&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;At this point, anyone already familiar with the normal distribution is probably having a sensible chuckle. This is because while Google might be selective in their hiring practices, they aren’t +4 SD selective. This is because, given a normal distribution, we only expect 0.000032% of observations to have a score ≥ 4 SDs above the mean. This percentage equates to just 273 New Yorkers, 30 people from San Francisco, and just 11 thousand people in the entire United States, the 3rd most populous country on earth. Google apparently employs about 50-70k. I don’t know what proportion of these are tech jobs, but I guarantee very few of them are filled with +4SD type talent.&lt;/p&gt;
 
@@ -82,13 +85,13 @@
 &lt;p&gt;Figure 5.
  &lt;center&gt;&lt;img src=&#34;https://darrendahly.github.io/img/fig5.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;I can hear you now thinking, “But you said the observed male to female ratio was also a function of the difference in variability of the sex-specific distributions.” So let’s say I double the variance? Then the sex ratio at ≥1.5 SD becomes 2:1. How realistic is this scenario? I have no idea, but thankfully Stevens and Haidt link to a bunch of studies that provide estimates about sex-specific differences in the variance (or SD) of many possibly relevant traits. And guess what? Everyone I looked at was well under a 2X difference. Most seem to be around 1.1X to 1.2X.&lt;/p&gt;
+&lt;p&gt;I can hear you thinking, “But you said the observed male to female ratio was also a function of the difference in variability of the sex-specific distributions.” So let’s say I double the variance. Then the sex ratio at ≥1.5 SD becomes 2:1. How realistic is this scenario? I have no idea, but thankfully Stevens and Haidt link to a bunch of studies that provide estimates about sex-specific differences in the variance (or SD) of many possibly relevant traits. And guess what? Every one I looked at was well under a 2X difference. Most seem to be around 1.1X to 1.2X.&lt;/p&gt;
 
 &lt;p&gt;That’s the hard part done. What about shifting the mean? Increasing the mean of a standard normal by 10% would lead to a 1.1 to 1 male to female ratio; while doubling it would give 2.2 to 1. Again, all the evidence seems to suggest that the 10% increase in the mean is the more realistic scenario.  However, you can use the &lt;a href=&#34;https://darrendahly.shinyapps.io/app1&#34; target=&#34;_blank&#34;&gt;app here&lt;/a&gt; to play around with the parameters to your heart’s content.&lt;/p&gt;
 
 &lt;h2 id=&#34;the-conclusion&#34;&gt;The Conclusion&lt;/h2&gt;
 
-&lt;p&gt;Relatively small, differences in sex-specific distributions of innate traits could contribute to the large male to female sex rations we see in Tech, but I can’t see how they could explain all or even much of it. As a scientist, I can only conclude that other factors must be at play.&lt;/p&gt;
+&lt;p&gt;Relatively small differences in sex-specific distributions of innate traits could theoretically contribute to the large male to female sex rations we see in Tech, but I can’t see how they could explain all or even much of it. As a scientist, I can only conclude that other factors must be at play.&lt;/p&gt;
 </description>
     </item>
     
