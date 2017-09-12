@@ -11,78 +11,11 @@
     <atom:link href="/https:/DarrenDahly.github.io/post/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Sex differences</title>
-      <link>/https:/DarrenDahly.github.io/post/2017-08-11-response-heterogeneity/</link>
-      <pubDate>Tue, 12 Sep 2017 12:00:00 +0000</pubDate>
-      
-      <guid>/https:/DarrenDahly.github.io/post/2017-08-11-response-heterogeneity/</guid>
-      <description>
-
-&lt;h2 id=&#34;the-introduction&#34;&gt;The Introduction&lt;/h2&gt;
-
-&lt;p&gt;Remember the whole Google Memo thing that happened a hundred years ago? Its central argument (as far as I could tell) was that the large male to female sex ratios we observe in Tech can be reasonably explained by small differences in the sex-specific probability distributions of innate characteristics. Thus Google’s attempts to increase diversity were silly at best, perhaps harmful or unjust, and largely due to a culture of political correctness that was oppressive to “conservative viewpoints”.
-This message’s appeal wasn’t limited to chauvinist TechBros. Many “moderate” commentators also seemed quite impressed. After all, the memo wasn’t arguing that all men, or even most of them, are better suited than women for tech jobs. That would be ridiculous! But since the existence of sex differences in some traits is scientifically uncontroversial, some supporters of the Google Memo claimed the scientific high-ground. “You see? We aren’t sexist or biased”, they proclaimed. “This is just science.” And you can’t hate on science.
-However, despite their self-professed love of logic, scepticism, critical-thinking, reason, data, facts, and evidence, the supporters of the Google Memo never seemed to take next logical step - they never asked the question, “Exactly how big would these differences need to be to explain the large male to female ratios we observe in Tech?”&lt;/p&gt;
-
-&lt;h2 id=&#34;ground-rules&#34;&gt;Ground Rules&lt;/h2&gt;
-
-&lt;p&gt;Before answering this question, I want to set a few simplifying assumptions. The first of these is that Google hires fairly, and the male to female ratio we observe in tech jobs at Google is reflective of the total pool of qualified potential applicants. Next we will assume that to be “qualified”, a person has to have high levels of tech related traits which we will reduce to a single, normally distributed variable that we will call Techiness. We will further assume that the distribution of Techiness is sex-specific, and that those sex-differences are there at birth, and not the result of later social or environmental factors. Taken together, these assumptions (which seem to fall largely in line with what many supporters of the Google Memo believe) mean that any male to female ratio we consider in this scenario would be completely driven by the degree of difference in the sex-specific distribution of innate Techiness.&lt;/p&gt;
-
-&lt;h2 id=&#34;the-normal-distribution&#34;&gt;The Normal Distribution&lt;/h2&gt;
-
-&lt;p&gt;Before going on, I want to briefly review the concept of a probability distribution for anyone who needs it (this is most people). Probability distributions play a central role in statistics and data analysis, so as a statistician, they are something that I think about pretty much all the time.
-A probability distribution is just a statement that says how often we should expect to see the various values of a given variable (or trait/feature/characteristic/etc.). For example, the plot below (figure 1 A) shows a distribution of height values in a sample of adult men. You will notice that values around 70 cm are relatively common, while values larger than 76 cm are rare. These kinds of statements have great practical value; e.g. what sizes of clothes should I offer in my shop to maximize profit?&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://darrendahly.github.io/img/fig1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;Often times the distributions we observe can be closely approximated by mathematical functions of just a few parameters. The distribution of heights above, for example, is well described by the most famous and useful of these, the normal distribution (figure 1 B), which we see frequently in nature because it describes variables that are themselves influenced by lots of other things.
-In mathematical terms, the normal distribution is defined as:&lt;/p&gt;
-
-&lt;p&gt;$$y = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}$$&lt;/p&gt;
-
-&lt;p&gt;It has just two parameters: its mean () and its standard deviation (). The first parameter, the mean, is pretty easy to understand for most people (it’s just the average value). The SD is a bit trickier. To calculate it, you subtract the mean from each person’s observation (i.e. how different they are from the average); square those values (so positive and negative differences have the same value); take the average of these values (this is called the variance); and then take the square root of the result so you are back on the same scale as the mean. The SD (or the variance) then gives a sense of the dispersion of the sample.
- If we are happy to assume that some variable is normally distributed, and we have calculated the mean and SD in the sample, then we can make probability statements about any given range of the variable’s values. For example, the plot below (figure 2) is of the standard normal, which is a normal distribution with a mean of zero and a SD of one. The total area under the bell shaped curve represents 100% of the sample’s values. So if we took all the people with a value &amp;lt; 0 (the mean), that would cut the curve exactly in half, i.e. 50% of the sample would have a value &amp;lt; 0. It is also apparent that the bulk of the observations are crowded around the mean.&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://darrendahly.github.io/img/fig2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;Importantly, we can calculate the % of people we expect to have a value of X or more, which is critical for what follows. For example, the plot below also divides the distribution at +2 SD. The left side of the divide then contains about 95% of the sample (i.e. 95% of total space under the curve), and the right side (which we might call the right tail of the distribution) includes the other 5%. In words, only about 5% of the people will have a value of 2 or more SDs.
-The right tail of the distribution is particularly important to this exercise. That’s because any differences in the sex-specific distributions of our Techiness variable will be more obvious out in the tails of the distribution (which we will demonstrate); and because Google only hires people with the highest Techiness scores. Their pool of potential applicants is the right tail of the distribution.&lt;/p&gt;
-
-&lt;h2 id=&#34;back-to-the-question&#34;&gt;Back to the question&lt;/h2&gt;
-
-&lt;p&gt;Given that we are dealing with normal distributions, there are two ways we can perturb the distribution: we can shift the mean left or right (figure 3 A), and/or we can increase or decrease the SD (or variance; figure 3 B). The first way is what the Google Memo seems to focus on, while the latter was repeatedly brought up in the memo’s aftermath, and appeared again just last week when Sean Stevens and Jonathan Haidt of Heterodox Academy fame wrote about the Greater Male Variability Hypothesis. We will start there.&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://darrendahly.github.io/img/fig3.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;The Greater Male Variability Hypothesis states that some traits will be similarly distributed men and women, except that the men’s distribution will be more variable, so that there will be more men than women at both the lowest and highest values of the distribution. If this was in fact true for Techiness, then yes, we would expect to see more males than females employed in tech jobs. How much of difference would then be a function of two things – how much more variable the men’s distribution is compared to the women’s, and how far out into the tail you are drawing your workers from.
-Stevens and Haidt illustrate this with a plot from Hyde and Mertz (2009), shown below. It essentially shows 2 overlapping normal distributions, one for men (red/orange) and one for women (green; and brown is the overlap), where the means are both zero, but the variance of the men’s distribution is 20% greater than that of the females (this is similar to figure 3B, above). Because the area under each of the overlapping curves must both be equal to one, the green curve is more peaked at the mean, and the red curve is more squashed down and has fatter tails (again, this is also apparent in figure 3 B).
-The plot also zooms in on the values ranging from +3.8 to +4.2 SD and the relative amount of (red + brown) compared to (green + brown) would give the observed sex ratio if this was the place in the distribution where you were drawing your employees from. It’s easy enough to see that the fat tails of the male distribution take up much more space than the tails of the female distribution. Thus the expected male to female ratio in this scenario would be quite large (back with specifics shortly).&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://darrendahly.github.io/img/fig4.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;Following from this plot, Stevens and Haidt make the following conclusion.
-“Thus, if males are overrepresented in the upper tail of the distributions for spatial abilities, mechanical reasoning, and mathematics, it would be possible for Google to end up hiring more males and, at the same time, not be discriminatory in their hiring practices.  This is because the pool of potentially qualified applicants may contain more males.”
-At this point, anyone already familiar with the normal distribution is probably having a sensible chuckle. This is because while Google might be selective in their hiring practices, they aren’t +4 SD selective. This is because, given a normal distribution, we only expect 0.000032% of observations to have a score ≥ 4 SDs above the mean. This percentage equates to just 273 New Yorkers, 30 people from San Francisco, and just 11 thousand people in the entire United States, the 3rd most populous country on earth. Google apparently employs about 50-70k. I don’t know what proportion of these are tech jobs, but I guarantee very few of them are filled with +4SD type talent.
-For this +4SD example the exact male to female ratio is 4 to 1 (0.00013 / 0.000032). So what happens if we instead say that Google recruits from the mere mortals with Techiness scores ≥ 2SD, which is still the top 5% of all people? That ratio drops to 1.5 to 1. Despite my enjoyment of Google’s products, I have a hard time believing they are even this selective, so if I lower the hiring threshold to 1.5 SD, the male to female ratio become 1.3 to 1 (figure 5).&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://darrendahly.github.io/img/fig5.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;I can hear you now thinking, “But you said the observed male to female ratio was also a function of the difference in variability of the sex-specific distributions.” So let’s say I double the variance? Then the sex ratio at ≥1.5 SD becomes 2:1. How realistic is this scenario? I have no idea, but thankfully Stevens and Haidt link to a bunch of studies that provide estimates about sex-specific differences in the variance (or SD) of many possibly relevant traits. And guess what? Everyone I looked at was well under a 2X difference. Most seem to be around 1.1X to 1.2X.
-That’s the hard part done. What about shifting the mean? Increasing the mean of a standard normal by 10% would lead to a 1.1 to 1 male to female ratio; while doubling it would give 2.2 to 1. Again, all the evidence seems to suggest that the 10% increase in the mean is the more realistic scenario.  However, you can use the &lt;a href=&#34;https://darrendahly.shinyapps.io/app1&#34; target=&#34;_blank&#34;&gt;app here&lt;/a&gt; to play around with the parameters to your heart’s content.&lt;/p&gt;
-
-&lt;h2 id=&#34;the-conclusion&#34;&gt;The Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Relatively small, differences in sex-specific distributions of innate traits could contribute to the large male to female sex rations we see in Tech, but I can’t see how they could explain all or even much of it. As a scientist, I can only conclude that other factors must be at play.
-&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Response Heterogeneity</title>
-      <link>/https:/DarrenDahly.github.io/post/2017-09-12-variances/</link>
+      <link>/https:/DarrenDahly.github.io/post/2017-08-11-response-heterogeneity/</link>
       <pubDate>Fri, 11 Aug 2017 12:00:00 +0000</pubDate>
       
-      <guid>/https:/DarrenDahly.github.io/post/2017-09-12-variances/</guid>
+      <guid>/https:/DarrenDahly.github.io/post/2017-08-11-response-heterogeneity/</guid>
       <description>&lt;p&gt;A colleague in food science recently sent me a narrative review outlining some of the challenges in their field (&lt;a href=&#34;http://ajcn.nutrition.org/content/early/2016/11/23/ajcn.116.136051&#34; target=&#34;_blank&#34;&gt;Cassidy and Minihane, 2017, Am J Clin Nutr&lt;/a&gt;). One of these was “extensive heterogeneity in the response to increased intake [of flavonoids]”.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Response heterogeneity&lt;/em&gt; is often highlighted to justify the need for precision medicine. The argument is that we need precision medicine to identify and treat the people that we know will respond well to a particular treatment, and not bother treating those who won&amp;rsquo;t respond. Sounds smart. The problem however is that the studies used to demonstrate response heterogeneity simply don’t, and doing it the right way is much more challenging than people seem to understand.&lt;/p&gt;
@@ -903,6 +836,18 @@ I successfully applied for a Medical Research Council fellowship. I had only bee
 &lt;p&gt;Now what if I have a BMI of 32 (which is about right in my case) and see this infographic? Again, I&amp;rsquo;m looking at that bottom figure and completely discounting that it has anything to do with me. It&amp;rsquo;s ridiculous, it&amp;rsquo;s &lt;a href=&#34;http://www.psychologytoday.com/blog/wiring-the-mind/201501/whats-wrong-fat-shaming&#34; target=&#34;_blank&#34;&gt;fat shaming&lt;/a&gt;, and it&amp;rsquo;s likely counter-productive.&lt;/p&gt;
 
 &lt;p&gt;What would I like to see instead? If I had the skills to make a decent infographic, I would start with the BMI/mortality graph above, add some traffic lights, and depict a person traveling along the path from better to poorer health as their BMI increases. I would also make sure to emphasize the health risks and other costs of &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3527647/&#34; target=&#34;_blank&#34;&gt;morbid obesity&lt;/a&gt; which is becoming all &lt;a href=&#34;http://www.worldobesity.org/site_media/library/resource_images/Trends_in_morbid_obesity_adults_Oct_2014.pdf&#34; target=&#34;_blank&#34;&gt;too common&lt;/a&gt; in many places.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What do we know about body composition in healthy infants?</title>
+      <link>/https:/DarrenDahly.github.io/post/2014-12-17-infant-body-composition/</link>
+      <pubDate>Wed, 17 Dec 2014 12:00:00 +0000</pubDate>
+      
+      <guid>/https:/DarrenDahly.github.io/post/2014-12-17-infant-body-composition/</guid>
+      <description>&lt;p&gt;Click to download the &lt;a href=&#34;http://darrendahly.github.io/img/bodycomp.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://darrendahly.github.io/public/img/bodycomp.pdf&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://darrendahly.github.io/img/bodycomp.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
