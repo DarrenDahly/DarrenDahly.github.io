@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Demo on </title>
-    <link>/https:/DarrenDahly.github.io/tags/demo/</link>
+    <link>/tags/demo/</link>
     <description>Recent content in Demo on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Darren L Dahly - All rights reserved</copyright>
     <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/https:/DarrenDahly.github.io/tags/demo/" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/demo/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>External Project</title>
-      <link>/https:/DarrenDahly.github.io/project/example-external-project/</link>
+      <link>/project/example-external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/https:/DarrenDahly.github.io/project/example-external-project/</guid>
+      <guid>/project/example-external-project/</guid>
       <description></description>
     </item>
     
