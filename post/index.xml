@@ -89,13 +89,15 @@
 
 &lt;p&gt;I can hear you thinking, “But you said the observed male to female ratio was also a function of the difference in variability of the sex-specific distributions.” So let’s say I double the variance. Then the sex ratio at ≥1.5 SD becomes 2:1. How realistic is this scenario? I have no idea, but thankfully Stevens and Haidt link to a bunch of studies that provide estimates about sex-specific differences in the variance (or SD) of many possibly relevant traits. And guess what? Every one I looked at was well under a 2X difference. Most seem to be around 1.1X to 1.2X.&lt;/p&gt;
 
-&lt;p&gt;That’s the hard part done. What about shifting the mean? Starting again from the standard normal, adding 0.10 SD to the male mean would lead to a 1.2 to 1 male to female ratio (at ≥1.5SD); but adding a full SD would give almost 5:1. Remember, a 1 SD shift is a pretty big one (e.g. a difference of 3 inches for height), so not suprisingly, the evidence seems to suggest that the 10% increase in the mean is the more realistic scenario for most variables where differences seem to exist.&lt;/p&gt;
+&lt;p&gt;That’s the hard part done. What about shifting the mean? Starting again from the standard normal, adding 0.10 SD to the male mean would lead to a 1.2 to 1 male to female ratio (at ≥1.5SD); but adding a full SD would give almost 5:1. However, a 1 SD shift is a pretty big one (e.g. a difference of 3 inches for height), so not suprisingly, the evidence seems to suggest that the 10% increase in the mean is the more realistic scenario for most variables where differences seem to exist.&lt;/p&gt;
 
 &lt;h2 id=&#34;the-conclusion&#34;&gt;The Conclusion&lt;/h2&gt;
 
 &lt;p&gt;Science is a tool for explaining what we observe. There is almost always more than one plausible explantion for any observation, and so it&amp;rsquo;s the job of the scientist to pit these against each other and see which comes out on top. So while differences in sex-specific distributions of innate traits &lt;em&gt;could&lt;/em&gt; contribute to the male to female sex ratios we see in Tech, they don&amp;rsquo;t seem to be the dominant factor. As a scientist, I can only conclude that other factors must be at play.&lt;/p&gt;
 
 &lt;p&gt;And if you don&amp;rsquo;t want to stop the fun, I made an &lt;a href=&#34;https://darrendahly.shinyapps.io/app1&#34; target=&#34;_blank&#34;&gt;app that you can use&lt;/a&gt; to recreate the examples above, or to play around with the parameters to your heart’s content.&lt;/p&gt;
+
+&lt;h2 id=&#34;post-script&#34;&gt;Post-script&lt;/h2&gt;
 </description>
     </item>
     
@@ -155,7 +157,7 @@
       <pubDate>Fri, 04 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>/post/rater_effects/</guid>
-      <description>&lt;p&gt;I was recently asked to help analyze some assessment data. There were 50 people applying for seven positions. Each person’s application materials were scored (0-100) by three people, randomly chosen from a larger group of raters. I was asked to help account for the fact that some raters might have a tendency to give higher or lower than average scores.&lt;/p&gt;
+      <description>&lt;p&gt;I was recently asked to help analyze some assessment data. There were 50 people applying for seven positions. Each person’s application materials were scored by three people, randomly chosen from a larger group of raters. I was asked to help account for the fact that some raters might have a tendency to give higher or lower than average scores.&lt;/p&gt;
 &lt;p&gt;If you want to play along, you can download the data here:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(tidyverse)
 
@@ -172,7 +174,7 @@
 ## 4    93     2     4
 ## 5    81     2    14
 ## 6    78     2    15&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;A naive approach to ranking the applicants would be to calculate a summary of their scores, such as the mean. Since the raters were assigned randomly, then there can’t be any bias due to rater effects. However, unbiased only means that if we were to replicate this process many times, the average of the rater effects from each of K replications would approach zero as K increased to infinity. This is different from our actual scenario, where applicants are assessed once. In this case, it’s possible that appliants who scored well did so because, at least partly, they “got lucky” and were assigned raters that tended to give higher than average marks.&lt;/p&gt;
+&lt;p&gt;A naive approach to ranking the applicants would be to calculate a summary of their scores, such as the mean. Since the raters were assigned randomly, then there can’t be any bias due to rater effects. However, unbiased only means that if we were to replicate this process many times, the average of the rater effects from each of K replications would approach zero as K increased to infinity. This is different from our actual scenario, where applicants are assessed once. In this case, it’s possible that applicants who scored well did so because, at least partly, they “got lucky” and were assigned raters that tended to give higher than average marks.&lt;/p&gt;
 &lt;p&gt;Here is the distribution of the number of applicants each rater had to deal with.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(htmlTable)
 
@@ -223,7 +225,7 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
       xlab(&amp;quot;Score&amp;quot;) +
       ggtitle(&amp;quot;Marginal score distributions&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-4-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Given the data we have, there are three ways to explain why any particular score falls where it does along the marginal distribution: applicant effects, rater effects, and random error (which just means any other sources of variation not accounted for by the other two observed sources of variation).&lt;/p&gt;
+&lt;p&gt;Given the data we have, there are three ways to explain why any particular score falls where it does along the marginal distribution: applicant effects (i.e. the “true” score of the applicant), rater effects (the tendency of a rater to be relatively easy or hard when scoring), and random error (which just means any other sources of variation not accounted for by the other two sources of variation).&lt;/p&gt;
 &lt;p&gt;To get a better look at what I am talking about, let’s calculate the mean score received for each applicant, and the mean score given by each rater.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  data &amp;lt;- group_by(data, app) %&amp;gt;%
           summarise(mean_app = mean(score)) %&amp;gt;%
@@ -252,7 +254,8 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
 ## 4    17        2     6         74       98    97
 ## 5    17        2    16         82       98    97
 ## 6    17        2    24         86       98   101&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Let’s plot the data twice. First, let’s highlight the applicants.&lt;/p&gt;
+&lt;p&gt;Let’s plot the data twice.&lt;/p&gt;
+&lt;p&gt;First, let’s highlight the applicants.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(data, aes(y = reorder(factor(app), mean_app),
                    x = reorder(factor(rater), mean_rater),
                    color = score)) +
@@ -266,6 +269,7 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
     ggtitle(&amp;quot;Scores, by applicant, across raters&amp;quot;,
     subtitle = &amp;quot;Applicants and Raters sorted by their respective mean scores&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-6-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Looking at applicant 20 (top row), we can see that the 3 dots are yellow-ish (scores of 94, 100, and 109) leading to the highest average score. We can also see that the highest individual score, the bright yellow dot on the far right, came from the rater with the highest average set of ratings (rater 20, coincidentally); while their other two scores came from raters that tended to give lower scores on average (raters 2 and 13).&lt;/p&gt;
 &lt;p&gt;Next let’s highlight the raters (other wise the plots are identical).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(data, aes(y = reorder(factor(app), mean_app),
                    x = reorder(factor(rater), mean_rater),
@@ -279,15 +283,15 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
     xlab(&amp;quot;Rater&amp;quot;) +
     ggtitle(&amp;quot;Scores given by raters, across applicants&amp;quot;,
     subtitle = &amp;quot;Applicants and Raters sorted by their respective mean scores&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-7-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Do some applicants have a low score because they had tougher raters? Do some raters appear tough because they dealt with poorer applicants?&lt;/p&gt;
-&lt;p&gt;To help sort this out, we will run two different mixed effects models. Both will include applicant as a random effect. Then one model will include rater as a fixed effect while the other model includes rater as a random effect.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-7-1.svg&#34; width=&#34;768&#34; /&gt; If you look to the far right, you can see that rater 20 tended to give higher scores, whereas rater 21, on the far left, was the harshest on applicants (reflected in all the blue and dark green dots).&lt;/p&gt;
+&lt;p&gt;The question then is this: Do some applicants have a low score because they had tougher raters? Or do some raters appear tough because they dealt with poorer applicants? The answer is that it’s a mix of these things, i.e. applicant effects plus rater effects.&lt;/p&gt;
+&lt;p&gt;To help sort this out, we will run two different mixed effects models. Both will include applicant as a random effect. Then one model will include rater as a fixed effect while the other model includes rater as a random effect. Which one is “correct” depends on your view of the raters: are they a sample of an underlying population of raters (a random effect), or are we interested in these and only these particular raters (a fixed effect).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(lme4)
 
   fixed_rater &amp;lt;- lmer(score ~ factor(rater) + (1 | app), data = data)
 
-  random_rater &amp;lt;- lmer(score ~ (1 | app) + (1 | rater), data = data)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then we’ll extract new rankings for the applicants, but this time adjusted for the rater effects.&lt;/p&gt;
+  randm_rater &amp;lt;- lmer(score ~ (1 | rater)   + (1 | app), data = data)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we’ll extract new rankings for the applicants, but this time adjusted for the rater effects. The extraction of these individual-level predictions is accomplished by the function &lt;code&gt;ranef&lt;/code&gt;, which is explained nicely by &lt;a href=&#34;https://stats.stackexchange.com/a/214145/16049&#34;&gt;Ben Bolker here&lt;/a&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  data &amp;lt;- data_frame(adjusted_fe = ranef(fixed_rater)$app[[1]],
                      app = c(1:50)) %&amp;gt;%
           full_join(data, by = &amp;quot;app&amp;quot;)
@@ -298,7 +302,7 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
           select(-adjusted_fe) %&amp;gt;%
           full_join(data, by = &amp;quot;app&amp;quot;) 
 
-  data &amp;lt;- data_frame(adjusted_re = ranef(random_rater)$app[[1]],
+  data &amp;lt;- data_frame(adjusted_re = ranef(randm_rater)$app[[1]],
                      app = c(1:50)) %&amp;gt;%
           full_join(data, by = &amp;quot;app&amp;quot;)
 
@@ -309,7 +313,7 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
           full_join(data, by = &amp;quot;app&amp;quot;) 
   
   data[] &amp;lt;- lapply(data, round, 1)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now we’ll plot the 3 types of rankings. We can see that after correction, 2 applicants move into the top 7, displacing 2 other applicants who would have made it in without the correction.&lt;/p&gt;
+&lt;p&gt;Finally, we’ll plot the 3 types of rankings.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(ggrepel)
 
   select(data, app, raw_rank,
@@ -339,6 +343,8 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
     ggtitle(&amp;quot;Applicant rankings (top 20)&amp;quot;,
             subtitle = &amp;quot;Raw ranks, plus rater-corrected ranks&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-10-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We can see that after the correction, 2 applicants move into the top 7, displacing 2 other applicants who would have made it otherwise (regardless of whether we model raters as a fixed or random effect).&lt;/p&gt;
+&lt;p&gt;Applicant 5 is the one most affected. Why did they drop so far? Returning to the previous plots, you can see that applicant 5 benefited from having two raters in the top 5 of average rater scores, while their third rater was in the middle of the pack. The closest comparison is applicant 25, who also benefited from two high raters, but their third rater tended to give low scores.&lt;/p&gt;
 </description>
     </item>
     

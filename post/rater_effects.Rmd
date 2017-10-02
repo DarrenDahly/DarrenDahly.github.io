@@ -17,7 +17,7 @@ output:
 ```
 
 
-I was recently asked to help analyze some assessment data. There were 50 people applying for seven positions. Each person's application materials were scored (0-100) by three people, randomly chosen from a larger group of raters. I was asked to help account for the fact that some raters might have a tendency to give higher or lower than average scores.
+I was recently asked to help analyze some assessment data. There were 50 people applying for seven positions. Each person's application materials were scored by three people, randomly chosen from a larger group of raters. I was asked to help account for the fact that some raters might have a tendency to give higher or lower than average scores.
 
 If you want to play along, you can download the data here:
 
@@ -39,7 +39,7 @@ If you want to play along, you can download the data here:
 
 ```
 
-A naive approach to ranking the applicants would be to calculate a summary of their scores, such as the mean. Since the raters were assigned randomly, then there can't be any bias due to rater effects. However, unbiased only means that if we were to replicate this process many times, the average of the rater effects from each of K replications would approach zero as K increased to infinity. This is different from our actual scenario, where applicants are assessed once. In this case, it's possible that appliants who scored well did so because, at least partly, they "got lucky" and were assigned raters that tended to give higher than average marks.  
+A naive approach to ranking the applicants would be to calculate a summary of their scores, such as the mean. Since the raters were assigned randomly, then there can't be any bias due to rater effects. However, unbiased only means that if we were to replicate this process many times, the average of the rater effects from each of K replications would approach zero as K increased to infinity. This is different from our actual scenario, where applicants are assessed once. In this case, it's possible that applicants who scored well did so because, at least partly, they "got lucky" and were assigned raters that tended to give higher than average marks.  
 
 Here is the distribution of the number of applicants each rater had to deal with. 
 
@@ -77,7 +77,7 @@ To address this problem, we have to first think about the overall distribution o
 
 ```
 
-Given the data we have, there are three ways to explain why any particular score falls where it does along the marginal distribution: applicant effects, rater effects, and random error (which just means any other sources of variation not accounted for by the other two observed sources of variation).
+Given the data we have, there are three ways to explain why any particular score falls where it does along the marginal distribution: applicant effects (i.e. the "true" score of the applicant), rater effects (the tendency of a rater to be relatively easy or hard when scoring), and random error (which just means any other sources of variation not accounted for by the other two sources of variation).
 
 To get a better look at what I am talking about, let's calculate the mean score received for each applicant, and the mean score given by each rater.
 
@@ -104,7 +104,9 @@ To get a better look at what I am talking about, let's calculate the mean score 
   head(data)
 
 ```
-Let's plot the data twice. First, let's highlight the applicants. 
+Let's plot the data twice. 
+
+First, let's highlight the applicants. 
 
 ```{r, fig.height = 6 * 1.67}
 
@@ -122,10 +124,9 @@ Let's plot the data twice. First, let's highlight the applicants.
     ggtitle("Scores, by applicant, across raters",
     subtitle = "Applicants and Raters sorted by their respective mean scores")
     
-
-
-
 ```
+
+Looking at applicant 20 (top row), we can see that the 3 dots are yellow-ish (scores of 94, 100, and 109) leading to the highest average score. We can also see that the highest individual score, the bright yellow dot on the far right, came from the rater with the highest average set of ratings (rater 20, coincidentally); while their other two scores came from raters that tended to give lower scores on average (raters 2 and 13). 
 
 Next let's highlight the raters (other wise the plots are identical).
 ```{r, fig.height = 6 * 1.67}
@@ -144,21 +145,22 @@ Next let's highlight the raters (other wise the plots are identical).
     subtitle = "Applicants and Raters sorted by their respective mean scores")
 
 ```
+If you look to the far right, you can see that rater 20 tended to give higher scores, whereas rater 21, on the far left, was the harshest on applicants (reflected in all the blue and dark green dots).
 
-Do some applicants have a low score because they had tougher raters? Do some raters appear tough because they dealt with poorer applicants? 
+The question then is this: Do some applicants have a low score because they had tougher raters? Or do some raters appear tough because they dealt with poorer applicants? The answer is that it's a mix of these things, i.e. applicant effects plus rater effects. 
 
-To help sort this out, we will run two different mixed effects models. Both will include applicant as a random effect. Then one model will include rater as a fixed effect while the other model includes rater as a random effect. 
+To help sort this out, we will run two different mixed effects models. Both will include applicant as a random effect. Then one model will include rater as a fixed effect while the other model includes rater as a random effect. Which one is "correct" depends on your view of the raters: are they a sample of an underlying population of raters (a random effect), or are we interested in these and only these particular raters (a fixed effect). 
 ```{r}
 
   library(lme4)
 
   fixed_rater <- lmer(score ~ factor(rater) + (1 | app), data = data)
 
-  random_rater <- lmer(score ~ (1 | app) + (1 | rater), data = data)
+  randm_rater <- lmer(score ~ (1 | rater)   + (1 | app), data = data)
   
 ```
 
-Then we'll extract new rankings for the applicants, but this time adjusted for the rater effects. 
+Now we'll extract new rankings for the applicants, but this time adjusted for the rater effects. The extraction of these individual-level predictions is accomplished by the function ```ranef```, which is explained nicely by [Ben Bolker here](https://stats.stackexchange.com/a/214145/16049).
 ```{r}
 
   data <- data_frame(adjusted_fe = ranef(fixed_rater)$app[[1]],
@@ -171,7 +173,7 @@ Then we'll extract new rankings for the applicants, but this time adjusted for t
           select(-adjusted_fe) %>%
           full_join(data, by = "app") 
 
-  data <- data_frame(adjusted_re = ranef(random_rater)$app[[1]],
+  data <- data_frame(adjusted_re = ranef(randm_rater)$app[[1]],
                      app = c(1:50)) %>%
           full_join(data, by = "app")
 
@@ -185,7 +187,7 @@ Then we'll extract new rankings for the applicants, but this time adjusted for t
   
 ```
 
-Now we'll plot the 3 types of rankings. We can see that after correction, 2 applicants move into the top 7, displacing 2 other applicants who would have made it in without the correction. 
+Finally, we'll plot the 3 types of rankings. 
 
 ```{r}
 
@@ -220,3 +222,6 @@ Now we'll plot the 3 types of rankings. We can see that after correction, 2 appl
 
 ```
 
+We can see that after the correction, 2 applicants move into the top 7, displacing 2 other applicants who would have made it otherwise (regardless of whether we model raters as a fixed or random effect). 
+
+Applicant 5 is the one most affected. Why did they drop so far? Returning to the previous plots, you can see that applicant 5 benefited from having two raters in the top 5 of average rater scores, while their third rater was in the middle of the pack. The closest comparison is applicant 25, who also benefited from two high raters, but their third rater tended to give low scores. 
