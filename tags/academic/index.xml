@@ -11,6 +11,53 @@
     <atom:link href="/tags/academic/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>New workshop for citizen scientists</title>
+      <link>/post/2017-10-04-citizen-science/</link>
+      <pubDate>Wed, 04 Oct 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-10-04-citizen-science/</guid>
+      <description>
+
+&lt;p&gt;I am happy to announce that in the new year we will be running a series of workshops for Cork&amp;rsquo;s Citizen Scientists. In contrast to the small series of lectures we ran this year, the new workshops will be completely focused on supporting local citizen scientists in their efforts to answer real questions with real data.&lt;/p&gt;
+
+&lt;p&gt;The 2-hour workshops will take place every 2 weeks (on Saturday evenings), for approximately 6 months. They will cover the following topics, with the aim of developing and conducting a real research project:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The philosophical foundations of science&lt;/li&gt;
+&lt;li&gt;The importance of science for shared decision making&lt;/li&gt;
+&lt;li&gt;Formulating useful, scientific questions&lt;/li&gt;
+&lt;li&gt;Causal and statistical inference&lt;/li&gt;
+&lt;li&gt;Research ethics and data protection&lt;/li&gt;
+&lt;li&gt;Accessing appropriate data&lt;/li&gt;
+&lt;li&gt;Cleaning and manipulating data&lt;/li&gt;
+&lt;li&gt;Visualising data&lt;/li&gt;
+&lt;li&gt;Analysing data&lt;/li&gt;
+&lt;li&gt;Reporting results&lt;/li&gt;
+&lt;li&gt;Drawing reasonable conclusions from our research&lt;/li&gt;
+&lt;li&gt;Communicating our research to stakeholders&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Due to the nature of the workshop, we are only accepting 10 participants (though we may expand to two parallel groups if there is demand). No prior experience with research or data analysis is required.&lt;/p&gt;
+
+&lt;p&gt;To apply, please send a 1-page (max!) summary of your best research idea to ddahly@ucc.ie by December 1. They will be reviewed and scored by a panel. Scoring criteria will include coherence, presentation, potential impact of the research, and whether the research idea is pragmatic. Successful applicants will be notified by January 1. Workshops will start in February. In your application, please include your name and an email address where you can be reached. No other personal information is required. The workshops are free of charge.&lt;/p&gt;
+
+&lt;h2 id=&#34;conditions&#34;&gt;Conditions&lt;/h2&gt;
+
+&lt;p&gt;Participants will ideally have laptops to work with. For anyone without access to a laptop, we’ll make every effort to find one for you to use during the workshops.&lt;/p&gt;
+
+&lt;p&gt;You must be 18 years of age or older to participate.&lt;/p&gt;
+
+&lt;p&gt;You cannot be employed as an academic or researcher, or enrolled as a student in a postgraduate research degree program. Please understand that this workshop is for the wider community, many of whom don’t otherwise have access to this kind of training. Email me If you have any questions about your eligibility (ddahly@ucc.ie). If you are a professional researcher and would like more training in statistics and data analysis, feel free to get in touch – we have other venues for that support.&lt;/p&gt;
+
+&lt;p&gt;Participants must commit to attending all of the workshops (beyond the occasional, unavoidable absence). Participants must also be willing to work on their projects for at least 5 hours per week. If you can’t commit to full participation, please don’t take a place that might go to someone who can.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions, please feel free to get in touch by email.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Sex differences</title>
       <link>/post/2017-09-12-sex-differences/</link>
       <pubDate>Tue, 12 Sep 2017 12:00:00 +0000</pubDate>
@@ -595,107 +642,6 @@ I successfully applied for a Medical Research Council fellowship. I had only bee
       <description>&lt;p&gt;Click to download the &lt;a href=&#34;http://darrendahly.github.io/img/bodycomp.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://darrendahly.github.io/public/img/bodycomp.pdf&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://darrendahly.github.io/img/bodycomp.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>River Plots</title>
-      <link>/post/2014-11-25-river-plots/</link>
-      <pubDate>Tue, 25 Nov 2014 12:00:00 +0000</pubDate>
-      
-      <guid>/post/2014-11-25-river-plots/</guid>
-      <description>&lt;p&gt;There are many ways to look at the relationship between two categorical variables.&lt;/p&gt;
-
-&lt;p&gt;A simple contingency table will often do the job.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;library(gmodels)
-
-macroTable &amp;lt;- (data$macro, data$macroCust, 
-               dnn = c(&amp;quot;Birth Weight&amp;quot;, &amp;quot;Customised Centile&amp;quot;)
-
-CrossTable(macroTable, digits = 2, prop.t = F, prop.chisq = F) 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/macroTable.png&#34; alt=&#34;macroTable&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Mosaic plots are pretty cool.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;library(vcd)
-
-mosaic(macroTable, 
-       labeling = labeling_list(sep = &amp;quot;, &amp;quot;, cols = 1), 
-       margins  = c(bottom = 7),
-       legend   = T, 
-       shade    = T)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/macroMosaic.png&#34; alt=&#34;macroMosaic&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;However, something I&amp;rsquo;ve really come to appreciate is the &lt;em&gt;&lt;a href=&#34;http://logfc.wordpress.com/2014/02/27/riverplot/&#34; target=&#34;_blank&#34;&gt;river plot&lt;/a&gt;&lt;/em&gt;. For example:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/macroRiver.png&#34; alt=&#34;macroRiver&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can make these using the R &lt;a href=&#34;http://cran.r-project.org/web/packages/riverplot/index.html&#34; target=&#34;_blank&#34;&gt;library(riverplot)&lt;/a&gt;, but you have to do a bit of data wrangling first. I have written a function to help with this when I am working from a data frame where the two factor variables are in separate columns, and the rows are observations.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;data &amp;lt;- data.frame(&amp;quot;ID&amp;quot; = c(1:500), 
-                   &amp;quot;A&amp;quot;  = factor(sample(c(1:4), 500, replace = T), 
-                                 labels = c(&amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;, &amp;quot;C&amp;quot;, &amp;quot;D&amp;quot;)),
-                   &amp;quot;B&amp;quot;  = factor(sample(c(1:3), 500, replace = T), 
-                                 labels = c(&amp;quot;Big&amp;quot;, &amp;quot;Mid&amp;quot;, &amp;quot;Small&amp;quot;)))
-
-makeRivPlot(data, &amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/dataRiver.png&#34; alt=&#34;dataRiver&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here is the function.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;makeRivPlot &amp;lt;- function(data, var1, var2) {
-
-  require(dplyr)          # Needed for the count function
-  require(riverplot)      # Does all the real work
-  require(RColorBrewer)   # To assign nice colours
-
-  names1 &amp;lt;- levels(data[, var1])
-  names2 &amp;lt;- levels(data[, var2])
-
-  var1   &amp;lt;- as.numeric(data[, var1])
-  var2   &amp;lt;- as.numeric(data[, var2])
-
-  edges  &amp;lt;- data.frame(var1, var2 + max(var1, na.rm = T))
-  edges  &amp;lt;- count(edges)
-
-  colnames(edges) &amp;lt;- c(&amp;quot;N1&amp;quot;, &amp;quot;N2&amp;quot;, &amp;quot;Value&amp;quot;)
-
-  nodes &amp;lt;- data.frame(
-           ID     = c(1:(max(var1, na.rm = T) + 
-                         max(var2, na.rm = T))),  
-           x      =  c(rep(1, times = max(var1, na.rm = T)), 
-                       rep(2, times = max(var2, na.rm = T))),       
-           labels = c(names1, names2) , 
-           col    = c(brewer.pal(max(var1, na.rm = T), &amp;quot;Set1&amp;quot;), 
-                      brewer.pal(max(var2, na.rm = T), &amp;quot;Set1&amp;quot;)),
-           stringsAsFactors = FALSE)
-
-  nodes$col &amp;lt;- paste(nodes$col, 95, sep = &amp;quot;&amp;quot;)
-
-  river &amp;lt;- makeRiver(nodes, edges)
-
-  return(plot(river))
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Related Links:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.exegetic.biz/blog/2014/08/plotting-flows-with-riverplot/?utm_source=rss&amp;amp;utm_medium=rss&amp;amp;utm_campaign=plotting-flows-with-riverplot&#34; target=&#34;_blank&#34;&gt;Plotting Flows with riverplot&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://stats.stackexchange.com/questions/87132/what-is-the-proper-name-for-a-river-plot-visualisation&#34; target=&#34;_blank&#34;&gt;Cross Validated Thread&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://cran.r-project.org/web/packages/riverplot/index.html&#34; target=&#34;_blank&#34;&gt;CRAN for library(riverplot)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://logfc.wordpress.com/2014/02/27/riverplot/&#34; target=&#34;_blank&#34;&gt;From the author of library(riverplot)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://blog.ouseful.info/2013/07/23/generating-sankey-diagrams-from-rcharts/&#34; target=&#34;_blank&#34;&gt;Generating Sankey Diagrams from rCharts&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

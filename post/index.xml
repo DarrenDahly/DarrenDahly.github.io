@@ -11,6 +11,53 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>New workshop for citizen scientists</title>
+      <link>/post/2017-10-04-citizen-science/</link>
+      <pubDate>Wed, 04 Oct 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-10-04-citizen-science/</guid>
+      <description>
+
+&lt;p&gt;I am happy to announce that in the new year we will be running a series of workshops for Cork&amp;rsquo;s Citizen Scientists. In contrast to the small series of lectures we ran this year, the new workshops will be completely focused on supporting local citizen scientists in their efforts to answer real questions with real data.&lt;/p&gt;
+
+&lt;p&gt;The 2-hour workshops will take place every 2 weeks (on Saturday evenings), for approximately 6 months. They will cover the following topics, with the aim of developing and conducting a real research project:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The philosophical foundations of science&lt;/li&gt;
+&lt;li&gt;The importance of science for shared decision making&lt;/li&gt;
+&lt;li&gt;Formulating useful, scientific questions&lt;/li&gt;
+&lt;li&gt;Causal and statistical inference&lt;/li&gt;
+&lt;li&gt;Research ethics and data protection&lt;/li&gt;
+&lt;li&gt;Accessing appropriate data&lt;/li&gt;
+&lt;li&gt;Cleaning and manipulating data&lt;/li&gt;
+&lt;li&gt;Visualising data&lt;/li&gt;
+&lt;li&gt;Analysing data&lt;/li&gt;
+&lt;li&gt;Reporting results&lt;/li&gt;
+&lt;li&gt;Drawing reasonable conclusions from our research&lt;/li&gt;
+&lt;li&gt;Communicating our research to stakeholders&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Due to the nature of the workshop, we are only accepting 10 participants (though we may expand to two parallel groups if there is demand). No prior experience with research or data analysis is required.&lt;/p&gt;
+
+&lt;p&gt;To apply, please send a 1-page (max!) summary of your best research idea to ddahly@ucc.ie by December 1. They will be reviewed and scored by a panel. Scoring criteria will include coherence, presentation, potential impact of the research, and whether the research idea is pragmatic. Successful applicants will be notified by January 1. Workshops will start in February. In your application, please include your name and an email address where you can be reached. No other personal information is required. The workshops are free of charge.&lt;/p&gt;
+
+&lt;h2 id=&#34;conditions&#34;&gt;Conditions&lt;/h2&gt;
+
+&lt;p&gt;Participants will ideally have laptops to work with. For anyone without access to a laptop, we’ll make every effort to find one for you to use during the workshops.&lt;/p&gt;
+
+&lt;p&gt;You must be 18 years of age or older to participate.&lt;/p&gt;
+
+&lt;p&gt;You cannot be employed as an academic or researcher, or enrolled as a student in a postgraduate research degree program. Please understand that this workshop is for the wider community, many of whom don’t otherwise have access to this kind of training. Email me If you have any questions about your eligibility (ddahly@ucc.ie). If you are a professional researcher and would like more training in statistics and data analysis, feel free to get in touch – we have other venues for that support.&lt;/p&gt;
+
+&lt;p&gt;Participants must commit to attending all of the workshops (beyond the occasional, unavoidable absence). Participants must also be willing to work on their projects for at least 5 hours per week. If you can’t commit to full participation, please don’t take a place that might go to someone who can.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions, please feel free to get in touch by email.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Sex differences</title>
       <link>/post/2017-09-12-sex-differences/</link>
       <pubDate>Tue, 12 Sep 2017 12:00:00 +0000</pubDate>
@@ -903,34 +950,6 @@ I successfully applied for a Medical Research Council fellowship. I had only bee
 &lt;p&gt;&lt;a href=&#34;http://scholarlykitchen.sspnet.org/2014/11/11/to-share-or-not-to-share-that-is-the-research-data-question/&#34; target=&#34;_blank&#34;&gt;To Share or not to Share? That is the (Research Data) Question…    &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.esajournals.org/doi/full/10.1890/ES14-00402.1&#34; target=&#34;_blank&#34;&gt;The Tao of open science for ecology&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>What is overweight, really?</title>
-      <link>/post/2015-01-05-who-obesity-infographic/</link>
-      <pubDate>Mon, 05 Jan 2015 12:00:00 +0000</pubDate>
-      
-      <guid>/post/2015-01-05-who-obesity-infographic/</guid>
-      <description>&lt;p&gt;The image below is from the WHO, and I don&amp;rsquo;t like it.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/whoOwOb.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The top figure represents both &lt;em&gt;overweight&lt;/em&gt; and &lt;em&gt;obese&lt;/em&gt; people. &lt;a href=&#34;http://www.who.int/mediacentre/factsheets/fs311/en/&#34; target=&#34;_blank&#34;&gt;According to the WHO&lt;/a&gt;, a person with a &lt;a href=&#34;http://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm&#34; target=&#34;_blank&#34;&gt;body mass index&lt;/a&gt; (BMI) of 25 or greater is overweight, while a person with a BMI of 30 or more is obese. The &lt;a href=&#34;http://whqlibdoc.who.int/trs/WHO_TRS_894_(part1).pdf&#34; target=&#34;_blank&#34;&gt;WHO arrived at these numbers&lt;/a&gt; partly due to research comparing health outcomes across people with different BMIs. &lt;a href=&#34;http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(09)60318-4/fulltext?_eventId=logout&#34; target=&#34;_blank&#34;&gt;These studies&lt;/a&gt; produce graphs like this one, which looks at mortality rate as a function of BMI.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/bmiMortality.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Risk of death starts to rise rapidly as BMI increases beyond 30, thus the WHO definition of obesity. But what about a BMI of 25, which the WHO defines as overweight? Your risk of death is almost as low as it can go!&lt;/p&gt;
-
-&lt;p&gt;Having a BMI of 25.7 is clearly very different than having a BMI of 33.1 in terms of health risks. So why do we so often see prevalence figures for obesity and overweight combined, as they are in the infographic above? Because it results in a bigger number, which makes your problem sound more important. Cynical, but true.&lt;/p&gt;
-
-&lt;p&gt;I am an obesity researcher, and I think it&amp;rsquo;s important to draw attention to the problem, but we need to be careful and honest about how we do it. If I am a healthy person with a BMI of 25.5 and see this infographic, I&amp;rsquo;m probably scratching my head looking at that first figure, who has a BMI of about 42 by my estimation. Then I&amp;rsquo;m probably ignoring everything else I ever hear about the dangers of obesity, because I know that I&amp;rsquo;m not anything like &lt;em&gt;that thing&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is unfortunate, because knowing you are overweight is useful, despite the fact it isn&amp;rsquo;t strongly related to poor health. This is because many people gain fat slowly across adulthood, and few experience sustained fat loss. As you continue to gain beyond a BMI of 25, health risks increase, slowly at first, and then more rapidly. Thus overweight is like a yellow traffic light, warning you that the path ahead is risky. It would be great if people better understood this, but in my opinion infographics like the one above undermine this understanding. (Side note: this perspective is very clearly outlined in a &lt;a href=&#34;http://whqlibdoc.who.int/trs/WHO_TRS_854.pdf?ua=1&#34; target=&#34;_blank&#34;&gt;1995 technical report from the WHO on anthropometry&lt;/a&gt;. Just scroll down to the section on overweight adults.)&lt;/p&gt;
-
-&lt;p&gt;Now what if I have a BMI of 32 (which is about right in my case) and see this infographic? Again, I&amp;rsquo;m looking at that bottom figure and completely discounting that it has anything to do with me. It&amp;rsquo;s ridiculous, it&amp;rsquo;s &lt;a href=&#34;http://www.psychologytoday.com/blog/wiring-the-mind/201501/whats-wrong-fat-shaming&#34; target=&#34;_blank&#34;&gt;fat shaming&lt;/a&gt;, and it&amp;rsquo;s likely counter-productive.&lt;/p&gt;
-
-&lt;p&gt;What would I like to see instead? If I had the skills to make a decent infographic, I would start with the BMI/mortality graph above, add some traffic lights, and depict a person traveling along the path from better to poorer health as their BMI increases. I would also make sure to emphasize the health risks and other costs of &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3527647/&#34; target=&#34;_blank&#34;&gt;morbid obesity&lt;/a&gt; which is becoming all &lt;a href=&#34;http://www.worldobesity.org/site_media/library/resource_images/Trends_in_morbid_obesity_adults_Oct_2014.pdf&#34; target=&#34;_blank&#34;&gt;too common&lt;/a&gt; in many places.&lt;/p&gt;
 </description>
     </item>
     
