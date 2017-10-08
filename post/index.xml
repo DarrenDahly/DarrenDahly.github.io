@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on </title>
-    <link>/post/</link>
+    <link>/darrendahly.github.io/post/</link>
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Darren L Dahly - All rights reserved</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/post/" rel="self" type="application/rss+xml" />
+    <atom:link href="/darrendahly.github.io/post/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>New workshop for citizen scientists</title>
-      <link>/post/2017-10-04-citizen-science/</link>
+      <link>/darrendahly.github.io/post/2017-10-04-citizen-science/</link>
       <pubDate>Wed, 04 Oct 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-10-04-citizen-science/</guid>
+      <guid>/darrendahly.github.io/post/2017-10-04-citizen-science/</guid>
       <description>
 
 &lt;p&gt;I am happy to announce that in the new year we will be running a series of workshops for Cork&amp;rsquo;s Citizen Scientists. In contrast to the small series of lectures we ran this year, the new workshops will be completely focused on supporting local citizen scientists in their efforts to answer real questions with real data.&lt;/p&gt;
@@ -59,10 +59,10 @@
     
     <item>
       <title>Sex differences</title>
-      <link>/post/2017-09-12-sex-differences/</link>
+      <link>/darrendahly.github.io/post/2017-09-12-sex-differences/</link>
       <pubDate>Tue, 12 Sep 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-09-12-sex-differences/</guid>
+      <guid>/darrendahly.github.io/post/2017-09-12-sex-differences/</guid>
       <description>
 
 &lt;h2 id=&#34;the-introduction&#34;&gt;The Introduction&lt;/h2&gt;
@@ -164,10 +164,10 @@
     
     <item>
       <title>Response Heterogeneity</title>
-      <link>/post/2017-08-11-response-heterogeneity/</link>
+      <link>/darrendahly.github.io/post/2017-08-11-response-heterogeneity/</link>
       <pubDate>Fri, 11 Aug 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-08-11-response-heterogeneity/</guid>
+      <guid>/darrendahly.github.io/post/2017-08-11-response-heterogeneity/</guid>
       <description>&lt;p&gt;A colleague in food science recently sent me a narrative review outlining some of the challenges in their field (&lt;a href=&#34;http://ajcn.nutrition.org/content/early/2016/11/23/ajcn.116.136051&#34; target=&#34;_blank&#34;&gt;Cassidy and Minihane, 2017, Am J Clin Nutr&lt;/a&gt;). One of these was “extensive heterogeneity in the response to increased intake [of flavonoids]”.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Response heterogeneity&lt;/em&gt; is often highlighted to justify the need for precision medicine. The argument is that we need precision medicine to identify and treat the people that we know will respond well to a particular treatment, and not bother treating those who won&amp;rsquo;t respond. Sounds smart. The problem however is that the studies used to demonstrate response heterogeneity simply don’t, and doing it the right way is much more challenging than people seem to understand.&lt;/p&gt;
@@ -214,10 +214,10 @@
     
     <item>
       <title>Rater effects</title>
-      <link>/post/rater_effects/</link>
+      <link>/darrendahly.github.io/post/rater_effects/</link>
       <pubDate>Fri, 04 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/rater_effects/</guid>
+      <guid>/darrendahly.github.io/post/rater_effects/</guid>
       <description>&lt;p&gt;I was recently asked to help analyze some assessment data. There were 50 people applying for seven positions. Each person’s application materials were scored by three people, randomly chosen from a larger group of raters. I was asked to help account for the fact that some raters might have a tendency to give higher or lower than average scores.&lt;/p&gt;
 &lt;p&gt;If you want to play along, you can download the data here:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(tidyverse)
@@ -285,7 +285,7 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
       ylab(&amp;quot;Count&amp;quot;) +
       xlab(&amp;quot;Score&amp;quot;) +
       ggtitle(&amp;quot;Marginal score distributions&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-4-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/darrendahly.github.io/post/rater_effects_files/figure-html/unnamed-chunk-4-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Given the data we have, there are three ways to explain why any particular score falls where it does along the marginal distribution: applicant effects (i.e. the “true” score of the applicant), rater effects (the tendency of a rater to be relatively easy or hard when scoring), and random error (which just means any other sources of variation not accounted for by the other two sources of variation).&lt;/p&gt;
 &lt;p&gt;To get a better look at what I am talking about, let’s calculate the mean score received for each applicant, and the mean score given by each rater.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  data &amp;lt;- group_by(data, app) %&amp;gt;%
@@ -329,7 +329,7 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
     xlab(&amp;quot;Rater&amp;quot;) +
     ggtitle(&amp;quot;Scores, by applicant, across raters&amp;quot;,
     subtitle = &amp;quot;Applicants and Raters sorted by their respective mean scores&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-6-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/darrendahly.github.io/post/rater_effects_files/figure-html/unnamed-chunk-6-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Looking at applicant 20 (top row), we can see that the 3 dots are yellow-ish (scores of 94, 100, and 109) leading to the highest average score. We can also see that the highest individual score, the bright yellow dot on the far right, came from the rater with the highest average set of ratings (rater 20, coincidentally); while their other two scores came from raters that tended to give lower scores on average (raters 2 and 13).&lt;/p&gt;
 &lt;p&gt;Next let’s highlight the raters (other wise the plots are identical).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(data, aes(y = reorder(factor(app), mean_app),
@@ -344,7 +344,7 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
     xlab(&amp;quot;Rater&amp;quot;) +
     ggtitle(&amp;quot;Scores given by raters, across applicants&amp;quot;,
     subtitle = &amp;quot;Applicants and Raters sorted by their respective mean scores&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-7-1.svg&#34; width=&#34;768&#34; /&gt; If you look to the far right, you can see that rater 20 tended to give higher scores, whereas rater 21, on the far left, was the harshest on applicants (reflected in all the blue and dark green dots).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/darrendahly.github.io/post/rater_effects_files/figure-html/unnamed-chunk-7-1.svg&#34; width=&#34;768&#34; /&gt; If you look to the far right, you can see that rater 20 tended to give higher scores, whereas rater 21, on the far left, was the harshest on applicants (reflected in all the blue and dark green dots).&lt;/p&gt;
 &lt;p&gt;The question then is this: Do some applicants have a low score because they had tougher raters? Or do some raters appear tough because they dealt with poorer applicants? The answer is that it’s a mix of these things, i.e. applicant effects plus rater effects.&lt;/p&gt;
 &lt;p&gt;To help sort this out, we will run two different mixed effects models. Both will include applicant as a random effect. Then one model will include rater as a fixed effect while the other model includes rater as a random effect. Which one is “correct” depends on your view of the raters: are they a sample of an underlying population of raters (a random effect), or are we interested in these and only these particular raters (a fixed effect).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(lme4)
@@ -403,7 +403,7 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
     ylab(&amp;quot;Rank&amp;quot;) +
     ggtitle(&amp;quot;Applicant rankings (top 20)&amp;quot;,
             subtitle = &amp;quot;Raw ranks, plus rater-corrected ranks&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-10-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/darrendahly.github.io/post/rater_effects_files/figure-html/unnamed-chunk-10-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We can see that after the correction, 2 applicants move into the top 7, displacing 2 other applicants who would have made it otherwise (regardless of whether we model raters as a fixed or random effect).&lt;/p&gt;
 &lt;p&gt;Applicant 5 is the one most affected. Why did they drop so far? Returning to the previous plots, you can see that applicant 5 benefited from having two raters in the top 5 of average rater scores, while their third rater was in the middle of the pack. The closest comparison is applicant 25, who also benefited from two high raters, but their third rater tended to give low scores.&lt;/p&gt;
 </description>
@@ -411,10 +411,10 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
     
     <item>
       <title>Log Log Regression</title>
-      <link>/post/loglog/</link>
+      <link>/darrendahly.github.io/post/loglog/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/loglog/</guid>
+      <guid>/darrendahly.github.io/post/loglog/</guid>
       <description>&lt;p&gt;When using linear regression, when should you log-transform your data?&lt;/p&gt;
 &lt;p&gt;Many people seem to think that any non-Gaussian, continuous variables should be transformed so that the data “look more normal.” Linear regression does in fact assume the errors are normally distributed, but it is fairly robust to violations of this assumption, and there are no such assumptions regarding the predictor variables. What is often ignored or misunderstood is the impact that variable transformations have on the linearity assumption of regression models, and on coefficient interpretation.&lt;/p&gt;
 &lt;p&gt;The are a variety of options for transforming data, and simply taking the logarithim may be the most popular, given that your data doesn’t include values equal to zero. We will thus focus on linear regression when the outcome and one predictor are both log transformed.&lt;/p&gt;
@@ -447,7 +447,7 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
     scale_fill_viridis(guide = FALSE, discrete = TRUE) +
     facet_wrap(~variable, scales = &amp;quot;free&amp;quot;) +
     theme_base()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-3-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/darrendahly.github.io/post/loglog_files/figure-html/unnamed-chunk-3-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;linearity&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Linearity&lt;/h2&gt;
@@ -458,7 +458,7 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
     geom_smooth(span   = 1,    color = viridis(1, begin = 0.6), se = FALSE, linetype =
                 &amp;quot;dashed&amp;quot;) +
     theme_base()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-4-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/darrendahly.github.io/post/loglog_files/figure-html/unnamed-chunk-4-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;linear-regression&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Linear regression&lt;/h2&gt;
@@ -489,7 +489,7 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
 &lt;div id=&#34;diagnostic-plots&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Diagnostic plots&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  autoplot(lr, which = 1:6, ncol = 3, label.size = 3)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-6-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/darrendahly.github.io/post/loglog_files/figure-html/unnamed-chunk-6-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;log-transformed-variables&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Log transformed variables&lt;/h2&gt;
@@ -500,7 +500,7 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
     geom_smooth(span   = 1,    color = viridis(1, begin = 0.6), se = FALSE, 
                 linetype = &amp;quot;dashed&amp;quot;) +
     theme_base()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-7-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/darrendahly.github.io/post/loglog_files/figure-html/unnamed-chunk-7-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Note that the extreme outlier in the first scatter plot is not an outlier in log-log space.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;log-log-linear-regression&#34; class=&#34;section level2&#34;&gt;
@@ -532,7 +532,7 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
 &lt;div id=&#34;diagnostic-plots-1&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Diagnostic plots&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  autoplot(log.log.lr, which = 1:6, ncol = 3, label.size = 3)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-9-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/darrendahly.github.io/post/loglog_files/figure-html/unnamed-chunk-9-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ploting-the-results-in-the-original-scales&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Ploting the results in the original scales&lt;/h2&gt;
@@ -548,7 +548,7 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
     geom_smooth(span = 1, color = viridis(1, begin = 0.6), size = 0.7, linetype = &amp;quot;dashed&amp;quot;,
                 se = FALSE) +
     theme_base()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-10-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/darrendahly.github.io/post/loglog_files/figure-html/unnamed-chunk-10-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;model-interpretation&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Model interpretation&lt;/h2&gt;
@@ -562,10 +562,10 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
     
     <item>
       <title>Getting an interview</title>
-      <link>/post/2017-05-09-interviews/</link>
+      <link>/darrendahly.github.io/post/2017-05-09-interviews/</link>
       <pubDate>Tue, 09 May 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-05-09-interviews/</guid>
+      <guid>/darrendahly.github.io/post/2017-05-09-interviews/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -598,10 +598,10 @@ Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
     
     <item>
       <title>In Defense of DAGs</title>
-      <link>/post/2017-03-30-dags/</link>
+      <link>/darrendahly.github.io/post/2017-03-30-dags/</link>
       <pubDate>Thu, 30 Mar 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-03-30-dags/</guid>
+      <guid>/darrendahly.github.io/post/2017-03-30-dags/</guid>
       <description>
 
 &lt;p&gt;Professors Nancy Krieger (NK) and George Davey Smith (GDS) recently published an editorial in the IJE titled &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/27694566&#34; target=&#34;_blank&#34;&gt;The tale wagged by the DAG: broadening the scope of causal inference and explanation for epidemiology&lt;/a&gt;. In it, they argue that causal inference in epidemiology is dominated by an approach characterised by counterfactuals (or potential outcomes) and directed acyclic graphs (DAGs); and that this hegemony is limiting the scope of our field, and preventing us from adopting a more useful, pluralistic view of causality.&lt;/p&gt;
@@ -676,10 +676,10 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
     
     <item>
       <title>Your science is justified by the question, not the answer</title>
-      <link>/post/2017-03-21-prereg/</link>
+      <link>/darrendahly.github.io/post/2017-03-21-prereg/</link>
       <pubDate>Tue, 21 Mar 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-03-21-prereg/</guid>
+      <guid>/darrendahly.github.io/post/2017-03-21-prereg/</guid>
       <description>&lt;p&gt;Registration of clinical trials, prior to any patient recruitment, is now common. Though trial registrations often omit the important details regarding their proposed analyses (despite advice to the contrary), most trialists seem to agree, at least in principle, that you should transparently describe your plans for clinical trial data before they are collected. Unfortunately, this remains a foreign concept in other areas of clinical and public health research.&lt;/p&gt;
 
 &lt;p&gt;Before I started working as a biostatistician involved in clinical trials, I worked with birth cohort studies. Whereas the vast majority of clinical trials are designed to answer a single research question (or small set of them), the prospective cohort study design allows researchers to answer many questions, even thousands, including questions that nobody envisioned at the start of the study. Given the costs of recruiting and following-up hundreds or thousands of study participants, many believe that it’s our responsibility to extract as much value from these data as we can. However, this well-intentioned mind-set can quickly be distorted to promote toxic research practices, where perverse incentives to publish, combined with the poor overall quality of peer-review, have created a body of flawed, often useless, research with results affected by various forms of p-hacking (intentional or otherwise) and file-drawer effects.&lt;/p&gt;
@@ -700,10 +700,10 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
     
     <item>
       <title>Upcoming R workshop</title>
-      <link>/post/2017-03-13-r_courses/</link>
+      <link>/darrendahly.github.io/post/2017-03-13-r_courses/</link>
       <pubDate>Mon, 13 Mar 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-03-13-r_courses/</guid>
+      <guid>/darrendahly.github.io/post/2017-03-13-r_courses/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&#34;https://www.ucc.ie/en/crfc/&#34; target=&#34;_blank&#34;&gt;Clinical Research Facility Cork&lt;/a&gt; is sponsoring a free, two-day introduction to data analysis using the R statistical programming language on March 30th and 31st (Th, F), from 09:30 to 16:30 in the &lt;a href=&#34;https://www.google.ie/maps/place/Western+Gateway,+Western+Gateway+Building,+University+College+Cork,+Western+Rd,+Mardyke,+Cork/data=!4m2!3m1!1s0x4844902fb2cfc8d3:0xbc1521a27a3ca450?sa=X&amp;amp;ved=0ahUKEwjRn-H2-pbQAhWDLMAKHStcCXwQ8gEIGzAA&#34; target=&#34;_blank&#34;&gt;Western Gateway Building&lt;/a&gt; 3.71. Places are available on a first-come, first-serve basis, and there is space for 10 participants. Please email me at ddahly@ucc.ie to reserve a place.&lt;/p&gt;
@@ -742,10 +742,10 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
     
     <item>
       <title>Cause vs. Consequence</title>
-      <link>/post/2017-02-04-consequentialism/</link>
+      <link>/darrendahly.github.io/post/2017-02-04-consequentialism/</link>
       <pubDate>Sat, 04 Feb 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-04-consequentialism/</guid>
+      <guid>/darrendahly.github.io/post/2017-02-04-consequentialism/</guid>
       <description>&lt;p&gt;I have, for some time, wanted to respond to Sandro Galea&amp;rsquo;s &lt;a href=&#34;https://academic.oup.com/aje/article/178/8/1185/84205/An-Argument-for-a-Consequentialist-Epidemiology&#34; target=&#34;_blank&#34;&gt;essay on a Consequentialist Epidemiology&lt;/a&gt;, published in 2013 (!) in the American Journal of Epidemiology. It is hard to argue against the importance of consequentialism for academic epidemiology. It is equally hard to dismiss Galea&amp;rsquo;s concerns about our lack of influence with funders and policy makers. However, my views beyond this diverge from Professor Galea&amp;rsquo;s, and in the spirit of his &amp;ldquo;provocation,&amp;rdquo; I would like to respectfully offer an alternate perspective.&lt;/p&gt;
 
 &lt;p&gt;Galea seems primarily concerned that academic epidemiology is focused too much on identifying causes of disease, and not enough on actual intervention. He further worries that &amp;ldquo;our focus on causal rather than pragmatic thinking&amp;rdquo; risks marginalizing us with funders and policy makers. His solution to this problem is to promote a &amp;ldquo;consequentialist epidemiology&amp;rdquo; that is intensely focused on improving health outcomes, even &amp;ldquo;at the expense of the development of epidemiological methods and novel approaches.&amp;rdquo;&lt;/p&gt;
@@ -778,10 +778,10 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
     
     <item>
       <title>Stata Workshop (2016)</title>
-      <link>/post/2017-04-13-stata_workshop/</link>
+      <link>/darrendahly.github.io/post/2017-04-13-stata_workshop/</link>
       <pubDate>Sat, 04 Feb 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-04-13-stata_workshop/</guid>
+      <guid>/darrendahly.github.io/post/2017-04-13-stata_workshop/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -798,10 +798,10 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
     
     <item>
       <title>The perils of exploratory data analysis</title>
-      <link>/post/2017-02-03-exploratory/</link>
+      <link>/darrendahly.github.io/post/2017-02-03-exploratory/</link>
       <pubDate>Fri, 03 Feb 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-03-exploratory/</guid>
+      <guid>/darrendahly.github.io/post/2017-02-03-exploratory/</guid>
       <description>&lt;p&gt;Is it ever ok to conduct an exploratory data analysis, for the purpose of &amp;ldquo;generating hypotheses&amp;rdquo;?&lt;/p&gt;
 
 &lt;p&gt;This question was motivated by a new Retraction Watch piece, &lt;a href=&#34;http://retractionwatch.com/2017/02/02/backlash-prompts-prominent-nutrition-researcher-reanalyze-multiple-papers/&#34; target=&#34;_blank&#34;&gt;Backlash prompts prominent nutrition researcher to reanalyze multiple papers&lt;/a&gt;. It covers the backlash to an earlier blog post by &lt;a href=&#34;https://twitter.com/BrianWansink&#34; target=&#34;_blank&#34;&gt;Brian Wansink&lt;/a&gt;, who wrote about two early career researchers, one of whom took on several &amp;ldquo;extra&amp;rdquo; projects, vs. another who refused (&lt;a href=&#34;http://www.brianwansink.com/phd-advice/the-grad-student-who-never-said-no&#34; target=&#34;_blank&#34;&gt;The Grad student who never said no&lt;/a&gt;). The former managed to turn the &amp;ldquo;opportunity&amp;rdquo; into a small handful of publications, and Wansink&amp;rsquo;s thesis was that this is how you get ahead in academia. However, in writing the blog post, its author revealed a concerning approach to statistical inference, not to mention a cavalier attitude to the exploitation of early career scientists, both of which were quickly noted on twitter and in the blog&amp;rsquo;s comments.&lt;/p&gt;
@@ -834,10 +834,10 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
     
     <item>
       <title>An academic career path</title>
-      <link>/post/2015-08-13-career-talk/</link>
+      <link>/darrendahly.github.io/post/2015-08-13-career-talk/</link>
       <pubDate>Thu, 13 Aug 2015 12:00:00 +0000</pubDate>
       
-      <guid>/post/2015-08-13-career-talk/</guid>
+      <guid>/darrendahly.github.io/post/2015-08-13-career-talk/</guid>
       <description>
 
 &lt;p&gt;As of today I am a Senior Lecturer at the &lt;a href=&#34;http://www.ucc.ie/en/crfc/&#34; target=&#34;_blank&#34;&gt;Clinical Research Facility Cork&lt;/a&gt;. I am feeling reflective. In the 5 short years following my PhD, I went from the USA, to England, to Brazil, to Ireland. I have gone from Lecturer, to Post-Doc, to &lt;a href=&#34;https://en.wikipedia.org/wiki/Senior_lecturer&#34; target=&#34;_blank&#34;&gt;Senior Lecturer&lt;/a&gt;, in that order. I started in pursuit of a career in public health nutrition, but now work primarily as a biostatistician conducting clinical research. It&amp;rsquo;s been a strange path, though &lt;em&gt;strange&lt;/em&gt; paths in academia are starting to feel awfully &lt;em&gt;normal&lt;/em&gt;. Apologies for my narcissism and any name dropping. I hope this is helpful.&lt;/p&gt;
@@ -887,10 +887,10 @@ I successfully applied for a Medical Research Council fellowship. I had only bee
     
     <item>
       <title>Cork R-Users Group - First Meet-Up</title>
-      <link>/post/2015-08-10-first-r-users/</link>
+      <link>/darrendahly.github.io/post/2015-08-10-first-r-users/</link>
       <pubDate>Mon, 10 Aug 2015 12:00:00 +0000</pubDate>
       
-      <guid>/post/2015-08-10-first-r-users/</guid>
+      <guid>/darrendahly.github.io/post/2015-08-10-first-r-users/</guid>
       <description>&lt;p&gt;Thanks to all of you for joining the Cork R-Users group, especially the thirteen real-life human R-Users who met for the first time last week at our inaugural meet-up.&lt;/p&gt;
 
 &lt;p&gt;I was happy to see a diverse group. I thought we were well balanced between academia and industry, and between statistics and data science. There were software engineers, biostatisticians, ecologists, data scientists, PhD students, and systems administrators. We had people with 10 plus years of experience with R, and people who had never used it but wanted to see what the fuss was about. Most of us had at least a few years of experience using R, but it was clear that everyone in the group was there because they wanted to learn more. Other reasons we wanted to create this group were to “Identify best practices…Learn what is possible…Solve Problems…Prevent errors,” and perhaps most importantly to, “Be around other people” that are as into data as we are.&lt;/p&gt;
@@ -907,10 +907,10 @@ I successfully applied for a Medical Research Council fellowship. I had only bee
     
     <item>
       <title>Why share the data?</title>
-      <link>/post/2015-06-15-sharing-data/</link>
+      <link>/darrendahly.github.io/post/2015-06-15-sharing-data/</link>
       <pubDate>Mon, 15 Jun 2015 12:00:00 +0000</pubDate>
       
-      <guid>/post/2015-06-15-sharing-data/</guid>
+      <guid>/darrendahly.github.io/post/2015-06-15-sharing-data/</guid>
       <description>
 
 &lt;p&gt;Research data should be shared. This view is widespread in academia and common among research funders. Regardless, most research datasets remain locked away. Sometimes data are held back for less than admirable reasons, but they can also be held back with good intent. For example, access to data is sometimes restricted in order to maximize opportunities for early career researchers to publish papers using the data. I believe this is instead counter-productive for ECRs.&lt;/p&gt;

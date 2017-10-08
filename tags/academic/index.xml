@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Content tagged as &#39;Academic&#39; on </title>
-    <link>/tags/academic/</link>
+    <link>/darrendahly.github.io/tags/academic/</link>
     <description>Recent content in Content tagged as &#39;Academic&#39; on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Darren L Dahly - All rights reserved</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/academic/" rel="self" type="application/rss+xml" />
+    <atom:link href="/darrendahly.github.io/tags/academic/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>New workshop for citizen scientists</title>
-      <link>/post/2017-10-04-citizen-science/</link>
+      <link>/darrendahly.github.io/post/2017-10-04-citizen-science/</link>
       <pubDate>Wed, 04 Oct 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-10-04-citizen-science/</guid>
+      <guid>/darrendahly.github.io/post/2017-10-04-citizen-science/</guid>
       <description>
 
 &lt;p&gt;I am happy to announce that in the new year we will be running a series of workshops for Cork&amp;rsquo;s Citizen Scientists. In contrast to the small series of lectures we ran this year, the new workshops will be completely focused on supporting local citizen scientists in their efforts to answer real questions with real data.&lt;/p&gt;
@@ -59,10 +59,10 @@
     
     <item>
       <title>Sex differences</title>
-      <link>/post/2017-09-12-sex-differences/</link>
+      <link>/darrendahly.github.io/post/2017-09-12-sex-differences/</link>
       <pubDate>Tue, 12 Sep 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-09-12-sex-differences/</guid>
+      <guid>/darrendahly.github.io/post/2017-09-12-sex-differences/</guid>
       <description>
 
 &lt;h2 id=&#34;the-introduction&#34;&gt;The Introduction&lt;/h2&gt;
@@ -164,10 +164,10 @@
     
     <item>
       <title>Response Heterogeneity</title>
-      <link>/post/2017-08-11-response-heterogeneity/</link>
+      <link>/darrendahly.github.io/post/2017-08-11-response-heterogeneity/</link>
       <pubDate>Fri, 11 Aug 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-08-11-response-heterogeneity/</guid>
+      <guid>/darrendahly.github.io/post/2017-08-11-response-heterogeneity/</guid>
       <description>&lt;p&gt;A colleague in food science recently sent me a narrative review outlining some of the challenges in their field (&lt;a href=&#34;http://ajcn.nutrition.org/content/early/2016/11/23/ajcn.116.136051&#34; target=&#34;_blank&#34;&gt;Cassidy and Minihane, 2017, Am J Clin Nutr&lt;/a&gt;). One of these was “extensive heterogeneity in the response to increased intake [of flavonoids]”.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Response heterogeneity&lt;/em&gt; is often highlighted to justify the need for precision medicine. The argument is that we need precision medicine to identify and treat the people that we know will respond well to a particular treatment, and not bother treating those who won&amp;rsquo;t respond. Sounds smart. The problem however is that the studies used to demonstrate response heterogeneity simply don’t, and doing it the right way is much more challenging than people seem to understand.&lt;/p&gt;
@@ -214,10 +214,10 @@
     
     <item>
       <title>Getting an interview</title>
-      <link>/post/2017-05-09-interviews/</link>
+      <link>/darrendahly.github.io/post/2017-05-09-interviews/</link>
       <pubDate>Tue, 09 May 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-05-09-interviews/</guid>
+      <guid>/darrendahly.github.io/post/2017-05-09-interviews/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -250,10 +250,10 @@
     
     <item>
       <title>In Defense of DAGs</title>
-      <link>/post/2017-03-30-dags/</link>
+      <link>/darrendahly.github.io/post/2017-03-30-dags/</link>
       <pubDate>Thu, 30 Mar 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-03-30-dags/</guid>
+      <guid>/darrendahly.github.io/post/2017-03-30-dags/</guid>
       <description>
 
 &lt;p&gt;Professors Nancy Krieger (NK) and George Davey Smith (GDS) recently published an editorial in the IJE titled &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/27694566&#34; target=&#34;_blank&#34;&gt;The tale wagged by the DAG: broadening the scope of causal inference and explanation for epidemiology&lt;/a&gt;. In it, they argue that causal inference in epidemiology is dominated by an approach characterised by counterfactuals (or potential outcomes) and directed acyclic graphs (DAGs); and that this hegemony is limiting the scope of our field, and preventing us from adopting a more useful, pluralistic view of causality.&lt;/p&gt;
@@ -328,10 +328,10 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
     
     <item>
       <title>Your science is justified by the question, not the answer</title>
-      <link>/post/2017-03-21-prereg/</link>
+      <link>/darrendahly.github.io/post/2017-03-21-prereg/</link>
       <pubDate>Tue, 21 Mar 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-03-21-prereg/</guid>
+      <guid>/darrendahly.github.io/post/2017-03-21-prereg/</guid>
       <description>&lt;p&gt;Registration of clinical trials, prior to any patient recruitment, is now common. Though trial registrations often omit the important details regarding their proposed analyses (despite advice to the contrary), most trialists seem to agree, at least in principle, that you should transparently describe your plans for clinical trial data before they are collected. Unfortunately, this remains a foreign concept in other areas of clinical and public health research.&lt;/p&gt;
 
 &lt;p&gt;Before I started working as a biostatistician involved in clinical trials, I worked with birth cohort studies. Whereas the vast majority of clinical trials are designed to answer a single research question (or small set of them), the prospective cohort study design allows researchers to answer many questions, even thousands, including questions that nobody envisioned at the start of the study. Given the costs of recruiting and following-up hundreds or thousands of study participants, many believe that it’s our responsibility to extract as much value from these data as we can. However, this well-intentioned mind-set can quickly be distorted to promote toxic research practices, where perverse incentives to publish, combined with the poor overall quality of peer-review, have created a body of flawed, often useless, research with results affected by various forms of p-hacking (intentional or otherwise) and file-drawer effects.&lt;/p&gt;
@@ -352,10 +352,10 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
     
     <item>
       <title>Upcoming R workshop</title>
-      <link>/post/2017-03-13-r_courses/</link>
+      <link>/darrendahly.github.io/post/2017-03-13-r_courses/</link>
       <pubDate>Mon, 13 Mar 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-03-13-r_courses/</guid>
+      <guid>/darrendahly.github.io/post/2017-03-13-r_courses/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&#34;https://www.ucc.ie/en/crfc/&#34; target=&#34;_blank&#34;&gt;Clinical Research Facility Cork&lt;/a&gt; is sponsoring a free, two-day introduction to data analysis using the R statistical programming language on March 30th and 31st (Th, F), from 09:30 to 16:30 in the &lt;a href=&#34;https://www.google.ie/maps/place/Western+Gateway,+Western+Gateway+Building,+University+College+Cork,+Western+Rd,+Mardyke,+Cork/data=!4m2!3m1!1s0x4844902fb2cfc8d3:0xbc1521a27a3ca450?sa=X&amp;amp;ved=0ahUKEwjRn-H2-pbQAhWDLMAKHStcCXwQ8gEIGzAA&#34; target=&#34;_blank&#34;&gt;Western Gateway Building&lt;/a&gt; 3.71. Places are available on a first-come, first-serve basis, and there is space for 10 participants. Please email me at ddahly@ucc.ie to reserve a place.&lt;/p&gt;
@@ -394,10 +394,10 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
     
     <item>
       <title>Cause vs. Consequence</title>
-      <link>/post/2017-02-04-consequentialism/</link>
+      <link>/darrendahly.github.io/post/2017-02-04-consequentialism/</link>
       <pubDate>Sat, 04 Feb 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-04-consequentialism/</guid>
+      <guid>/darrendahly.github.io/post/2017-02-04-consequentialism/</guid>
       <description>&lt;p&gt;I have, for some time, wanted to respond to Sandro Galea&amp;rsquo;s &lt;a href=&#34;https://academic.oup.com/aje/article/178/8/1185/84205/An-Argument-for-a-Consequentialist-Epidemiology&#34; target=&#34;_blank&#34;&gt;essay on a Consequentialist Epidemiology&lt;/a&gt;, published in 2013 (!) in the American Journal of Epidemiology. It is hard to argue against the importance of consequentialism for academic epidemiology. It is equally hard to dismiss Galea&amp;rsquo;s concerns about our lack of influence with funders and policy makers. However, my views beyond this diverge from Professor Galea&amp;rsquo;s, and in the spirit of his &amp;ldquo;provocation,&amp;rdquo; I would like to respectfully offer an alternate perspective.&lt;/p&gt;
 
 &lt;p&gt;Galea seems primarily concerned that academic epidemiology is focused too much on identifying causes of disease, and not enough on actual intervention. He further worries that &amp;ldquo;our focus on causal rather than pragmatic thinking&amp;rdquo; risks marginalizing us with funders and policy makers. His solution to this problem is to promote a &amp;ldquo;consequentialist epidemiology&amp;rdquo; that is intensely focused on improving health outcomes, even &amp;ldquo;at the expense of the development of epidemiological methods and novel approaches.&amp;rdquo;&lt;/p&gt;
@@ -430,10 +430,10 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
     
     <item>
       <title>Stata Workshop (2016)</title>
-      <link>/post/2017-04-13-stata_workshop/</link>
+      <link>/darrendahly.github.io/post/2017-04-13-stata_workshop/</link>
       <pubDate>Sat, 04 Feb 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-04-13-stata_workshop/</guid>
+      <guid>/darrendahly.github.io/post/2017-04-13-stata_workshop/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -450,10 +450,10 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
     
     <item>
       <title>The perils of exploratory data analysis</title>
-      <link>/post/2017-02-03-exploratory/</link>
+      <link>/darrendahly.github.io/post/2017-02-03-exploratory/</link>
       <pubDate>Fri, 03 Feb 2017 12:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-03-exploratory/</guid>
+      <guid>/darrendahly.github.io/post/2017-02-03-exploratory/</guid>
       <description>&lt;p&gt;Is it ever ok to conduct an exploratory data analysis, for the purpose of &amp;ldquo;generating hypotheses&amp;rdquo;?&lt;/p&gt;
 
 &lt;p&gt;This question was motivated by a new Retraction Watch piece, &lt;a href=&#34;http://retractionwatch.com/2017/02/02/backlash-prompts-prominent-nutrition-researcher-reanalyze-multiple-papers/&#34; target=&#34;_blank&#34;&gt;Backlash prompts prominent nutrition researcher to reanalyze multiple papers&lt;/a&gt;. It covers the backlash to an earlier blog post by &lt;a href=&#34;https://twitter.com/BrianWansink&#34; target=&#34;_blank&#34;&gt;Brian Wansink&lt;/a&gt;, who wrote about two early career researchers, one of whom took on several &amp;ldquo;extra&amp;rdquo; projects, vs. another who refused (&lt;a href=&#34;http://www.brianwansink.com/phd-advice/the-grad-student-who-never-said-no&#34; target=&#34;_blank&#34;&gt;The Grad student who never said no&lt;/a&gt;). The former managed to turn the &amp;ldquo;opportunity&amp;rdquo; into a small handful of publications, and Wansink&amp;rsquo;s thesis was that this is how you get ahead in academia. However, in writing the blog post, its author revealed a concerning approach to statistical inference, not to mention a cavalier attitude to the exploitation of early career scientists, both of which were quickly noted on twitter and in the blog&amp;rsquo;s comments.&lt;/p&gt;
@@ -486,10 +486,10 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
     
     <item>
       <title>An academic career path</title>
-      <link>/post/2015-08-13-career-talk/</link>
+      <link>/darrendahly.github.io/post/2015-08-13-career-talk/</link>
       <pubDate>Thu, 13 Aug 2015 12:00:00 +0000</pubDate>
       
-      <guid>/post/2015-08-13-career-talk/</guid>
+      <guid>/darrendahly.github.io/post/2015-08-13-career-talk/</guid>
       <description>
 
 &lt;p&gt;As of today I am a Senior Lecturer at the &lt;a href=&#34;http://www.ucc.ie/en/crfc/&#34; target=&#34;_blank&#34;&gt;Clinical Research Facility Cork&lt;/a&gt;. I am feeling reflective. In the 5 short years following my PhD, I went from the USA, to England, to Brazil, to Ireland. I have gone from Lecturer, to Post-Doc, to &lt;a href=&#34;https://en.wikipedia.org/wiki/Senior_lecturer&#34; target=&#34;_blank&#34;&gt;Senior Lecturer&lt;/a&gt;, in that order. I started in pursuit of a career in public health nutrition, but now work primarily as a biostatistician conducting clinical research. It&amp;rsquo;s been a strange path, though &lt;em&gt;strange&lt;/em&gt; paths in academia are starting to feel awfully &lt;em&gt;normal&lt;/em&gt;. Apologies for my narcissism and any name dropping. I hope this is helpful.&lt;/p&gt;
@@ -539,10 +539,10 @@ I successfully applied for a Medical Research Council fellowship. I had only bee
     
     <item>
       <title>Cork R-Users Group - First Meet-Up</title>
-      <link>/post/2015-08-10-first-r-users/</link>
+      <link>/darrendahly.github.io/post/2015-08-10-first-r-users/</link>
       <pubDate>Mon, 10 Aug 2015 12:00:00 +0000</pubDate>
       
-      <guid>/post/2015-08-10-first-r-users/</guid>
+      <guid>/darrendahly.github.io/post/2015-08-10-first-r-users/</guid>
       <description>&lt;p&gt;Thanks to all of you for joining the Cork R-Users group, especially the thirteen real-life human R-Users who met for the first time last week at our inaugural meet-up.&lt;/p&gt;
 
 &lt;p&gt;I was happy to see a diverse group. I thought we were well balanced between academia and industry, and between statistics and data science. There were software engineers, biostatisticians, ecologists, data scientists, PhD students, and systems administrators. We had people with 10 plus years of experience with R, and people who had never used it but wanted to see what the fuss was about. Most of us had at least a few years of experience using R, but it was clear that everyone in the group was there because they wanted to learn more. Other reasons we wanted to create this group were to “Identify best practices…Learn what is possible…Solve Problems…Prevent errors,” and perhaps most importantly to, “Be around other people” that are as into data as we are.&lt;/p&gt;
@@ -559,10 +559,10 @@ I successfully applied for a Medical Research Council fellowship. I had only bee
     
     <item>
       <title>Why share the data?</title>
-      <link>/post/2015-06-15-sharing-data/</link>
+      <link>/darrendahly.github.io/post/2015-06-15-sharing-data/</link>
       <pubDate>Mon, 15 Jun 2015 12:00:00 +0000</pubDate>
       
-      <guid>/post/2015-06-15-sharing-data/</guid>
+      <guid>/darrendahly.github.io/post/2015-06-15-sharing-data/</guid>
       <description>
 
 &lt;p&gt;Research data should be shared. This view is widespread in academia and common among research funders. Regardless, most research datasets remain locked away. Sometimes data are held back for less than admirable reasons, but they can also be held back with good intent. For example, access to data is sometimes restricted in order to maximize opportunities for early career researchers to publish papers using the data. I believe this is instead counter-productive for ECRs.&lt;/p&gt;
@@ -621,10 +621,10 @@ I successfully applied for a Medical Research Council fellowship. I had only bee
     
     <item>
       <title>What is overweight, really?</title>
-      <link>/post/2015-01-05-who-obesity-infographic/</link>
+      <link>/darrendahly.github.io/post/2015-01-05-who-obesity-infographic/</link>
       <pubDate>Mon, 05 Jan 2015 12:00:00 +0000</pubDate>
       
-      <guid>/post/2015-01-05-who-obesity-infographic/</guid>
+      <guid>/darrendahly.github.io/post/2015-01-05-who-obesity-infographic/</guid>
       <description>&lt;p&gt;The image below is from the WHO, and I don&amp;rsquo;t like it.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/whoOwOb.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -649,10 +649,10 @@ I successfully applied for a Medical Research Council fellowship. I had only bee
     
     <item>
       <title>What do we know about body composition in healthy infants?</title>
-      <link>/post/2014-12-17-infant-body-composition/</link>
+      <link>/darrendahly.github.io/post/2014-12-17-infant-body-composition/</link>
       <pubDate>Wed, 17 Dec 2014 12:00:00 +0000</pubDate>
       
-      <guid>/post/2014-12-17-infant-body-composition/</guid>
+      <guid>/darrendahly.github.io/post/2014-12-17-infant-body-composition/</guid>
       <description>&lt;p&gt;Click to download the &lt;a href=&#34;http://darrendahly.github.io/img/bodycomp.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://darrendahly.github.io/public/img/bodycomp.pdf&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://darrendahly.github.io/img/bodycomp.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
