@@ -79,14 +79,14 @@
 
 &lt;h2 id=&#34;the-normal-distribution&#34;&gt;The Normal Distribution&lt;/h2&gt;
 
-&lt;p&gt;Before going on, I want to briefly review the concept of a probability distribution for anyone who needs it (this is most people). Probability distributions play a central role in statistics and data analysis, so as a statistician, they are something that I think about pretty much all the time.&lt;/p&gt;
+&lt;p&gt;Before going on, I want to briefly review the concept of a probability distribution for anyone who needs it. Probability distributions play a central role in statistics and data analysis, so as a statistician, they are something that I think about pretty much all the time.&lt;/p&gt;
 
-&lt;p&gt;A probability distribution is just a statement that says how often we should expect to see the various values of a given variable (or trait/feature/characteristic/etc.). For example, the plot below (figure 1 A) shows a distribution of height values in a sample of adult men. You will notice that values around 70 inches are relatively common, while values larger than 76 inches are rare. These kinds of statements have great practical value; e.g. what sizes of clothes should I offer in my shop to maximize profit?&lt;/p&gt;
+&lt;p&gt;A probability distribution is just a statement that says how often we should expect to see the various values of a given variable (or trait/feature/characteristic). For example, the plot below (figure 1 A) shows a distribution of height values in a sample of adult men. You will notice that values around 70 inches are relatively common, while values larger than 76 inches are rare. These kinds of statements have great practical value. For example, what sizes of clothes should I offer in my shop to maximize profit?&lt;/p&gt;
 
 &lt;p&gt;Figure 1.
 &lt;center&gt;&lt;img src=&#34;https://darrendahly.github.io/img/fig1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;Often times the distributions we observe can be closely approximated by mathematical functions of just a few parameters. The distribution of heights above, for example, is well described by the most famous and useful of these, the normal distribution (figure 1 B), which we see frequently in nature because it describes variables that are themselves influenced by lots of other things.&lt;/p&gt;
+&lt;p&gt;The probability distributions we observe can often be adequately described by mathematical functions of just a few parameters. The distribution of heights above, for example, is well described by the most famous and useful of these, the normal distribution (figure 1 B), which we see frequently in nature because it describes variables that are themselves influenced by lots of other things.&lt;/p&gt;
 
 &lt;p&gt;In mathematical terms, the normal distribution is defined as:&lt;/p&gt;
 
@@ -154,9 +154,7 @@
 
 &lt;p&gt;I am not an expert in sex-differences, so appologies to anyone who wanted a vigorous debate and didn&amp;rsquo;t get one. I am mostly just a statistician taking the opportunity to talk about probability distributions, a concept which I kept seeing people butcher in their debates over the Google Memo.&lt;/p&gt;
 
-&lt;p&gt;It was repeatedly pointed out to me that I misunderstood the Google Memo, which was really about differences in &lt;em&gt;preferences&lt;/em&gt;, rather than &lt;em&gt;apptitude&lt;/em&gt;. There was a reason however I chose to focus on the idea of innate ability, despite knowing that some would clearly view this as a straw-man. To me, it just seemed like common sense that if I was a tech company wanting to recruit +4 SD aptitude, I would be nuts if I didn&amp;rsquo;t go out of my way to be more appealing to qualified people who might otherwise prefer to work elsewhere.&lt;/p&gt;
-
-&lt;p&gt;This essay seems to have been looked at about 5k times. It&amp;rsquo;s obviously a contentious issue, so it is perhaps worth noting that I have recieved exactly zero hateful emails, tweets, or DMs&amp;hellip;&lt;/p&gt;
+&lt;p&gt;It was repeatedly pointed out to me that I misunderstood the Google Memo, which, according to some, was really about differences in &lt;em&gt;preferences&lt;/em&gt;, rather than &lt;em&gt;apptitude&lt;/em&gt;. However, if a tech company wants to recruit +4 SD aptitude, they would be nuts if they didn&amp;rsquo;t go out of their way to be more appealing to qualified people who might otherwise prefer to work elsewhere. This is just common sense, and certainly not an argument against diversity programs.&lt;/p&gt;
 
 &lt;p&gt;Thanks to everyone who pointed out typos and other minor errors.&lt;/p&gt;
 </description>

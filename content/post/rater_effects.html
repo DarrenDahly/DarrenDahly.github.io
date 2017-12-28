@@ -1,0 +1,201 @@
+---
+title: "Rater effects"
+author: "Darren L Dahly"
+date: "2017-08-04"
+output:
+  blogdown::html_page:
+    toc: FALSE
+    fig_width: 8
+    dev: "svg"
+---
+
+
+
+<p>I was recently asked to help analyze some assessment data. There were 50 people applying for seven positions. Each person’s application materials were scored by three people, randomly chosen from a larger group of raters. I was asked to help account for the fact that some raters might have a tendency to give higher or lower than average scores.</p>
+<p>If you want to play along, you can download the data here:</p>
+<pre class="r"><code>  library(tidyverse)
+
+  data &lt;- read_csv(&quot;https://dantalus.github.io/public/scores.csv&quot;)
+  
+  names(data) &lt;- c(&quot;score&quot;, &quot;app&quot;, &quot;rater&quot;)</code></pre>
+<pre class="r"><code>  head(data)</code></pre>
+<pre><code>## # A tibble: 6 x 3
+##   score   app rater
+##   &lt;int&gt; &lt;int&gt; &lt;int&gt;
+## 1    62     1    19
+## 2    84     1    13
+## 3    78     1    10
+## 4    93     2     4
+## 5    81     2    14
+## 6    78     2    15</code></pre>
+<p>A naive approach to ranking the applicants would be to calculate a summary of their scores, such as the mean. Since the raters were assigned randomly, then there can’t be any bias due to rater effects. However, unbiased only means that if we were to replicate this process many times, the average of the rater effects from each of K replications would approach zero as K increased to infinity. This is different from our actual scenario, where applicants are assessed once. In this case, it’s possible that applicants who scored well did so because, at least partly, they “got lucky” and were assigned raters that tended to give higher than average marks.</p>
+<p>Here is the distribution of the number of applicants each rater had to deal with.</p>
+<pre class="r"><code>  library(htmlTable)
+
+  group_by(data, rater) %&gt;% summarise(n = n()) %&gt;%
+     summarise(mean =    mean(n),
+                min =    min(n),
+                max =    max(n),
+                lq =     quantile(n, 0.25),
+                median = quantile(n, 0.50),
+                uq =     quantile(n, 0.70)) %&gt;% 
+     htmlTable(header = c(&quot;Mean&quot;, &quot;Min&quot;, &quot;Max&quot;, &quot;25th centile&quot;, &quot;Median&quot;, 
+                          &quot;75th centile&quot;), rnames = FALSE, 
+               align = &quot;c&quot;,
+               css.cell = &quot;padding-left: 2em; padding-right: 2em;&quot;, 
+               caption = &quot;Distribution of the number of applicants per rater&quot;)</code></pre>
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><td colspan='6' style='text-align: left;'>
+Distribution of the number of applicants per rater</td></tr>
+<tr>
+<th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Mean</th>
+<th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Min</th>
+<th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Max</th>
+<th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>25th centile</th>
+<th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Median</th>
+<th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>75th centile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;'>6.25</td>
+<td style='padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;'>4</td>
+<td style='padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;'>11</td>
+<td style='padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;'>5</td>
+<td style='padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;'>6</td>
+<td style='padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;'>7</td>
+</tr>
+</tbody>
+</table>
+<p>To address this problem, we have to first think about the overall distribution of the 150 scores (3 for each of 50 applicants).</p>
+<pre class="r"><code>  library(ggthemes)
+  library(viridis)
+
+  ggplot(data, aes(x = score, fill = score)) +
+      geom_bar(fill = viridis(1)) +
+      theme_base() +
+      ylab(&quot;Count&quot;) +
+      xlab(&quot;Score&quot;) +
+      ggtitle(&quot;Marginal score distributions&quot;)</code></pre>
+<p><img src="/post/rater_effects_files/figure-html/unnamed-chunk-4-1.svg" width="768" /></p>
+<p>Given the data we have, there are three ways to explain why any particular score falls where it does along the marginal distribution: applicant effects (i.e. the “true” score of the applicant), rater effects (the tendency of a rater to be relatively easy or hard when scoring), and random error (which just means any other sources of variation not accounted for by the other two sources of variation).</p>
+<p>To get a better look at what I am talking about, let’s calculate the mean score received for each applicant, and the mean score given by each rater.</p>
+<pre class="r"><code>  data &lt;- group_by(data, app) %&gt;%
+          summarise(mean_app = mean(score)) %&gt;%
+          full_join(data, by = &quot;app&quot;)
+
+  data &lt;- group_by(data, rater) %&gt;%
+          summarise(mean_rater = mean(score)) %&gt;%
+          full_join(data, by = &quot;rater&quot;)
+
+  data &lt;- select(data, app, mean_app) %&gt;%
+          distinct() %&gt;%
+          mutate(raw_rank = min_rank(desc(mean_app))) %&gt;%
+          select(-mean_app) %&gt;%
+          full_join(data, by = &quot;app&quot;) %&gt;%
+          arrange(raw_rank)
+  
+  data[] &lt;- lapply(data, round, 0)
+  
+  head(data)</code></pre>
+<pre><code>## # A tibble: 6 x 6
+##     app raw_rank rater mean_rater mean_app score
+##   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;
+## 1    20        1     2         79      101    94
+## 2    20        1    13         80      101   100
+## 3    20        1    20        100      101   109
+## 4    17        2     6         74       98    97
+## 5    17        2    16         82       98    97
+## 6    17        2    24         86       98   101</code></pre>
+<p>Let’s plot the data twice.</p>
+<p>First, let’s highlight the applicants.</p>
+<pre class="r"><code>  ggplot(data, aes(y = reorder(factor(app), mean_app),
+                   x = reorder(factor(rater), mean_rater),
+                   color = score)) +
+    geom_point(size = 3) +
+    geom_line(aes(group = app), color = &quot;grey50&quot;) +
+    scale_color_viridis() +
+    theme_base() +
+    theme(axis.text.y = element_text(size = 8)) +
+    ylab(&quot;Applicant&quot;) +
+    xlab(&quot;Rater&quot;) +
+    ggtitle(&quot;Scores, by applicant, across raters&quot;,
+    subtitle = &quot;Applicants and Raters sorted by their respective mean scores&quot;)</code></pre>
+<p><img src="/post/rater_effects_files/figure-html/unnamed-chunk-6-1.svg" width="768" /></p>
+<p>Looking at applicant 20 (top row), we can see that the 3 dots are yellow-ish (scores of 94, 100, and 109) leading to the highest average score. We can also see that the highest individual score, the bright yellow dot on the far right, came from the rater with the highest average set of ratings (rater 20, coincidentally); while their other two scores came from raters that tended to give lower scores on average (raters 2 and 13).</p>
+<p>Next let’s highlight the raters (other wise the plots are identical).</p>
+<pre class="r"><code>  ggplot(data, aes(y = reorder(factor(app), mean_app),
+                   x = reorder(factor(rater), mean_rater),
+                   color = score)) +
+    geom_point(size = 3) +
+    geom_line(aes(group = rater), color = &quot;grey50&quot;) +
+    scale_color_viridis() +
+    theme_base() +
+    theme(axis.text.y = element_text(size = 8)) +
+    ylab(&quot;Applicant&quot;) +
+    xlab(&quot;Rater&quot;) +
+    ggtitle(&quot;Scores given by raters, across applicants&quot;,
+    subtitle = &quot;Applicants and Raters sorted by their respective mean scores&quot;)</code></pre>
+<p><img src="/post/rater_effects_files/figure-html/unnamed-chunk-7-1.svg" width="768" /> If you look to the far right, you can see that rater 20 tended to give higher scores, whereas rater 21, on the far left, was the harshest on applicants (reflected in all the blue and dark green dots).</p>
+<p>The question then is this: Do some applicants have a low score because they had tougher raters? Or do some raters appear tough because they dealt with poorer applicants? The answer is that it’s a mix of these things, i.e. applicant effects plus rater effects.</p>
+<p>To help sort this out, we will run two different mixed effects models. Both will include applicant as a random effect. Then one model will include rater as a fixed effect while the other model includes rater as a random effect. Which one is “correct” depends on your view of the raters: are they a sample of an underlying population of raters (a random effect), or are we interested in these and only these particular raters (a fixed effect).</p>
+<pre class="r"><code>  library(lme4)
+
+  fixed_rater &lt;- lmer(score ~ factor(rater) + (1 | app), data = data)
+
+  randm_rater &lt;- lmer(score ~ (1 | rater)   + (1 | app), data = data)</code></pre>
+<p>Now we’ll extract new rankings for the applicants, but this time adjusted for the rater effects. The extraction of these individual-level predictions is accomplished by the function <code>ranef</code>, which is explained nicely by <a href="https://stats.stackexchange.com/a/214145/16049">Ben Bolker here</a>.</p>
+<pre class="r"><code>  data &lt;- data_frame(adjusted_fe = ranef(fixed_rater)$app[[1]],
+                     app = c(1:50)) %&gt;%
+          full_join(data, by = &quot;app&quot;)
+
+  data &lt;- select(data, app, adjusted_fe) %&gt;%
+          distinct() %&gt;%
+          mutate(adjust_fe_rank = min_rank(desc(adjusted_fe))) %&gt;%
+          select(-adjusted_fe) %&gt;%
+          full_join(data, by = &quot;app&quot;) 
+
+  data &lt;- data_frame(adjusted_re = ranef(randm_rater)$app[[1]],
+                     app = c(1:50)) %&gt;%
+          full_join(data, by = &quot;app&quot;)
+
+  data &lt;- select(data, app, adjusted_re) %&gt;%
+          distinct() %&gt;%
+          mutate(adjust_re_rank = min_rank(desc(adjusted_re))) %&gt;%
+          select(-adjusted_re) %&gt;%
+          full_join(data, by = &quot;app&quot;) 
+  
+  data[] &lt;- lapply(data, round, 1)</code></pre>
+<p>Finally, we’ll plot the 3 types of rankings.</p>
+<pre class="r"><code>  library(ggrepel)
+
+  select(data, app, raw_rank,
+         adjust_re_rank, adjust_fe_rank) %&gt;%
+    mutate(app = reorder(factor(app), adjust_re_rank)) %&gt;%
+    filter(adjust_re_rank &lt; 21) %&gt;%
+    gather(rank.type, rank, -app) %&gt;%
+    distinct() %&gt;%
+  ggplot(aes(x = app, y = rank,
+               color = rank.type)) +
+    geom_line(aes(group = app)) +
+    geom_hline(yintercept = 7, linetype = &quot;dashed&quot;, color = &quot;grey&quot;) +
+    geom_point(alpha = 0.5, size = 4) +
+    scale_color_viridis(discrete = TRUE) +
+    theme_base() +
+    geom_text_repel(data = select(data, app, adjust_re_rank) %&gt;%
+                           filter(adjust_re_rank &lt; 21) %&gt;%
+                           mutate(app = reorder(factor(app), adjust_re_rank)) %&gt;%
+                           distinct(),
+                    aes(label = app, x = app, y = adjust_re_rank),
+                    color = &quot;black&quot;) +
+    scale_y_reverse(breaks = c(1, seq(5, 50, by = 5))) +
+    theme(axis.ticks.x = element_blank(),
+          axis.text.x = element_blank()) +
+    xlab(&quot;&quot;) +
+    ylab(&quot;Rank&quot;) +
+    ggtitle(&quot;Applicant rankings (top 20)&quot;,
+            subtitle = &quot;Raw ranks, plus rater-corrected ranks&quot;)</code></pre>
+<p><img src="/post/rater_effects_files/figure-html/unnamed-chunk-10-1.svg" width="768" /></p>
+<p>We can see that after the correction, 2 applicants move into the top 7, displacing 2 other applicants who would have made it otherwise (regardless of whether we model raters as a fixed or random effect).</p>
+<p>Applicant 5 is the one most affected. Why did they drop so far? Returning to the previous plots, you can see that applicant 5 benefited from having two raters in the top 5 of average rater scores, while their third rater was in the middle of the pack. The closest comparison is applicant 25, who also benefited from two high raters, but their third rater tended to give low scores.</p>

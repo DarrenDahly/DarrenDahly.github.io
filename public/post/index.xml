@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on </title>
+    <link>/post/</link>
+    <description>Recent content in Posts on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Darren L Dahly - All rights reserved</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/post/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>New workshop for citizen scientists</title>
+      <link>/post/2017-10-04-citizen-science/</link>
+      <pubDate>Wed, 04 Oct 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-10-04-citizen-science/</guid>
+      <description>
+
+&lt;p&gt;I am happy to announce that in the new year we will be running a series of workshops for Cork&amp;rsquo;s Citizen Scientists. In contrast to the small series of lectures we ran this year, the new workshops will be completely focused on supporting local citizen scientists in their efforts to answer real questions with real data.&lt;/p&gt;
+
+&lt;p&gt;The 2-hour workshops will take place every 2 weeks (on Saturday evenings), for approximately 6 months. They will cover the following topics, with the aim of developing and conducting a real research project:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The philosophical foundations of science&lt;/li&gt;
+&lt;li&gt;The importance of science for shared decision making&lt;/li&gt;
+&lt;li&gt;Formulating useful, scientific questions&lt;/li&gt;
+&lt;li&gt;Causal and statistical inference&lt;/li&gt;
+&lt;li&gt;Research ethics and data protection&lt;/li&gt;
+&lt;li&gt;Accessing appropriate data&lt;/li&gt;
+&lt;li&gt;Cleaning and manipulating data&lt;/li&gt;
+&lt;li&gt;Visualising data&lt;/li&gt;
+&lt;li&gt;Analysing data&lt;/li&gt;
+&lt;li&gt;Reporting results&lt;/li&gt;
+&lt;li&gt;Drawing reasonable conclusions from our research&lt;/li&gt;
+&lt;li&gt;Communicating our research to stakeholders&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Due to the nature of the workshop, we are only accepting 10 participants (though we may expand to two parallel groups if there is demand). No prior experience with research or data analysis is required.&lt;/p&gt;
+
+&lt;p&gt;To apply, please send a 1-page (max!) summary of your best research idea to ddahly@ucc.ie by December 1. They will be reviewed and scored by a panel. Scoring criteria will include coherence, presentation, potential impact of the research, and whether the research idea is pragmatic. Successful applicants will be notified by January 1. Workshops will start in February. In your application, please include your name and an email address where you can be reached. No other personal information is required. The workshops are free of charge.&lt;/p&gt;
+
+&lt;h2 id=&#34;conditions&#34;&gt;Conditions&lt;/h2&gt;
+
+&lt;p&gt;Participants will ideally have laptops to work with. For anyone without access to a laptop, we’ll make every effort to find one for you to use during the workshops.&lt;/p&gt;
+
+&lt;p&gt;You must be 18 years of age or older to participate.&lt;/p&gt;
+
+&lt;p&gt;You cannot be employed as an academic or researcher, or enrolled as a student in a postgraduate research degree program. Please understand that this workshop is for the wider community, many of whom don’t otherwise have access to this kind of training. Email me If you have any questions about your eligibility (ddahly@ucc.ie). If you are a professional researcher and would like more training in statistics and data analysis, feel free to get in touch – we have other venues for that support.&lt;/p&gt;
+
+&lt;p&gt;Participants must commit to attending all of the workshops (beyond the occasional, unavoidable absence). Participants must also be willing to work on their projects for at least 5 hours per week. If you can’t commit to full participation, please don’t take a place that might go to someone who can.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions, please feel free to get in touch by email.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sex differences</title>
+      <link>/post/2017-09-12-sex-differences/</link>
+      <pubDate>Tue, 12 Sep 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-09-12-sex-differences/</guid>
+      <description>
+
+&lt;h2 id=&#34;the-introduction&#34;&gt;The Introduction&lt;/h2&gt;
+
+&lt;p&gt;Remember the whole &lt;a href=&#34;https://assets.documentcloud.org/documents/3914586/Googles-Ideological-Echo-Chamber.pdf&#34; target=&#34;_blank&#34;&gt;Google Memo&lt;/a&gt; thing that happened a hundred years ago? Its central argument (as far as I could tell) was that the large male to female sex ratios we observe in Tech can be reasonably explained by small differences in the sex-specific probability distributions of innate characteristics. Thus Google’s attempts to increase diversity were silly at best, perhaps harmful or unjust, and largely due to a culture of political correctness that was oppressive to “conservative viewpoints”.&lt;/p&gt;
+
+&lt;p&gt;The apparent appeal of this message wasn’t limited to chauvinist TechBros. Many “moderate” commentators also seemed quite impressed. After all, the memo wasn’t arguing that all men, or even most of them, are better suited than women for tech jobs. That would be ridiculous! But since the existence of sex differences in some traits is scientifically uncontroversial, some supporters of the Google Memo claimed the scientific high-ground. “You see? We aren’t sexist or biased”, they proclaimed. “This is just science.” And you can’t hate on science.&lt;/p&gt;
+
+&lt;p&gt;However, despite their self-professed love of logic, skepticism, critical-thinking, reason, data, facts, and evidence, many of the supporters of the Google Memo never seemed to take next logical step - they never asked the question, “Exactly how big would these differences need to be to explain the large male to female ratios we observe in Tech?”&lt;/p&gt;
+
+&lt;h2 id=&#34;ground-rules&#34;&gt;Ground Rules&lt;/h2&gt;
+
+&lt;p&gt;Before answering this question, I want to set a few simplifying assumptions. The first of these is that Google hires fairly, and the male to female ratio we observe in tech jobs at Google is reflective of the total pool of qualified potential applicants. Next we will assume that to be “qualified”, a person has to have high levels of tech related traits which we will reduce to a single, normally distributed variable that we will call &lt;em&gt;Techiness&lt;/em&gt;. We will further assume that the distribution of Techiness is sex-specific; and that those sex-differences exist at birth and aren&amp;rsquo;t the result of later social or environmental factors. Taken together, these assumptions (which seem to fall in line with what many supporters of the Google Memo believe) mean that any male to female ratio we consider in this scenario would be completely driven by the degree of difference in the sex-specific distribution of innate Techiness.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-normal-distribution&#34;&gt;The Normal Distribution&lt;/h2&gt;
+
+&lt;p&gt;Before going on, I want to briefly review the concept of a probability distribution for anyone who needs it (this is most people). Probability distributions play a central role in statistics and data analysis, so as a statistician, they are something that I think about pretty much all the time.&lt;/p&gt;
+
+&lt;p&gt;A probability distribution is just a statement that says how often we should expect to see the various values of a given variable (or trait/feature/characteristic/etc.). For example, the plot below (figure 1 A) shows a distribution of height values in a sample of adult men. You will notice that values around 70 inches are relatively common, while values larger than 76 inches are rare. These kinds of statements have great practical value; e.g. what sizes of clothes should I offer in my shop to maximize profit?&lt;/p&gt;
+
+&lt;p&gt;Figure 1.
+&lt;center&gt;&lt;img src=&#34;https://darrendahly.github.io/img/fig1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Often times the distributions we observe can be closely approximated by mathematical functions of just a few parameters. The distribution of heights above, for example, is well described by the most famous and useful of these, the normal distribution (figure 1 B), which we see frequently in nature because it describes variables that are themselves influenced by lots of other things.&lt;/p&gt;
+
+&lt;p&gt;In mathematical terms, the normal distribution is defined as:&lt;/p&gt;
+
+&lt;p&gt;$$ y = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x- \mu)^2}{2 \sigma^2}}$$&lt;/p&gt;
+
+&lt;p&gt;It has just two parameters: its mean ($\mu$) and its standard deviation ($\sigma$). The first parameter, the mean, is pretty easy to understand for most people (it’s just the average value). The SD is a bit trickier. To calculate it, you subtract the mean from each person’s observation (i.e. how different they are from the average); square those values (so positive and negative differences have the same value); take the average of these values (this is called the variance); and then take the square root of the result so you are back on the same scale as the mean. The SD (or the variance) then gives a sense of the dispersion of the sample. It is also common to discuss normally distributed variables in units of SD (e.g. 1 SD of height is equal to 3 inches). This is called standardization is can be useful when talking about distributions with different scales (e.g. feet vs. grams).&lt;/p&gt;
+
+&lt;p&gt;If we are happy to assume that some variable is normally distributed, and we have calculated the mean and SD in the sample, then we can make probability statements about any given range of the variable’s values. For example, the plot below (figure 2) is of the &lt;em&gt;standard normal&lt;/em&gt;, which is a normal distribution with a mean of zero and a SD of one. The total area under the bell shaped curve represents 100% of the sample’s values. So if we took all the people with a value &amp;lt; 0 (the mean), that would cut the curve exactly in half, i.e. 50% of the sample would have a value &amp;lt; 0. It is also apparent that the bulk of the observations are crowded around the mean.&lt;/p&gt;
+
+&lt;p&gt;Figure 2.
+ &lt;center&gt;&lt;img src=&#34;https://darrendahly.github.io/img/fig2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;We can also calculate the % of people we expect to have a value of X or more, which is critical for what follows. For example, the plot above also divides the distribution at +2 SD. The left side of the divide then contains about 95% of the sample (i.e. 95% of total space under the curve), and the right side (which we might call the right tail of the distribution) includes the other 5%. In words, only about 5% of the people will have a value of 2 or more SDs.&lt;/p&gt;
+
+&lt;p&gt;The right tail of the distribution is critical to this exercise because any differences in the sex-specific distributions of our Techiness variable will be more obvious out in the tails of the distribution, and because Google only hires people with the highest Techiness scores. In other words, their pool of potential applicants &lt;em&gt;is&lt;/em&gt; the right tail of the distribution.&lt;/p&gt;
+
+&lt;h2 id=&#34;back-to-the-question&#34;&gt;Back to the question&lt;/h2&gt;
+
+&lt;p&gt;Given that we are dealing with normal distributions, there are two ways we can perturb the distribution: we can shift the mean left or right (figure 3 A), and/or we can increase or decrease the SD (or variance; figure 3 B). The effect of the latter is to squish the observations out into the tails of the distribution, just as if you were pushing a balloon down with your finger, since the areas under each curve must all equal one (i.e. 100% of the observations).&lt;/p&gt;
+
+&lt;p&gt;Figure 3.
+&lt;center&gt;&lt;img src=&#34;https://darrendahly.github.io/img/fig3.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;The differences in means is what the Google Memo seems to focus on, while the differences in variability were repeatedly brought up in the memo’s aftermath, and appeared again just last week when &lt;a href=&#34;https://heterodoxacademy.org/2017/09/04/the-greater-male-variability-hypothesis/&#34; target=&#34;_blank&#34;&gt;Sean Stevens and Jonathan Haidt of Heterodox Academy fame wrote about the Greater Male Variability Hypothesis&lt;/a&gt;. We will start there.&lt;/p&gt;
+
+&lt;p&gt;The Greater Male Variability Hypothesis states that some traits will be similarly distributed for men and women, except that the men’s distribution will be more variable, so that there will be more men than women at both the lowest and highest values of the distribution. If this was in fact true for Techiness, then yes, we would expect to see more males than females employed in tech jobs. How much of difference would then be a function of two things – how much more variable the men’s distribution is compared to the women’s, and how far out into the tail you are drawing your workers from.&lt;/p&gt;
+
+&lt;p&gt;Stevens and Haidt illustrate this with a plot from &lt;a href=&#34;http://www.pnas.org/content/106/22/8801.full.pdf&#34; target=&#34;_blank&#34;&gt;Hyde and Mertz (2009)&lt;/a&gt;, shown below. It essentially shows 2 overlapping normal distributions, one for men (red/orange) and one for women (green; and brown is the overlap), where the means are both zero, but the variance of the men’s distribution is 20% greater than that of the females (this is similar to figure 3B, above). Because the area under each of the overlapping curves must both be equal to one, the green curve is more peaked at the mean, and the red curve is more spread out and has fatter tails.&lt;/p&gt;
+
+&lt;p&gt;The plot also zooms in on the values ranging from +3.8 to +4.2 SD and the relative amount of (red + brown) compared to (green + brown) would give the observed sex ratio if this was the place in the distribution where you were drawing your employees from. It’s easy enough to see that the fat tails of the male distribution take up much more space than the tails of the female distribution. Thus the expected male to female ratio in this scenario would be quite large (back with specifics shortly).&lt;/p&gt;
+
+&lt;p&gt;Figure 4.
+&lt;center&gt;&lt;img src=&#34;https://darrendahly.github.io/img/fig4.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Following from this plot, Stevens and Haidt make the following conclusion:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Thus, if males are overrepresented in the upper tail of the distributions for spatial abilities, mechanical reasoning, and mathematics, it would be possible for Google to end up hiring more males and, at the same time, not be discriminatory in their hiring practices.  This is because the pool of potentially qualified applicants may contain more males.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;At this point, anyone already familiar with the normal distribution is probably having a sensible chuckle. This is because while Google might be selective in their hiring practices, they aren’t +4 SD selective. This is because, given a normal distribution, we only expect 0.0032% of observations to have a score ≥ 4 SDs above the mean. This percentage equates to just 273 New Yorkers, or 30 people from San Francisco, or just 11 thousand people in the entire United States, the 3rd most populous country on earth. Google apparently employs about 50-70k. I don’t know what proportion of these are tech jobs, but I guarantee very few of them are filled with +4 SD type talent.&lt;/p&gt;
+
+&lt;p&gt;So under these rather unrealistic conditions (+4 SD), the exact male to female ratio is 4 : 1 (0.00013 / 0.000032). So what happens if we instead say that Google recruits from the mere mortals with Techiness scores ≥ 2SD, which is still the top 5% of all people? That ratio drops to 1.5 : 1. Despite my enjoyment of Google’s products, I have a hard time believing they are even this selective, so if I lower the hiring threshold to 1.5 SD, the male to female ratio becomes 1.3 : 1 (figure 5).&lt;/p&gt;
+
+&lt;p&gt;Figure 5.
+ &lt;center&gt;&lt;img src=&#34;https://darrendahly.github.io/img/fig5.jpg&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;As noted above, the observed male to female ratio could also be affected by perturbing the relative variances of the sex-specific distributions. So let’s say I double the variance of the male distribution. Then the sex ratio at ≥1.5 SD becomes 2:1. How realistic is this scenario? I have no idea, but thankfully Stevens and Haidt link to a bunch of studies that provide estimates about sex-specific differences in the variance (or SD) of many supposedly relevant traits. And guess what? Every one I looked at was well under a 2X difference. Most seem to be around 1.1X to 1.2X.&lt;/p&gt;
+
+&lt;p&gt;That’s the hard part done. What about shifting the mean? Starting again from the standard normal, adding 0.10 SD to the male mean would lead to a 1.2 to 1 male to female ratio (at ≥1.5SD); but adding a full SD would give almost 5:1. However, a 1 SD shift is a pretty big one (e.g. a difference of 3 inches for height), so not surprisingly, the evidence I looked at seems to suggest that the 10% increase in the mean is the more realistic scenario for most variables where differences seem to exist.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-conclusion&#34;&gt;The Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Science is a tool for explaining what we observe. There is almost always more than one plausible explanation for any observation, and so it&amp;rsquo;s the job of the scientist to pit these against each other and see which comes out on top. So while differences in sex-specific distributions of innate traits &lt;em&gt;could&lt;/em&gt; contribute to the male to female sex ratios we see in Tech, they don&amp;rsquo;t seem to be the dominant factor. As a scientist, I can only conclude that other factors must be at play.&lt;/p&gt;
+
+&lt;p&gt;And if you don&amp;rsquo;t want to stop the fun, I made an &lt;a href=&#34;https://darrendahly.shinyapps.io/app1&#34; target=&#34;_blank&#34;&gt;app that you can use&lt;/a&gt; to recreate the examples above, or to play around with the parameters to your heart’s content.&lt;/p&gt;
+
+&lt;h2 id=&#34;post-script&#34;&gt;Post-script&lt;/h2&gt;
+
+&lt;p&gt;After a bit of feedback, I wanted to add a few comments and clarifications.&lt;/p&gt;
+
+&lt;p&gt;There are clearly people in tech that have absolutely no problem thinking of themselves as &amp;ldquo;+4 SD talent&amp;rdquo;. I love the confidence.&lt;/p&gt;
+
+&lt;p&gt;Yes, if it was a different distribution, the results would also be different. However, most of the papers I looked at only report means and SDs, which usually implies the author thinks the variable in question is normally distributed (or they are clueless, which is often plausible). In my opinion, it&amp;rsquo;s not enough to say &amp;ldquo;there are sex-differences in the distribution of X that explain these things&amp;rdquo;. You should instead be able to specify the distribution, and exactly how it differs, if your argument is to hold any water.&lt;/p&gt;
+
+&lt;p&gt;I am not an expert in sex-differences, so appologies to anyone who wanted a vigorous debate and didn&amp;rsquo;t get one. I am mostly just a statistician taking the opportunity to talk about probability distributions, a concept which I kept seeing people butcher in their debates over the Google Memo.&lt;/p&gt;
+
+&lt;p&gt;It was repeatedly pointed out to me that I misunderstood the Google Memo, which was really about differences in &lt;em&gt;preferences&lt;/em&gt;, rather than &lt;em&gt;apptitude&lt;/em&gt;. There was a reason however I chose to focus on the idea of innate ability, despite knowing that some would clearly view this as a straw-man. To me, it just seemed like common sense that if I was a tech company wanting to recruit +4 SD aptitude, I would be nuts if I didn&amp;rsquo;t go out of my way to be more appealing to qualified people who might otherwise prefer to work elsewhere.&lt;/p&gt;
+
+&lt;p&gt;This essay seems to have been looked at about 5k times. It&amp;rsquo;s obviously a contentious issue, so it is perhaps worth noting that I have recieved exactly zero hateful emails, tweets, or DMs&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone who pointed out typos and other minor errors.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Response Heterogeneity</title>
+      <link>/post/2017-08-11-response-heterogeneity/</link>
+      <pubDate>Fri, 11 Aug 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-08-11-response-heterogeneity/</guid>
+      <description>&lt;p&gt;A colleague in food science recently sent me a narrative review outlining some of the challenges in their field (&lt;a href=&#34;http://ajcn.nutrition.org/content/early/2016/11/23/ajcn.116.136051&#34; target=&#34;_blank&#34;&gt;Cassidy and Minihane, 2017, Am J Clin Nutr&lt;/a&gt;). One of these was “extensive heterogeneity in the response to increased intake [of flavonoids]”.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Response heterogeneity&lt;/em&gt; is often highlighted to justify the need for precision medicine. The argument is that we need precision medicine to identify and treat the people that we know will respond well to a particular treatment, and not bother treating those who won&amp;rsquo;t respond. Sounds smart. The problem however is that the studies used to demonstrate response heterogeneity simply don’t, and doing it the right way is much more challenging than people seem to understand.&lt;/p&gt;
+
+&lt;p&gt;Have a look at the figure below. The data are from a randomized controlled trial of a 1-year flavonoid intervention. More specifically, each data-point in the plot is one of the participants that was randomized to the intervention arm of the trial. You can see that the mean 12-month change in fasting insulin was -0.72 mU/L in those participants (the dash-dot horizontal line). You will also notice how variable those changes are: they range from -8 to +6 mU/L, and almost half of participants actually experienced an increase in fasting insult over the course of the study.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/hetero.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Can we learn anything else from this plot? Not really, as I’ll explain below. However, some people look at it and want to ascribe all of that variability  in fasting insulin to differences in how participants responded to the treatment. For example, Cassidy and Minihane interpret it as demonstrating “a large variability in the physiologic &lt;em&gt;response&lt;/em&gt; to flavonoid intake” and that the figure above “shows the insulin &lt;em&gt;response&lt;/em&gt; to the previously mentioned 1-y intervention” [emphasis mine]. In other words, they think that the drug caused some people to experience an increase in fasting insulin, while in others it caused a decrease. Unfortunately, at least for proponents of personalized medicine, it does no such thing, which I will now try to explain.&lt;/p&gt;
+
+&lt;p&gt;To further interpret the plot above, we need one more critical piece of information - the outcomes of the control group. Without that information, you might be tempted to conclude that the treatment had the effect of lowering fasting insulin by 0.72 mU/L, on average. But what if we saw the exact same thing in the control group? What would you conclude then? This is the fundamental point of an RCT – our inferences about treatment effects are based on &lt;a href=&#34;ttp://www.jameslindlibrary.org/research-topics/fair-tests-of-treatments/treatment-comparisons-are-essential/&#34; target=&#34;_blank&#34;&gt;treatment comparisons&lt;/a&gt;, so we can’t say anything about the effect of the treatment without reference to what happened in the control group.&lt;/p&gt;
+
+&lt;p&gt;This is just as true if we want to say something about the response of a &lt;em&gt;particular patient&lt;/em&gt;. Unfortunately, there is no way to obtain such a control observation. I would need to need to give a person the treatment, observe the outcome, reset the entire universe to the exact condition it was in when I gave them the treatment, and then withhold the treatment and see what happens. The effect of the treatment for that patient would then be apparent in the difference in the outcomes measured under the two conditions.&lt;/p&gt;
+
+&lt;p&gt;This kind of mental experiment reflects the counterfactual interpretation of causality. It “works” because if we see a difference in outcomes, it could only be explained the difference in treatment conditions, since everything else is exactly the same (1).&lt;/p&gt;
+
+&lt;p&gt;Moving back into reality, we could take two people, give the treatment to one but not the other, and then compare their outcomes. Would you believe that the difference in their outcomes was a measurement of the treatment effect? Of course not, because it’s a near certainty that the two people will differ in important ways that influence the outcome, irrespective of their treatment condition.&lt;/p&gt;
+
+&lt;p&gt;Since this can’t work with just two people, let’s give the different treatments to different groups of people. If I then then compared the average outcome in each group, should you then accept that it’s a good estimate of the treatment effect?&lt;/p&gt;
+
+&lt;p&gt;The answer depends on your opinion about the exchangeability of the two groups. By exchangeability, I mean that the distribution of future outcomes under the control condition is the same in both groups. Importantly, I don’t need everything about the two groups to be identical - just the distribution of future outcomes.&lt;/p&gt;
+
+&lt;p&gt;Since we can’t know the future outcome for each person, we can’t directly create exchangeable groups. However, through clever study design we can often create groups that we are happy to assume are exchangeable by controlling for the factors we expect to affect the outcome.  For example, in study of mice we might use genetically identical animals, keep them in the exact same environment, feed them the exact same food, etc.&lt;/p&gt;
+
+&lt;p&gt;It’s clearly trickier in humans. Thankfully we have a good way to create exchangeable groups of humans – randomization. As people enter the trial, we randomly allocate them to treatment arms, with no consideration of patient/clinician/clinic or other characteristics. If we have a good idea of how the eventual outcomes might be distributed under the different conditions (e.g. what is the distribution of fasting glucose in the types of patients being recruited into the trial?), we can randomize enough people to feel confident that the groups will indeed be exchangeable.&lt;/p&gt;
+
+&lt;p&gt;So where does this leave us with trying to demonstrate response heterogeneity? For the vast majority of study designs, including the parallel arm trial described above, you can&amp;rsquo;t. The RCT result is inherently limited. It gives us our best guess at what the average treatment effect is, and we are forced to act as if all patients will similarly experience that effect, even though we know they won’t.&lt;/p&gt;
+
+&lt;p&gt;Proponents of personalized medicine would like to find a way to move beyond this dissatisfying situation. Unfortunately, they will need to face some hard truths. As far as I can see, there are only two ways to scientifically demonstrate something close to response heterogeneity.&lt;/p&gt;
+
+&lt;p&gt;The first will hinge on our ability to identify and recruit large enough groups of patients that share the characteristics we suspect are driving response heterogeneity (i.e. gene X). The challenge however is getting enough people who meet the necessary conditions, when they are going to be quite rare by definition. To put this challenge in context, trials are often criticized for not being large enough to estimate subgroup specific effects. Well, if we can’t often run studies that let us estimate the effect of a treatment in a subgroup that makes up 30% of possible patients, for example, how are we going to run studies in subgroups that make up fewer than 0.01% of those patients?&lt;/p&gt;
+
+&lt;p&gt;The other option is to run repeated-crossover and N-of-1 trials where individuals are repeatedly exposed to the different treatments. However, that’s only possible for particular combinations of interventions and outcomes.&lt;/p&gt;
+
+&lt;p&gt;NOTES&lt;/p&gt;
+
+&lt;p&gt;I was introduced to this problem though the work of Professor Stephen Senn. To learn more, see this &lt;a href=&#34;https://vimeo.com/208150991&#34; target=&#34;_blank&#34;&gt;video,&lt;/a&gt; and this excellent paper in Statistics in Medicine, &lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1002/sim.6739/full&#34; target=&#34;_blank&#34;&gt;Mastering variation: variance components and personalised medicine.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;(1) - Thankfully we can relax this scenario a bit - we don’t actually need both universes to be exactly the same in every way, since there will be lots of things that don’t have any influence on the outcome. For example, the position of Jupiter could vary between the two universes and we would still get the same difference in outcomes. While this updated scenario would mean less work for an all-powerful deity capable of doing all of this, it remains well out of our reach.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rater effects</title>
+      <link>/post/rater_effects/</link>
+      <pubDate>Fri, 04 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/rater_effects/</guid>
+      <description>&lt;p&gt;I was recently asked to help analyze some assessment data. There were 50 people applying for seven positions. Each person’s application materials were scored by three people, randomly chosen from a larger group of raters. I was asked to help account for the fact that some raters might have a tendency to give higher or lower than average scores.&lt;/p&gt;
+&lt;p&gt;If you want to play along, you can download the data here:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(tidyverse)
+
+  data &amp;lt;- read_csv(&amp;quot;https://dantalus.github.io/public/scores.csv&amp;quot;)
+  
+  names(data) &amp;lt;- c(&amp;quot;score&amp;quot;, &amp;quot;app&amp;quot;, &amp;quot;rater&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  head(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   score   app rater
+##   &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;
+## 1    62     1    19
+## 2    84     1    13
+## 3    78     1    10
+## 4    93     2     4
+## 5    81     2    14
+## 6    78     2    15&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A naive approach to ranking the applicants would be to calculate a summary of their scores, such as the mean. Since the raters were assigned randomly, then there can’t be any bias due to rater effects. However, unbiased only means that if we were to replicate this process many times, the average of the rater effects from each of K replications would approach zero as K increased to infinity. This is different from our actual scenario, where applicants are assessed once. In this case, it’s possible that applicants who scored well did so because, at least partly, they “got lucky” and were assigned raters that tended to give higher than average marks.&lt;/p&gt;
+&lt;p&gt;Here is the distribution of the number of applicants each rater had to deal with.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(htmlTable)
+
+  group_by(data, rater) %&amp;gt;% summarise(n = n()) %&amp;gt;%
+     summarise(mean =    mean(n),
+                min =    min(n),
+                max =    max(n),
+                lq =     quantile(n, 0.25),
+                median = quantile(n, 0.50),
+                uq =     quantile(n, 0.70)) %&amp;gt;% 
+     htmlTable(header = c(&amp;quot;Mean&amp;quot;, &amp;quot;Min&amp;quot;, &amp;quot;Max&amp;quot;, &amp;quot;25th centile&amp;quot;, &amp;quot;Median&amp;quot;, 
+                          &amp;quot;75th centile&amp;quot;), rnames = FALSE, 
+               align = &amp;quot;c&amp;quot;,
+               css.cell = &amp;quot;padding-left: 2em; padding-right: 2em;&amp;quot;, 
+               caption = &amp;quot;Distribution of the number of applicants per rater&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;table class=&#39;gmisc_table&#39; style=&#39;border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;&#39; &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;td colspan=&#39;6&#39; style=&#39;text-align: left;&#39;&gt;
+Distribution of the number of applicants per rater&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th style=&#39;border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;Mean&lt;/th&gt;
+&lt;th style=&#39;border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;Min&lt;/th&gt;
+&lt;th style=&#39;border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;Max&lt;/th&gt;
+&lt;th style=&#39;border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;25th centile&lt;/th&gt;
+&lt;th style=&#39;border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;Median&lt;/th&gt;
+&lt;th style=&#39;border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;75th centile&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#39;padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;&#39;&gt;6.25&lt;/td&gt;
+&lt;td style=&#39;padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;&#39;&gt;4&lt;/td&gt;
+&lt;td style=&#39;padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;&#39;&gt;11&lt;/td&gt;
+&lt;td style=&#39;padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;&#39;&gt;5&lt;/td&gt;
+&lt;td style=&#39;padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;&#39;&gt;6&lt;/td&gt;
+&lt;td style=&#39;padding-left: 2em; padding-right: 2em; border-bottom: 2px solid grey; text-align: center;&#39;&gt;7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;To address this problem, we have to first think about the overall distribution of the 150 scores (3 for each of 50 applicants).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(ggthemes)
+  library(viridis)
+
+  ggplot(data, aes(x = score, fill = score)) +
+      geom_bar(fill = viridis(1)) +
+      theme_base() +
+      ylab(&amp;quot;Count&amp;quot;) +
+      xlab(&amp;quot;Score&amp;quot;) +
+      ggtitle(&amp;quot;Marginal score distributions&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-4-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Given the data we have, there are three ways to explain why any particular score falls where it does along the marginal distribution: applicant effects (i.e. the “true” score of the applicant), rater effects (the tendency of a rater to be relatively easy or hard when scoring), and random error (which just means any other sources of variation not accounted for by the other two sources of variation).&lt;/p&gt;
+&lt;p&gt;To get a better look at what I am talking about, let’s calculate the mean score received for each applicant, and the mean score given by each rater.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  data &amp;lt;- group_by(data, app) %&amp;gt;%
+          summarise(mean_app = mean(score)) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;)
+
+  data &amp;lt;- group_by(data, rater) %&amp;gt;%
+          summarise(mean_rater = mean(score)) %&amp;gt;%
+          full_join(data, by = &amp;quot;rater&amp;quot;)
+
+  data &amp;lt;- select(data, app, mean_app) %&amp;gt;%
+          distinct() %&amp;gt;%
+          mutate(raw_rank = min_rank(desc(mean_app))) %&amp;gt;%
+          select(-mean_app) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;) %&amp;gt;%
+          arrange(raw_rank)
+  
+  data[] &amp;lt;- lapply(data, round, 0)
+  
+  head(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 6
+##     app raw_rank rater mean_rater mean_app score
+##   &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1    20        1     2         79      101    94
+## 2    20        1    13         80      101   100
+## 3    20        1    20        100      101   109
+## 4    17        2     6         74       98    97
+## 5    17        2    16         82       98    97
+## 6    17        2    24         86       98   101&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s plot the data twice.&lt;/p&gt;
+&lt;p&gt;First, let’s highlight the applicants.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(data, aes(y = reorder(factor(app), mean_app),
+                   x = reorder(factor(rater), mean_rater),
+                   color = score)) +
+    geom_point(size = 3) +
+    geom_line(aes(group = app), color = &amp;quot;grey50&amp;quot;) +
+    scale_color_viridis() +
+    theme_base() +
+    theme(axis.text.y = element_text(size = 8)) +
+    ylab(&amp;quot;Applicant&amp;quot;) +
+    xlab(&amp;quot;Rater&amp;quot;) +
+    ggtitle(&amp;quot;Scores, by applicant, across raters&amp;quot;,
+    subtitle = &amp;quot;Applicants and Raters sorted by their respective mean scores&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-6-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Looking at applicant 20 (top row), we can see that the 3 dots are yellow-ish (scores of 94, 100, and 109) leading to the highest average score. We can also see that the highest individual score, the bright yellow dot on the far right, came from the rater with the highest average set of ratings (rater 20, coincidentally); while their other two scores came from raters that tended to give lower scores on average (raters 2 and 13).&lt;/p&gt;
+&lt;p&gt;Next let’s highlight the raters (other wise the plots are identical).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(data, aes(y = reorder(factor(app), mean_app),
+                   x = reorder(factor(rater), mean_rater),
+                   color = score)) +
+    geom_point(size = 3) +
+    geom_line(aes(group = rater), color = &amp;quot;grey50&amp;quot;) +
+    scale_color_viridis() +
+    theme_base() +
+    theme(axis.text.y = element_text(size = 8)) +
+    ylab(&amp;quot;Applicant&amp;quot;) +
+    xlab(&amp;quot;Rater&amp;quot;) +
+    ggtitle(&amp;quot;Scores given by raters, across applicants&amp;quot;,
+    subtitle = &amp;quot;Applicants and Raters sorted by their respective mean scores&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-7-1.svg&#34; width=&#34;768&#34; /&gt; If you look to the far right, you can see that rater 20 tended to give higher scores, whereas rater 21, on the far left, was the harshest on applicants (reflected in all the blue and dark green dots).&lt;/p&gt;
+&lt;p&gt;The question then is this: Do some applicants have a low score because they had tougher raters? Or do some raters appear tough because they dealt with poorer applicants? The answer is that it’s a mix of these things, i.e. applicant effects plus rater effects.&lt;/p&gt;
+&lt;p&gt;To help sort this out, we will run two different mixed effects models. Both will include applicant as a random effect. Then one model will include rater as a fixed effect while the other model includes rater as a random effect. Which one is “correct” depends on your view of the raters: are they a sample of an underlying population of raters (a random effect), or are we interested in these and only these particular raters (a fixed effect).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(lme4)
+
+  fixed_rater &amp;lt;- lmer(score ~ factor(rater) + (1 | app), data = data)
+
+  randm_rater &amp;lt;- lmer(score ~ (1 | rater)   + (1 | app), data = data)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we’ll extract new rankings for the applicants, but this time adjusted for the rater effects. The extraction of these individual-level predictions is accomplished by the function &lt;code&gt;ranef&lt;/code&gt;, which is explained nicely by &lt;a href=&#34;https://stats.stackexchange.com/a/214145/16049&#34;&gt;Ben Bolker here&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  data &amp;lt;- data_frame(adjusted_fe = ranef(fixed_rater)$app[[1]],
+                     app = c(1:50)) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;)
+
+  data &amp;lt;- select(data, app, adjusted_fe) %&amp;gt;%
+          distinct() %&amp;gt;%
+          mutate(adjust_fe_rank = min_rank(desc(adjusted_fe))) %&amp;gt;%
+          select(-adjusted_fe) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;) 
+
+  data &amp;lt;- data_frame(adjusted_re = ranef(randm_rater)$app[[1]],
+                     app = c(1:50)) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;)
+
+  data &amp;lt;- select(data, app, adjusted_re) %&amp;gt;%
+          distinct() %&amp;gt;%
+          mutate(adjust_re_rank = min_rank(desc(adjusted_re))) %&amp;gt;%
+          select(-adjusted_re) %&amp;gt;%
+          full_join(data, by = &amp;quot;app&amp;quot;) 
+  
+  data[] &amp;lt;- lapply(data, round, 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, we’ll plot the 3 types of rankings.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(ggrepel)
+
+  select(data, app, raw_rank,
+         adjust_re_rank, adjust_fe_rank) %&amp;gt;%
+    mutate(app = reorder(factor(app), adjust_re_rank)) %&amp;gt;%
+    filter(adjust_re_rank &amp;lt; 21) %&amp;gt;%
+    gather(rank.type, rank, -app) %&amp;gt;%
+    distinct() %&amp;gt;%
+  ggplot(aes(x = app, y = rank,
+               color = rank.type)) +
+    geom_line(aes(group = app)) +
+    geom_hline(yintercept = 7, linetype = &amp;quot;dashed&amp;quot;, color = &amp;quot;grey&amp;quot;) +
+    geom_point(alpha = 0.5, size = 4) +
+    scale_color_viridis(discrete = TRUE) +
+    theme_base() +
+    geom_text_repel(data = select(data, app, adjust_re_rank) %&amp;gt;%
+                           filter(adjust_re_rank &amp;lt; 21) %&amp;gt;%
+                           mutate(app = reorder(factor(app), adjust_re_rank)) %&amp;gt;%
+                           distinct(),
+                    aes(label = app, x = app, y = adjust_re_rank),
+                    color = &amp;quot;black&amp;quot;) +
+    scale_y_reverse(breaks = c(1, seq(5, 50, by = 5))) +
+    theme(axis.ticks.x = element_blank(),
+          axis.text.x = element_blank()) +
+    xlab(&amp;quot;&amp;quot;) +
+    ylab(&amp;quot;Rank&amp;quot;) +
+    ggtitle(&amp;quot;Applicant rankings (top 20)&amp;quot;,
+            subtitle = &amp;quot;Raw ranks, plus rater-corrected ranks&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/rater_effects_files/figure-html/unnamed-chunk-10-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We can see that after the correction, 2 applicants move into the top 7, displacing 2 other applicants who would have made it otherwise (regardless of whether we model raters as a fixed or random effect).&lt;/p&gt;
+&lt;p&gt;Applicant 5 is the one most affected. Why did they drop so far? Returning to the previous plots, you can see that applicant 5 benefited from having two raters in the top 5 of average rater scores, while their third rater was in the middle of the pack. The closest comparison is applicant 25, who also benefited from two high raters, but their third rater tended to give low scores.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Log Log Regression</title>
+      <link>/post/loglog/</link>
+      <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/loglog/</guid>
+      <description>&lt;p&gt;When using linear regression, when should you log-transform your data?&lt;/p&gt;
+&lt;p&gt;Many people seem to think that any non-Gaussian, continuous variables should be transformed so that the data “look more normal.” Linear regression does in fact assume the errors are normally distributed, but it is fairly robust to violations of this assumption, and there are no such assumptions regarding the predictor variables. What is often ignored or misunderstood is the impact that variable transformations have on the linearity assumption of regression models, and on coefficient interpretation.&lt;/p&gt;
+&lt;p&gt;The are a variety of options for transforming data, and simply taking the logarithim may be the most popular, given that your data doesn’t include values equal to zero. We will thus focus on linear regression when the outcome and one predictor are both log transformed.&lt;/p&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data&lt;/h2&gt;
+&lt;p&gt;The data for this exercise are from a small sample of older, in-hospital patients with information on average daily step count (measured over 5 days with a pedometer) and their length of stay in the hospital. The data can be down loaded from github.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(ggfortify)
+  library(ggplot2)
+  library(readr)
+  library(dplyr)
+  library(tidyr)
+  library(viridis)
+  library(ggthemes)
+  library(ggalt)
+  library(car)
+
+  data &amp;lt;- read_csv(&amp;quot;https://dantalus.github.io/public/steps.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Variables&lt;/h2&gt;
+&lt;p&gt;The distributions for average daily step count (Steps) and hospital length of stay (LOS) and their repective log transformed values are plotted below. The original values are right skewed and bounded on the left side at zero. As expected, the log transformed values are more symetrical.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  gather(data, variable, value, avg.steps, los,  log.avg.steps, log.los) %&amp;gt;%
+  mutate(variable = factor(variable, levels = c(&amp;quot;avg.steps&amp;quot;, 
+                                                &amp;quot;log.avg.steps&amp;quot;, 
+                                                &amp;quot;los&amp;quot;, 
+                                                &amp;quot;log.los&amp;quot;))) %&amp;gt;%
+  ggplot(aes(x = value, fill = variable)) +
+    geom_bkde() +
+    geom_rug() +
+    scale_fill_viridis(guide = FALSE, discrete = TRUE) +
+    facet_wrap(~variable, scales = &amp;quot;free&amp;quot;) +
+    theme_base()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-3-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;linearity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Linearity&lt;/h2&gt;
+&lt;p&gt;The real challenge however is that the relationship between Steps and LOS is clearly not linear. This is illustrated in the plot below, where the solid line is from the linear regression of LOS on Steps, and the dashed line is from a loess smoother.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(data, aes(x = avg.steps, y = los)) +
+    geom_jitter() +
+    geom_smooth(method = &amp;quot;lm&amp;quot;, color = viridis(1, begin = 1),   se = FALSE) +
+    geom_smooth(span   = 1,    color = viridis(1, begin = 0.6), se = FALSE, linetype =
+                &amp;quot;dashed&amp;quot;) +
+    theme_base()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-4-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;linear-regression&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Linear regression&lt;/h2&gt;
+&lt;p&gt;We can estimate the linear regression shown in the previous plot as follows:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  lr &amp;lt;- lm(los ~ avg.steps, data)
+  
+  summary(lr)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = los ~ avg.steps, data = data)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -7.632 -3.650 -1.227  1.623 19.275 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept)  9.4672380  0.6484016  14.601  &amp;lt; 2e-16 ***
+## avg.steps   -0.0017605  0.0006241  -2.821  0.00546 ** 
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 5.342 on 146 degrees of freedom
+##   (6 observations deleted due to missingness)
+## Multiple R-squared:  0.05168,    Adjusted R-squared:  0.04518 
+## F-statistic: 7.956 on 1 and 146 DF,  p-value: 0.00546&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;diagnostic-plots&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Diagnostic plots&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  autoplot(lr, which = 1:6, ncol = 3, label.size = 3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-6-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;log-transformed-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Log transformed variables&lt;/h2&gt;
+&lt;p&gt;As we saw above, the distributions of Steps and LOS “look more normal” after transformation. More importantly however, the relationship between the log transformed variables is also linear.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(data, aes(x = log.avg.steps, y = log.los, group)) +
+    geom_jitter(alpha = 0.5) +
+    geom_smooth(method = &amp;quot;lm&amp;quot;, color = viridis(1, begin = 1),   se = FALSE) +
+    geom_smooth(span   = 1,    color = viridis(1, begin = 0.6), se = FALSE, 
+                linetype = &amp;quot;dashed&amp;quot;) +
+    theme_base()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-7-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Note that the extreme outlier in the first scatter plot is not an outlier in log-log space.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;log-log-linear-regression&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Log-Log linear regression&lt;/h2&gt;
+&lt;p&gt;A regression model where the outcome and at least one predictor are log transformed is called a log-log linear model. Here are the model and results:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  log.log.lr &amp;lt;- lm(log.los ~ log.avg.steps, data)
+  
+  summary(log.log.lr)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = log.los ~ log.avg.steps, data = data)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1.92304 -0.44851  0.00306  0.32693  1.39440 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept)    3.01997    0.29400  10.272  &amp;lt; 2e-16 ***
+## log.avg.steps -0.17800    0.04653  -3.825 0.000193 ***
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 0.5748 on 146 degrees of freedom
+##   (6 observations deleted due to missingness)
+## Multiple R-squared:  0.09109,    Adjusted R-squared:  0.08486 
+## F-statistic: 14.63 on 1 and 146 DF,  p-value: 0.0001931&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;diagnostic-plots-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Diagnostic plots&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  autoplot(log.log.lr, which = 1:6, ncol = 3, label.size = 3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-9-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ploting-the-results-in-the-original-scales&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Ploting the results in the original scales&lt;/h2&gt;
+&lt;p&gt;We will again scatter plot the Steps and LOS variables with fit lines, but this time we will add the line from the log-log linear regression model we just estimated. Importantly, the regression line in log-log space is straight (see above), but in the space defined by the original scales, it’s curved, as shown by the purple line below.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(data, aes(x = avg.steps, y = los)) +
+    geom_jitter(alpha = 0.5) +
+    geom_smooth(method = &amp;quot;lm&amp;quot;, color = viridis(1, begin = 1), se = FALSE, 
+                linetype = &amp;quot;dashed&amp;quot;) +
+    geom_line(data = data.frame(x = exp(log.log.lr$model$log.avg.steps),
+                                y = exp(predict(log.log.lr))),
+              aes(x = x, y = y),
+              color = viridis(1, end = 0), size = 0.7) +
+    geom_smooth(span = 1, color = viridis(1, begin = 0.6), size = 0.7, linetype = &amp;quot;dashed&amp;quot;,
+                se = FALSE) +
+    theme_base()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/loglog_files/figure-html/unnamed-chunk-10-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;model-interpretation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Model interpretation&lt;/h2&gt;
+&lt;p&gt;So how do we interpret the regression coefficients from a log-log model? The best explanation I have found for interpreting the regression coefficients can be found here: &lt;a href=&#34;http://www.kenbenoit.net/courses/ME104/logmodels2.pdf&#34; class=&#34;uri&#34;&gt;http://www.kenbenoit.net/courses/ME104/logmodels2.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In a nutshell, a 1% increase in the predictor is associated with a Beta% change in the outcome. This is an approximation however. To be exact, we can say that an x% increase in the predictor is associated with a change in the outcome equivalent to multiplying it by 2.71^((log((100+x)/100)) * Beta)). For the model above, the approximation is a 1% increase in Steps is associated with an approximately 0.18% decrease in LOS. Using the exact method, we can calculate the a 50% increase in Steps is associated with a 2.71^((log((100 + 50)/100)) * -0.18)) = 0.93 * LOS = a 7% decrease in LOS.&lt;/p&gt;
+&lt;p&gt;The important thing to understand is that by working with logarithms, we have moved from talking about absolute differences (e.g. 600 steps = 1 less day in the hospital) to relative differences (given a 1% increase in Steps, we would expect an 0.18% decrease in hospital length of stay). Why is this? Remember from math class that adding log(x) + log(y) = log(x * y)? When we start adding things in log space, we are multiplying them in absolute space. This is the same reason that a one-unit increase in log(odds) space results in an odds-ratio after exponentiation in logistic regression models. This shift from thinking in absolute to thinking in relative terms is important for understanding a number of analytical techniques (e.g. what is the difference between an additive and a multiplicative interaction?). Here is a entertaining introduction to the topic: &lt;a href=&#34;https://www.youtube.com/watch?v=Pxb5lSPLy9c&#34; class=&#34;uri&#34;&gt;https://www.youtube.com/watch?v=Pxb5lSPLy9c&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One last, critical point we must consider is whether the proportional interpretation is reasonable for each variable. In the case of Steps, it makes sense to me that an increase of 50 steps per day would mean something different for a completely sedentary patient vs. a very active patient. How to think about LOS is less obvious to me. Do I expect a change in Steps to be associated with same amount of change in LOS regardless of how long the stay would have been otherwise? I’ll have to ask the physiotherapist about this one.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Getting an interview</title>
+      <link>/post/2017-05-09-interviews/</link>
+      <pubDate>Tue, 09 May 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-05-09-interviews/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To get a job, you have to get an interview. Who knows what will happen at that point, but securing an interview is at least partly in your own hands. Having just finished shortlisting the applicants to a postdoctoral research post I recently advertised, here are my thoughts on how to get your foot further in the door. None of this is original. It’s just fresh on my mind.&lt;/p&gt;
+
+&lt;h3 id=&#34;your-letter-must-be-well-written-and-fit-for-purpose&#34;&gt;Your letter must be well written and fit for purpose&lt;/h3&gt;
+
+&lt;p&gt;Some people seem to think the letter is just a “Hello, my name is Bob, and I am applying for this job.” I can assure you that it is so much more than that. First, I get to see if you can write. Whether you want to believe it or not, academics are professional writers. It’s a skill you will use all the time, and the letter is your best way to show me you have it. It’s not just about the grammar either. People who write well also tend to think well, organize well, and argue well.&lt;/p&gt;
+
+&lt;p&gt;Next, the letter shows me how good you are at research, which is obviously an important skill for our profession. What do you know about me? What do you know about where I work? What do you know about the job you are applying for?  If you don’t do this simple piece of research, when there so much at stake for you, why would anyone trust you to do more?&lt;/p&gt;
+
+&lt;h3 id=&#34;send-a-professional-looking-cv&#34;&gt;Send a professional looking CV&lt;/h3&gt;
+
+&lt;p&gt;Attention to detail matters. Let’s say we just completed a clinical trial. Many smart people worked hard on the project, patients took on real risks to participate, and we spent lots of somebody else’s money. Now I need you to analyse the data from that trial, and write up the results. A lot is riding on the job you do. How can I trust this to someone who can’t get the margins of their CV to line up? It’s not like your CV is something you have to write every day, so it shouldn’t be that difficult to write a nice one and update it as needed.&lt;/p&gt;
+
+&lt;h3 id=&#34;demonstrate-how-you-meet-the-criteria&#34;&gt;Demonstrate how you meet the criteria&lt;/h3&gt;
+
+&lt;p&gt;Just about every job description has a list of criteria. If you don’t appear to meet the criteria, then I can’t put you ahead of the applicants that do. Some criteria are easy to verify, such as your degree, or prior experience. Other things aren’t as obvious, so you need to make sure that you point these out in the letter. When you are done, give the job description along with your CV and letter to a friend or mentor and see if they can match it all up. If they can’t, keep working on it.&lt;/p&gt;
+
+&lt;h3 id=&#34;don-t-publish-in-dodgy-journals&#34;&gt;Don’t publish in dodgy journals&lt;/h3&gt;
+
+&lt;p&gt;I hate that academia is so focused on papers, and I could care less about impact factors - but you can’t have a CV full of papers published in the Galactic International Journal of Financial Biochemistry. It&amp;rsquo;s not always easy to know for sure that a journal is dodgy, but in some cases it is, so stay away.&lt;/p&gt;
+
+&lt;h3 id=&#34;appeal-to-the-pis-interests-and-values&#34;&gt;Appeal to the PIs interests and values&lt;/h3&gt;
+
+&lt;p&gt;As noted above, if you want to work with me, it’s a good idea to learn about me (just as I will try to learn about you). Many academics are now active on social media, so go check them out. We all publish papers, so go read some of them. If you learn that we share an interest that is relevant to the job, then make that clear in your application. This isn’t just vanity. I am looking to start a professional relationship with someone that might last a few decades, so your chances of getting an interview shoot up if we already share some common ground.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>In Defense of DAGs</title>
+      <link>/post/2017-03-30-dags/</link>
+      <pubDate>Thu, 30 Mar 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-03-30-dags/</guid>
+      <description>
+
+&lt;p&gt;Professors Nancy Krieger (NK) and George Davey Smith (GDS) recently published an editorial in the IJE titled &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/27694566&#34; target=&#34;_blank&#34;&gt;The tale wagged by the DAG: broadening the scope of causal inference and explanation for epidemiology&lt;/a&gt;. In it, they argue that causal inference in epidemiology is dominated by an approach characterised by counterfactuals (or potential outcomes) and directed acyclic graphs (DAGs); and that this hegemony is limiting the scope of our field, and preventing us from adopting a more useful, pluralistic view of causality.&lt;/p&gt;
+
+&lt;p&gt;They began their editorial with the results of a literature search of &lt;code&gt;[epidemiology AND causal AND inference]&lt;/code&gt;. They found 558 such articles, none of which were published before 1990, and half of which were published after 2010. I believe they were trying to show that causal inference is becoming a more important topic to epidemiologists. However, if that was the case, I think it makes more sense to ask how many papers mention causal inference &lt;em&gt;out of&lt;/em&gt; the papers published in our field. After all, in epidemiology, it’s all about the denominators. Once you do this, a much more important problem appears.&lt;/p&gt;
+
+&lt;p&gt;In contrast to their search, I started by looking for papers on Pubmed from the last five years that were published in the four key epidemiological journals where most of the discussion about causal inference probably takes place. These were: &lt;em&gt;Epidemiology&lt;/em&gt;, &lt;em&gt;the American Journal of Epidemiology&lt;/em&gt;, &lt;em&gt;the International Journal of Epidemiology&lt;/em&gt;, and &lt;em&gt;the Journal of Epidemiology and Community Health&lt;/em&gt;. Then, out of these papers, I alternately searched for those mentioning causal inference; those mentioning DAGs; and those mentioning counterfactuals. The results are plotted below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://DarrenDahly.github.io/img/plot.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Search 1: (&amp;quot;J Epidemiol Community Health&amp;quot; [journal] OR &amp;quot;Am J Epidemiol&amp;quot; [journal] OR &amp;quot;Int J Epidemiol&amp;quot; [journal] OR &amp;quot;Epidemiology&amp;quot; [journal])
+Search 2: Search 1 AND &amp;quot;causal inference&amp;quot;
+Search 3: Search 1 AND (causal graph* OR &amp;quot;DAGs&amp;quot; OR &amp;quot;DAG&amp;quot; OR directed acyclic graph*)
+Search 4: Search 1 AND (counterfactual OR potential outcomes) 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The plot of course supports NK and GDS’s assertion that counterfactuals and DAGs dominate our discussion of causal inference, but I am much more worried about how limited that discussion appears to be.&lt;/p&gt;
+
+&lt;p&gt;Like many others,&lt;a href=&#34;http://dantalus.github.io/2017/02/04/consequentialism/&#34; target=&#34;_blank&#34;&gt; I have previously argued that there is far too little causal thinking in epidemiology&lt;/a&gt;. The plot above is consistent with this view, and won&amp;rsquo;t allow me to accept that DAGs and counterfactuals are now pervasive enough to warrant some cautionary backlash. I instead believe that DAGs and counterfactuals, rather than displacing a more pluralistic view of causal inference, are actually &lt;em&gt;creating&lt;/em&gt; the space for it to exist.  Unfortunately, in an otherwise excellent  and informative editorial, I think that NK and GDS misrepresent counterfactuals and DAGs, and worry that this might actually discourage their use. With that in mind, I offer the following commentary.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-story-of-a-useful-wrench-denigrated-for-not-being-a-perfect-hammer&#34;&gt;The story of a useful wrench, denigrated for not being a perfect hammer&lt;/h2&gt;
+
+&lt;p&gt;Discussions of causal inference in epidemiology are often seen as “high-level”, or somehow beyond the rank-and-file epidemiologists. This is unfortunate, since drawing causal inferences from observational data is probably the biggest challenge we all regularly face. In my opinion, the single best way to help them meet this challenge is to teach them about counterfactuals and DAGs, which I have been doing for almost 10 years.&lt;/p&gt;
+
+&lt;p&gt;The most obvious value of DAGs for epidemiologists is that they facilitate a rigorous and transparent means of deciding which variables to adjust for when you hope to draw causal inferences from associations. They are especially helpfully for identifying tricky situations where adjustment for a possible confounder will actually create more bias than it resolves (e.g. collider bias).&lt;/p&gt;
+
+&lt;p&gt;Beyond this, DAGs can be used to describe competing sets of theory-based predictions that can be checked against data (Science!). They can be communicated unambiguously to others, so that disagreements about a DAG’s specific form can be debated and evaluated. &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/15308962&#34; target=&#34;_blank&#34;&gt;DAGs can be used to describe most (if not all?) of the many biases&lt;/a&gt; researchers have identified, and re-identified, over the years. They are also helpful for contrasting study designs and the different assumptions they rely on (including Mendelian randomization, which I have never successfully described to anyone without using a DAG).&lt;/p&gt;
+
+&lt;p&gt;I could go on. I love DAGs, for all the reasons above and more. But the thing I love most about DAGs is that they encourage the exact kind of pluralistic causal thinking that NK and GDS advocate for in their editorial. For example, NK and GDS say the following about an approach to causal inference they admire, inference to the best explanation:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;In brief, the essence of the IBE approach is to ‘think through inferential problems in causal rather than logical terms’ and to employ a ‘two-stage mechanism involving the generation of candidate hypotheses and then section among them’. IBE is thus driven by theory, substantive knowledge, and evidence, as opposed to being driven solely by logic or by probabilities.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When I read this, I thought it was a spot-on explanation of the kind of thinking DAGs facilitate. In fact, many of the other good ideas they shared were things that could be described and justified using counterfactuals and DAGs, &lt;a href=&#34;https://twitter.com/PophamFrank/status/846836389853511680&#34; target=&#34;_blank&#34;&gt;including each of the things listed in Textbox 3&lt;/a&gt;. While reading their editorial, I couldn’t help feeling like NK and GDS weren’t giving DAGs the credit they deserve for promoting a deeper level of causal thinking.&lt;/p&gt;
+
+&lt;p&gt;The editorial also kept pointing out things that DAGs can’t be used for, but most of it was in a “no duh” kind of way. It was like warning me my car doesn&amp;rsquo;t drive under water. Strangely though, their key example of how DAGs go wrong was instead a perfect description of how they go right. It was the bit about the birth weight paradox.&lt;/p&gt;
+
+&lt;p&gt;To summarise, maternal smoking is associated with neonatal mortality, which won’t come as a surprise to anyone. However, if you only look at very low birth weight (VLBW) infants, there seems to be a protective effect, i.e. neonatal mortality is lower among infants born to moms who smoke. However, using a DAG, one can quite easily argue that because VLBW is a consequence of maternal smoking, stratifying by birth weights (which is what happens once we look at only the VLBW infants) leads to a collider bias. The collider bias in turn suggests the following: if you take a VLBW baby, and their mom didn’t smoke, then it’s more likely they were exposed to some other nasty insult that causes their VLBW, and that this alternate exposure was even more strongly associated with mortality. I teach this example every year. It’s great.&lt;/p&gt;
+
+&lt;p&gt;Seemingly dissatisfied with this conclusion, NK and GDS go on to say that an “elaborate and biologically plausible alternative explanation exists”. However, their explanation is 100% consistent with what others have suggested based on collider bias I just described. I quote:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;It is that infants who are low-birthweight for reasons other than smoking may well have experienced harms during their fetal development unrelated to and much worse than those imposed by smoking…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;They then note that their “proposed alternative biological explanation cannot be discerned from a DAG”, but also that “the DAGs for collider bias and for heterogeneity of LBW phenotypes have a similar structure.” I found this astounding, and can’t fathom why NK and GDS don’t see that they have the exact same structure. The only difference is that they have attached biologically informed labels to the nodes of the graph. Hence, while arguing the DAG is limited, they demonstrate that it actually worked as intended. It has described a causal structure that explains an otherwise paradoxical finding, to which they have added their own expert knowledge to further increase our belief that the DAG is correctly specified.  This is how DAGs work. They are just a tool. They are not magical. Garbage-In-Garbage-Out applies.&lt;/p&gt;
+
+&lt;h2 id=&#34;back-to-counterfactuals&#34;&gt;Back to counterfactuals&lt;/h2&gt;
+
+&lt;p&gt;Returning to the plot above, I fail to see how a counterfactual view of cause threatens to narrow the scope of our field, considering that just under 1% of papers from the best epidemiological journals even mention it. Further, I don’t see where NK and GDS offer any actual evidence of this occurring. What they offer instead is a more philosophical critique of counterfactuals.&lt;/p&gt;
+
+&lt;p&gt;They focus on a particularly “alarming feature” of counterfactualism, which is the idea that race or ethnicity can’t cause poor health (or anything else) because it isn’t intervenable. They then go onto to discuss that this “belief fails to acknowledge reams of genetic evidence demonstrating that H sapiens cannot be meaningfully parsed into discrete genetically distinct races…” They go on in this vein for some time.&lt;/p&gt;
+
+&lt;p&gt;I must admit, I had to re-read all of it several times before I could allow myself to conclude the following: NK and GDS aren’t just accusing counterfactualists of holding a debateable view of causality; they are accusing them of holding a deeply offensive and ignorant view of humanity.&lt;/p&gt;
+
+&lt;p&gt;So please let me be very clear. A counterfactual view of race doesn’t mean you think that there are “fixed races.” The counterfactual view of race doesn’t say race can’t be changed, or even that it exists. It doesn’t say that race is a “natural kind”. It doesn’t say we shouldn’t study it (and thus “narrow the scope” of our field). To me, the counterfactual view simply says that race can’t be the target of intervention. It says that race doesn’t cause poor health, racism does – which is the exact point NK and GDS get to at while arguing against the counterfactual view. I hope everyone can see the distinction, and nobody is put off of  counterfactuals for fear of offending.&lt;/p&gt;
+
+&lt;p&gt;I would like to provide a less contentious example that I teach to my students, which will hopefully explain their value. Does fluoride prevent dental carries? This might seem like a straightforward causal question, but it is woefully incomplete without consideration of how we might vary exposure to fluoride. For example, we could fluoridate the water supply, dictate that manufacturers put more fluoride in toothpaste, or encourage people to brush their teeth more often. Each of these interventions represents a distinct causal question, with different sets of potential confounders, taking place at different scales, and all of them are more useful than simply asking whether fluoride prevents tooth decay. So counterfactuals are, at the very least, a useful fiction that I believe help crystalize causal questions. Even in situations where there is no possible intervention, due to ethical or other constraints, thinking about exposures as if you could intervene can be helpful.&lt;/p&gt;
+
+&lt;h2 id=&#34;in-conclusion&#34;&gt;In conclusion&lt;/h2&gt;
+
+&lt;p&gt;A colleague once told me that Jamie Robbins, when asked what a confounder was, answered, “Whatever you need to adjust for to get the right answer.” I think this answer really gets to the point of DAGs and their counterfactual foundations. It’s not about identifying what &lt;strong&gt;&lt;em&gt;A confounder&lt;/em&gt;&lt;/strong&gt; is, but rather it’s about identifying the set of things to adjust for, given a specific causal question, asked in a specific context.&lt;/p&gt;
+
+&lt;p&gt;This is in stark contrast to what I see in most health research papers. The process of covariate selection, typically the crux of the entire analysis, is often omitted. When it isn’t, it can frequently be described as a monkey-see-monkey-do approach, or even worse, by some step-wise algorithm. Then, after dancing around the causal question at hand, careful not to admit their true motives, the authors are usually quick to practically apologize for their efforts with that old falsehood, “Correlation doesn’t imply causation.” All of this reflects a deficit of causal thinking that is a drag on our profession.&lt;/p&gt;
+
+&lt;p&gt;DAGs and counterfactual thinking are currently the best tools we have to counter this. Their value seems so obvious to me, but clearly not to everyone else. Every year, a student will inevitably ask, “If DAGs are so useful, why don’t epidemiologists use them?” I still don’t have a good answer for that question. It’s been about two decades since &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/9888278&#34; target=&#34;_blank&#34;&gt;Robins, Greenland, Pearl&lt;/a&gt;, &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/15308962&#34; target=&#34;_blank&#34;&gt;Hernan&lt;/a&gt;, &lt;a href=&#34;http://publicifsv.sund.ku.dk/~nk/epiF14/Glymour_DAGs.pdf&#34; target=&#34;_blank&#34;&gt;Glymour&lt;/a&gt; and others helped to introduce DAGs to our field. It would be generous to describe their uptake as slow.  There is no denying that most “successful” epidemiologists have gotten along just fine without them, and they rarely appear in the journal articles I read or review. So please forgive any defensiveness on my part; just know that we are on an uphill climb here.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Your science is justified by the question, not the answer</title>
+      <link>/post/2017-03-21-prereg/</link>
+      <pubDate>Tue, 21 Mar 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-03-21-prereg/</guid>
+      <description>&lt;p&gt;Registration of clinical trials, prior to any patient recruitment, is now common. Though trial registrations often omit the important details regarding their proposed analyses (despite advice to the contrary), most trialists seem to agree, at least in principle, that you should transparently describe your plans for clinical trial data before they are collected. Unfortunately, this remains a foreign concept in other areas of clinical and public health research.&lt;/p&gt;
+
+&lt;p&gt;Before I started working as a biostatistician involved in clinical trials, I worked with birth cohort studies. Whereas the vast majority of clinical trials are designed to answer a single research question (or small set of them), the prospective cohort study design allows researchers to answer many questions, even thousands, including questions that nobody envisioned at the start of the study. Given the costs of recruiting and following-up hundreds or thousands of study participants, many believe that it’s our responsibility to extract as much value from these data as we can. However, this well-intentioned mind-set can quickly be distorted to promote toxic research practices, where perverse incentives to publish, combined with the poor overall quality of peer-review, have created a body of flawed, often useless, research with results affected by various forms of p-hacking (intentional or otherwise) and file-drawer effects.&lt;/p&gt;
+
+&lt;p&gt;I imagine that most people reading this will be well aware of these issues, but the world of cohort studies has done little, in my opinion, to address them. Pre-registration of planned data analyses would go a long way to solving these problems, which has been repeatedly suggested by many others. The key questions then are where should people register their analyses, and how can we realistically compel them to do so?&lt;/p&gt;
+
+&lt;p&gt;Research funders have played an important role in the open access research movement, through decree, and by covering the costs of open access publishing. They must play a similar role in the pre-registration of data analyses. I believe that any new cohort study should be required by the funder to maintain a transparent, current list of the analyses they plan to conduct. Many studies already use some form of a publication committee to plan research outputs, so this would be a natural extension of their work. These study-specific registries could be hosted using a variety of online, easy to use, low-cost tools that provide a timestamp and DOI. Most importantly, funders should then require researchers to update progress on the registered analyses as a part of their regular reporting processes (hopefully replacing the less useful information that is often asked for). Subsequent manuscripts should then reference the respective analysis registration(s), and take the opportunity to justify any departures in the supplemental material. I also suspect such public registries would help identify helpful collaborators, and justify when researchers might prefer to not yet share the study data.&lt;/p&gt;
+
+&lt;p&gt;While I don’t see a substantial logistical challenge to cohort studies maintaining their own registry of planned data analyses, I suspect that many reading this will think that it’s impossible none-the-less.&lt;/p&gt;
+
+&lt;p&gt;This is why: I continue to collaborate on cohort studies that I didn’t design, where my involvement is typically sought long after the data have been collected. I will typically ask my colleagues to first send me a draft of the introduction and the methods of recruitment and measurement, as if we were preparing a manuscript. I then tell them that I will add the appropriate statistical methods and a dispassionate summary of the results, including the tables and plots, after which we will plan to meet minds, outline the discussion, and start editing the paper. This request almost always causes discomfort, even when everyone acknowledges it’s just a process to move things along. People always want to see the results first. In my opinion, this is because we have adopted a view of science where the justification for a research project is given by the results. But this is completely backwards! It’s the question that drives us. Is it important enough to answer? And can it be answered in a scientific manner?&lt;/p&gt;
+
+&lt;p&gt;In other words, you should be able to start drafting a manuscript before the data are collected, much less analysed (using exactly what went into your grant and/or ethics application). This shouldn’t cause any discomfort at all. This is the standard we should all strive to attain. This propensity to want to see the results first and then spin the paper (and that’s exactly what it is – spin) is harming science, and those who want to discredit science are starting to exploit it.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;It is difficult to get a man to understand something, when his salary depends upon his not understanding it!&amp;rdquo; – Upton Sinclair&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Upcoming R workshop</title>
+      <link>/post/2017-03-13-r_courses/</link>
+      <pubDate>Mon, 13 Mar 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-03-13-r_courses/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://darrendahly.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://www.ucc.ie/en/crfc/&#34; target=&#34;_blank&#34;&gt;Clinical Research Facility Cork&lt;/a&gt; is sponsoring a free, two-day introduction to data analysis using the R statistical programming language on March 30th and 31st (Th, F), from 09:30 to 16:30 in the &lt;a href=&#34;https://www.google.ie/maps/place/Western+Gateway,+Western+Gateway+Building,+University+College+Cork,+Western+Rd,+Mardyke,+Cork/data=!4m2!3m1!1s0x4844902fb2cfc8d3:0xbc1521a27a3ca450?sa=X&amp;amp;ved=0ahUKEwjRn-H2-pbQAhWDLMAKHStcCXwQ8gEIGzAA&#34; target=&#34;_blank&#34;&gt;Western Gateway Building&lt;/a&gt; 3.71. Places are available on a first-come, first-serve basis, and there is space for 10 participants. Please email me at ddahly@ucc.ie to reserve a place.&lt;/p&gt;
+
+&lt;p&gt;The course is intended for people who are new to R, but at least somewhat familiar with other statistical software such as Stata or SPSS. Each participant will need to being their own laptop with R and R-Studio Desktop installed and working. Once these are installed, you will need to execute the following code: &lt;code&gt;install.packages(&amp;quot;tidyverse&amp;quot;)&lt;/code&gt;. You are also encouraged to “bring your own data” to work with (in any format).&lt;/p&gt;
+
+&lt;p&gt;We will cover the following topics:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The strengths and weaknesses of R, relative to other options for data analysis&lt;/li&gt;
+&lt;li&gt;The basics of &amp;ldquo;how R works&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Working with the R-Studio environment&lt;/li&gt;
+&lt;li&gt;Workflow and managing projects&lt;/li&gt;
+&lt;li&gt;Importing data into R (from Excel, Stata, SAS, SPSS, text files)&lt;/li&gt;
+&lt;li&gt;Working with dataframes&lt;/li&gt;
+&lt;li&gt;Data visualisation with ggplot2&lt;/li&gt;
+&lt;li&gt;Writing your own functions&lt;/li&gt;
+&lt;li&gt;Literate programming and reproducible research&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;By the end of the workshop, you will be able to import a dataset into R, manipulate it, visualize it, and then wrap everything up in a report that can be reproduced at the press of a button.&lt;/p&gt;
+
+&lt;p&gt;For more R related activities, please feel free to join the Cork R-User&amp;rsquo;s Group &lt;a href=&#34;http://www.meetup.com/Cork-Ireland-R-Users-Group/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For help installing the R statistical programming language and R-Studio, please see these links.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://swirlstats.com/&#34; target=&#34;_blank&#34;&gt;http://swirlstats.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.r-project.org/&#34; target=&#34;_blank&#34;&gt;https://www.r-project.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.rstudio.com/products/rstudio/download2/&#34; target=&#34;_blank&#34;&gt;https://www.rstudio.com/products/rstudio/download2/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/cars.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cause vs. Consequence</title>
+      <link>/post/2017-02-04-consequentialism/</link>
+      <pubDate>Sat, 04 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-02-04-consequentialism/</guid>
+      <description>&lt;p&gt;I have, for some time, wanted to respond to Sandro Galea&amp;rsquo;s &lt;a href=&#34;https://academic.oup.com/aje/article/178/8/1185/84205/An-Argument-for-a-Consequentialist-Epidemiology&#34; target=&#34;_blank&#34;&gt;essay on a Consequentialist Epidemiology&lt;/a&gt;, published in 2013 (!) in the American Journal of Epidemiology. It is hard to argue against the importance of consequentialism for academic epidemiology. It is equally hard to dismiss Galea&amp;rsquo;s concerns about our lack of influence with funders and policy makers. However, my views beyond this diverge from Professor Galea&amp;rsquo;s, and in the spirit of his &amp;ldquo;provocation,&amp;rdquo; I would like to respectfully offer an alternate perspective.&lt;/p&gt;
+
+&lt;p&gt;Galea seems primarily concerned that academic epidemiology is focused too much on identifying causes of disease, and not enough on actual intervention. He further worries that &amp;ldquo;our focus on causal rather than pragmatic thinking&amp;rdquo; risks marginalizing us with funders and policy makers. His solution to this problem is to promote a &amp;ldquo;consequentialist epidemiology&amp;rdquo; that is intensely focused on improving health outcomes, even &amp;ldquo;at the expense of the development of epidemiological methods and novel approaches.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Setting up the need for a consequentialist epidemiology, Galea points to key epidemiological textbooks and journals as evidence that we are too focused on etiology and not focused enough on intervention. The former, he observes, don&amp;rsquo;t teach students how to intervene, and the latter are too focused on etiological research and publish relatively few papers about actual interventions. Though his observations are surely accurate, I think they reflect too narrow a view of academic epidemiology.&lt;/p&gt;
+
+&lt;p&gt;We train in schools of public health, where we are expected to study a range of topics that often includes intervention design and evaluation. We typically work in the same, or similarly diverse, institutions, where our expertise contributes to a variety of public health research programs, and is published widely. The interventions we contribute to have a better chance of appearing in &amp;ldquo;high impact&amp;rdquo; journals, while our etiological research and innovative methods are appropriately showcased for our peers in the &amp;ldquo;core epidemiological&amp;rdquo; journals. It is thus no suprise that &amp;ldquo;our&amp;rdquo; journals are focused on method, and in no way does this reflect a lack of consequentialism.&lt;/p&gt;
+
+&lt;p&gt;All of that being said, of course we are preoccupied with etiology and cause! Definitive answers to causal questions are rare, but if we want to intelligently inform intervention efforts, we must continue to pursue them - even in observational data, and even in the face of heroic assumptions.  The only alternative is to say nothing at all. We are not content to simply describe the world we live in. We want to overcome these barriers to causal inference, as best as possible. Consequently, epidemiologists have built tools for causal inference that are improving applied research, even in &amp;ldquo;gold-standard&amp;rdquo; RCTs. Causal thinking is thus not a detraction to pragmatic thinking – it is a consequence of it.&lt;/p&gt;
+
+&lt;p&gt;Cause is our niche. Successful public health interventions are born of long, complex processes. A different expertise is required at each step in this process, and no person, or academic discipline, can master them all.  Thus, if an academic discipline is going to contribute to this process, it must occupy a useful space. The application of causal thinking is ours.&lt;/p&gt;
+
+&lt;p&gt;From this perspective, I am troubled that we would sacrifice the continued development of epidemiological methods, especially those aimed at improving our causal inferences. I believe that any sacrifice to methodological rigour and innovation will do nothing but hasten us down the path to irrelevance. The solutions to our problems lie in more causal thinking, not less.&lt;/p&gt;
+
+&lt;p&gt;Galea provides examples of the kind of intervention research he would like to see published more often in our core journals. I believe that it is facile to say that we should engage more with interventions without clarifying our contribution.  At a glance, we can see that Galea&amp;rsquo;s examples ask fundamentally causal questions; and even though these papers are about interventions, the questions being asked are about relationships in observational data. A better goal then would be to bring our expertise to intervention research, or, if needed, to show interventionists what we bring to the table. Consequently, any sacrifice of our method would be counter-productive.&lt;/p&gt;
+
+&lt;p&gt;I also fail to see how reducing methodological rigor and innovation will cure external dissatisfaction with &amp;ldquo;epidemiologic description and correlation&amp;rdquo;.  Most of this dissatisfaction has to do with the never-ending reporting of weak, often conflicting associations among every exposure/disease dyad under the sun (see the &lt;a href=&#34;http://journals.lww.com/epidem/Citation/1993/05000/The_Hypothesis_Generating_Machine.12.aspx&#34; target=&#34;_blank&#34;&gt;Hypothesis Generating Machine&lt;/a&gt;). But this situation isn’t the result of obsession with cause, but rather the opposite (combined with perverse incentives to publish, and poor application of tools for statistical inference). Surely we should instead respond to our critics by continuing to improve the way we make inferences about correlations, and apply those methods more consistently as a profession. This of course requires more causal thinking, not less.&lt;/p&gt;
+
+&lt;p&gt;I also strongly disagree that the lack of &amp;ldquo;big wins&amp;rdquo; is an indictment of causal thinking. I offer a more likely explanation: we have already picked the low hanging fruit. All the big risk-ratios have been found, simply because they are the easiest to find. Now we are looking for needles in haystacks, and our necessary search for small effect sizes means that we should be striving for more methodological rigour, not less. If funders are walking away because we haven&amp;rsquo;t found the next tobacco-sized health risk, whom will they turn to? And how long will it take them to return once they realize poorer methodological rigour leads to even more ghost chases?&lt;/p&gt;
+
+&lt;p&gt;If the funders and policy makers do not appreciate our contributions, perhaps we must instead strive to help them appreciate what it is that we do. The field of economics doesn&amp;rsquo;t seem to have produced any big wins as of late, but they do undoubtedly have more sway with policy makers. Perhaps this is simply because more people know, or at least think they know, what an economist is. Conversely, my own mother still suspects that I am &amp;ldquo;some kind of skin doctor&amp;rdquo;. &lt;em&gt;This&lt;/em&gt; is our problem.&lt;/p&gt;
+
+&lt;p&gt;Finally, I too agree that we must change the way we train epidemiologists, but what does an outcome orientated epidemiology training program look like? Which outcomes will programs focus on? How will these decisions be made? The beauty of training students on &amp;ldquo;our methods as tools&amp;rdquo; is that these can be applied to a variety of problems. I would argue instead for a greater emphasis on causal thinking at all levels of epidemiological training.&lt;/p&gt;
+
+&lt;p&gt;To this point I have argued that epidemiology in practice is already consequentialist in nature, and that our embrace of causal thinking and continued investment in methodological innovation is a reflection of this. Though I must agree with Professor Galea that our field faces important challenges, following from my position, I see no solutions in the dulling of our expertise. Quite the opposite. So in epidemiology, just like in life, there is no consequence without cause.&lt;/p&gt;
+
+&lt;p&gt;[First draft,  Feb 06, 2017]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Stata Workshop (2016)</title>
+      <link>/post/2017-04-13-stata_workshop/</link>
+      <pubDate>Sat, 04 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-04-13-stata_workshop/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction-to-data-analysis-with-stata&#34;&gt;Introduction to data analysis with Stata&lt;/h2&gt;
+
+&lt;p&gt;On May 24, 2017, the Clinical Research Facility Cork will host a one-day workshop featuring Stata data analysis and statistical software. It will take place in the Brookfield Health Sciences Building (G07) at University College Cork. The workshop will be led by Dr Darren Dahly, the Principal Statistician at the CRF-C.&lt;/p&gt;
+
+&lt;p&gt;The workshop is free for registered PhD students. Otherwise, the cost is 75 EUR and can be paid by credit card or purchase order (for UCC based attendees). To sign up, please email Darren (ddahly@ucc.ie). You will then be given payment details.&lt;/p&gt;
+
+&lt;p&gt;The workshop (9:45 to 16:15) will introduce Stata to researchers with little or no experience using it. Participants will learn how to load data and produce descriptive summaries, including tables and graphs, how to edit and modify data, and how to carry out analyses such as t-tests, chi-square tests, ANOVA and regression. We will also demonstrate how Stata can be used to support reproducible research practices.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The perils of exploratory data analysis</title>
+      <link>/post/2017-02-03-exploratory/</link>
+      <pubDate>Fri, 03 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-02-03-exploratory/</guid>
+      <description>&lt;p&gt;Is it ever ok to conduct an exploratory data analysis, for the purpose of &amp;ldquo;generating hypotheses&amp;rdquo;?&lt;/p&gt;
+
+&lt;p&gt;This question was motivated by a new Retraction Watch piece, &lt;a href=&#34;http://retractionwatch.com/2017/02/02/backlash-prompts-prominent-nutrition-researcher-reanalyze-multiple-papers/&#34; target=&#34;_blank&#34;&gt;Backlash prompts prominent nutrition researcher to reanalyze multiple papers&lt;/a&gt;. It covers the backlash to an earlier blog post by &lt;a href=&#34;https://twitter.com/BrianWansink&#34; target=&#34;_blank&#34;&gt;Brian Wansink&lt;/a&gt;, who wrote about two early career researchers, one of whom took on several &amp;ldquo;extra&amp;rdquo; projects, vs. another who refused (&lt;a href=&#34;http://www.brianwansink.com/phd-advice/the-grad-student-who-never-said-no&#34; target=&#34;_blank&#34;&gt;The Grad student who never said no&lt;/a&gt;). The former managed to turn the &amp;ldquo;opportunity&amp;rdquo; into a small handful of publications, and Wansink&amp;rsquo;s thesis was that this is how you get ahead in academia. However, in writing the blog post, its author revealed a concerning approach to statistical inference, not to mention a cavalier attitude to the exploitation of early career scientists, both of which were quickly noted on twitter and in the blog&amp;rsquo;s comments.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/statsepi/status/809479929435979776&#34; target=&#34;_blank&#34;&gt;You can find the relevant tweets here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I am not here to pile on, but in the RW article, there was a quote from Professor Wansink that I couldn&amp;rsquo;t believe.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;P-hacking shouldn’t be confused with deep data dives – with figuring out why our results don’t look as perfect as we want.&lt;/p&gt;
+
+&lt;p&gt;With field studies, hypotheses usually don’t “come out” on the first data run.  But instead of dropping the study, a person contributes more to science by figuring out when the hypo worked and when it didn’t.  This is Plan B.  Perhaps your hypo worked during lunches but not dinners, or with small groups but not large groups. You don’t change your hypothesis, but you figure out where it worked and where it didn’t.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/statsepi/status/827456005084704769&#34; target=&#34;_blank&#34;&gt;I of course turned to twitter to express my outrage&lt;/a&gt;, and was suprised to find people supporting the idea that exploratory analyses were perfectly acceptable for &amp;ldquo;generating hypotheses&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;I immediately thought of this great paper by Philip Cole, titled &lt;a href=&#34;http://journals.lww.com/epidem/Citation/1993/05000/The_Hypothesis_Generating_Machine_.12.aspx&#34; target=&#34;_blank&#34;&gt;The Hypothesis Generating Machine&lt;/a&gt;, in which he humourously claims to have compiled a list that contains every possible &amp;ldquo;X is associated with Y&amp;rdquo; hypothesis, making it pointless to try and identify any new ones.  It&amp;rsquo;s a short and entertaining read, and I encourage you to have a look for yourself.&lt;/p&gt;
+
+&lt;p&gt;People also seemed to think that exploratory analyses are ok in principle, but only if your explorations, regardless of their outcome, are reported. Obviously we can’t selectively report our &amp;ldquo;successful&amp;rdquo; explorations, and hide away the others (see the Texas sharpshooter fallacy; the garden of forking paths; file-dawer effects; and publication bias).  However,  I think people are missing the point that there aren&amp;rsquo;t enough hours in the day to actually do this. Even if you were just sharing summaries of your explorations, the time it would take to write them up would take up more time than the analyses themselves. Given that most of these analyses would lead nowhere, this would be a remarkable waste of researcher time, which is often publicly funded. So sure, exploratory analyses aren’t the end of the world - unless you take the point about selective reporting seriously.&lt;/p&gt;
+
+&lt;p&gt;I want to be clear about one last thing. I agree with &lt;a href=&#34;https://twitter.com/f2harrell&#34; target=&#34;_blank&#34;&gt;Frank Harell&amp;rsquo;s&lt;/a&gt; point that &lt;a href=&#34;https://twitter.com/robertstats/status/774112526489440256&#34; target=&#34;_blank&#34;&gt;&amp;ldquo;Using the data to guide the analysis is almost as dangerous as not doing so.&amp;rdquo;&lt;/a&gt;. We should certainly use the data in front of us to guide modelling decisions, but this is &lt;em&gt;within the context of the scientific question at hand&lt;/em&gt; (unless I am misunderstanding Harell&amp;rsquo;s point). However, it is completely unscientific to suggest that you should look for subgroups for which you your &amp;ldquo;hypothesis works&amp;rdquo; if it didn&amp;rsquo;t work in the full sample. It&amp;rsquo;s exactly the logic that practitioners of so called alternative medicine use, when they point out that the treatment didn&amp;rsquo;t work, except in the people that it worked in.&lt;/p&gt;
+
+&lt;p&gt;These problems aren’t trivial. This kind of thinking is damaging science. It has contributed to a bloated, garbage heap of published research. Most importantly, these problems are no longer just fodder for scientists to discuss over cocktails at international conferences. There are plenty of actors with a vested interest in eliminating the role science &lt;strong&gt;must&lt;/strong&gt; play in public decision making, and those people are now actively using our methodological errors against us.&lt;/p&gt;
+
+&lt;p&gt;[First draft,  Feb 03, 2017]&lt;/p&gt;
+
+&lt;p&gt;[Second draft, Feb 05, 2017]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An academic career path</title>
+      <link>/post/2015-08-13-career-talk/</link>
+      <pubDate>Thu, 13 Aug 2015 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2015-08-13-career-talk/</guid>
+      <description>
+
+&lt;p&gt;As of today I am a Senior Lecturer at the &lt;a href=&#34;http://www.ucc.ie/en/crfc/&#34; target=&#34;_blank&#34;&gt;Clinical Research Facility Cork&lt;/a&gt;. I am feeling reflective. In the 5 short years following my PhD, I went from the USA, to England, to Brazil, to Ireland. I have gone from Lecturer, to Post-Doc, to &lt;a href=&#34;https://en.wikipedia.org/wiki/Senior_lecturer&#34; target=&#34;_blank&#34;&gt;Senior Lecturer&lt;/a&gt;, in that order. I started in pursuit of a career in public health nutrition, but now work primarily as a biostatistician conducting clinical research. It&amp;rsquo;s been a strange path, though &lt;em&gt;strange&lt;/em&gt; paths in academia are starting to feel awfully &lt;em&gt;normal&lt;/em&gt;. Apologies for my narcissism and any name dropping. I hope this is helpful.&lt;/p&gt;
+
+&lt;h3 id=&#34;1992-to-2003-fast-forward&#34;&gt;1992 to 2003 - Fast forward&lt;/h3&gt;
+
+&lt;p&gt;I graduated high school and flunked out of college after 3 semesters. I spent 4 thankfully peaceful years in the United States Marine Corps, and went back to college to study biology. I wanted to go to medical school, but instead fell in love with public health, so I went to Hopkins for a masters in health sciences. I then spent a year working as a field epidemiologist in Togo. Following my growing interests in nutrition and epidemiology, I went to the University of North Carolina to pursue a PhD in the &lt;a href=&#34;http://sph.unc.edu/nutr/unc-nutrition/&#34; target=&#34;_blank&#34;&gt;Department of Nutrition&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;2003-to-2008-grad-school&#34;&gt;2003 to 2008 - Grad School&lt;/h3&gt;
+
+&lt;p&gt;My choice of PhD programs was fortuitous. I was supervised by &lt;a href=&#34;http://sph.unc.edu/profiles/linda-adair-phd/&#34; target=&#34;_blank&#34;&gt;Linda Adair&lt;/a&gt;. With hindsight, I couldn&amp;rsquo;t have worked with anyone better, and she remains a friend and mentor. The department was one of the best in the country for nutrition. I was fortunate to be a trainee at the &lt;a href=&#34;http://www.cpc.unc.edu/&#34; target=&#34;_blank&#34;&gt;Carolina Population Center&lt;/a&gt;, which was also nationally recognized for its excellence. Through the department and the Pop Center, I was able to learn from top scientists: Barry Popkin, Penny Gordon-Larsen, Jay Kaufman, Michael Emch, and Ken Bollen. I was publishing papers in good journals as a PhD student. I won a prestigious award for doctoral students in nutrition. I was making good money as an &lt;a href=&#34;https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=12759&#34; target=&#34;_blank&#34;&gt;NSF-IGERT&lt;/a&gt; trainee. I met my eventual &lt;a href=&#34;https://twitter.com/dmanmama&#34; target=&#34;_blank&#34;&gt;wife&lt;/a&gt;. It was a good start.&lt;/p&gt;
+
+&lt;p&gt;I became interested in statistical methods as a PhD student. I was conducting some fairly complicated analyses, and resented the idea that I needed to rely on these wizards called biostatisticians to do so. I was of course taught basic biostats as a masters and PhD student, but it felt grossly inadequate as I tried to grasp multilevel models and latent variables. I studied, and continue to study. The feeling of inadequacy remains today, but it&amp;rsquo;s motivation.&lt;/p&gt;
+
+&lt;p&gt;Two years into my PhD, I presented a poster at a &lt;a href=&#34;http://www.mrc-leu.soton.ac.uk/dohad/index.asp&#34; target=&#34;_blank&#34;&gt;DOHaD&lt;/a&gt; conference in Toronto. It was largely in response to a paper by &lt;a href=&#34;http://medhealth.leeds.ac.uk/profile/520/100/mark_s_gilthorpe&#34; target=&#34;_blank&#34;&gt;Mark Gilthorpe&lt;/a&gt; at the University of Leeds. A few years later I presented a better &lt;a href=&#34;http://ije.oxfordjournals.org/content/38/2/538.abstract&#34; target=&#34;_blank&#34;&gt;poster related to the same topic&lt;/a&gt; at the DOHaD meeting in Perth. I ran into Mark again, as well as Robert West and George Ellison, and spent most evenings hanging out with them. They liked my work, we got on well, and in 2008 Mark encouraged me to apply for an Lecturer position at Leeds. I got the job, got married, and planned the moved to England as an ABD PhD student. Jay Kaufman teased that my life events stress scale must be off the charts. Barry Popkin said I would never again be able to work in the US as an academic. Off we went.&lt;/p&gt;
+
+&lt;h3 id=&#34;2008-to-2012-lecturer&#34;&gt;2008 to 2012 - Lecturer&lt;/h3&gt;
+
+&lt;p&gt;I was suddenly a Lecturer, realizing that I wasn&amp;rsquo;t really taught how to be a Lecturer. I was handed a few classes to teach in a new masters program in nutrition and obesity. Shortly after, I was asked to manage the program. I foolishly agreed to do this. Hello deep end. I managed to write up my dissertation (it was described as &amp;ldquo;lean&amp;rdquo; by one advisor, which I thought was kind) and flew back to North Carolina to defend it in the Spring of 2009. I passed. To be honest I can&amp;rsquo;t even remember the defense.&lt;/p&gt;
+
+&lt;p&gt;I published two papers from my PhD and was presenting the results at conferences.
+I successfully applied for a Medical Research Council fellowship. I had only been at Leeds for a year when I wrote the application, so I was feeling pretty good about things. However, I was straddling 2 research groups whose leaders didn&amp;rsquo;t get on particularly well. One of those groups changed institutes but I stayed put. There was more drama then there should have been, and certainly more than I should have been exposed to, but I emerged with no hard feelings, at least from my end.&lt;/p&gt;
+
+&lt;p&gt;The fellowship lightened my teaching load and the program I was managing went away due to the aforementioned drama. I wrote a book chapter, and helped design and deliver a related workshop on statistical models for lifecourse epidemiology. I chaired my first symposium. I published the last paper from my PhD dissertation. I started supervising my first PhD student, &lt;a href=&#34;http://www.otago.ac.nz/wellington/departments/publichealth/staff/otago072137.html&#34; target=&#34;_blank&#34;&gt;Cristina Cleghorn&lt;/a&gt;. I was collaborating on a amazing project called &lt;a href=&#34;http://www.wellcome.ac.uk/stellent/groups/corporatesite/@policy_communications/documents/web_document/wtp056927.pdf&#34; target=&#34;_blank&#34;&gt;COHORTS&lt;/a&gt;. But new, first-author papers weren&amp;rsquo;t coming. I just kept starting projects that were never finished before the next idea or task arrived. My wife and I also had our first kid around this time.&lt;/p&gt;
+
+&lt;h3 id=&#34;2013-brazil-to-ireland&#34;&gt;2013 - Brazil to Ireland&lt;/h3&gt;
+
+&lt;p&gt;The three of us moved to Pelotas, Brazil so I could work with my fellowship &lt;a href=&#34;http://www.epidemio-ufpel.org.br/site/content/faculty/detalhe.php?docente=19&#34; target=&#34;_blank&#34;&gt;collaborators&lt;/a&gt;. The trip was delayed due to repeated miscommunications among administrators, so when we eventually left my wife was 4 months pregnant. Some people seem to think we did this impressive thing by moving to Brazil, with a 2 year-old in tow and one on the way. It was great experience seeing how my collaborators worked, I met some great people, and Brazil is lovely, but it wasn&amp;rsquo;t nearly as productive a trip as I had hoped. I think I would still do it again, though I sometimes waver. I think my wife feels the same. I love her so much for going.&lt;/p&gt;
+
+&lt;p&gt;About a month after we left for Brazil, the UK changed it&amp;rsquo;s immigration law in a way that applied to us. From that point forward, if you were out of the UK and your residence visa expired, you couldn&amp;rsquo;t reapply for 12 months. The UK government was thus able to report fewer immigrants for that quarter. You couldn&amp;rsquo;t make it up. Our options: I could return to the UK, leaving my pregnant wife and 2 year-old behind for a month, and renew our visas, all on my dime; or we could stay in Brazil and return after the 12 months. But there was an added wrinkle. Before we left, I was waiting to have my contract extended. I&amp;rsquo;m not here to point fingers, but something fell through the cracks, so there was still no extension. I was unofficially offered a short-term solution because someone approaching maternity leave, and assured something more permanent would come along. Notably, around this time, HR decided I wasn&amp;rsquo;t returnable in the REF as an early career researcher, since I was the named PI on a fellowship. The university apparatus was utterly unhelpful as I tried to find solutions to the visa and contract situations. Someone I liked and respected starting replying to my emails with HR-admin-speak. I have to admit, I&amp;rsquo;m still a bit bitter about this. At this point we stopped considering a return to Leeds.&lt;/p&gt;
+
+&lt;p&gt;Sidenote: Shortly after all of this, Leeds started advertising their &lt;a href=&#34;http://250greatminds.leeds.ac.uk/&#34; target=&#34;_blank&#34;&gt;250 Great Minds&lt;/a&gt; program. It was intended to recruit and support early career researchers that held existing fellowships. I already held one these fellowships, and needed support, but nobody outside of Mark had lifted a finger to help. Universities can be strange. It was salt in the wound, but moving on.&lt;/p&gt;
+
+&lt;p&gt;In Brazil, &lt;a href=&#34;http://blog.wellcome.ac.uk/2012/10/19/cesar-victora-30-years-of-brazil-cohort-studies/&#34; target=&#34;_blank&#34;&gt;Cesar Victora&lt;/a&gt; very graciously said he would try to arrange a position for me as a visiting professor. I&amp;rsquo;ll never forget the comfort I found in Cesar&amp;rsquo;s generosity, and in another life, my wife and I would have jumped at it with both feet, but we were isolated in Pelotas, especially our toddler, and our Portuguese was coming very slowly. My wife and I were literally at a point where we were considering moving back to Los Angeles or Little Rock (our respective home towns), jobless. Then Janas Harrington, a collaborator in Cork, asked me to advertise a 3 year post-doc in her department on my blog. We had done some work together on &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/24564930&#34; target=&#34;_blank&#34;&gt;latent variable models for dietary patterns&lt;/a&gt;. Like a lightning bolt, my wife asked whether I should apply. I checked the pay scales and learned it wouldn&amp;rsquo;t be a loss in pay since I would qualify as a senior postdoctoral researcher. I liked Janas, as well as the other people I had met from her &lt;a href=&#34;https://www.ucc.ie/en/epid/&#34; target=&#34;_blank&#34;&gt;department in Cork&lt;/a&gt;, Tony Fitzgerald and Ivan Perry. I inquired and applied. The interview was on a bad mobile connection in the Porto Alegre apartment my second son would soon be born in. I was well qualified for the post, but it had also been unfilled for quite some time, so I was offered the job soon after the call. We jumped at it.&lt;/p&gt;
+
+&lt;h3 id=&#34;2013-to-now-post-doc-to-senior-lecturer&#34;&gt;2013 to now - Post-Doc to Senior Lecturer&lt;/h3&gt;
+
+&lt;p&gt;While in Leeds, I became less known for my research on early life nutrition (to the small degree that I was known at all!), and more for my methodological expertise, particularly with longitudinal and latent variable statistical models.   This carried over to Cork, where I joined a vibrant, active, successful department; but one with few academics as focused on statistics as I had become. Long-story short: After 18 months working as an &lt;a href=&#34;http://www.ncri.ie/news/article/photos-ice-awards-conference-2014&#34; target=&#34;_blank&#34;&gt;HRB funded ICE research fellow&lt;/a&gt; with Patricia Kearney, an excellent research leader, a Senior Lecturer post with a focus on statistics and data analysis was advertised in the Clinical Research Facility in Cork. I applied, twice, and was ultimately offered the job. Five-years, full time, and now a third kid on the way. Just in time. I feel very lucky.&lt;/p&gt;
+
+&lt;p&gt;That contract starts today, August 13, 2015. Thankfully everyone is away on holiday, and I could write this all down.&lt;/p&gt;
+
+&lt;h3 id=&#34;wrapping-up&#34;&gt;Wrapping up&lt;/h3&gt;
+
+&lt;p&gt;I met with our PhD students and Research Assistants a few weeks ago and shared this story. A good discussion followed. There seemed to be some comfort that you can progress professionally, even if you aren&amp;rsquo;t a perfect academic or following a traditional route. Some of them appreciated that skills still matter, not just metrics. Others took note of how collaborations and networking can sometimes make the critical difference. Finally, a few told me it was just nice to hear about someone&amp;rsquo;s academic career path. If you made it this far, I hope you can say the same.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cork R-Users Group - First Meet-Up</title>
+      <link>/post/2015-08-10-first-r-users/</link>
+      <pubDate>Mon, 10 Aug 2015 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2015-08-10-first-r-users/</guid>
+      <description>&lt;p&gt;Thanks to all of you for joining the Cork R-Users group, especially the thirteen real-life human R-Users who met for the first time last week at our inaugural meet-up.&lt;/p&gt;
+
+&lt;p&gt;I was happy to see a diverse group. I thought we were well balanced between academia and industry, and between statistics and data science. There were software engineers, biostatisticians, ecologists, data scientists, PhD students, and systems administrators. We had people with 10 plus years of experience with R, and people who had never used it but wanted to see what the fuss was about. Most of us had at least a few years of experience using R, but it was clear that everyone in the group was there because they wanted to learn more. Other reasons we wanted to create this group were to “Identify best practices…Learn what is possible…Solve Problems…Prevent errors,” and perhaps most importantly to, “Be around other people” that are as into data as we are.&lt;/p&gt;
+
+&lt;p&gt;We identified skills we could each share, as well as topics we wanted to learn more about. Based on this discussion we are planning sessions for the fall on &lt;strong&gt;Data Visualisation with ggplot2&lt;/strong&gt;; &lt;strong&gt;Building Shiny Apps&lt;/strong&gt;; and &lt;strong&gt;Using R with Spark&lt;/strong&gt;. We are also planning a hands-on, collaborative session on data cleaning.&lt;/p&gt;
+
+&lt;p&gt;Most people were happy to meet afternoons in the Western Gateway Building, but the sample selection here is obvious. It is thus critical for members to propose and organise meetings at other times, in other venues.&lt;/p&gt;
+
+&lt;p&gt;On the topic of organisation, Edward and Mervyn volunteered to help, and you are all very welcome to take the lead on whatever you are able to.&lt;/p&gt;
+
+&lt;p&gt;Please feel free to get in touch with me for any reason (ddahly@ucc.ie, Twitter &lt;a href=&#34;https://twitter.com/statsepi&#34; target=&#34;_blank&#34;&gt;@statsepi&lt;/a&gt;). More information will be available on the &lt;a href=&#34;http://www.meetup.com/Cork-Ireland-R-Users-Group/&#34; target=&#34;_blank&#34;&gt;meet-up.com page&lt;/a&gt; for the group.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Why share the data?</title>
+      <link>/post/2015-06-15-sharing-data/</link>
+      <pubDate>Mon, 15 Jun 2015 12:00:00 +0000</pubDate>
+      
+      <guid>/post/2015-06-15-sharing-data/</guid>
+      <description>
+
+&lt;p&gt;Research data should be shared. This view is widespread in academia and common among research funders. Regardless, most research datasets remain locked away. Sometimes data are held back for less than admirable reasons, but they can also be held back with good intent. For example, access to data is sometimes restricted in order to maximize opportunities for early career researchers to publish papers using the data. I believe this is instead counter-productive for ECRs.&lt;/p&gt;
+
+&lt;h3 id=&#34;open-data-turns-ecrs-into-valuable-collaborators&#34;&gt;Open data turns ECRs into valuable collaborators&lt;/h3&gt;
+
+&lt;p&gt;One concern is that open data will attract tribes of competing researchers to publish results that you could have just as easily produced. In my experience, this doesn&amp;rsquo;t happen. Sharing the data instead turns researchers on your team into valuable collaborators, since their intimate knowledge of the data cannot be replaced by an outsider.&lt;/p&gt;
+
+&lt;h3 id=&#34;open-data-creates-healthy-incentives-to-get-work-done&#34;&gt;Open data creates healthy incentives to get work done&lt;/h3&gt;
+
+&lt;p&gt;Even if the fear that someone else will beat you to the scoop is largely unfounded, I do think it creates an incentive to complete work in a timely fashion. It&amp;rsquo;s otherwise too easy to put work on the back-burner, where it often stays indefinitely.&lt;/p&gt;
+
+&lt;h3 id=&#34;data-sharing-is-now-a-neccessary-research-skill&#34;&gt;Data sharing is now a neccessary research skill&lt;/h3&gt;
+
+&lt;p&gt;Funding applications now typically require a concrete plan for how you will share the data. Five years from now, you will not just need this data-sharing plan, you will also be competing with research teams with actual experience sharing data. It is thus important that you develop and demonstrate your data-sharing skills now.&lt;/p&gt;
+
+&lt;h3 id=&#34;sharing-data-is-ethical&#34;&gt;Sharing data is ethical&lt;/h3&gt;
+
+&lt;p&gt;The data aren&amp;rsquo;t yours. They belong to your participants, who have consented for you to use them for societal benefit. Further, you didn&amp;rsquo;t pay for the data to be collected. Yes, your blood, sweat and tears are in the project, but you were compensated for this. Thus any otherwise-reasonable action that limits the social value of the data is an unethical one. In my opinion, as soon as the pre-stated aims of a research project have been addressed, the data should be made as widely available as possible.&lt;/p&gt;
+
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+
+&lt;h4 id=&#34;policy-and-guidance-from-research-funders&#34;&gt;Policy and guidance from research funders&lt;/h4&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.wellcome.ac.uk/About-us/Policy/Spotlight-issues/Data-sharing/&#34; target=&#34;_blank&#34;&gt;Wellcome Trust - Spotlight on Data Sharing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.rcuk.ac.uk/research/datapolicy/&#34; target=&#34;_blank&#34;&gt;RCUK Common Principles on Data Policy&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.fosteropenscience.eu/content/horizon-2020-open-research-data-pilot&#34; target=&#34;_blank&#34;&gt;Horizon 2020 Open Research Data Pilot&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://erc.europa.eu/media-and-events/events/erc-workshop-research-data-management-and-sharing&#34; target=&#34;_blank&#34;&gt;ERC Workshop on Research Data Management and Sharing&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;data-sharing-tools&#34;&gt;Data sharing tools&lt;/h4&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://figshare.com/&#34; target=&#34;_blank&#34;&gt;Figshare&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ropensci.org/&#34; target=&#34;_blank&#34;&gt;rOpenSci&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://osf.io&#34; target=&#34;_blank&#34;&gt;Open Science Framework&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;other-posts-and-papers-on-data-sharing&#34;&gt;Other posts and papers on data sharing&lt;/h4&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.lse.ac.uk/library/usingTheLibrary/academicSupport/RDM/sharing/whyShare.aspx&#34; target=&#34;_blank&#34;&gt;LSE Library: Why share my research data?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://scholarlykitchen.sspnet.org/2014/11/11/to-share-or-not-to-share-that-is-the-research-data-question/&#34; target=&#34;_blank&#34;&gt;To Share or not to Share? That is the (Research Data) Question…    &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.esajournals.org/doi/full/10.1890/ES14-00402.1&#34; target=&#34;_blank&#34;&gt;The Tao of open science for ecology&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
