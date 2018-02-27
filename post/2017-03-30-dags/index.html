@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.29" />
+  <meta name="author" content="Darren L Dahly">
+  <meta name="description" content="Principal Statistician | Senior Lecturer">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-56679606-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="/post/2017-03-30-dags/">
+
+  
+
+  <title>In Defense of DAGs | </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"></a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">In Defense of DAGs</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-03-30 12:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Thu, Mar 30, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/academic">academic</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2f2017-03-30-dags%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=In%20Defense%20of%20DAGs&amp;url=%2fpost%2f2017-03-30-dags%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f2017-03-30-dags%2f&amp;title=In%20Defense%20of%20DAGs"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f2017-03-30-dags%2f&amp;title=In%20Defense%20of%20DAGs"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=In%20Defense%20of%20DAGs&amp;body=%2fpost%2f2017-03-30-dags%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>Professors Nancy Krieger (NK) and George Davey Smith (GDS) recently published an editorial in the IJE titled <a href="https://www.ncbi.nlm.nih.gov/pubmed/27694566" target="_blank">The tale wagged by the DAG: broadening the scope of causal inference and explanation for epidemiology</a>. In it, they argue that causal inference in epidemiology is dominated by an approach characterised by counterfactuals (or potential outcomes) and directed acyclic graphs (DAGs); and that this hegemony is limiting the scope of our field, and preventing us from adopting a more useful, pluralistic view of causality.</p>
+
+<p>They began their editorial with the results of a literature search of <code>[epidemiology AND causal AND inference]</code>. They found 558 such articles, none of which were published before 1990, and half of which were published after 2010. I believe they were trying to show that causal inference is becoming a more important topic to epidemiologists. However, if that was the case, I think it makes more sense to ask how many papers mention causal inference <em>out of</em> the papers published in our field. After all, in epidemiology, it’s all about the denominators. Once you do this, a much more important problem appears.</p>
+
+<p>In contrast to their search, I started by looking for papers on Pubmed from the last five years that were published in the four key epidemiological journals where most of the discussion about causal inference probably takes place. These were: <em>Epidemiology</em>, <em>the American Journal of Epidemiology</em>, <em>the International Journal of Epidemiology</em>, and <em>the Journal of Epidemiology and Community Health</em>. Then, out of these papers, I alternately searched for those mentioning causal inference; those mentioning DAGs; and those mentioning counterfactuals. The results are plotted below.</p>
+
+<p><img src="http://DarrenDahly.github.io/img/plot.png" alt="" /></p>
+
+<pre><code>Search 1: (&quot;J Epidemiol Community Health&quot; [journal] OR &quot;Am J Epidemiol&quot; [journal] OR &quot;Int J Epidemiol&quot; [journal] OR &quot;Epidemiology&quot; [journal])
+Search 2: Search 1 AND &quot;causal inference&quot;
+Search 3: Search 1 AND (causal graph* OR &quot;DAGs&quot; OR &quot;DAG&quot; OR directed acyclic graph*)
+Search 4: Search 1 AND (counterfactual OR potential outcomes) 
+</code></pre>
+
+<p>The plot of course supports NK and GDS’s assertion that counterfactuals and DAGs dominate our discussion of causal inference, but I am much more worried about how limited that discussion appears to be.</p>
+
+<p>Like many others,<a href="http://dantalus.github.io/2017/02/04/consequentialism/" target="_blank"> I have previously argued that there is far too little causal thinking in epidemiology</a>. The plot above is consistent with this view, and won&rsquo;t allow me to accept that DAGs and counterfactuals are now pervasive enough to warrant some cautionary backlash. I instead believe that DAGs and counterfactuals, rather than displacing a more pluralistic view of causal inference, are actually <em>creating</em> the space for it to exist.  Unfortunately, in an otherwise excellent  and informative editorial, I think that NK and GDS misrepresent counterfactuals and DAGs, and worry that this might actually discourage their use. With that in mind, I offer the following commentary.</p>
+
+<h2 id="the-story-of-a-useful-wrench-denigrated-for-not-being-a-perfect-hammer">The story of a useful wrench, denigrated for not being a perfect hammer</h2>
+
+<p>Discussions of causal inference in epidemiology are often seen as “high-level”, or somehow beyond the rank-and-file epidemiologists. This is unfortunate, since drawing causal inferences from observational data is probably the biggest challenge we all regularly face. In my opinion, the single best way to help them meet this challenge is to teach them about counterfactuals and DAGs, which I have been doing for almost 10 years.</p>
+
+<p>The most obvious value of DAGs for epidemiologists is that they facilitate a rigorous and transparent means of deciding which variables to adjust for when you hope to draw causal inferences from associations. They are especially helpfully for identifying tricky situations where adjustment for a possible confounder will actually create more bias than it resolves (e.g. collider bias).</p>
+
+<p>Beyond this, DAGs can be used to describe competing sets of theory-based predictions that can be checked against data (Science!). They can be communicated unambiguously to others, so that disagreements about a DAG’s specific form can be debated and evaluated. <a href="https://www.ncbi.nlm.nih.gov/pubmed/15308962" target="_blank">DAGs can be used to describe most (if not all?) of the many biases</a> researchers have identified, and re-identified, over the years. They are also helpful for contrasting study designs and the different assumptions they rely on (including Mendelian randomization, which I have never successfully described to anyone without using a DAG).</p>
+
+<p>I could go on. I love DAGs, for all the reasons above and more. But the thing I love most about DAGs is that they encourage the exact kind of pluralistic causal thinking that NK and GDS advocate for in their editorial. For example, NK and GDS say the following about an approach to causal inference they admire, inference to the best explanation:</p>
+
+<blockquote>
+<p>In brief, the essence of the IBE approach is to ‘think through inferential problems in causal rather than logical terms’ and to employ a ‘two-stage mechanism involving the generation of candidate hypotheses and then section among them’. IBE is thus driven by theory, substantive knowledge, and evidence, as opposed to being driven solely by logic or by probabilities.</p>
+</blockquote>
+
+<p>When I read this, I thought it was a spot-on explanation of the kind of thinking DAGs facilitate. In fact, many of the other good ideas they shared were things that could be described and justified using counterfactuals and DAGs, <a href="https://twitter.com/PophamFrank/status/846836389853511680" target="_blank">including each of the things listed in Textbox 3</a>. While reading their editorial, I couldn’t help feeling like NK and GDS weren’t giving DAGs the credit they deserve for promoting a deeper level of causal thinking.</p>
+
+<p>The editorial also kept pointing out things that DAGs can’t be used for, but most of it was in a “no duh” kind of way. It was like warning me my car doesn&rsquo;t drive under water. Strangely though, their key example of how DAGs go wrong was instead a perfect description of how they go right. It was the bit about the birth weight paradox.</p>
+
+<p>To summarise, maternal smoking is associated with neonatal mortality, which won’t come as a surprise to anyone. However, if you only look at very low birth weight (VLBW) infants, there seems to be a protective effect, i.e. neonatal mortality is lower among infants born to moms who smoke. However, using a DAG, one can quite easily argue that because VLBW is a consequence of maternal smoking, stratifying by birth weights (which is what happens once we look at only the VLBW infants) leads to a collider bias. The collider bias in turn suggests the following: if you take a VLBW baby, and their mom didn’t smoke, then it’s more likely they were exposed to some other nasty insult that causes their VLBW, and that this alternate exposure was even more strongly associated with mortality. I teach this example every year. It’s great.</p>
+
+<p>Seemingly dissatisfied with this conclusion, NK and GDS go on to say that an “elaborate and biologically plausible alternative explanation exists”. However, their explanation is 100% consistent with what others have suggested based on collider bias I just described. I quote:</p>
+
+<blockquote>
+<p>It is that infants who are low-birthweight for reasons other than smoking may well have experienced harms during their fetal development unrelated to and much worse than those imposed by smoking…</p>
+</blockquote>
+
+<p>They then note that their “proposed alternative biological explanation cannot be discerned from a DAG”, but also that “the DAGs for collider bias and for heterogeneity of LBW phenotypes have a similar structure.” I found this astounding, and can’t fathom why NK and GDS don’t see that they have the exact same structure. The only difference is that they have attached biologically informed labels to the nodes of the graph. Hence, while arguing the DAG is limited, they demonstrate that it actually worked as intended. It has described a causal structure that explains an otherwise paradoxical finding, to which they have added their own expert knowledge to further increase our belief that the DAG is correctly specified.  This is how DAGs work. They are just a tool. They are not magical. Garbage-In-Garbage-Out applies.</p>
+
+<h2 id="back-to-counterfactuals">Back to counterfactuals</h2>
+
+<p>Returning to the plot above, I fail to see how a counterfactual view of cause threatens to narrow the scope of our field, considering that just under 1% of papers from the best epidemiological journals even mention it. Further, I don’t see where NK and GDS offer any actual evidence of this occurring. What they offer instead is a more philosophical critique of counterfactuals.</p>
+
+<p>They focus on a particularly “alarming feature” of counterfactualism, which is the idea that race or ethnicity can’t cause poor health (or anything else) because it isn’t intervenable. They then go onto to discuss that this “belief fails to acknowledge reams of genetic evidence demonstrating that H sapiens cannot be meaningfully parsed into discrete genetically distinct races…” They go on in this vein for some time.</p>
+
+<p>I must admit, I had to re-read all of it several times before I could allow myself to conclude the following: NK and GDS aren’t just accusing counterfactualists of holding a debateable view of causality; they are accusing them of holding a deeply offensive and ignorant view of humanity.</p>
+
+<p>So please let me be very clear. A counterfactual view of race doesn’t mean you think that there are “fixed races.” The counterfactual view of race doesn’t say race can’t be changed, or even that it exists. It doesn’t say that race is a “natural kind”. It doesn’t say we shouldn’t study it (and thus “narrow the scope” of our field). To me, the counterfactual view simply says that race can’t be the target of intervention. It says that race doesn’t cause poor health, racism does – which is the exact point NK and GDS get to at while arguing against the counterfactual view. I hope everyone can see the distinction, and nobody is put off of  counterfactuals for fear of offending.</p>
+
+<p>I would like to provide a less contentious example that I teach to my students, which will hopefully explain their value. Does fluoride prevent dental carries? This might seem like a straightforward causal question, but it is woefully incomplete without consideration of how we might vary exposure to fluoride. For example, we could fluoridate the water supply, dictate that manufacturers put more fluoride in toothpaste, or encourage people to brush their teeth more often. Each of these interventions represents a distinct causal question, with different sets of potential confounders, taking place at different scales, and all of them are more useful than simply asking whether fluoride prevents tooth decay. So counterfactuals are, at the very least, a useful fiction that I believe help crystalize causal questions. Even in situations where there is no possible intervention, due to ethical or other constraints, thinking about exposures as if you could intervene can be helpful.</p>
+
+<h2 id="in-conclusion">In conclusion</h2>
+
+<p>A colleague once told me that Jamie Robbins, when asked what a confounder was, answered, “Whatever you need to adjust for to get the right answer.” I think this answer really gets to the point of DAGs and their counterfactual foundations. It’s not about identifying what <strong><em>A confounder</em></strong> is, but rather it’s about identifying the set of things to adjust for, given a specific causal question, asked in a specific context.</p>
+
+<p>This is in stark contrast to what I see in most health research papers. The process of covariate selection, typically the crux of the entire analysis, is often omitted. When it isn’t, it can frequently be described as a monkey-see-monkey-do approach, or even worse, by some step-wise algorithm. Then, after dancing around the causal question at hand, careful not to admit their true motives, the authors are usually quick to practically apologize for their efforts with that old falsehood, “Correlation doesn’t imply causation.” All of this reflects a deficit of causal thinking that is a drag on our profession.</p>
+
+<p>DAGs and counterfactual thinking are currently the best tools we have to counter this. Their value seems so obvious to me, but clearly not to everyone else. Every year, a student will inevitably ask, “If DAGs are so useful, why don’t epidemiologists use them?” I still don’t have a good answer for that question. It’s been about two decades since <a href="https://www.ncbi.nlm.nih.gov/pubmed/9888278" target="_blank">Robins, Greenland, Pearl</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/15308962" target="_blank">Hernan</a>, <a href="http://publicifsv.sund.ku.dk/~nk/epiF14/Glymour_DAGs.pdf" target="_blank">Glymour</a> and others helped to introduce DAGs to our field. It would be generous to describe their uptake as slow.  There is no denying that most “successful” epidemiologists have gotten along just fine without them, and they rarely appear in the journal articles I read or review. So please forgive any defensiveness on my part; just know that we are on an uphill climb here.</p>
+
+<p><img src="http://darrendahly.github.io/img/crfc_banner.jpg" alt="" /></p>
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container">
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/2017-03-21-prereg/">Your science is justified by the question, not the answer</a></li>
+    
+    <li><a href="/post/2017-03-13-r_courses/">Upcoming R workshop</a></li>
+    
+    <li><a href="/post/2017-02-04-consequentialism/">Cause vs. Consequence</a></li>
+    
+    <li><a href="/post/2017-04-13-stata_workshop/">Stata Workshop (2016)</a></li>
+    
+    <li><a href="/post/2017-02-03-exploratory/">The perils of exploratory data analysis</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="/post/2017-03-21-prereg/"><span
+      aria-hidden="true">&larr;</span> Your science is justified by the question, not the answer</a></li>
+    
+
+    
+    <li class="next"><a href="/post/2017-05-09-interviews/">Getting an interview <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Darren L Dahly - All rights reserved &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+
