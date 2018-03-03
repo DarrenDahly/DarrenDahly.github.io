@@ -16,12 +16,18 @@
       <pubDate>Sat, 03 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/cluster/</guid>
-      <description>&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  x &amp;lt;- rnorm(1000, 0, 1)
+      <description>&lt;p&gt;I was greeted today with &lt;a href=&#34;http://www.bbc.com/news/health-43246261&#34;&gt;the news that there are 5, not 2, types of diabetes&lt;/a&gt;. This is &lt;strong&gt;earth-shattering&lt;/strong&gt; if you are a diabetologist or diabetes researcher. However, I soon as I saw the term “data-driven clustering” I knew I could probably relax.&lt;/p&gt;
+&lt;p&gt;For the uninitiated, data-driven clustering techniques can seem magical. The basic premise is that you take a sample, measure lots of things about them, and then feed all those data into an algorithm that will divide your sample into mutually exclusive groups. The seductive idea behind this is that knowing what group a person is in will supposedly tell you something else important about them that isn’t otherwise apparent. In this diabetes example, the authors are touting that knowing which of the 5 groups a patient falls into will eventually be used to guide their treatment.&lt;/p&gt;
+&lt;p&gt;I suspect that many people when reading about this paper won’t understand just how easy it is to detect groups. In fact, in most cases I would be shocked if groups &lt;em&gt;weren’t&lt;/em&gt; found. This is because clustering, regardless of the specific method used, is just another way to describe relationships among variables - and as long as the variables are in fact related, you will find groups. Here is a simple example:&lt;/p&gt;
+&lt;p&gt;First, create some data for two variables. The first is just 1000 observations drawn from a standard normal. The second variable then multiplies the first variable by 2 and adds some additional randomly distributed noise.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  x &amp;lt;- rnorm(1000, 0, 1)
   y &amp;lt;- (2 * x) + rnorm(1000, 0, 3)
 
   data &amp;lt;- data.frame(x = x, y = y)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Plotting these data confirms that they are related.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;    plot(x, y, data = data)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/cluster_files/figure-html/unnamed-chunk-2-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/cluster_files/figure-html/unnamed-chunk-2-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Pretending that we didn’t just simulate these data, upon seeing them for the first time, most people would probably try to fit a regression line, the results of which are below.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(pander)
 
   pander(lm(y ~ x, data))&lt;/code&gt;&lt;/pre&gt;
@@ -46,20 +52,21 @@
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;(Intercept)&lt;/strong&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;-0.1354&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.09709&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;-1.395&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.1634&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.01883&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.09549&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.1972&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.8437&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;x&lt;/strong&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;2.026&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.09888&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;20.49&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;3.584e-78&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2.05&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.09303&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;22.04&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5.372e-88&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;So the results of the linear model confirm what we already know. However, there are other ways to explain the data, so to speak. Here are the results from a fairly constrained finite mixture model which is similar enough to the k-means approach used in the diabetes paper.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(mclust)
 
   bic &amp;lt;- mclustBIC(data)
@@ -69,6 +76,9 @@
 # summary(clusters, parameters = TRUE)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  plot(clusters, what = &amp;quot;classification&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/cluster_files/figure-html/unnamed-chunk-5-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;What you can see from the plot is that the clustering algorithm explained the x-y scatter plot by positing the existence of 8 groups of observations, each covering a different area in the overall space. In other words, the clustering algorithm is trying to describe 2 correlated variables when the only tool it has is to group people. As long as there is in fact a correlation between the two variables, then you are going to need more than one group to describe the data (unless you start to use more flexible models).&lt;/p&gt;
+&lt;p&gt;So in most cases it is trivially easy to find groups. The challenge is of course to ascribe meaning to them. If we return to the linear regression, we might want to infer that x is a cause of y based on the observed relationship. However, we’d be foolish to do so without other information to support the causal claim. Similarly, you can pretend that data-driven clusters are revealing some deeper truth, but again, without other corroborating information, I wouldn’t be making strong claims.&lt;/p&gt;
+&lt;p&gt;For additional commentary, &lt;a href=&#34;https://twitter.com/f2harrell&#34;&gt;Frank Harrell&lt;/a&gt; also blogged about this today, &lt;a href=&#34;http://www.fharrell.com/post/errmed/#cluster&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

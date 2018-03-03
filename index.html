@@ -334,60 +334,8 @@
 
   <div class="article-style" itemprop="articleBody">
     
-    <pre class="r"><code>  x &lt;- rnorm(1000, 0, 1)
-  y &lt;- (2 * x) + rnorm(1000, 0, 3)
-
-  data &lt;- data.frame(x = x, y = y)</code></pre>
-<pre class="r"><code>    plot(x, y, data = data)</code></pre>
-<p><img src="/post/cluster_files/figure-html/unnamed-chunk-2-1.svg" width="768" /></p>
-<pre class="r"><code>  library(pander)
-
-  pander(lm(y ~ x, data))</code></pre>
-<table style="width:88%;">
-<caption>Fitting linear model: y ~ x</caption>
-<colgroup>
-<col width="25%" />
-<col width="15%" />
-<col width="18%" />
-<col width="13%" />
-<col width="15%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center"> </th>
-<th align="center">Estimate</th>
-<th align="center">Std. Error</th>
-<th align="center">t value</th>
-<th align="center">Pr(&gt;|t|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><strong>(Intercept)</strong></td>
-<td align="center">-0.1354</td>
-<td align="center">0.09709</td>
-<td align="center">-1.395</td>
-<td align="center">0.1634</td>
-</tr>
-<tr class="even">
-<td align="center"><strong>x</strong></td>
-<td align="center">2.026</td>
-<td align="center">0.09888</td>
-<td align="center">20.49</td>
-<td align="center">3.584e-78</td>
-</tr>
-</tbody>
-</table>
-<pre class="r"><code>  library(mclust)
-
-  bic &lt;- mclustBIC(data)
-
-  clusters &lt;- Mclust(data, x = bic, modelNames = (&quot;EII&quot;))
-  
-# summary(clusters, parameters = TRUE)</code></pre>
-<pre class="r"><code>  plot(clusters, what = &quot;classification&quot;)</code></pre>
-<p><img src="/post/cluster_files/figure-html/unnamed-chunk-5-1.svg" width="768" /></p>
-
+    I was greeted today with the news that there are 5, not 2, types of diabetes. This is earth-shattering if you are a diabetologist or diabetes researcher. However, I soon as I saw the term “data-driven clustering” I knew I could probably relax.
+For the uninitiated, data-driven clustering techniques can seem magical. The basic premise is that you take a sample, measure lots of things about them, and then feed all those data into an algorithm that will divide your sample into mutually exclusive groups.
     
   </div>
   <p class="read-more">

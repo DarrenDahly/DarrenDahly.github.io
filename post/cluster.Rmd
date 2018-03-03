@@ -16,8 +16,13 @@ output:
 
 ```
 
+I was greeted today with [the news that there are 5, not 2, types of diabetes](http://www.bbc.com/news/health-43246261). This is **earth-shattering** if you are a diabetologist or diabetes researcher. However, I soon as I saw the term "data-driven clustering" I knew I could probably relax. 
 
+For the uninitiated, data-driven clustering techniques can seem magical. The basic premise is that you take a sample, measure lots of things about them, and then feed all those data into an algorithm that will divide your sample into mutually exclusive groups. The seductive idea behind this is that knowing what group a person is in will supposedly tell you something else important about them that isn't otherwise apparent. In this diabetes example, the authors are touting that knowing which of the 5 groups a patient falls into will eventually be used to guide their treatment.  
 
+I suspect that many people when reading about this paper won't understand just how easy it is to detect groups. In fact, in most cases I would be shocked if groups *weren't* found. This is because clustering, regardless of the specific method used, is just another way to describe relationships among variables - and as long as the variables are in fact related, you will find groups. Here is a simple example: 
+
+First, create some data for two variables. The first is just 1000 observations drawn from a standard normal. The second variable then multiplies the first variable by 2 and adds some additional randomly distributed noise. 
 
 ```{r}
 
@@ -29,13 +34,16 @@ output:
   
 ```
 
-```{r, fig.height = 6 * 1.67}
+Plotting these data confirms that they are related. 
+
+```{r, fig.height = 6, fig.width = 6}
 
     plot(x, y, data = data)
 
+
 ```
 
-
+Pretending that we didn't just simulate these data, upon seeing them for the first time, most people would probably try to fit a regression line, the results of which are below. 
 ```{r}
 
   library(pander)
@@ -44,6 +52,8 @@ output:
 
 ```
 
+
+So the results of the linear model confirm what we already know. However, there are other ways to explain the data, so to speak. Here are the results from a fairly constrained finite mixture model which is similar enough to the k-means approach used in the diabetes paper. 
 
 ```{r}
 
@@ -63,4 +73,8 @@ output:
 
 ```
 
+What you can see from the plot is that the clustering algorithm explained the x-y scatter plot by positing the existence of 8 groups of observations, each covering a different area in the overall space. In other words, the clustering algorithm is trying to describe 2 correlated variables when the only tool it has is to group people. As long as there is in fact a correlation between the two variables, then you are going to need more than one group to describe the data (unless you start to use more flexible models).
 
+So in most cases it is trivially easy to find groups. The challenge is of course to ascribe meaning to them. If we return to the linear regression, we might want to infer that x is a cause of y based on the observed relationship. However, we'd be foolish to do so without other information to support the causal claim. Similarly, you can pretend that data-driven clusters are revealing some deeper truth, but again, without other corroborating information, I wouldn't be making strong claims. 
+
+For additional commentary, [Frank Harrell](https://twitter.com/f2harrell) also blogged about this today, [here](http://www.fharrell.com/post/errmed/#cluster). 
