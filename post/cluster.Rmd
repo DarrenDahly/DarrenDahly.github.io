@@ -1,0 +1,66 @@
+---
+title: "Magical clusters"
+author: "Darren L Dahly"
+date: "2018-03-03"
+output:
+  blogdown::html_page:
+    toc: FALSE
+    fig_width: 8
+    dev: "svg"
+---
+
+```{r setup, include = FALSE}
+
+  knitr::opts_chunk$set(echo = TRUE, include = TRUE, message = FALSE, 
+                        warning = FALSE)
+
+```
+
+
+
+
+```{r}
+
+  x <- rnorm(1000, 0, 1)
+  y <- (2 * x) + rnorm(1000, 0, 3)
+
+  data <- data.frame(x = x, y = y)
+  
+  
+```
+
+```{r, fig.height = 6 * 1.67}
+
+    plot(x, y, data = data)
+
+```
+
+
+```{r}
+
+  library(pander)
+
+  pander(lm(y ~ x, data))
+
+```
+
+
+```{r}
+
+  library(mclust)
+
+  bic <- mclustBIC(data)
+
+  clusters <- Mclust(data, x = bic, modelNames = ("EII"))
+  
+# summary(clusters, parameters = TRUE)
+  
+  
+```
+```{r, fig.height = 6 * 1.67}
+
+  plot(clusters, what = "classification")
+
+```
+
+

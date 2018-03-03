@@ -11,6 +11,68 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Magical clusters</title>
+      <link>/post/cluster/</link>
+      <pubDate>Sat, 03 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/cluster/</guid>
+      <description>&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  x &amp;lt;- rnorm(1000, 0, 1)
+  y &amp;lt;- (2 * x) + rnorm(1000, 0, 3)
+
+  data &amp;lt;- data.frame(x = x, y = y)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;    plot(x, y, data = data)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/cluster_files/figure-html/unnamed-chunk-2-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(pander)
+
+  pander(lm(y ~ x, data))&lt;/code&gt;&lt;/pre&gt;
+&lt;table style=&#34;width:88%;&#34;&gt;
+&lt;caption&gt;Fitting linear model: y ~ x&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;25%&#34; /&gt;
+&lt;col width=&#34;15%&#34; /&gt;
+&lt;col width=&#34;18%&#34; /&gt;
+&lt;col width=&#34;13%&#34; /&gt;
+&lt;col width=&#34;15%&#34; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt; &lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Estimate&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Std. Error&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;t value&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Pr(&amp;gt;|t|)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;(Intercept)&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;-0.1354&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.09709&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;-1.395&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.1634&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;x&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2.026&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.09888&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;20.49&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3.584e-78&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  library(mclust)
+
+  bic &amp;lt;- mclustBIC(data)
+
+  clusters &amp;lt;- Mclust(data, x = bic, modelNames = (&amp;quot;EII&amp;quot;))
+  
+# summary(clusters, parameters = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  plot(clusters, what = &amp;quot;classification&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/cluster_files/figure-html/unnamed-chunk-5-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Can social media be useful for scientists?</title>
       <link>/post/2018-02-28-socialmedia/</link>
       <pubDate>Wed, 28 Feb 2018 12:00:00 +0000</pubDate>
@@ -966,26 +1028,6 @@ I successfully applied for a Medical Research Council fellowship. I had only bee
 &lt;h3 id=&#34;wrapping-up&#34;&gt;Wrapping up&lt;/h3&gt;
 
 &lt;p&gt;I met with our PhD students and Research Assistants a few weeks ago and shared this story. A good discussion followed. There seemed to be some comfort that you can progress professionally, even if you aren&amp;rsquo;t a perfect academic or following a traditional route. Some of them appreciated that skills still matter, not just metrics. Others took note of how collaborations and networking can sometimes make the critical difference. Finally, a few told me it was just nice to hear about someone&amp;rsquo;s academic career path. If you made it this far, I hope you can say the same.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cork R-Users Group - First Meet-Up</title>
-      <link>/post/2015-08-10-first-r-users/</link>
-      <pubDate>Mon, 10 Aug 2015 12:00:00 +0000</pubDate>
-      
-      <guid>/post/2015-08-10-first-r-users/</guid>
-      <description>&lt;p&gt;Thanks to all of you for joining the Cork R-Users group, especially the thirteen real-life human R-Users who met for the first time last week at our inaugural meet-up.&lt;/p&gt;
-
-&lt;p&gt;I was happy to see a diverse group. I thought we were well balanced between academia and industry, and between statistics and data science. There were software engineers, biostatisticians, ecologists, data scientists, PhD students, and systems administrators. We had people with 10 plus years of experience with R, and people who had never used it but wanted to see what the fuss was about. Most of us had at least a few years of experience using R, but it was clear that everyone in the group was there because they wanted to learn more. Other reasons we wanted to create this group were to “Identify best practices…Learn what is possible…Solve Problems…Prevent errors,” and perhaps most importantly to, “Be around other people” that are as into data as we are.&lt;/p&gt;
-
-&lt;p&gt;We identified skills we could each share, as well as topics we wanted to learn more about. Based on this discussion we are planning sessions for the fall on &lt;strong&gt;Data Visualisation with ggplot2&lt;/strong&gt;; &lt;strong&gt;Building Shiny Apps&lt;/strong&gt;; and &lt;strong&gt;Using R with Spark&lt;/strong&gt;. We are also planning a hands-on, collaborative session on data cleaning.&lt;/p&gt;
-
-&lt;p&gt;Most people were happy to meet afternoons in the Western Gateway Building, but the sample selection here is obvious. It is thus critical for members to propose and organise meetings at other times, in other venues.&lt;/p&gt;
-
-&lt;p&gt;On the topic of organisation, Edward and Mervyn volunteered to help, and you are all very welcome to take the lead on whatever you are able to.&lt;/p&gt;
-
-&lt;p&gt;Please feel free to get in touch with me for any reason (ddahly@ucc.ie, Twitter &lt;a href=&#34;https://twitter.com/statsepi&#34; target=&#34;_blank&#34;&gt;@statsepi&lt;/a&gt;). More information will be available on the &lt;a href=&#34;http://www.meetup.com/Cork-Ireland-R-Users-Group/&#34; target=&#34;_blank&#34;&gt;meet-up.com page&lt;/a&gt; for the group.&lt;/p&gt;
 </description>
     </item>
     

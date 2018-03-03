@@ -147,6 +147,88 @@
   
   <div>
     
+    <h2><a href="/post/cluster/">Magical clusters</a></h2>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-03-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sat, Mar 3, 2018
+    </time>
+  </span>
+
+  
+
+  
+
+  
+
+</div>
+
+    <div class="article-style"><p>
+      
+      <pre class="r"><code>  x &lt;- rnorm(1000, 0, 1)
+  y &lt;- (2 * x) + rnorm(1000, 0, 3)
+
+  data &lt;- data.frame(x = x, y = y)</code></pre>
+<pre class="r"><code>    plot(x, y, data = data)</code></pre>
+<p><img src="/post/cluster_files/figure-html/unnamed-chunk-2-1.svg" width="768" /></p>
+<pre class="r"><code>  library(pander)
+
+  pander(lm(y ~ x, data))</code></pre>
+<table style="width:88%;">
+<caption>Fitting linear model: y ~ x</caption>
+<colgroup>
+<col width="25%" />
+<col width="15%" />
+<col width="18%" />
+<col width="13%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center">Estimate</th>
+<th align="center">Std. Error</th>
+<th align="center">t value</th>
+<th align="center">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>(Intercept)</strong></td>
+<td align="center">-0.1354</td>
+<td align="center">0.09709</td>
+<td align="center">-1.395</td>
+<td align="center">0.1634</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>x</strong></td>
+<td align="center">2.026</td>
+<td align="center">0.09888</td>
+<td align="center">20.49</td>
+<td align="center">3.584e-78</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>  library(mclust)
+
+  bic &lt;- mclustBIC(data)
+
+  clusters &lt;- Mclust(data, x = bic, modelNames = (&quot;EII&quot;))
+  
+# summary(clusters, parameters = TRUE)</code></pre>
+<pre class="r"><code>  plot(clusters, what = &quot;classification&quot;)</code></pre>
+<p><img src="/post/cluster_files/figure-html/unnamed-chunk-5-1.svg" width="768" /></p>
+
+      
+    </p></div>
+  </div>
+  
+  <div>
+    
     <h2><a href="/post/2018-02-28-socialmedia/">Can social media be useful for scientists?</a></h2>
     
 
@@ -481,46 +563,6 @@ Many people seem to think that any non-Gaussian, continuous variables should be 
     <div class="article-style"><p>
       
       Registration of clinical trials, prior to any patient recruitment, is now common. Though trial registrations often omit the important details regarding their proposed analyses (despite advice to the contrary), most trialists seem to agree, at least in principle, that you should transparently describe your plans for clinical trial data before they are collected. Unfortunately, this remains a foreign concept in other areas of clinical and public health research.
-      
-    </p></div>
-  </div>
-  
-  <div>
-    
-    <h2><a href="/post/2017-03-13-r_courses/">Upcoming R workshop</a></h2>
-    
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2017-03-13 12:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Mon, Mar 13, 2017
-    </time>
-  </span>
-
-  
-
-  
-  
-  
-  <span class="article-tags">
-    <i class="fa fa-tags"></i>
-    
-    <a href="/tags/academic">academic</a
-    >
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-    <div class="article-style"><p>
-      
-      
       
     </p></div>
   </div>
