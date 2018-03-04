@@ -18,7 +18,7 @@
       <guid>/post/cluster/</guid>
       <description>&lt;p&gt;I was greeted today with &lt;a href=&#34;http://www.bbc.com/news/health-43246261&#34;&gt;the news that there are 5, not 2, types of diabetes&lt;/a&gt;. This is &lt;strong&gt;earth-shattering&lt;/strong&gt; if you are a diabetologist or diabetes researcher. However, I soon as I saw the term “data-driven clustering” I knew I could probably relax.&lt;/p&gt;
 &lt;p&gt;For the uninitiated, data-driven clustering techniques can seem magical. The basic premise is that you take a sample, measure lots of things about them, and then feed all those data into an algorithm that will divide your sample into mutually exclusive groups. Then, hopefully, knowing what group a person is in will tell you something about them that isn’t otherwise apparent in the data. This is a seductive idea. In this diabetes example, the authors are touting that knowing a patient’s group will eventually be used to guide their treatment.&lt;/p&gt;
-&lt;p&gt;I suspect that some people reading about this research won’t understand just how easy it is to detect groups. It’s so easy in fact that I would be shocked if groups &lt;em&gt;weren’t&lt;/em&gt; foundin most cases. This is because clustering, regardless of the specific method used, is just another way to describe relationships among variables - and as long as the variables are in fact related, you will find groups. Here is a simple example:&lt;/p&gt;
+&lt;p&gt;I suspect that some people reading about this research won’t understand just how easy it is to detect groups. It’s so easy in fact that I would be shocked if groups &lt;em&gt;weren’t&lt;/em&gt; found in most cases. This is because clustering, regardless of the specific method used, is just another way to describe relationships among variables - and as long as the variables are in fact related, you will find groups. Here is a simple example:&lt;/p&gt;
 &lt;p&gt;First, create some data for two variables. The first is just 1000 observations drawn from a standard normal. The second variable then multiplies the first variable by 2 and adds some additional randomly distributed noise.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  x &amp;lt;- rnorm(1000, 0, 1)
   y &amp;lt;- (2 * x) + rnorm(1000, 0, 3)
@@ -52,17 +52,17 @@
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;(Intercept)&lt;/strong&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;-0.04966&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.09533&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;-0.521&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.6025&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;-0.1035&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.09558&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;-1.083&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.2792&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;x&lt;/strong&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;1.811&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.09526&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;19.01&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;5.301e-69&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1.727&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.09362&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;18.45&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1.276e-65&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

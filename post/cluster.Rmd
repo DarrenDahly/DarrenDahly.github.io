@@ -20,7 +20,7 @@ I was greeted today with [the news that there are 5, not 2, types of diabetes](h
 
 For the uninitiated, data-driven clustering techniques can seem magical. The basic premise is that you take a sample, measure lots of things about them, and then feed all those data into an algorithm that will divide your sample into mutually exclusive groups. Then, hopefully, knowing what group a person is in will tell you something about them that isn't otherwise apparent in the data. This is a seductive idea. In this diabetes example, the authors are touting that knowing a patient's group will eventually be used to guide their treatment.  
 
-I suspect that some people reading about this research won't understand just how easy it is to detect groups. It's so easy in fact that I would be shocked if groups *weren't* foundin most cases. This is because clustering, regardless of the specific method used, is just another way to describe relationships among variables - and as long as the variables are in fact related, you will find groups. Here is a simple example: 
+I suspect that some people reading about this research won't understand just how easy it is to detect groups. It's so easy in fact that I would be shocked if groups *weren't* found in most cases. This is because clustering, regardless of the specific method used, is just another way to describe relationships among variables - and as long as the variables are in fact related, you will find groups. Here is a simple example: 
 
 First, create some data for two variables. The first is just 1000 observations drawn from a standard normal. The second variable then multiplies the first variable by 2 and adds some additional randomly distributed noise. 
 
