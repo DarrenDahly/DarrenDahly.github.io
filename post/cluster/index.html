@@ -209,8 +209,8 @@
 
     <div class="article-style" itemprop="articleBody">
       <p>I was greeted today with <a href="http://www.bbc.com/news/health-43246261">the news that there are 5, not 2, types of diabetes</a>. This is <strong>earth-shattering</strong> if you are a diabetologist or diabetes researcher. However, I soon as I saw the term “data-driven clustering” I knew I could probably relax.</p>
-<p>For the uninitiated, data-driven clustering techniques can seem magical. The basic premise is that you take a sample, measure lots of things about them, and then feed all those data into an algorithm that will divide your sample into mutually exclusive groups. The seductive idea behind this is that knowing what group a person is in will supposedly tell you something else important about them that isn’t otherwise apparent. In this diabetes example, the authors are touting that knowing which of the 5 groups a patient falls into will eventually be used to guide their treatment.</p>
-<p>I suspect that many people when reading about this paper won’t understand just how easy it is to detect groups. In fact, in most cases I would be shocked if groups <em>weren’t</em> found. This is because clustering, regardless of the specific method used, is just another way to describe relationships among variables - and as long as the variables are in fact related, you will find groups. Here is a simple example:</p>
+<p>For the uninitiated, data-driven clustering techniques can seem magical. The basic premise is that you take a sample, measure lots of things about them, and then feed all those data into an algorithm that will divide your sample into mutually exclusive groups. Then, hopefully, knowing what group a person is in will tell you something about them that isn’t otherwise apparent in the data. This is a seductive idea. In this diabetes example, the authors are touting that knowing a patient’s group will eventually be used to guide their treatment.</p>
+<p>I suspect that some people reading about this research won’t understand just how easy it is to detect groups. It’s so easy in fact that I would be shocked if groups <em>weren’t</em> foundin most cases. This is because clustering, regardless of the specific method used, is just another way to describe relationships among variables - and as long as the variables are in fact related, you will find groups. Here is a simple example:</p>
 <p>First, create some data for two variables. The first is just 1000 observations drawn from a standard normal. The second variable then multiplies the first variable by 2 and adds some additional randomly distributed noise.</p>
 <pre class="r"><code>  x &lt;- rnorm(1000, 0, 1)
   y &lt;- (2 * x) + rnorm(1000, 0, 3)
@@ -244,17 +244,17 @@
 <tbody>
 <tr class="odd">
 <td align="center"><strong>(Intercept)</strong></td>
-<td align="center">0.01883</td>
-<td align="center">0.09549</td>
-<td align="center">0.1972</td>
-<td align="center">0.8437</td>
+<td align="center">-0.04966</td>
+<td align="center">0.09533</td>
+<td align="center">-0.521</td>
+<td align="center">0.6025</td>
 </tr>
 <tr class="even">
 <td align="center"><strong>x</strong></td>
-<td align="center">2.05</td>
-<td align="center">0.09303</td>
-<td align="center">22.04</td>
-<td align="center">5.372e-88</td>
+<td align="center">1.811</td>
+<td align="center">0.09526</td>
+<td align="center">19.01</td>
+<td align="center">5.301e-69</td>
 </tr>
 </tbody>
 </table>
@@ -267,7 +267,7 @@
   
 # summary(clusters, parameters = TRUE)</code></pre>
 <pre class="r"><code>  plot(clusters, what = &quot;classification&quot;)</code></pre>
-<p><img src="/post/cluster_files/figure-html/unnamed-chunk-5-1.svg" width="768" /></p>
+<p><img src="/post/cluster_files/figure-html/unnamed-chunk-5-1.svg" width="576" /></p>
 <p>What you can see from the plot is that the clustering algorithm explained the x-y scatter plot by positing the existence of 8 groups of observations, each covering a different area in the overall space. In other words, the clustering algorithm is trying to describe 2 correlated variables when the only tool it has is to group people. As long as there is in fact a correlation between the two variables, then you are going to need more than one group to describe the data (unless you start to use more flexible models).</p>
 <p>So in most cases it is trivially easy to find groups. The challenge is of course to ascribe meaning to them. If we return to the linear regression, we might want to infer that x is a cause of y based on the observed relationship. However, we’d be foolish to do so without other information to support the causal claim. Similarly, you can pretend that data-driven clusters are revealing some deeper truth, but again, without other corroborating information, I wouldn’t be making strong claims.</p>
 <p>For additional commentary, <a href="https://twitter.com/f2harrell">Frank Harrell</a> also blogged about this today, <a href="http://www.fharrell.com/post/errmed/#cluster">here</a>.</p>
