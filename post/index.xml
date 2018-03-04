@@ -52,17 +52,17 @@
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;(Intercept)&lt;/strong&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;-0.1035&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.09558&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;-1.083&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.2792&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.1343&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.09664&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1.39&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.165&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;x&lt;/strong&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;1.727&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.09362&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;18.45&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;1.276e-65&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1.992&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.1006&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;19.81&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;6.101e-74&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -78,7 +78,7 @@
 &lt;p&gt;&lt;img src=&#34;/post/cluster_files/figure-html/unnamed-chunk-5-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;What you can see from the plot is that the clustering algorithm explained the x-y scatter plot by positing the existence of 8 groups of observations, each covering a different area in the overall space. In other words, the clustering algorithm is trying to describe 2 correlated variables when the only tool it has is to group people. As long as there is in fact a correlation between the two variables, then you are going to need more than one group to describe the data (unless you start to use more flexible models).&lt;/p&gt;
 &lt;p&gt;So in most cases it is trivially easy to find groups. The challenge is of course to ascribe meaning to them. If we return to the linear regression, we might want to infer that x is a cause of y based on the observed relationship. However, we’d be foolish to do so without other information to support the causal claim. Similarly, you can pretend that data-driven clusters are revealing some deeper truth, but again, without other corroborating information, I wouldn’t be making strong claims.&lt;/p&gt;
-&lt;p&gt;For additional commentary, &lt;a href=&#34;https://twitter.com/f2harrell&#34;&gt;Frank Harrell&lt;/a&gt; also blogged about this today, &lt;a href=&#34;http://www.fharrell.com/post/errmed/#cluster&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For additional thoughts, &lt;a href=&#34;https://twitter.com/f2harrell&#34;&gt;Frank Harrell&lt;/a&gt; also blogged about this &lt;a href=&#34;http://www.fharrell.com/post/errmed/#cluster&#34;&gt;here&lt;/a&gt;; and &lt;a href=&#34;https://twitter.com/MaartenvSmeden&#34;&gt;Maarten van Smeden&lt;/a&gt; did some other simulation work described &lt;a href=&#34;https://twitter.com/MaartenvSmeden/status/970237614413570048&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

@@ -77,4 +77,4 @@ What you can see from the plot is that the clustering algorithm explained the x-
 
 So in most cases it is trivially easy to find groups. The challenge is of course to ascribe meaning to them. If we return to the linear regression, we might want to infer that x is a cause of y based on the observed relationship. However, we'd be foolish to do so without other information to support the causal claim. Similarly, you can pretend that data-driven clusters are revealing some deeper truth, but again, without other corroborating information, I wouldn't be making strong claims. 
 
-For additional commentary, [Frank Harrell](https://twitter.com/f2harrell) also blogged about this today, [here](http://www.fharrell.com/post/errmed/#cluster). 
+For additional thoughts, [Frank Harrell](https://twitter.com/f2harrell) also blogged about this [here](http://www.fharrell.com/post/errmed/#cluster); and [Maarten van Smeden](https://twitter.com/MaartenvSmeden) did some other simulation work described [here](https://twitter.com/MaartenvSmeden/status/970237614413570048).

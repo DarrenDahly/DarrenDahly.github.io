@@ -244,17 +244,17 @@
 <tbody>
 <tr class="odd">
 <td align="center"><strong>(Intercept)</strong></td>
-<td align="center">-0.1035</td>
-<td align="center">0.09558</td>
-<td align="center">-1.083</td>
-<td align="center">0.2792</td>
+<td align="center">0.1343</td>
+<td align="center">0.09664</td>
+<td align="center">1.39</td>
+<td align="center">0.165</td>
 </tr>
 <tr class="even">
 <td align="center"><strong>x</strong></td>
-<td align="center">1.727</td>
-<td align="center">0.09362</td>
-<td align="center">18.45</td>
-<td align="center">1.276e-65</td>
+<td align="center">1.992</td>
+<td align="center">0.1006</td>
+<td align="center">19.81</td>
+<td align="center">6.101e-74</td>
 </tr>
 </tbody>
 </table>
@@ -270,7 +270,7 @@
 <p><img src="/post/cluster_files/figure-html/unnamed-chunk-5-1.svg" width="576" /></p>
 <p>What you can see from the plot is that the clustering algorithm explained the x-y scatter plot by positing the existence of 8 groups of observations, each covering a different area in the overall space. In other words, the clustering algorithm is trying to describe 2 correlated variables when the only tool it has is to group people. As long as there is in fact a correlation between the two variables, then you are going to need more than one group to describe the data (unless you start to use more flexible models).</p>
 <p>So in most cases it is trivially easy to find groups. The challenge is of course to ascribe meaning to them. If we return to the linear regression, we might want to infer that x is a cause of y based on the observed relationship. However, we’d be foolish to do so without other information to support the causal claim. Similarly, you can pretend that data-driven clusters are revealing some deeper truth, but again, without other corroborating information, I wouldn’t be making strong claims.</p>
-<p>For additional commentary, <a href="https://twitter.com/f2harrell">Frank Harrell</a> also blogged about this today, <a href="http://www.fharrell.com/post/errmed/#cluster">here</a>.</p>
+<p>For additional thoughts, <a href="https://twitter.com/f2harrell">Frank Harrell</a> also blogged about this <a href="http://www.fharrell.com/post/errmed/#cluster">here</a>; and <a href="https://twitter.com/MaartenvSmeden">Maarten van Smeden</a> did some other simulation work described <a href="https://twitter.com/MaartenvSmeden/status/970237614413570048">here</a>.</p>
 
     </div>
   </div>
