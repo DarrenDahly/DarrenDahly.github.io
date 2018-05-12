@@ -8,7 +8,46 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Darren L Dahly - All rights reserved</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/home/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/about/</guid>
+      <description>I am the Principal Statistician for the HRB Clinical Research Facility in Cork, Ireland, and a Senior Lecturer in Research Methods at UCC. I collaborate and consult on a large and varied portfolio of patient-focused and public health research projects. My primary goal is to work with investigators to help ensure that their study designs and methods for data analysis are appropriate.
+I am also interested in methodological research, particularly in the areas of longitudinal and latent variable statistical modelling, and analysis of compositional data (e.</description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Publications</title>
+      <link>/home/publications/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/contact/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

@@ -8,7 +8,9 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Darren L Dahly - All rights reserved</copyright>
     <lastBuildDate>Tue, 01 Jan 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/publication_types/2/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Associations of linear growth and relative weight gain during early life with adult health and human capital in countries of low and middle income: findings from five birth cohort studies</title>
