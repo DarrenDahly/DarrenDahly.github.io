@@ -11,6 +11,38 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Dealing with negative trial results</title>
+      <link>/post/negative_results/</link>
+      <pubDate>Sat, 21 Jul 2018 12:00:00 +0000</pubDate>
+      
+      <guid>/post/negative_results/</guid>
+      <description>&lt;p&gt;Welcome to the world of clinical trials. I think it’s great that you want to find new treatments that will improve human health. And let’s be honest, if you are a clinician, the career boost is nice as well. But I have some bad news for you. Are you ready?&lt;/p&gt;
+
+&lt;p&gt;Your intervention doesn’t work. I’m sorry. It doesn’t. Not even a little. No, not in the older patients. Not in the younger ones either. It…does…not…work.&lt;/p&gt;
+
+&lt;p&gt;Hold on a minute. You haven’t even run the trial yet. So how can I possibly know it doesn’t work? Experience my friend – and as any experienced trialist can tell you, the intervention never works. Ever. I don’t care about your pilot data. I don’t care about your theory or proposed mechanism. If I could find a way to short clinical trials like stock, I’d be filthy rich. So I’ll say it one last time: The intervention never works.&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Ok, with that in mind, let’s go forward in time, to the end of the trial. You are standing next to me (the trial’s statistician) at the front of a large meeting room in an almost-really-nice-hotel. I have a clicker in my hand, there is a graph projected onto the large screen behind us, and I just told everyone that the intervention didn’t work.&lt;/p&gt;
+
+&lt;p&gt;Who is everyone? The entire study team of course, all sat quietly at a giant U-shaped table with little name placards in front of them. They include the other site investigators, and all the other people that just spent years of their lives working on the trial. It was a huge endeavour. Someone from the funding body is there as well, since huge endeavours cost lots of money. And don’t forget the patients’ representative – they gave more than anyone.&lt;/p&gt;
+
+&lt;p&gt;OMG, look at their little faces. They look so confused. Disappointed. A few even look sad. Oh no, are those tears? But we were just having so much fun, drinking free coffee and catching up since our last meeting. Now they are just staring at us. You have to say something. You have to say something now.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Freeze time&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;What are you going to say?&lt;/p&gt;
+
+&lt;p&gt;To survive this moment, you need to be able to look everyone in the eye and remind them that the trial was designed to &lt;strong&gt;rigorously answer an important question&lt;/strong&gt;. If this is true, then you have likely just learned something useful, regardless of whether the intervention worked or not. Further, if the study was well designed, other people will be more likely to trust your result and act on it. In other words, there is no such thing as a “negative” trial result – the answer given by a well-designed trial is always useful, whether the intervention worked or not. So you simply remind everyone of this. People will still be disappointed of course - we’d be fools to test treatments if we didn’t think they worked (even though they never do). But at least we can all live with ourselves knowing that we gave it our absolute best. At least we all know that we added knowledge to the world.&lt;/p&gt;
+
+&lt;p&gt;And what if the trial wasn’t well designed? In that case, then you’ve probably wasted lots of time and money. Even worse, you might have needlessly put patients at risk. And everyone in that room will know it. There&amp;rsquo;s not enough perfume in France to cover that kind of stink. And just like for a well-designed trial, the result doesn’t matter. If the intervention didn’t seem to work, it might have been due to the design errors. On the flip side, nobody outside the trial team will believe a “positive” result, for the same reason. In other words, design errors can often explain any result obtained, and thus the answer from a poorly-designed trial is never useful, whether the intervention worked or not.&lt;/p&gt;
+
+&lt;p&gt;So here is my advice. At the start of any trial, imagine yourself in the situation above. The intervention didn’t work. How are you going to live with yourself? Now act accordingly.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>No, we can&#39;t censure people for ad hominem attacks in scientific discourse.</title>
       <link>/post/2018-05-12-pnas/</link>
       <pubDate>Sat, 12 May 2018 12:00:00 +0000</pubDate>
@@ -995,42 +1027,6 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
 &lt;p&gt;The workshop is free for registered PhD students. Otherwise, the cost is 75 EUR and can be paid by credit card or purchase order (for UCC based attendees). To sign up, please email Darren (ddahly@ucc.ie). You will then be given payment details.&lt;/p&gt;
 
 &lt;p&gt;The workshop (9:45 to 16:15) will introduce Stata to researchers with little or no experience using it. Participants will learn how to load data and produce descriptive summaries, including tables and graphs, how to edit and modify data, and how to carry out analyses such as t-tests, chi-square tests, ANOVA and regression. We will also demonstrate how Stata can be used to support reproducible research practices.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The perils of exploratory data analysis</title>
-      <link>/post/2017-02-03-exploratory/</link>
-      <pubDate>Fri, 03 Feb 2017 12:00:00 +0000</pubDate>
-      
-      <guid>/post/2017-02-03-exploratory/</guid>
-      <description>&lt;p&gt;Is it ever ok to conduct an exploratory data analysis, for the purpose of &amp;ldquo;generating hypotheses&amp;rdquo;?&lt;/p&gt;
-
-&lt;p&gt;This question was motivated by a new Retraction Watch piece, &lt;a href=&#34;http://retractionwatch.com/2017/02/02/backlash-prompts-prominent-nutrition-researcher-reanalyze-multiple-papers/&#34; target=&#34;_blank&#34;&gt;Backlash prompts prominent nutrition researcher to reanalyze multiple papers&lt;/a&gt;. It covers the backlash to an earlier blog post by &lt;a href=&#34;https://twitter.com/BrianWansink&#34; target=&#34;_blank&#34;&gt;Brian Wansink&lt;/a&gt;, who wrote about two early career researchers, one of whom took on several &amp;ldquo;extra&amp;rdquo; projects, vs. another who refused (&lt;a href=&#34;http://www.brianwansink.com/phd-advice/the-grad-student-who-never-said-no&#34; target=&#34;_blank&#34;&gt;The Grad student who never said no&lt;/a&gt;). The former managed to turn the &amp;ldquo;opportunity&amp;rdquo; into a small handful of publications, and Wansink&amp;rsquo;s thesis was that this is how you get ahead in academia. However, in writing the blog post, its author revealed a concerning approach to statistical inference, not to mention a cavalier attitude to the exploitation of early career scientists, both of which were quickly noted on twitter and in the blog&amp;rsquo;s comments.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/statsepi/status/809479929435979776&#34; target=&#34;_blank&#34;&gt;You can find the relevant tweets here.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I am not here to pile on, but in the RW article, there was a quote from Professor Wansink that I couldn&amp;rsquo;t believe.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;P-hacking shouldn’t be confused with deep data dives – with figuring out why our results don’t look as perfect as we want.&lt;/p&gt;
-
-&lt;p&gt;With field studies, hypotheses usually don’t “come out” on the first data run.  But instead of dropping the study, a person contributes more to science by figuring out when the hypo worked and when it didn’t.  This is Plan B.  Perhaps your hypo worked during lunches but not dinners, or with small groups but not large groups. You don’t change your hypothesis, but you figure out where it worked and where it didn’t.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/statsepi/status/827456005084704769&#34; target=&#34;_blank&#34;&gt;I of course turned to twitter to express my outrage&lt;/a&gt;, and was suprised to find people supporting the idea that exploratory analyses were perfectly acceptable for &amp;ldquo;generating hypotheses&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;I immediately thought of this great paper by Philip Cole, titled &lt;a href=&#34;http://journals.lww.com/epidem/Citation/1993/05000/The_Hypothesis_Generating_Machine_.12.aspx&#34; target=&#34;_blank&#34;&gt;The Hypothesis Generating Machine&lt;/a&gt;, in which he humourously claims to have compiled a list that contains every possible &amp;ldquo;X is associated with Y&amp;rdquo; hypothesis, making it pointless to try and identify any new ones.  It&amp;rsquo;s a short and entertaining read, and I encourage you to have a look for yourself.&lt;/p&gt;
-
-&lt;p&gt;People also seemed to think that exploratory analyses are ok in principle, but only if your explorations, regardless of their outcome, are reported. Obviously we can’t selectively report our &amp;ldquo;successful&amp;rdquo; explorations, and hide away the others (see the Texas sharpshooter fallacy; the garden of forking paths; file-dawer effects; and publication bias).  However,  I think people are missing the point that there aren&amp;rsquo;t enough hours in the day to actually do this. Even if you were just sharing summaries of your explorations, the time it would take to write them up would take up more time than the analyses themselves. Given that most of these analyses would lead nowhere, this would be a remarkable waste of researcher time, which is often publicly funded. So sure, exploratory analyses aren’t the end of the world - unless you take the point about selective reporting seriously.&lt;/p&gt;
-
-&lt;p&gt;I want to be clear about one last thing. I agree with &lt;a href=&#34;https://twitter.com/f2harrell&#34; target=&#34;_blank&#34;&gt;Frank Harell&amp;rsquo;s&lt;/a&gt; point that &lt;a href=&#34;https://twitter.com/robertstats/status/774112526489440256&#34; target=&#34;_blank&#34;&gt;&amp;ldquo;Using the data to guide the analysis is almost as dangerous as not doing so.&amp;rdquo;&lt;/a&gt;. We should certainly use the data in front of us to guide modelling decisions, but this is &lt;em&gt;within the context of the scientific question at hand&lt;/em&gt; (unless I am misunderstanding Harell&amp;rsquo;s point). However, it is completely unscientific to suggest that you should look for subgroups for which you your &amp;ldquo;hypothesis works&amp;rdquo; if it didn&amp;rsquo;t work in the full sample. It&amp;rsquo;s exactly the logic that practitioners of so called alternative medicine use, when they point out that the treatment didn&amp;rsquo;t work, except in the people that it worked in.&lt;/p&gt;
-
-&lt;p&gt;These problems aren’t trivial. This kind of thinking is damaging science. It has contributed to a bloated, garbage heap of published research. Most importantly, these problems are no longer just fodder for scientists to discuss over cocktails at international conferences. There are plenty of actors with a vested interest in eliminating the role science &lt;strong&gt;must&lt;/strong&gt; play in public decision making, and those people are now actively using our methodological errors against us.&lt;/p&gt;
-
-&lt;p&gt;[First draft,  Feb 03, 2017]&lt;/p&gt;
-
-&lt;p&gt;[Second draft, Feb 05, 2017]&lt;/p&gt;
 </description>
     </item>
     
