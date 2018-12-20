@@ -11,6 +11,52 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Science doesn&#39;t have a problem</title>
+      <link>/post/problems_part1/</link>
+      <pubDate>Thu, 20 Dec 2018 12:00:00 +0000</pubDate>
+      
+      <guid>/post/problems_part1/</guid>
+      <description>&lt;p&gt;Everywhere I look, people are saying there is something wrong with Science. &lt;a href=&#34;http://science.sciencemag.org/content/349/6251/aac4716&#34; target=&#34;_blank&#34;&gt;Studies don’t replicate&lt;/a&gt;. &lt;a href=&#34;https://www.thelancet.com/series/research&#34; target=&#34;_blank&#34;&gt;Heaps of research waste&lt;/a&gt;. &lt;a href=&#34;https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124&#34; target=&#34;_blank&#34;&gt;Findings are false&lt;/a&gt;. &lt;a href=&#34;https://www.bmj.com/content/308/6924/283&#34; target=&#34;_blank&#34;&gt;The scandal of poor medical research&lt;/a&gt;. &lt;a href=&#34;https://retractionwatch.com/&#34; target=&#34;_blank&#34;&gt;Retractions left and right&lt;/a&gt;. It’s all so depressing. But I have good news. These things aren’t problems after all, and here is my evidence: universities aren’t spending any money to fix them.&lt;/p&gt;
+
+&lt;p&gt;Not real money anyway. A few appointments. A bit of training. A working group. A guidance document. But the amount being spent to actually fix science is a tiny, tiny fraction of the overall research spend. It’s less than a band-aid, which is for one simple reason – nobody with money actually thinks there is a problem.&lt;/p&gt;
+
+&lt;p&gt;Why is that? After all, I am repeatedly reminded by administrators that the university must be treated like a business. Surely if a business was selling a defective product, they would invest in improving it. Right? Otherwise consumers will see the problem and then turn to the competitor.&lt;/p&gt;
+
+&lt;p&gt;Ah. Yes. I see the problem. The university has no competitor, and vanishingly few consumers understand the product.&lt;/p&gt;
+
+&lt;p&gt;This misunderstanding of the product by the public and policy makers is key. Most scientists and philosophers of science would probably agree that scientific progress rarely arrives in a Eureka moment. Instead it builds up slowly, inching forward over time. There are starts and stutters and many dead-ends along the way, so that real moments of substantial progress can only be identified after the fact. And so the evaluation of scientific endeavours is reduced to a numbers game focused on volume, and new knowledge is now regularly misidentified as a new published paper.&lt;/p&gt;
+
+&lt;p&gt;So the politician asks the funder, “Why should you be included in the budget?” To which the funder replies, “Look at all the papers that acknowledge us.”&lt;/p&gt;
+
+&lt;p&gt;And the funder asks the university, “Why should you get the grant?” To which the university replies, “Look at all the papers our academics have written.”&lt;/p&gt;
+
+&lt;p&gt;And the university asks the academic, “Why should you be promoted?” To which the academic replies, “Look at all the papers I’ve written.”&lt;/p&gt;
+
+&lt;p&gt;Anyone who points out how ridiculous this is risks a lecture from some bureaucrat about the “economic realities” we’re facing. And they aren’t even wrong. Universities, seeing budgets shrink, are increasingly reliant on overseas students and the unethical, bloated tuition fees they bring. And those students (and their governments, who often foot the bill) base their decisions on university rankings, which are strongly influenced by - you guessed it – how many papers get published.&lt;/p&gt;
+
+&lt;p&gt;So why on earth would anyone spend money on fixing the problems in science when the solutions will surely lead to one horrific outcome.&lt;/p&gt;
+
+&lt;p&gt;Fewer papers.&lt;/p&gt;
+
+&lt;p&gt;Fewer papers, because any time spent improving the quality of the research is less time for writing papers. Fewer papers, because surely setting some bar for quality means some of the things published today wouldn’t be.&lt;/p&gt;
+
+&lt;p&gt;“Hold on a minute.” you say. “Papers have to be peer reviewed. There already is a bar for quality. You can’t just publish anything. It’s all vetted.”&lt;/p&gt;
+
+&lt;p&gt;If you still believe this, it’s time to open your eyes. Modern peer review is not an effective quality control mechanism. Two reviewers. That’s all you need. Two reviewers, pulled from God knows where, to sign off; and then a lazy editor to calculate that Yes + Yes = Publish. And if you get a diligent, knowledgeable reviewer or editor mucking things up? Just resubmit elsewhere.&lt;/p&gt;
+
+&lt;p&gt;So publish your terrible papers. Publish your PhD students’ terrible papers. Publish your summer interns’ terrible papers. We’d publish our cats’ terrible papers if we could get away with it.&lt;/p&gt;
+
+&lt;p&gt;And anyone who does otherwise puts themselves at a professional disadvantage.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Ok, so that was the most depressing take on all of this that I could come up with. I’m pretty sure it’s all true, but surely we can end the year with something a bit more uplifting. Right?&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;To be continued…&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Dealing with negative trial results</title>
       <link>/post/negative_results/</link>
       <pubDate>Sat, 21 Jul 2018 12:00:00 +0000</pubDate>
@@ -1007,26 +1053,6 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
 &lt;p&gt;To this point I have argued that epidemiology in practice is already consequentialist in nature, and that our embrace of causal thinking and continued investment in methodological innovation is a reflection of this. Though I must agree with Professor Galea that our field faces important challenges, following from my position, I see no solutions in the dulling of our expertise. Quite the opposite. So in epidemiology, just like in life, there is no consequence without cause.&lt;/p&gt;
 
 &lt;p&gt;[First draft,  Feb 06, 2017]&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Stata Workshop (2016)</title>
-      <link>/post/2017-04-13-stata_workshop/</link>
-      <pubDate>Sat, 04 Feb 2017 12:00:00 +0000</pubDate>
-      
-      <guid>/post/2017-04-13-stata_workshop/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/img/crfc_banner.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;introduction-to-data-analysis-with-stata&#34;&gt;Introduction to data analysis with Stata&lt;/h2&gt;
-
-&lt;p&gt;On May 24, 2017, the Clinical Research Facility Cork will host a one-day workshop featuring Stata data analysis and statistical software. It will take place in the Brookfield Health Sciences Building (G07) at University College Cork. The workshop will be led by Dr Darren Dahly, the Principal Statistician at the CRF-C.&lt;/p&gt;
-
-&lt;p&gt;The workshop is free for registered PhD students. Otherwise, the cost is 75 EUR and can be paid by credit card or purchase order (for UCC based attendees). To sign up, please email Darren (ddahly@ucc.ie). You will then be given payment details.&lt;/p&gt;
-
-&lt;p&gt;The workshop (9:45 to 16:15) will introduce Stata to researchers with little or no experience using it. Participants will learn how to load data and produce descriptive summaries, including tables and graphs, how to edit and modify data, and how to carry out analyses such as t-tests, chi-square tests, ANOVA and regression. We will also demonstrate how Stata can be used to support reproducible research practices.&lt;/p&gt;
 </description>
     </item>
     
