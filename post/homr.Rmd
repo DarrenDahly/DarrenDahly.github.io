@@ -9,7 +9,7 @@ output:
     dev: "svg"
 ---
 
-This is a tutorial on how to use R to evaluate a previously published prediction tool in a new dataset. Most of the good ideas came from [Maarten van Smedan](https://twitter.com/MaartenvSmeden), and any mistakes are surely mine. This post is not intended to explain they *why* one might do what follows, but rather *how* to do it in R. 
+This is a tutorial on how to use R to evaluate a previously published prediction tool in a new dataset. Most of the good ideas came from [Maarten van Smeden](https://twitter.com/MaartenvSmeden), and any mistakes are surely mine. This post is not intended to explain they *why* one might do what follows, but rather *how* to do it in R. 
 
 It is based on a recent analysis we published (in press) that validated the [HOMR](http://dx.doi.org/10.1016/j.jclinepi.2014.05.003) model to predict all-cause mortality within one-year of a hospitalization in a cohort of `r nrow(data)` patients aged 65 years or older that were under the care of geriatric medicine service at Cork University Hospital (2013-01-01 to 2015-03-06). The predictors used in the HOMR model were generally things that are easy enough to collect during hospitalization. You can read all about it in the paper linked above. 
 
