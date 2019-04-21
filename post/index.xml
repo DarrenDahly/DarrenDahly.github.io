@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Evaluating a logistic regression based prediction tool in R</title>
+      <link>/post/homr/</link>
+      <pubDate>Sun, 21 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/homr/</guid>
+      <description>This is a tutorial on how to use R to evaluate a previously published prediction tool in a new dataset. Most of the good ideas came from Maarten van Smedan, and any mistakes are surely mine. This post is not intended to explain they why one might do what follows, but rather how to do it in R.
+It is based on a recent analysis we published (In Press) that validated the HOMR model to predict all-cause mortality within one-year of a hospitalization in a cohort of patients aged 65 years or older that were under the care of geriatric medicine service at Cork University Hospital (2013-01-01 to 2015-03-06).</description>
+    </item>
+    
+    <item>
       <title>Science doesn&#39;t have a problem</title>
       <link>/post/problems_part1/</link>
       <pubDate>Thu, 20 Dec 2018 12:00:00 +0000</pubDate>

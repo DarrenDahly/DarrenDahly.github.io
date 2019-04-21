@@ -11,6 +11,839 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Evaluating a logistic regression based prediction tool in R</title>
+      <link>/post/homr/</link>
+      <pubDate>Sun, 21 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/homr/</guid>
+      <description>&lt;p&gt;This is a tutorial on how to use R to evaluate a previously published prediction tool in a new dataset. Most of the good ideas came from &lt;a href=&#34;https://twitter.com/MaartenvSmeden&#34;&gt;Maarten van Smedan&lt;/a&gt;, and any mistakes are surely mine. This post is not intended to explain they &lt;em&gt;why&lt;/em&gt; one might do what follows, but rather &lt;em&gt;how&lt;/em&gt; to do it in R.&lt;/p&gt;
+&lt;p&gt;It is based on a recent analysis we published (In Press) that validated the &lt;a href=&#34;http://dx.doi.org/10.1016/j.jclinepi.2014.05.003&#34;&gt;HOMR&lt;/a&gt; model to predict all-cause mortality within one-year of a hospitalization in a cohort of patients aged 65 years or older that were under the care of geriatric medicine service at Cork University Hospital (2013-01-01 to 2015-03-06). The predictors used in the HOMR model were generally things that are easy enough to collect during hospitalization. You can read all about it in the paper linked above.&lt;/p&gt;
+&lt;p&gt;All materials for the analysis can be found on the &lt;a href=&#34;https://osf.io/tv26k/&#34;&gt;project’s OSF page&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  data &amp;lt;- read_csv(&amp;quot;https://crfcsdau.github.io/public/homr_data.csv&amp;quot;) 
+  data$alive &amp;lt;- factor(data$alive, levels = c(&amp;quot;Yes&amp;quot;, &amp;quot;No&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;calculating-the-homr-score&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Calculating the HOMR score&lt;/h2&gt;
+&lt;p&gt;The first step in evaluating the HOMR model in our cohort of patients was to calculate the linear predictor (Z) for each of them. This was done by multiplying the fitted regression coefficients (on the log-odds scale; found in appendix E of the &lt;a href=&#34;http://dx.doi.org/10.1016/j.jclinepi.2014.05.003&#34;&gt;HOMR development paper&lt;/a&gt;) by each patient’s respective variable values, and then adding them all together, including the intercept term (&lt;code&gt;data$z_homr&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;The original HOMR development paper also provided a set of tables to calculate a score based on the predictors (&lt;code&gt;data$homr_3&lt;/code&gt;). However, these scores are just a rescaled version of Z that gives you a set of integer values that can be easily added together from simple tables to get a prediction. However, since there was considerable rounding error (as you can see from the plot below), we used Z instead of the HOMR score in our evaluation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 1.&lt;/strong&gt; The relationship between the HOMR score and the HOMR linear predictor (Z) in our cohort of patients.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(data, aes(x = z_homr, y = homr_3)) +
+    geom_point(alpha = 0.2, size = 2, color = viridis(1, begin = 0.5)) +
+    xlab(&amp;quot;HOMR linear predictor (log odds scale)&amp;quot;) +
+    ylab(&amp;quot;HOMR score&amp;quot;) +
+    theme_minimal()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/homr_files/figure-html/score_vs_z_scatter-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;evaluating-the-model-overview&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluating the model: Overview&lt;/h2&gt;
+&lt;p&gt;To evaluate the HOMR Model, we followed the procedure outlined in &lt;a href=&#34;https://doi.org/10.1002/sim.7179&#34;&gt;Vergouwe e t al (2016)&lt;/a&gt; and estimated four logistic regression models. The first included the HOMR linear predictor, with its coefficient set equal to 1, and intercept set to zero (&lt;strong&gt;the original HOMR model&lt;/strong&gt;). The second model allowed the intercept to be freely estimated (&lt;strong&gt;Recalibration in the Large&lt;/strong&gt;). The third then allowed the coefficient on the HOMR linear predictor to be freely estimated as well (&lt;strong&gt;Logistic Recalibration&lt;/strong&gt;). Finally, the fourth model included the complete set variables used in the HOMR model, including the same transformations and interactions, and allowed their respective coefficients to be freely estimated (&lt;strong&gt;Model Revision&lt;/strong&gt;). Here is the code for executing those models:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# HOMR (intercept = 0 and beta = 1)
+  m1 &amp;lt;- glm(alive ~ -1 + offset(z_homr), data = data, family = binomial)
+# Recalibration in the Large (estimate intercept, beta = 1)
+  m2 &amp;lt;- glm(alive ~  1 + offset(z_homr), data = data, family = binomial)
+# Logisitic Calibration (estimate both)
+  m3 &amp;lt;- glm(alive ~  1 +        z_homr,  data = data, family = binomial)
+# Model Revision
+  data2 &amp;lt;- data
+  data2$admit_service &amp;lt;- as.character(data2$admit_service)
+  data2$admit_service &amp;lt;- factor(
+    ifelse( # Sparse cells, so this was collapsed to binary
+    data2$admit_service == &amp;quot;General Medicine&amp;quot;, 
+    data2$admit_service, 
+    &amp;quot;Other&amp;quot;
+    )
+  )
+  
+  formula_4 &amp;lt;- as.formula(
+    &amp;quot;alive ~  1 + drs + sqrt_age + sex + living_status + log_cci +
+    trans_ed + trans_amb + admit_service + urgency_admit + urgent_readmit +      
+    (sqrt_age * log_cci) + (living_status * trans_amb) + 
+    (urgency_admit * trans_amb)&amp;quot;
+    )
+
+  m4 &amp;lt;- glm(formula_4, data = data2, family = binomial)
+  
+# Model predicted probabilties
+  data$m1_pred &amp;lt;- predict(m1, type = &amp;quot;response&amp;quot;)
+  data$m2_pred &amp;lt;- predict(m2, type = &amp;quot;response&amp;quot;)
+  data$m3_pred &amp;lt;- predict(m3, type = &amp;quot;response&amp;quot;)
+  data$m4_pred &amp;lt;- predict(m4, type = &amp;quot;response&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The overall performance of these models was evaluated using the Brier score, rescaled to range from 0 to 1 (with higher values indicating better performance) as suggested by &lt;a href=&#34;https://doi.org/10.1097/EDE.0b013e3181c30fb2&#34;&gt;Steyerberg et al (2010)&lt;/a&gt;. We assessed calibration graphically, in addition to using the maximum and average difference in predicted vs loess-calibrated probabilities (Emax and Eavg); and we used the c-statistic to assess discrimination. For each of these metrics, we reported bootstrapped 95% confidence intervals. Finally, for &lt;strong&gt;Model Revision&lt;/strong&gt;, we estimated an optimism-corrected c-statistic and shrinkage factor using bootstrapping, as described in &lt;a href=&#34;https://doi-org.ucc.idm.oclc.org/10.1002/(SICI)1097-0258(19960229)15:4%3C361::AID-SIM168%3E3.0.CO;2-4&#34;&gt;Harrell, Lee and Mark (1996)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To get most metrics, we used &lt;code&gt;rms::val.prob&lt;/code&gt; as follows:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Metrics  
+  val_m1 &amp;lt;- val.prob(data$m1_pred, as.numeric(data$alive) - 1, 
+                     pl = FALSE) %&amp;gt;% round(3)
+  val_m2 &amp;lt;- val.prob(data$m2_pred, as.numeric(data$alive) - 1, 
+                     pl = FALSE) %&amp;gt;% round(3)
+  val_m3 &amp;lt;- val.prob(data$m3_pred, as.numeric(data$alive) - 1, 
+                     pl = FALSE) %&amp;gt;% round(3)
+  val_m4 &amp;lt;- val.prob(data$m4_pred, as.numeric(data$alive) - 1, 
+                     pl = FALSE) %&amp;gt;% round(3)
+  
+  rescale_brier &amp;lt;- function(x, p, ...){ 
+    format(round(1 - (x / (mean(p) * (1 - mean(p)))), digits = 2), nsmall = 2)
+  }
+  
+  b1 &amp;lt;- rescale_brier(val_m1[&amp;quot;Brier&amp;quot;], 0.184) 
+  b2 &amp;lt;- rescale_brier(val_m2[&amp;quot;Brier&amp;quot;], 0.184)
+  b3 &amp;lt;- rescale_brier(val_m3[&amp;quot;Brier&amp;quot;], 0.184)
+  b4 &amp;lt;- rescale_brier(val_m4[&amp;quot;Brier&amp;quot;], 0.184)
+# Note: 0.184 is the marginal probabilty of death in the entire sample&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here is what the &lt;code&gt;rms::val.prob&lt;/code&gt; output looks like.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  pander(val_m1) &lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;caption&gt;Table continues below&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;10%&#34; /&gt;
+&lt;col width=&#34;13%&#34; /&gt;
+&lt;col width=&#34;9%&#34; /&gt;
+&lt;col width=&#34;10%&#34; /&gt;
+&lt;col width=&#34;14%&#34; /&gt;
+&lt;col width=&#34;8%&#34; /&gt;
+&lt;col width=&#34;10%&#34; /&gt;
+&lt;col width=&#34;14%&#34; /&gt;
+&lt;col width=&#34;6%&#34; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;Dxy&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;C (ROC)&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;R2&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;D&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;D:Chi-sq&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;D:p&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;U&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;U:Chi-sq&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;U:p&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;0.564&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.782&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.22&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.145&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;204.6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.021&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;32.23&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;10%&#34; /&gt;
+&lt;col width=&#34;10%&#34; /&gt;
+&lt;col width=&#34;16%&#34; /&gt;
+&lt;col width=&#34;10%&#34; /&gt;
+&lt;col width=&#34;10%&#34; /&gt;
+&lt;col width=&#34;10%&#34; /&gt;
+&lt;col width=&#34;10%&#34; /&gt;
+&lt;col width=&#34;12%&#34; /&gt;
+&lt;col width=&#34;6%&#34; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;Q&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Brier&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Intercept&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Slope&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Emax&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;E90&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Eavg&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;S:z&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;S:p&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;0.123&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.127&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;-0.428&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.985&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.103&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.102&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.058&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;-3.806&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Uncertainty in these metrics was evaluated with bootstrapping.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  set.seed(48572)
+
+  boot_val &amp;lt;- function(data, formula, ...){
+    out &amp;lt;- list()
+    for(i in 1:500){
+      df &amp;lt;- sample_n(data, nrow(data), replace = TRUE)
+      md &amp;lt;- glm(formula, data = df, family = binomial)
+      out[[i]] &amp;lt;- val.prob(predict(md, type = &amp;quot;response&amp;quot;),
+                           as.numeric(df$alive) - 1, 
+                           pl = FALSE) %&amp;gt;% round(3)
+    }
+    return(out)
+  }
+
+  boot_vals_m1 &amp;lt;- boot_val(data,  as.formula(&amp;quot;alive ~ -1 + offset(z_homr)&amp;quot;))
+  boot_vals_m2 &amp;lt;- boot_val(data,  as.formula(&amp;quot;alive ~  1 + offset(z_homr)&amp;quot;))
+  boot_vals_m3 &amp;lt;- boot_val(data,  as.formula(&amp;quot;alive ~  1 +        z_homr &amp;quot;))
+  boot_vals_m4 &amp;lt;- boot_val(data2, formula_4) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This code just pulls out 95% intervals from the bootstrapped values.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  calc_ci &amp;lt;- function(metric, boot_vals, n){
+    x &amp;lt;- unlist(map(boot_vals, `[`, c(metric)))
+    if(metric == &amp;#39;Brier&amp;#39;){x &amp;lt;- as.numeric(rescale_brier(x, 0.184))}
+    paste0(&amp;quot;(&amp;quot;, round(quantile(x, 0.025), n), &amp;quot; to &amp;quot;, 
+           round(quantile(x, 0.975), n), &amp;quot;)&amp;quot;)
+  }
+
+# m1
+  m1_c_boot_ci     &amp;lt;- calc_ci(&amp;quot;C (ROC)&amp;quot;, boot_vals_m1, 2)
+  m1_brier_boot_ci &amp;lt;- calc_ci(&amp;quot;Brier&amp;quot;,   boot_vals_m1, 2)
+  m1_emax_boot_ci  &amp;lt;- calc_ci(&amp;quot;Emax&amp;quot;,    boot_vals_m1, 2)
+  m1_eavg_boot_ci  &amp;lt;- calc_ci(&amp;quot;Eavg&amp;quot;,    boot_vals_m1, 2)
+
+# m2
+  m2_c_boot_ci     &amp;lt;- calc_ci(&amp;quot;C (ROC)&amp;quot;, boot_vals_m2, 2)
+  m2_brier_boot_ci &amp;lt;- calc_ci(&amp;quot;Brier&amp;quot;,   boot_vals_m2, 2)
+  m2_emax_boot_ci  &amp;lt;- calc_ci(&amp;quot;Emax&amp;quot;,    boot_vals_m2, 2)
+  m2_eavg_boot_ci  &amp;lt;- calc_ci(&amp;quot;Eavg&amp;quot;,    boot_vals_m2, 2)
+  
+# m3
+  m3_c_boot_ci     &amp;lt;- calc_ci(&amp;quot;C (ROC)&amp;quot;, boot_vals_m3, 2)
+  m3_brier_boot_ci &amp;lt;- calc_ci(&amp;quot;Brier&amp;quot;,   boot_vals_m3, 2)
+  m3_emax_boot_ci  &amp;lt;- calc_ci(&amp;quot;Emax&amp;quot;,    boot_vals_m3, 2)
+  m3_eavg_boot_ci  &amp;lt;- calc_ci(&amp;quot;Eavg&amp;quot;,    boot_vals_m3, 2)
+  
+# m4
+  m4_c_boot_ci     &amp;lt;- calc_ci(&amp;quot;C (ROC)&amp;quot;, boot_vals_m4, 2)
+  m4_brier_boot_ci &amp;lt;- calc_ci(&amp;quot;Brier&amp;quot;,   boot_vals_m4, 2)
+  m4_emax_boot_ci  &amp;lt;- calc_ci(&amp;quot;Emax&amp;quot;,    boot_vals_m4, 2)
+  m4_eavg_boot_ci  &amp;lt;- calc_ci(&amp;quot;Eavg&amp;quot;,    boot_vals_m4, 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This code is for the shrinkage corrected c-index and calibration slope for Model Revision. Since we are estimating new coefficients for each predictor from the data we have, this helps us avoid over-fit. To do this, we use &lt;code&gt;rms::validate&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# To use validate, we need to estimate m4 with lrm instead of glm. 
+
+  d &amp;lt;- datadist(data)
+  options(datadist = &amp;quot;d&amp;quot;)
+  
+  m4b &amp;lt;- lrm(formula_4, data = data2, x = TRUE, y = TRUE)
+
+  set.seed(04012019)
+  val_new &amp;lt;- rms::validate(m4b, B = 500)
+  
+  shrink_factor &amp;lt;- round(val_new[&amp;quot;Slope&amp;quot;,&amp;quot;index.corrected&amp;quot;], 2)
+  c_corrected &amp;lt;- round(0.5 * (1 + val_new[&amp;quot;Dxy&amp;quot;,&amp;quot;index.corrected&amp;quot;]), 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, this is the code for making the calibration plots (&lt;code&gt;rms::val.plot&lt;/code&gt; will also give a nice calibration plot unless it’s suppressed in the call, but I wanted a ggplot based version so I could tweak it to my liking).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Function to produce the calibration plots
+
+  cal_plot &amp;lt;- function(model, model_name, pred_var, ...){
+
+    require(tidyverse)
+    require(viridis)
+    require(gridExtra)
+
+# The calibration plot        
+    g1 &amp;lt;- mutate(data, bin = ntile(get(pred_var), 10)) %&amp;gt;% 
+          # Bin prediction into 10ths
+      group_by(bin) %&amp;gt;%
+      mutate(n = n(), # Get ests and CIs
+             bin_pred = mean(get(pred_var)), 
+             bin_prob = mean(as.numeric(alive) - 1), 
+             se = sqrt((bin_prob * (1 - bin_prob)) / n), 
+             ul = bin_prob + 1.96 * se, 
+             ll = bin_prob - 1.96 * se) %&amp;gt;%
+      ungroup() %&amp;gt;%
+    ggplot(aes(x = bin_pred, y = bin_prob, ymin = ll, ymax = ul)) +
+      geom_pointrange(size = 0.5, color = &amp;quot;black&amp;quot;) +
+      scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, by = 0.1)) +
+      scale_x_continuous(limits = c(0, 1), breaks = seq(0, 1, by = 0.1)) +
+      geom_abline() + # 45 degree line indicating perfect calibration
+      geom_smooth(method = &amp;quot;lm&amp;quot;, se = FALSE, linetype = &amp;quot;dashed&amp;quot;, 
+                  color = &amp;quot;black&amp;quot;, formula = y~-1 + x) + 
+                  # straight line fit through estimates
+      geom_smooth(aes(x = get(pred_var), y = as.numeric(alive) - 1), 
+                  color = &amp;quot;red&amp;quot;, se = FALSE, method = &amp;quot;loess&amp;quot;) + 
+                  # loess fit through estimates
+      xlab(&amp;quot;&amp;quot;) +
+      ylab(&amp;quot;Observed Probability&amp;quot;) +
+      theme_minimal() +
+      ggtitle(model_name)
+
+# The distribution plot        
+    g2 &amp;lt;- ggplot(data, aes(x = get(pred_var))) +
+      geom_histogram(fill = &amp;quot;black&amp;quot;, bins = 200) +
+      scale_x_continuous(limits = c(0, 1), breaks = seq(0, 1, by = 0.1)) +
+      xlab(&amp;quot;Predicted Probability&amp;quot;) +
+      ylab(&amp;quot;&amp;quot;) +
+      theme_minimal() +
+      scale_y_continuous(breaks = c(0, 40)) +
+      theme(panel.grid.minor = element_blank())
+    
+# Combine them    
+    g &amp;lt;- arrangeGrob(g1, g2, respect = TRUE, heights = c(1, 0.25), ncol = 1)
+    grid.newpage()
+    grid.draw(g)
+    return(g[[3]])
+
+  }&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;results&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Results&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Combine all the results into a single dataframe 
+
+  model_tab_1 &amp;lt;- data_frame(
+    est = c(&amp;quot;Intercept&amp;quot;, &amp;quot;Slope&amp;quot;, &amp;quot;Residual deviance&amp;quot;, &amp;quot;Df&amp;quot;, 
+            &amp;quot;LRT Chisq p-value&amp;quot;, &amp;quot;Brier score (rescaled)&amp;quot;,
+            &amp;quot;Emax&amp;quot;, &amp;quot;Eavg&amp;quot;, &amp;quot;c-statistic&amp;quot;),
+    m1_est = c(round(c(0, 1,                 m1$deviance, m1$df.residual, 0), 2), 
+               paste(b1, m1_brier_boot_ci), 
+               paste(val_m1[&amp;quot;Emax&amp;quot;], m1_emax_boot_ci),
+               paste(val_m1[&amp;quot;Eavg&amp;quot;], m1_eavg_boot_ci),
+               paste(round(val_m1[&amp;quot;C (ROC)&amp;quot;], 2), m1_c_boot_ci)),
+    m2_est = c(round(c(tidy(m2)$estimate, 1, m2$deviance, m2$df.residual, 0), 2), 
+               paste(b2, m2_brier_boot_ci), 
+               paste(val_m2[&amp;quot;Emax&amp;quot;], m2_emax_boot_ci),
+               paste(val_m2[&amp;quot;Eavg&amp;quot;], m2_eavg_boot_ci), 
+               paste(round(val_m2[&amp;quot;C (ROC)&amp;quot;], 2), m2_c_boot_ci)),
+    m3_est = c(round(c(tidy(m3)$estimate,    m3$deviance, m3$df.residual, 0), 2), 
+               paste(b3, m3_brier_boot_ci), 
+               paste(val_m3[&amp;quot;Emax&amp;quot;], m3_emax_boot_ci),
+               paste(val_m3[&amp;quot;Eavg&amp;quot;], m3_eavg_boot_ci),
+               paste(round(val_m3[&amp;quot;C (ROC)&amp;quot;], 2), m3_c_boot_ci)),
+    m4_est = c(&amp;quot;&amp;quot;, &amp;quot;&amp;quot;,               round(c(m4$deviance, m4$df.residual, 0), 2), 
+               paste(b4, m4_brier_boot_ci), 
+               paste(val_m4[&amp;quot;Emax&amp;quot;], m4_emax_boot_ci),
+               paste(val_m4[&amp;quot;Eavg&amp;quot;], m4_eavg_boot_ci),
+               paste(round(val_m4[&amp;quot;C (ROC)&amp;quot;], 2), m4_c_boot_ci))
+    )
+  
+  names(model_tab_1) &amp;lt;- c(&amp;quot;&amp;quot;, &amp;quot;HOMR model&amp;quot;, &amp;quot;Calibration in the Large&amp;quot;, 
+                          &amp;quot;Logistic Recalibration&amp;quot;, &amp;quot;Model Revision&amp;quot;)
+  
+  model_tab_1[5, 2:5] &amp;lt;- c(
+    &amp;quot;-&amp;quot;, &amp;quot;&amp;lt;0.001&amp;quot;, round(anova(m2, m3, test = &amp;quot;Chisq&amp;quot;)[5][2, ], 2), &amp;quot;-&amp;quot;
+    )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Table 1.&lt;/strong&gt; All the results hacked into a table.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  knitr::kable(model_tab_1)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;HOMR model&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Calibration in the Large&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Logistic Recalibration&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Model Revision&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Intercept&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;-0.42&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;-0.43&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Slope&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.99&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Residual deviance&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1139.96&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1107.76&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1107.73&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1046.55&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Df&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1409&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1408&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1407&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1389&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;LRT Chisq p-value&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;-&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;lt;0.001&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.85&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Brier score (rescaled)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.15 (0.09 to 0.22)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.19 (0.11 to 0.26)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.19 (0.11 to 0.27)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.23 (0.17 to 0.32)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Emax&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.103 (0.08 to 0.17)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.111 (0.03 to 0.25)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.121 (0.03 to 0.23)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.017 (0.01 to 0.11)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Eavg&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.058 (0.04 to 0.08)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.016 (0.01 to 0.03)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.017 (0.01 to 0.03)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.008 (0 to 0.02)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;c-statistic&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.78 (0.75 to 0.81)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.78 (0.75 to 0.81)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.78 (0.75 to 0.81)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.82 (0.8 to 0.86)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;calibration-plots&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Calibration plots&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Figure 2.&lt;/strong&gt; Calibration plot for the HOMR model in a sample of 1409 patients aged 65 years or older that were under the care of geriatric medicine service at Cork University Hospital (2013-01-01 to 2015-03-06)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  x &amp;lt;- cal_plot(m1, &amp;quot;HOMR model&amp;quot;, &amp;quot;m1_pred&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/homr_files/figure-html/figure_1-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 3.&lt;/strong&gt; Calibration plots for &lt;strong&gt;Recalibration in the Large&lt;/strong&gt; &lt;img src=&#34;/post/homr_files/figure-html/figure_2-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 4.&lt;/strong&gt; Calibration plots for &lt;strong&gt;Model Revision&lt;/strong&gt; &lt;img src=&#34;/post/homr_files/figure-html/figure_3-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;other-stuff&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Other stuff&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Figure 5.&lt;/strong&gt; Logistic curve fit of the original HOMR model to one year post-hospitalization mortality&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Plot of data with a logistic curve fit
+  ggplot(data, aes(x = z_homr, y = as.numeric(alive) - 1)) +
+    geom_jitter(height = 0.1, size =1, alpha = 0.5) +
+    geom_smooth(method = &amp;quot;glm&amp;quot;,
+                method.args = list(family = &amp;quot;binomial&amp;quot;)) +
+    theme_minimal() +
+    scale_y_continuous(breaks = c(0, 1), labels = c(&amp;quot;Alive&amp;quot;, &amp;quot;Dead&amp;quot;)) +
+    ylab(&amp;quot;&amp;quot;) +
+    xlab(&amp;quot;HOMR Linear Predictor&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/homr_files/figure-html/unnamed-chunk-1-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 6.&lt;/strong&gt; Number/Proportion of patients who died within one year of hospitalization by risk level (Z)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  g1 &amp;lt;- ggplot(data, aes(x = z_homr, fill = alive)) +
+    geom_histogram() +
+    theme_minimal() +
+    xlab(&amp;quot;HOMR Linear Predictor&amp;quot;) +
+    ylab(&amp;quot;Number of Participants&amp;quot;) +
+    scale_fill_brewer(&amp;quot;Alive&amp;quot;, palette = &amp;quot;Paired&amp;quot;)
+
+  g2 &amp;lt;- ggplot(data, aes(x = z_homr, fill = alive)) +
+    geom_histogram(position = &amp;quot;fill&amp;quot;) +
+    theme_minimal() +
+    xlab(&amp;quot;HOMR Linear Predictor&amp;quot;) +
+    ylab(&amp;quot;Proportion&amp;quot;) +
+    scale_fill_brewer(&amp;quot;Alive&amp;quot;, palette = &amp;quot;Paired&amp;quot;)
+  
+  grid.arrange(g1, g2, ncol = 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/homr_files/figure-html/unnamed-chunk-2-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 7.&lt;/strong&gt; Distribution of the original HOMR linear predictor among those who did and didn’t die within one year after hospitalization&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(data, aes(y = z_homr, x = alive, fill = alive, color = alive)) +
+    geom_beeswarm() +
+    geom_boxplot(alpha = 0, color = &amp;quot;black&amp;quot;) +
+    theme_minimal() +
+    ylab(&amp;quot;HOMR Linear Predictor&amp;quot;) +
+    xlab(&amp;quot;Alive at 1 year&amp;quot;) +
+    scale_fill_brewer(guide = FALSE, palette = &amp;quot;Paired&amp;quot;) +
+    scale_color_brewer(guide = FALSE, palette = &amp;quot;Paired&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/homr_files/figure-html/unnamed-chunk-3-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Table 2.&lt;/strong&gt; HOMR Model Revision coefficients&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  covariates &amp;lt;- c(
+    &amp;quot;Intercept&amp;quot;,
+    &amp;quot;DRS&amp;quot;,                                            
+    &amp;quot;sqrt(Age)&amp;quot;,                                            
+    &amp;quot;Male (vs Female)&amp;quot;,                                       
+    &amp;quot;Rehab&amp;quot;,                             
+    &amp;quot;Homecare&amp;quot;,                         
+    &amp;quot;Nursing Home&amp;quot;,                     
+    &amp;quot;log(CCI)&amp;quot;,                                            
+    &amp;quot;sqrt(Ed visits in the previous year + 1)&amp;quot;,                                
+    &amp;quot;1/(Admissions by ambulance in previous year +1)&amp;quot;,    
+    &amp;quot;Other (vs General Medicine)&amp;quot;,                        
+    &amp;quot;ED w/o Ambulance&amp;quot;,                 
+    &amp;quot;ED w/Ambulance&amp;quot;,                   
+    &amp;quot;Urgent readmission&amp;quot;,                             
+    &amp;quot;Sqrt(Age) * log(CCI)&amp;quot;,                                       
+    &amp;quot;Rehab * 1/(Admissions by ambulance in previous year +1)&amp;quot;,              
+    &amp;quot;Homecare * 1/(Admissions by ambulance in previous year +1)&amp;quot;,           
+    &amp;quot;Nursing Home * 1/(Admissions by ambulance in previous year +1)&amp;quot;,       
+    &amp;quot;ED w/o Ambulance * 1/(Admissions by ambulance in previous year +1)&amp;quot;,
+    &amp;quot;ED w/Ambulance * 1/(Admissions by ambulance in previous year +1)&amp;quot;
+  )
+
+  sjPlot::tab_model(m4, show.p = FALSE, show.ci = FALSE, show.se = TRUE, 
+                    transform = NULL, pred.labels = covariates)&lt;/code&gt;&lt;/pre&gt;
+&lt;table style=&#34;border-collapse:collapse; border:none;&#34;&gt;
+&lt;tr&gt;
+&lt;th style=&#34;border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm;  text-align:left; &#34;&gt;
+ 
+&lt;/th&gt;
+&lt;th colspan=&#34;2&#34; style=&#34;border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; &#34;&gt;
+alive
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  text-align:left; &#34;&gt;
+Predictors
+&lt;/td&gt;
+&lt;td style=&#34; text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  &#34;&gt;
+Log-Odds
+&lt;/td&gt;
+&lt;td style=&#34; text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  &#34;&gt;
+std. Error
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+Intercept
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+-14.84
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+4.02
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+DRS
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.11
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.02
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+sqrt(Age)
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+1.45
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.43
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+Male (vs Female)
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.44
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.17
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+Rehab
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+-1.16
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.71
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+Homecare
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.41
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.66
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+Nursing Home
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+-0.34
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+1.29
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+log(CCI)
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+2.78
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+2.83
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+sqrt(Ed visits in the previous year + 1)
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.16
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.71
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+1/(Admissions by ambulance in previous year +1)
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.19
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.61
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+Other (vs General Medicine)
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+-0.68
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.46
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+ED w/o Ambulance
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.38
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.67
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+ED w/Ambulance
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+1.21
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+1.12
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+Urgent readmission
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.60
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.27
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+Sqrt(Age) * log(CCI)
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+-0.23
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.31
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+Rehab * 1/(Admissions by ambulance in previous year +1)
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+-0.31
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.79
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+Homecare * 1/(Admissions by ambulance in previous year +1)
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+-0.51
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.82
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+Nursing Home * 1/(Admissions by ambulance in previous year +1)
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+-0.46
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+1.78
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+ED w/o Ambulance * 1/(Admissions by ambulance in previous year +1)
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+-0.87
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+0.76
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; &#34;&gt;
+ED w/Ambulance * 1/(Admissions by ambulance in previous year +1)
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+-1.91
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  &#34;&gt;
+1.34
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm; border-top:1px solid;&#34;&gt;
+Observations
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left; border-top:1px solid;&#34; colspan=&#34;2&#34;&gt;
+1409
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;&#34;&gt;
+Cox &amp;amp; Snell’s R&lt;sup&gt;2&lt;/sup&gt; / Nagelkerke’s R&lt;sup&gt;2&lt;/sup&gt;
+&lt;/td&gt;
+&lt;td style=&#34; padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;&#34; colspan=&#34;2&#34;&gt;
+0.191 / 0.310
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;Note: Admit service recoded to General Medicine vs Other, due to small call sizes. ICU admission was omitted as there were only 3 cases of this happening. Home O2 was omitted since no patients in our sample were using it.&lt;/p&gt;
+&lt;p&gt;Full distributions of bootstrapped values.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  boots &amp;lt;- function(metric, boot_vals){
+    x &amp;lt;- as.numeric(unlist(map(boot_vals, `[`, metric)))
+    if(metric == &amp;#39;Brier&amp;#39;){x &amp;lt;- as.numeric(rescale_brier(x, 0.184))}
+    return(x)
+  }
+
+  boot_list &amp;lt;- list(boot_vals_m1, boot_vals_m2, boot_vals_m3, boot_vals_m4)
+  metrics &amp;lt;- c(&amp;quot;C (ROC)&amp;quot;, &amp;quot;Brier&amp;quot;, &amp;quot;Eavg&amp;quot;, &amp;quot;Emax&amp;quot;)
+  
+  x &amp;lt;- c()
+  for(i in metrics){
+    for(j in 1:4){
+      x &amp;lt;- c(x, boots(i, boot_list[[j]]))
+    }
+  }
+  
+  y &amp;lt;- rep(c(paste0(&amp;quot;m&amp;quot;, 1:4, &amp;quot; c-index&amp;quot;), paste0(&amp;quot;m&amp;quot;, 1:4, &amp;quot; Brier&amp;quot;), 
+             paste0(&amp;quot;m&amp;quot;, 1:4, &amp;quot; Emax&amp;quot;), paste0(&amp;quot;m&amp;quot;, 1:4, &amp;quot; Eavg&amp;quot;)), 
+           each = 500) 
+
+  boot_data &amp;lt;- data_frame(var = y, val = x)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Figure 7.&lt;/strong&gt; Distributions of bootstrapped model statistics&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(boot_data, aes(x = val)) +
+    geom_density() +
+    facet_wrap(~var, nrow = 4, scales = &amp;quot;free&amp;quot;) +
+    theme_minimal() +
+    xlab(&amp;quot;&amp;quot;) +
+    ylab(&amp;quot;Density&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/homr_files/figure-html/boot_plot-1.svg&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Packages used
+
+# library(tidyverse)
+# library(rms)
+# library(Hmisc)
+# library(knitr)
+# library(broom)
+# library(pander)
+# library(ggbeeswarm)
+# library(gridExtra)
+# library(grid)
+# library(sjPlot)
+# library(sjmisc)
+# library(sjlabelled)
+# library(viridis)
+
+  sessionInfo()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## R version 3.4.3 (2017-11-30)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 15063)
+## 
+## Matrix products: default
+## 
+## locale:
+## [1] LC_COLLATE=English_United Kingdom.1252 
+## [2] LC_CTYPE=English_United Kingdom.1252   
+## [3] LC_MONETARY=English_United Kingdom.1252
+## [4] LC_NUMERIC=C                           
+## [5] LC_TIME=English_United Kingdom.1252    
+## 
+## attached base packages:
+## [1] grid      methods   stats     graphics  grDevices utils     datasets 
+## [8] base     
+## 
+## other attached packages:
+##  [1] viridis_0.5.1     viridisLite_0.3.0 sjlabelled_1.0.17
+##  [4] sjmisc_2.7.9      sjPlot_2.6.2      gridExtra_2.3    
+##  [7] ggbeeswarm_0.6.0  pander_0.6.2      broom_0.4.4      
+## [10] knitr_1.20        rms_5.1-2         SparseM_1.77     
+## [13] Hmisc_4.1-1       Formula_1.2-3     survival_2.41-3  
+## [16] lattice_0.20-35   forcats_0.3.0     stringr_1.3.1    
+## [19] dplyr_0.8.0.1     purrr_0.2.5       readr_1.1.1      
+## [22] tidyr_0.8.1       tibble_2.0.1      ggplot2_3.1.0    
+## [25] tidyverse_1.2.1  
+## 
+## loaded via a namespace (and not attached):
+##  [1] nlme_3.1-131        lubridate_1.7.4     insight_0.2.0      
+##  [4] RColorBrewer_1.1-2  httr_1.4.0          rprojroot_1.3-2    
+##  [7] TMB_1.7.13          tools_3.4.3         backports_1.1.2    
+## [10] R6_2.2.2            rpart_4.1-11        vipor_0.4.5        
+## [13] lazyeval_0.2.1      colorspace_1.3-2    nnet_7.3-12        
+## [16] withr_2.1.2         tidyselect_0.2.5    mnormt_1.5-5       
+## [19] emmeans_1.2.3       curl_3.3            compiler_3.4.3     
+## [22] cli_1.0.1           rvest_0.3.2         quantreg_5.36      
+## [25] htmlTable_1.12      xml2_1.2.0          sandwich_2.4-0     
+## [28] labeling_0.3        bookdown_0.9        scales_1.0.0       
+## [31] checkmate_1.8.5     polspline_1.1.13    mvtnorm_1.0-8      
+## [34] psych_1.8.4         digest_0.6.18       minqa_1.2.4        
+## [37] foreign_0.8-69      rmarkdown_1.10      base64enc_0.1-3    
+## [40] pkgconfig_2.0.2     htmltools_0.3.6     lme4_1.1-17        
+## [43] highr_0.7           htmlwidgets_1.3     rlang_0.3.4        
+## [46] readxl_1.1.0        rstudioapi_0.7      zoo_1.8-2          
+## [49] jsonlite_1.6        acepack_1.4.1       magrittr_1.5       
+## [52] Matrix_1.2-12       Rcpp_1.0.0          munsell_0.5.0      
+## [55] stringi_1.4.3       multcomp_1.4-8      yaml_2.1.19        
+## [58] snakecase_0.9.1     MASS_7.3-47         plyr_1.8.4         
+## [61] parallel_3.4.3      crayon_1.3.4        ggeffects_0.9.0    
+## [64] haven_2.1.0         splines_3.4.3       sjstats_0.17.4     
+## [67] hms_0.4.2           pillar_1.3.1        estimability_1.3   
+## [70] reshape2_1.4.3      codetools_0.2-15    glue_1.3.0         
+## [73] evaluate_0.10.1     blogdown_0.6        latticeExtra_0.6-28
+## [76] data.table_1.11.4   modelr_0.1.2        nloptr_1.0.4       
+## [79] MatrixModels_0.4-1  cellranger_1.1.0    gtable_0.2.0       
+## [82] assertthat_0.2.0    xfun_0.2            xtable_1.8-2       
+## [85] coda_0.19-1         glmmTMB_0.2.1.0     beeswarm_0.2.3     
+## [88] cluster_2.0.6       TH.data_1.0-8&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Science doesn&#39;t have a problem</title>
       <link>/post/problems_part1/</link>
       <pubDate>Thu, 20 Dec 2018 12:00:00 +0000</pubDate>
@@ -1017,42 +1850,6 @@ Search 4: Search 1 AND (counterfactual OR potential outcomes)
 &lt;p&gt;&lt;a href=&#34;https://www.rstudio.com/products/rstudio/download2/&#34; target=&#34;_blank&#34;&gt;https://www.rstudio.com/products/rstudio/download2/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://dantalus.github.io/public/images/cars.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cause vs. Consequence</title>
-      <link>/post/2017-02-04-consequentialism/</link>
-      <pubDate>Sat, 04 Feb 2017 12:00:00 +0000</pubDate>
-      
-      <guid>/post/2017-02-04-consequentialism/</guid>
-      <description>&lt;p&gt;I have, for some time, wanted to respond to Sandro Galea&amp;rsquo;s &lt;a href=&#34;https://academic.oup.com/aje/article/178/8/1185/84205/An-Argument-for-a-Consequentialist-Epidemiology&#34; target=&#34;_blank&#34;&gt;essay on a Consequentialist Epidemiology&lt;/a&gt;, published in 2013 (!) in the American Journal of Epidemiology. It is hard to argue against the importance of consequentialism for academic epidemiology. It is equally hard to dismiss Galea&amp;rsquo;s concerns about our lack of influence with funders and policy makers. However, my views beyond this diverge from Professor Galea&amp;rsquo;s, and in the spirit of his &amp;ldquo;provocation,&amp;rdquo; I would like to respectfully offer an alternate perspective.&lt;/p&gt;
-
-&lt;p&gt;Galea seems primarily concerned that academic epidemiology is focused too much on identifying causes of disease, and not enough on actual intervention. He further worries that &amp;ldquo;our focus on causal rather than pragmatic thinking&amp;rdquo; risks marginalizing us with funders and policy makers. His solution to this problem is to promote a &amp;ldquo;consequentialist epidemiology&amp;rdquo; that is intensely focused on improving health outcomes, even &amp;ldquo;at the expense of the development of epidemiological methods and novel approaches.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;Setting up the need for a consequentialist epidemiology, Galea points to key epidemiological textbooks and journals as evidence that we are too focused on etiology and not focused enough on intervention. The former, he observes, don&amp;rsquo;t teach students how to intervene, and the latter are too focused on etiological research and publish relatively few papers about actual interventions. Though his observations are surely accurate, I think they reflect too narrow a view of academic epidemiology.&lt;/p&gt;
-
-&lt;p&gt;We train in schools of public health, where we are expected to study a range of topics that often includes intervention design and evaluation. We typically work in the same, or similarly diverse, institutions, where our expertise contributes to a variety of public health research programs, and is published widely. The interventions we contribute to have a better chance of appearing in &amp;ldquo;high impact&amp;rdquo; journals, while our etiological research and innovative methods are appropriately showcased for our peers in the &amp;ldquo;core epidemiological&amp;rdquo; journals. It is thus no suprise that &amp;ldquo;our&amp;rdquo; journals are focused on method, and in no way does this reflect a lack of consequentialism.&lt;/p&gt;
-
-&lt;p&gt;All of that being said, of course we are preoccupied with etiology and cause! Definitive answers to causal questions are rare, but if we want to intelligently inform intervention efforts, we must continue to pursue them - even in observational data, and even in the face of heroic assumptions.  The only alternative is to say nothing at all. We are not content to simply describe the world we live in. We want to overcome these barriers to causal inference, as best as possible. Consequently, epidemiologists have built tools for causal inference that are improving applied research, even in &amp;ldquo;gold-standard&amp;rdquo; RCTs. Causal thinking is thus not a detraction to pragmatic thinking – it is a consequence of it.&lt;/p&gt;
-
-&lt;p&gt;Cause is our niche. Successful public health interventions are born of long, complex processes. A different expertise is required at each step in this process, and no person, or academic discipline, can master them all.  Thus, if an academic discipline is going to contribute to this process, it must occupy a useful space. The application of causal thinking is ours.&lt;/p&gt;
-
-&lt;p&gt;From this perspective, I am troubled that we would sacrifice the continued development of epidemiological methods, especially those aimed at improving our causal inferences. I believe that any sacrifice to methodological rigour and innovation will do nothing but hasten us down the path to irrelevance. The solutions to our problems lie in more causal thinking, not less.&lt;/p&gt;
-
-&lt;p&gt;Galea provides examples of the kind of intervention research he would like to see published more often in our core journals. I believe that it is facile to say that we should engage more with interventions without clarifying our contribution.  At a glance, we can see that Galea&amp;rsquo;s examples ask fundamentally causal questions; and even though these papers are about interventions, the questions being asked are about relationships in observational data. A better goal then would be to bring our expertise to intervention research, or, if needed, to show interventionists what we bring to the table. Consequently, any sacrifice of our method would be counter-productive.&lt;/p&gt;
-
-&lt;p&gt;I also fail to see how reducing methodological rigor and innovation will cure external dissatisfaction with &amp;ldquo;epidemiologic description and correlation&amp;rdquo;.  Most of this dissatisfaction has to do with the never-ending reporting of weak, often conflicting associations among every exposure/disease dyad under the sun (see the &lt;a href=&#34;http://journals.lww.com/epidem/Citation/1993/05000/The_Hypothesis_Generating_Machine.12.aspx&#34; target=&#34;_blank&#34;&gt;Hypothesis Generating Machine&lt;/a&gt;). But this situation isn’t the result of obsession with cause, but rather the opposite (combined with perverse incentives to publish, and poor application of tools for statistical inference). Surely we should instead respond to our critics by continuing to improve the way we make inferences about correlations, and apply those methods more consistently as a profession. This of course requires more causal thinking, not less.&lt;/p&gt;
-
-&lt;p&gt;I also strongly disagree that the lack of &amp;ldquo;big wins&amp;rdquo; is an indictment of causal thinking. I offer a more likely explanation: we have already picked the low hanging fruit. All the big risk-ratios have been found, simply because they are the easiest to find. Now we are looking for needles in haystacks, and our necessary search for small effect sizes means that we should be striving for more methodological rigour, not less. If funders are walking away because we haven&amp;rsquo;t found the next tobacco-sized health risk, whom will they turn to? And how long will it take them to return once they realize poorer methodological rigour leads to even more ghost chases?&lt;/p&gt;
-
-&lt;p&gt;If the funders and policy makers do not appreciate our contributions, perhaps we must instead strive to help them appreciate what it is that we do. The field of economics doesn&amp;rsquo;t seem to have produced any big wins as of late, but they do undoubtedly have more sway with policy makers. Perhaps this is simply because more people know, or at least think they know, what an economist is. Conversely, my own mother still suspects that I am &amp;ldquo;some kind of skin doctor&amp;rdquo;. &lt;em&gt;This&lt;/em&gt; is our problem.&lt;/p&gt;
-
-&lt;p&gt;Finally, I too agree that we must change the way we train epidemiologists, but what does an outcome orientated epidemiology training program look like? Which outcomes will programs focus on? How will these decisions be made? The beauty of training students on &amp;ldquo;our methods as tools&amp;rdquo; is that these can be applied to a variety of problems. I would argue instead for a greater emphasis on causal thinking at all levels of epidemiological training.&lt;/p&gt;
-
-&lt;p&gt;To this point I have argued that epidemiology in practice is already consequentialist in nature, and that our embrace of causal thinking and continued investment in methodological innovation is a reflection of this. Though I must agree with Professor Galea that our field faces important challenges, following from my position, I see no solutions in the dulling of our expertise. Quite the opposite. So in epidemiology, just like in life, there is no consequence without cause.&lt;/p&gt;
-
-&lt;p&gt;[First draft,  Feb 06, 2017]&lt;/p&gt;
 </description>
     </item>
     

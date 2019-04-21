@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="author" content="Darren L Dahly">
+  <meta name="description" content="Principal Statistician | Senior Lecturer">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-56679606-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="/post/homr/">
+
+  
+
+  <title>Evaluating a logistic regression based prediction tool in R | </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"></a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Evaluating a logistic regression based prediction tool in R</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2019-04-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sun, Apr 21, 2019
+    </time>
+  </span>
+
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fhomr%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Evaluating%20a%20logistic%20regression%20based%20prediction%20tool%20in%20R&amp;url=%2fpost%2fhomr%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fhomr%2f&amp;title=Evaluating%20a%20logistic%20regression%20based%20prediction%20tool%20in%20R"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fhomr%2f&amp;title=Evaluating%20a%20logistic%20regression%20based%20prediction%20tool%20in%20R"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Evaluating%20a%20logistic%20regression%20based%20prediction%20tool%20in%20R&amp;body=%2fpost%2fhomr%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <p>This is a tutorial on how to use R to evaluate a previously published prediction tool in a new dataset. Most of the good ideas came from <a href="https://twitter.com/MaartenvSmeden">Maarten van Smedan</a>, and any mistakes are surely mine. This post is not intended to explain they <em>why</em> one might do what follows, but rather <em>how</em> to do it in R.</p>
+<p>It is based on a recent analysis we published (In Press) that validated the <a href="http://dx.doi.org/10.1016/j.jclinepi.2014.05.003">HOMR</a> model to predict all-cause mortality within one-year of a hospitalization in a cohort of patients aged 65 years or older that were under the care of geriatric medicine service at Cork University Hospital (2013-01-01 to 2015-03-06). The predictors used in the HOMR model were generally things that are easy enough to collect during hospitalization. You can read all about it in the paper linked above.</p>
+<p>All materials for the analysis can be found on the <a href="https://osf.io/tv26k/">project’s OSF page</a>.</p>
+<pre class="r"><code>  data &lt;- read_csv(&quot;https://crfcsdau.github.io/public/homr_data.csv&quot;) 
+  data$alive &lt;- factor(data$alive, levels = c(&quot;Yes&quot;, &quot;No&quot;))</code></pre>
+<div id="calculating-the-homr-score" class="section level2">
+<h2>Calculating the HOMR score</h2>
+<p>The first step in evaluating the HOMR model in our cohort of patients was to calculate the linear predictor (Z) for each of them. This was done by multiplying the fitted regression coefficients (on the log-odds scale; found in appendix E of the <a href="http://dx.doi.org/10.1016/j.jclinepi.2014.05.003">HOMR development paper</a>) by each patient’s respective variable values, and then adding them all together, including the intercept term (<code>data$z_homr</code>).</p>
+<p>The original HOMR development paper also provided a set of tables to calculate a score based on the predictors (<code>data$homr_3</code>). However, these scores are just a rescaled version of Z that gives you a set of integer values that can be easily added together from simple tables to get a prediction. However, since there was considerable rounding error (as you can see from the plot below), we used Z instead of the HOMR score in our evaluation.</p>
+<p><strong>Figure 1.</strong> The relationship between the HOMR score and the HOMR linear predictor (Z) in our cohort of patients.</p>
+<pre class="r"><code>  ggplot(data, aes(x = z_homr, y = homr_3)) +
+    geom_point(alpha = 0.2, size = 2, color = viridis(1, begin = 0.5)) +
+    xlab(&quot;HOMR linear predictor (log odds scale)&quot;) +
+    ylab(&quot;HOMR score&quot;) +
+    theme_minimal()</code></pre>
+<p><img src="/post/homr_files/figure-html/score_vs_z_scatter-1.svg" width="768" /></p>
+</div>
+<div id="evaluating-the-model-overview" class="section level2">
+<h2>Evaluating the model: Overview</h2>
+<p>To evaluate the HOMR Model, we followed the procedure outlined in <a href="https://doi.org/10.1002/sim.7179">Vergouwe e t al (2016)</a> and estimated four logistic regression models. The first included the HOMR linear predictor, with its coefficient set equal to 1, and intercept set to zero (<strong>the original HOMR model</strong>). The second model allowed the intercept to be freely estimated (<strong>Recalibration in the Large</strong>). The third then allowed the coefficient on the HOMR linear predictor to be freely estimated as well (<strong>Logistic Recalibration</strong>). Finally, the fourth model included the complete set variables used in the HOMR model, including the same transformations and interactions, and allowed their respective coefficients to be freely estimated (<strong>Model Revision</strong>). Here is the code for executing those models:</p>
+<pre class="r"><code># HOMR (intercept = 0 and beta = 1)
+  m1 &lt;- glm(alive ~ -1 + offset(z_homr), data = data, family = binomial)
+# Recalibration in the Large (estimate intercept, beta = 1)
+  m2 &lt;- glm(alive ~  1 + offset(z_homr), data = data, family = binomial)
+# Logisitic Calibration (estimate both)
+  m3 &lt;- glm(alive ~  1 +        z_homr,  data = data, family = binomial)
+# Model Revision
+  data2 &lt;- data
+  data2$admit_service &lt;- as.character(data2$admit_service)
+  data2$admit_service &lt;- factor(
+    ifelse( # Sparse cells, so this was collapsed to binary
+    data2$admit_service == &quot;General Medicine&quot;, 
+    data2$admit_service, 
+    &quot;Other&quot;
+    )
+  )
+  
+  formula_4 &lt;- as.formula(
+    &quot;alive ~  1 + drs + sqrt_age + sex + living_status + log_cci +
+    trans_ed + trans_amb + admit_service + urgency_admit + urgent_readmit +      
+    (sqrt_age * log_cci) + (living_status * trans_amb) + 
+    (urgency_admit * trans_amb)&quot;
+    )
+
+  m4 &lt;- glm(formula_4, data = data2, family = binomial)
+  
+# Model predicted probabilties
+  data$m1_pred &lt;- predict(m1, type = &quot;response&quot;)
+  data$m2_pred &lt;- predict(m2, type = &quot;response&quot;)
+  data$m3_pred &lt;- predict(m3, type = &quot;response&quot;)
+  data$m4_pred &lt;- predict(m4, type = &quot;response&quot;)</code></pre>
+<p>The overall performance of these models was evaluated using the Brier score, rescaled to range from 0 to 1 (with higher values indicating better performance) as suggested by <a href="https://doi.org/10.1097/EDE.0b013e3181c30fb2">Steyerberg et al (2010)</a>. We assessed calibration graphically, in addition to using the maximum and average difference in predicted vs loess-calibrated probabilities (Emax and Eavg); and we used the c-statistic to assess discrimination. For each of these metrics, we reported bootstrapped 95% confidence intervals. Finally, for <strong>Model Revision</strong>, we estimated an optimism-corrected c-statistic and shrinkage factor using bootstrapping, as described in <a href="https://doi-org.ucc.idm.oclc.org/10.1002/(SICI)1097-0258(19960229)15:4%3C361::AID-SIM168%3E3.0.CO;2-4">Harrell, Lee and Mark (1996)</a></p>
+<p>To get most metrics, we used <code>rms::val.prob</code> as follows:</p>
+<pre class="r"><code># Metrics  
+  val_m1 &lt;- val.prob(data$m1_pred, as.numeric(data$alive) - 1, 
+                     pl = FALSE) %&gt;% round(3)
+  val_m2 &lt;- val.prob(data$m2_pred, as.numeric(data$alive) - 1, 
+                     pl = FALSE) %&gt;% round(3)
+  val_m3 &lt;- val.prob(data$m3_pred, as.numeric(data$alive) - 1, 
+                     pl = FALSE) %&gt;% round(3)
+  val_m4 &lt;- val.prob(data$m4_pred, as.numeric(data$alive) - 1, 
+                     pl = FALSE) %&gt;% round(3)
+  
+  rescale_brier &lt;- function(x, p, ...){ 
+    format(round(1 - (x / (mean(p) * (1 - mean(p)))), digits = 2), nsmall = 2)
+  }
+  
+  b1 &lt;- rescale_brier(val_m1[&quot;Brier&quot;], 0.184) 
+  b2 &lt;- rescale_brier(val_m2[&quot;Brier&quot;], 0.184)
+  b3 &lt;- rescale_brier(val_m3[&quot;Brier&quot;], 0.184)
+  b4 &lt;- rescale_brier(val_m4[&quot;Brier&quot;], 0.184)
+# Note: 0.184 is the marginal probabilty of death in the entire sample</code></pre>
+<p>Here is what the <code>rms::val.prob</code> output looks like.</p>
+<pre class="r"><code>  pander(val_m1) </code></pre>
+<table>
+<caption>Table continues below</caption>
+<colgroup>
+<col width="10%" />
+<col width="13%" />
+<col width="9%" />
+<col width="10%" />
+<col width="14%" />
+<col width="8%" />
+<col width="10%" />
+<col width="14%" />
+<col width="6%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Dxy</th>
+<th align="center">C (ROC)</th>
+<th align="center">R2</th>
+<th align="center">D</th>
+<th align="center">D:Chi-sq</th>
+<th align="center">D:p</th>
+<th align="center">U</th>
+<th align="center">U:Chi-sq</th>
+<th align="center">U:p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0.564</td>
+<td align="center">0.782</td>
+<td align="center">0.22</td>
+<td align="center">0.145</td>
+<td align="center">204.6</td>
+<td align="center">NA</td>
+<td align="center">0.021</td>
+<td align="center">32.23</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="10%" />
+<col width="16%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="12%" />
+<col width="6%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Q</th>
+<th align="center">Brier</th>
+<th align="center">Intercept</th>
+<th align="center">Slope</th>
+<th align="center">Emax</th>
+<th align="center">E90</th>
+<th align="center">Eavg</th>
+<th align="center">S:z</th>
+<th align="center">S:p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0.123</td>
+<td align="center">0.127</td>
+<td align="center">-0.428</td>
+<td align="center">0.985</td>
+<td align="center">0.103</td>
+<td align="center">0.102</td>
+<td align="center">0.058</td>
+<td align="center">-3.806</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p>Uncertainty in these metrics was evaluated with bootstrapping.</p>
+<pre class="r"><code>  set.seed(48572)
+
+  boot_val &lt;- function(data, formula, ...){
+    out &lt;- list()
+    for(i in 1:500){
+      df &lt;- sample_n(data, nrow(data), replace = TRUE)
+      md &lt;- glm(formula, data = df, family = binomial)
+      out[[i]] &lt;- val.prob(predict(md, type = &quot;response&quot;),
+                           as.numeric(df$alive) - 1, 
+                           pl = FALSE) %&gt;% round(3)
+    }
+    return(out)
+  }
+
+  boot_vals_m1 &lt;- boot_val(data,  as.formula(&quot;alive ~ -1 + offset(z_homr)&quot;))
+  boot_vals_m2 &lt;- boot_val(data,  as.formula(&quot;alive ~  1 + offset(z_homr)&quot;))
+  boot_vals_m3 &lt;- boot_val(data,  as.formula(&quot;alive ~  1 +        z_homr &quot;))
+  boot_vals_m4 &lt;- boot_val(data2, formula_4) </code></pre>
+<p>This code just pulls out 95% intervals from the bootstrapped values.</p>
+<pre class="r"><code>  calc_ci &lt;- function(metric, boot_vals, n){
+    x &lt;- unlist(map(boot_vals, `[`, c(metric)))
+    if(metric == &#39;Brier&#39;){x &lt;- as.numeric(rescale_brier(x, 0.184))}
+    paste0(&quot;(&quot;, round(quantile(x, 0.025), n), &quot; to &quot;, 
+           round(quantile(x, 0.975), n), &quot;)&quot;)
+  }
+
+# m1
+  m1_c_boot_ci     &lt;- calc_ci(&quot;C (ROC)&quot;, boot_vals_m1, 2)
+  m1_brier_boot_ci &lt;- calc_ci(&quot;Brier&quot;,   boot_vals_m1, 2)
+  m1_emax_boot_ci  &lt;- calc_ci(&quot;Emax&quot;,    boot_vals_m1, 2)
+  m1_eavg_boot_ci  &lt;- calc_ci(&quot;Eavg&quot;,    boot_vals_m1, 2)
+
+# m2
+  m2_c_boot_ci     &lt;- calc_ci(&quot;C (ROC)&quot;, boot_vals_m2, 2)
+  m2_brier_boot_ci &lt;- calc_ci(&quot;Brier&quot;,   boot_vals_m2, 2)
+  m2_emax_boot_ci  &lt;- calc_ci(&quot;Emax&quot;,    boot_vals_m2, 2)
+  m2_eavg_boot_ci  &lt;- calc_ci(&quot;Eavg&quot;,    boot_vals_m2, 2)
+  
+# m3
+  m3_c_boot_ci     &lt;- calc_ci(&quot;C (ROC)&quot;, boot_vals_m3, 2)
+  m3_brier_boot_ci &lt;- calc_ci(&quot;Brier&quot;,   boot_vals_m3, 2)
+  m3_emax_boot_ci  &lt;- calc_ci(&quot;Emax&quot;,    boot_vals_m3, 2)
+  m3_eavg_boot_ci  &lt;- calc_ci(&quot;Eavg&quot;,    boot_vals_m3, 2)
+  
+# m4
+  m4_c_boot_ci     &lt;- calc_ci(&quot;C (ROC)&quot;, boot_vals_m4, 2)
+  m4_brier_boot_ci &lt;- calc_ci(&quot;Brier&quot;,   boot_vals_m4, 2)
+  m4_emax_boot_ci  &lt;- calc_ci(&quot;Emax&quot;,    boot_vals_m4, 2)
+  m4_eavg_boot_ci  &lt;- calc_ci(&quot;Eavg&quot;,    boot_vals_m4, 2)</code></pre>
+<p>This code is for the shrinkage corrected c-index and calibration slope for Model Revision. Since we are estimating new coefficients for each predictor from the data we have, this helps us avoid over-fit. To do this, we use <code>rms::validate</code>.</p>
+<pre class="r"><code># To use validate, we need to estimate m4 with lrm instead of glm. 
+
+  d &lt;- datadist(data)
+  options(datadist = &quot;d&quot;)
+  
+  m4b &lt;- lrm(formula_4, data = data2, x = TRUE, y = TRUE)
+
+  set.seed(04012019)
+  val_new &lt;- rms::validate(m4b, B = 500)
+  
+  shrink_factor &lt;- round(val_new[&quot;Slope&quot;,&quot;index.corrected&quot;], 2)
+  c_corrected &lt;- round(0.5 * (1 + val_new[&quot;Dxy&quot;,&quot;index.corrected&quot;]), 2)</code></pre>
+<p>Finally, this is the code for making the calibration plots (<code>rms::val.plot</code> will also give a nice calibration plot unless it’s suppressed in the call, but I wanted a ggplot based version so I could tweak it to my liking).</p>
+<pre class="r"><code># Function to produce the calibration plots
+
+  cal_plot &lt;- function(model, model_name, pred_var, ...){
+
+    require(tidyverse)
+    require(viridis)
+    require(gridExtra)
+
+# The calibration plot        
+    g1 &lt;- mutate(data, bin = ntile(get(pred_var), 10)) %&gt;% 
+          # Bin prediction into 10ths
+      group_by(bin) %&gt;%
+      mutate(n = n(), # Get ests and CIs
+             bin_pred = mean(get(pred_var)), 
+             bin_prob = mean(as.numeric(alive) - 1), 
+             se = sqrt((bin_prob * (1 - bin_prob)) / n), 
+             ul = bin_prob + 1.96 * se, 
+             ll = bin_prob - 1.96 * se) %&gt;%
+      ungroup() %&gt;%
+    ggplot(aes(x = bin_pred, y = bin_prob, ymin = ll, ymax = ul)) +
+      geom_pointrange(size = 0.5, color = &quot;black&quot;) +
+      scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, by = 0.1)) +
+      scale_x_continuous(limits = c(0, 1), breaks = seq(0, 1, by = 0.1)) +
+      geom_abline() + # 45 degree line indicating perfect calibration
+      geom_smooth(method = &quot;lm&quot;, se = FALSE, linetype = &quot;dashed&quot;, 
+                  color = &quot;black&quot;, formula = y~-1 + x) + 
+                  # straight line fit through estimates
+      geom_smooth(aes(x = get(pred_var), y = as.numeric(alive) - 1), 
+                  color = &quot;red&quot;, se = FALSE, method = &quot;loess&quot;) + 
+                  # loess fit through estimates
+      xlab(&quot;&quot;) +
+      ylab(&quot;Observed Probability&quot;) +
+      theme_minimal() +
+      ggtitle(model_name)
+
+# The distribution plot        
+    g2 &lt;- ggplot(data, aes(x = get(pred_var))) +
+      geom_histogram(fill = &quot;black&quot;, bins = 200) +
+      scale_x_continuous(limits = c(0, 1), breaks = seq(0, 1, by = 0.1)) +
+      xlab(&quot;Predicted Probability&quot;) +
+      ylab(&quot;&quot;) +
+      theme_minimal() +
+      scale_y_continuous(breaks = c(0, 40)) +
+      theme(panel.grid.minor = element_blank())
+    
+# Combine them    
+    g &lt;- arrangeGrob(g1, g2, respect = TRUE, heights = c(1, 0.25), ncol = 1)
+    grid.newpage()
+    grid.draw(g)
+    return(g[[3]])
+
+  }</code></pre>
+</div>
+<div id="results" class="section level2">
+<h2>Results</h2>
+<pre class="r"><code># Combine all the results into a single dataframe 
+
+  model_tab_1 &lt;- data_frame(
+    est = c(&quot;Intercept&quot;, &quot;Slope&quot;, &quot;Residual deviance&quot;, &quot;Df&quot;, 
+            &quot;LRT Chisq p-value&quot;, &quot;Brier score (rescaled)&quot;,
+            &quot;Emax&quot;, &quot;Eavg&quot;, &quot;c-statistic&quot;),
+    m1_est = c(round(c(0, 1,                 m1$deviance, m1$df.residual, 0), 2), 
+               paste(b1, m1_brier_boot_ci), 
+               paste(val_m1[&quot;Emax&quot;], m1_emax_boot_ci),
+               paste(val_m1[&quot;Eavg&quot;], m1_eavg_boot_ci),
+               paste(round(val_m1[&quot;C (ROC)&quot;], 2), m1_c_boot_ci)),
+    m2_est = c(round(c(tidy(m2)$estimate, 1, m2$deviance, m2$df.residual, 0), 2), 
+               paste(b2, m2_brier_boot_ci), 
+               paste(val_m2[&quot;Emax&quot;], m2_emax_boot_ci),
+               paste(val_m2[&quot;Eavg&quot;], m2_eavg_boot_ci), 
+               paste(round(val_m2[&quot;C (ROC)&quot;], 2), m2_c_boot_ci)),
+    m3_est = c(round(c(tidy(m3)$estimate,    m3$deviance, m3$df.residual, 0), 2), 
+               paste(b3, m3_brier_boot_ci), 
+               paste(val_m3[&quot;Emax&quot;], m3_emax_boot_ci),
+               paste(val_m3[&quot;Eavg&quot;], m3_eavg_boot_ci),
+               paste(round(val_m3[&quot;C (ROC)&quot;], 2), m3_c_boot_ci)),
+    m4_est = c(&quot;&quot;, &quot;&quot;,               round(c(m4$deviance, m4$df.residual, 0), 2), 
+               paste(b4, m4_brier_boot_ci), 
+               paste(val_m4[&quot;Emax&quot;], m4_emax_boot_ci),
+               paste(val_m4[&quot;Eavg&quot;], m4_eavg_boot_ci),
+               paste(round(val_m4[&quot;C (ROC)&quot;], 2), m4_c_boot_ci))
+    )
+  
+  names(model_tab_1) &lt;- c(&quot;&quot;, &quot;HOMR model&quot;, &quot;Calibration in the Large&quot;, 
+                          &quot;Logistic Recalibration&quot;, &quot;Model Revision&quot;)
+  
+  model_tab_1[5, 2:5] &lt;- c(
+    &quot;-&quot;, &quot;&lt;0.001&quot;, round(anova(m2, m3, test = &quot;Chisq&quot;)[5][2, ], 2), &quot;-&quot;
+    )</code></pre>
+<p><strong>Table 1.</strong> All the results hacked into a table.</p>
+<pre class="r"><code>  knitr::kable(model_tab_1)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="left">HOMR model</th>
+<th align="left">Calibration in the Large</th>
+<th align="left">Logistic Recalibration</th>
+<th align="left">Model Revision</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Intercept</td>
+<td align="left">0</td>
+<td align="left">-0.42</td>
+<td align="left">-0.43</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td>Slope</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">0.99</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td>Residual deviance</td>
+<td align="left">1139.96</td>
+<td align="left">1107.76</td>
+<td align="left">1107.73</td>
+<td align="left">1046.55</td>
+</tr>
+<tr class="even">
+<td>Df</td>
+<td align="left">1409</td>
+<td align="left">1408</td>
+<td align="left">1407</td>
+<td align="left">1389</td>
+</tr>
+<tr class="odd">
+<td>LRT Chisq p-value</td>
+<td align="left">-</td>
+<td align="left">&lt;0.001</td>
+<td align="left">0.85</td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td>Brier score (rescaled)</td>
+<td align="left">0.15 (0.09 to 0.22)</td>
+<td align="left">0.19 (0.11 to 0.26)</td>
+<td align="left">0.19 (0.11 to 0.27)</td>
+<td align="left">0.23 (0.17 to 0.32)</td>
+</tr>
+<tr class="odd">
+<td>Emax</td>
+<td align="left">0.103 (0.08 to 0.17)</td>
+<td align="left">0.111 (0.03 to 0.25)</td>
+<td align="left">0.121 (0.03 to 0.23)</td>
+<td align="left">0.017 (0.01 to 0.11)</td>
+</tr>
+<tr class="even">
+<td>Eavg</td>
+<td align="left">0.058 (0.04 to 0.08)</td>
+<td align="left">0.016 (0.01 to 0.03)</td>
+<td align="left">0.017 (0.01 to 0.03)</td>
+<td align="left">0.008 (0 to 0.02)</td>
+</tr>
+<tr class="odd">
+<td>c-statistic</td>
+<td align="left">0.78 (0.75 to 0.81)</td>
+<td align="left">0.78 (0.75 to 0.81)</td>
+<td align="left">0.78 (0.75 to 0.81)</td>
+<td align="left">0.82 (0.8 to 0.86)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="calibration-plots" class="section level2">
+<h2>Calibration plots</h2>
+<p><strong>Figure 2.</strong> Calibration plot for the HOMR model in a sample of 1409 patients aged 65 years or older that were under the care of geriatric medicine service at Cork University Hospital (2013-01-01 to 2015-03-06)</p>
+<pre class="r"><code>  x &lt;- cal_plot(m1, &quot;HOMR model&quot;, &quot;m1_pred&quot;)</code></pre>
+<p><img src="/post/homr_files/figure-html/figure_1-1.svg" width="768" /></p>
+<p><strong>Figure 3.</strong> Calibration plots for <strong>Recalibration in the Large</strong> <img src="/post/homr_files/figure-html/figure_2-1.svg" width="768" /></p>
+<p><strong>Figure 4.</strong> Calibration plots for <strong>Model Revision</strong> <img src="/post/homr_files/figure-html/figure_3-1.svg" width="768" /></p>
+</div>
+<div id="other-stuff" class="section level2">
+<h2>Other stuff</h2>
+<p><strong>Figure 5.</strong> Logistic curve fit of the original HOMR model to one year post-hospitalization mortality</p>
+<pre class="r"><code># Plot of data with a logistic curve fit
+  ggplot(data, aes(x = z_homr, y = as.numeric(alive) - 1)) +
+    geom_jitter(height = 0.1, size =1, alpha = 0.5) +
+    geom_smooth(method = &quot;glm&quot;,
+                method.args = list(family = &quot;binomial&quot;)) +
+    theme_minimal() +
+    scale_y_continuous(breaks = c(0, 1), labels = c(&quot;Alive&quot;, &quot;Dead&quot;)) +
+    ylab(&quot;&quot;) +
+    xlab(&quot;HOMR Linear Predictor&quot;)</code></pre>
+<p><img src="/post/homr_files/figure-html/unnamed-chunk-1-1.svg" width="768" /></p>
+<p><strong>Figure 6.</strong> Number/Proportion of patients who died within one year of hospitalization by risk level (Z)</p>
+<pre class="r"><code>  g1 &lt;- ggplot(data, aes(x = z_homr, fill = alive)) +
+    geom_histogram() +
+    theme_minimal() +
+    xlab(&quot;HOMR Linear Predictor&quot;) +
+    ylab(&quot;Number of Participants&quot;) +
+    scale_fill_brewer(&quot;Alive&quot;, palette = &quot;Paired&quot;)
+
+  g2 &lt;- ggplot(data, aes(x = z_homr, fill = alive)) +
+    geom_histogram(position = &quot;fill&quot;) +
+    theme_minimal() +
+    xlab(&quot;HOMR Linear Predictor&quot;) +
+    ylab(&quot;Proportion&quot;) +
+    scale_fill_brewer(&quot;Alive&quot;, palette = &quot;Paired&quot;)
+  
+  grid.arrange(g1, g2, ncol = 1)</code></pre>
+<p><img src="/post/homr_files/figure-html/unnamed-chunk-2-1.svg" width="768" /></p>
+<p><strong>Figure 7.</strong> Distribution of the original HOMR linear predictor among those who did and didn’t die within one year after hospitalization</p>
+<pre class="r"><code>  ggplot(data, aes(y = z_homr, x = alive, fill = alive, color = alive)) +
+    geom_beeswarm() +
+    geom_boxplot(alpha = 0, color = &quot;black&quot;) +
+    theme_minimal() +
+    ylab(&quot;HOMR Linear Predictor&quot;) +
+    xlab(&quot;Alive at 1 year&quot;) +
+    scale_fill_brewer(guide = FALSE, palette = &quot;Paired&quot;) +
+    scale_color_brewer(guide = FALSE, palette = &quot;Paired&quot;) </code></pre>
+<p><img src="/post/homr_files/figure-html/unnamed-chunk-3-1.svg" width="768" /></p>
+<p><strong>Table 2.</strong> HOMR Model Revision coefficients</p>
+<pre class="r"><code>  covariates &lt;- c(
+    &quot;Intercept&quot;,
+    &quot;DRS&quot;,                                            
+    &quot;sqrt(Age)&quot;,                                            
+    &quot;Male (vs Female)&quot;,                                       
+    &quot;Rehab&quot;,                             
+    &quot;Homecare&quot;,                         
+    &quot;Nursing Home&quot;,                     
+    &quot;log(CCI)&quot;,                                            
+    &quot;sqrt(Ed visits in the previous year + 1)&quot;,                                
+    &quot;1/(Admissions by ambulance in previous year +1)&quot;,    
+    &quot;Other (vs General Medicine)&quot;,                        
+    &quot;ED w/o Ambulance&quot;,                 
+    &quot;ED w/Ambulance&quot;,                   
+    &quot;Urgent readmission&quot;,                             
+    &quot;Sqrt(Age) * log(CCI)&quot;,                                       
+    &quot;Rehab * 1/(Admissions by ambulance in previous year +1)&quot;,              
+    &quot;Homecare * 1/(Admissions by ambulance in previous year +1)&quot;,           
+    &quot;Nursing Home * 1/(Admissions by ambulance in previous year +1)&quot;,       
+    &quot;ED w/o Ambulance * 1/(Admissions by ambulance in previous year +1)&quot;,
+    &quot;ED w/Ambulance * 1/(Admissions by ambulance in previous year +1)&quot;
+  )
+
+  sjPlot::tab_model(m4, show.p = FALSE, show.ci = FALSE, show.se = TRUE, 
+                    transform = NULL, pred.labels = covariates)</code></pre>
+<table style="border-collapse:collapse; border:none;">
+<tr>
+<th style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm;  text-align:left; ">
+ 
+</th>
+<th colspan="2" style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; ">
+alive
+</th>
+</tr>
+<tr>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  text-align:left; ">
+Predictors
+</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">
+Log-Odds
+</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">
+std. Error
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+Intercept
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+-14.84
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+4.02
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+DRS
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.11
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.02
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+sqrt(Age)
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+1.45
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.43
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+Male (vs Female)
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.44
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.17
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+Rehab
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+-1.16
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.71
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+Homecare
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.41
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.66
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+Nursing Home
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+-0.34
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+1.29
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+log(CCI)
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+2.78
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+2.83
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+sqrt(Ed visits in the previous year + 1)
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.16
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.71
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+1/(Admissions by ambulance in previous year +1)
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.19
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.61
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+Other (vs General Medicine)
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+-0.68
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.46
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+ED w/o Ambulance
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.38
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.67
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+ED w/Ambulance
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+1.21
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+1.12
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+Urgent readmission
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.60
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.27
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+Sqrt(Age) * log(CCI)
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+-0.23
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.31
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+Rehab * 1/(Admissions by ambulance in previous year +1)
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+-0.31
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.79
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+Homecare * 1/(Admissions by ambulance in previous year +1)
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+-0.51
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.82
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+Nursing Home * 1/(Admissions by ambulance in previous year +1)
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+-0.46
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+1.78
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+ED w/o Ambulance * 1/(Admissions by ambulance in previous year +1)
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+-0.87
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.76
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+ED w/Ambulance * 1/(Admissions by ambulance in previous year +1)
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+-1.91
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+1.34
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm; border-top:1px solid;">
+Observations
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left; border-top:1px solid;" colspan="2">
+1409
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">
+Cox &amp; Snell’s R<sup>2</sup> / Nagelkerke’s R<sup>2</sup>
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="2">
+0.191 / 0.310
+</td>
+</tr>
+</table>
+<p>Note: Admit service recoded to General Medicine vs Other, due to small call sizes. ICU admission was omitted as there were only 3 cases of this happening. Home O2 was omitted since no patients in our sample were using it.</p>
+<p>Full distributions of bootstrapped values.</p>
+<pre class="r"><code>  boots &lt;- function(metric, boot_vals){
+    x &lt;- as.numeric(unlist(map(boot_vals, `[`, metric)))
+    if(metric == &#39;Brier&#39;){x &lt;- as.numeric(rescale_brier(x, 0.184))}
+    return(x)
+  }
+
+  boot_list &lt;- list(boot_vals_m1, boot_vals_m2, boot_vals_m3, boot_vals_m4)
+  metrics &lt;- c(&quot;C (ROC)&quot;, &quot;Brier&quot;, &quot;Eavg&quot;, &quot;Emax&quot;)
+  
+  x &lt;- c()
+  for(i in metrics){
+    for(j in 1:4){
+      x &lt;- c(x, boots(i, boot_list[[j]]))
+    }
+  }
+  
+  y &lt;- rep(c(paste0(&quot;m&quot;, 1:4, &quot; c-index&quot;), paste0(&quot;m&quot;, 1:4, &quot; Brier&quot;), 
+             paste0(&quot;m&quot;, 1:4, &quot; Emax&quot;), paste0(&quot;m&quot;, 1:4, &quot; Eavg&quot;)), 
+           each = 500) 
+
+  boot_data &lt;- data_frame(var = y, val = x)</code></pre>
+<p><strong>Figure 7.</strong> Distributions of bootstrapped model statistics</p>
+<pre class="r"><code>  ggplot(boot_data, aes(x = val)) +
+    geom_density() +
+    facet_wrap(~var, nrow = 4, scales = &quot;free&quot;) +
+    theme_minimal() +
+    xlab(&quot;&quot;) +
+    ylab(&quot;Density&quot;)</code></pre>
+<p><img src="/post/homr_files/figure-html/boot_plot-1.svg" width="768" /></p>
+<pre class="r"><code># Packages used
+
+# library(tidyverse)
+# library(rms)
+# library(Hmisc)
+# library(knitr)
+# library(broom)
+# library(pander)
+# library(ggbeeswarm)
+# library(gridExtra)
+# library(grid)
+# library(sjPlot)
+# library(sjmisc)
+# library(sjlabelled)
+# library(viridis)
+
+  sessionInfo()</code></pre>
+<pre><code>## R version 3.4.3 (2017-11-30)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 15063)
+## 
+## Matrix products: default
+## 
+## locale:
+## [1] LC_COLLATE=English_United Kingdom.1252 
+## [2] LC_CTYPE=English_United Kingdom.1252   
+## [3] LC_MONETARY=English_United Kingdom.1252
+## [4] LC_NUMERIC=C                           
+## [5] LC_TIME=English_United Kingdom.1252    
+## 
+## attached base packages:
+## [1] grid      methods   stats     graphics  grDevices utils     datasets 
+## [8] base     
+## 
+## other attached packages:
+##  [1] viridis_0.5.1     viridisLite_0.3.0 sjlabelled_1.0.17
+##  [4] sjmisc_2.7.9      sjPlot_2.6.2      gridExtra_2.3    
+##  [7] ggbeeswarm_0.6.0  pander_0.6.2      broom_0.4.4      
+## [10] knitr_1.20        rms_5.1-2         SparseM_1.77     
+## [13] Hmisc_4.1-1       Formula_1.2-3     survival_2.41-3  
+## [16] lattice_0.20-35   forcats_0.3.0     stringr_1.3.1    
+## [19] dplyr_0.8.0.1     purrr_0.2.5       readr_1.1.1      
+## [22] tidyr_0.8.1       tibble_2.0.1      ggplot2_3.1.0    
+## [25] tidyverse_1.2.1  
+## 
+## loaded via a namespace (and not attached):
+##  [1] nlme_3.1-131        lubridate_1.7.4     insight_0.2.0      
+##  [4] RColorBrewer_1.1-2  httr_1.4.0          rprojroot_1.3-2    
+##  [7] TMB_1.7.13          tools_3.4.3         backports_1.1.2    
+## [10] R6_2.2.2            rpart_4.1-11        vipor_0.4.5        
+## [13] lazyeval_0.2.1      colorspace_1.3-2    nnet_7.3-12        
+## [16] withr_2.1.2         tidyselect_0.2.5    mnormt_1.5-5       
+## [19] emmeans_1.2.3       curl_3.3            compiler_3.4.3     
+## [22] cli_1.0.1           rvest_0.3.2         quantreg_5.36      
+## [25] htmlTable_1.12      xml2_1.2.0          sandwich_2.4-0     
+## [28] labeling_0.3        bookdown_0.9        scales_1.0.0       
+## [31] checkmate_1.8.5     polspline_1.1.13    mvtnorm_1.0-8      
+## [34] psych_1.8.4         digest_0.6.18       minqa_1.2.4        
+## [37] foreign_0.8-69      rmarkdown_1.10      base64enc_0.1-3    
+## [40] pkgconfig_2.0.2     htmltools_0.3.6     lme4_1.1-17        
+## [43] highr_0.7           htmlwidgets_1.3     rlang_0.3.4        
+## [46] readxl_1.1.0        rstudioapi_0.7      zoo_1.8-2          
+## [49] jsonlite_1.6        acepack_1.4.1       magrittr_1.5       
+## [52] Matrix_1.2-12       Rcpp_1.0.0          munsell_0.5.0      
+## [55] stringi_1.4.3       multcomp_1.4-8      yaml_2.1.19        
+## [58] snakecase_0.9.1     MASS_7.3-47         plyr_1.8.4         
+## [61] parallel_3.4.3      crayon_1.3.4        ggeffects_0.9.0    
+## [64] haven_2.1.0         splines_3.4.3       sjstats_0.17.4     
+## [67] hms_0.4.2           pillar_1.3.1        estimability_1.3   
+## [70] reshape2_1.4.3      codetools_0.2-15    glue_1.3.0         
+## [73] evaluate_0.10.1     blogdown_0.6        latticeExtra_0.6-28
+## [76] data.table_1.11.4   modelr_0.1.2        nloptr_1.0.4       
+## [79] MatrixModels_0.4-1  cellranger_1.1.0    gtable_0.2.0       
+## [82] assertthat_0.2.0    xfun_0.2            xtable_1.8-2       
+## [85] coda_0.19-1         glmmTMB_0.2.1.0     beeswarm_0.2.3     
+## [88] cluster_2.0.6       TH.data_1.0-8</code></pre>
+</div>
+
+    </div>
+  </div>
+
+</article>
+
+
+
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="/post/problems_part1/"><span
+      aria-hidden="true">&larr;</span> Science doesn&#39;t have a problem</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Darren L Dahly - All rights reserved &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+
