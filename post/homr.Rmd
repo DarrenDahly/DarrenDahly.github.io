@@ -11,7 +11,7 @@ output:
 
 This is a tutorial on how to use R to evaluate a previously published prediction tool in a new dataset. Most of the good ideas came from [Maarten van Smedan](https://twitter.com/MaartenvSmeden), and any mistakes are surely mine. This post is not intended to explain they *why* one might do what follows, but rather *how* to do it in R. 
 
-It is based on a recent analysis we published (In Press) that validated the [HOMR](http://dx.doi.org/10.1016/j.jclinepi.2014.05.003) model to predict all-cause mortality within one-year of a hospitalization in a cohort of `r nrow(data)` patients aged 65 years or older that were under the care of geriatric medicine service at Cork University Hospital (2013-01-01 to 2015-03-06). The predictors used in the HOMR model were generally things that are easy enough to collect during hospitalization. You can read all about it in the paper linked above. 
+It is based on a recent analysis we published (in press) that validated the [HOMR](http://dx.doi.org/10.1016/j.jclinepi.2014.05.003) model to predict all-cause mortality within one-year of a hospitalization in a cohort of `r nrow(data)` patients aged 65 years or older that were under the care of geriatric medicine service at Cork University Hospital (2013-01-01 to 2015-03-06). The predictors used in the HOMR model were generally things that are easy enough to collect during hospitalization. You can read all about it in the paper linked above. 
 
 All materials for the analysis can be found on the [project's OSF page](https://osf.io/tv26k/). 
 
@@ -63,7 +63,7 @@ The original HOMR development paper also provided a set of tables to calculate a
 
 ## Evaluating the model: Overview
 
-To evaluate the HOMR Model, we followed the procedure outlined in [Vergouwe e t al (2016)](https://doi.org/10.1002/sim.7179) and estimated four logistic regression models. The first included the HOMR linear predictor, with its coefficient set equal to 1, and intercept set to zero (**the original HOMR model**). The second model allowed the intercept to be freely estimated (**Recalibration in the Large**). The third then allowed the coefficient on the HOMR linear predictor to be freely estimated as well (**Logistic Recalibration**). Finally, the fourth model included the complete set variables used in the HOMR model, including the same transformations and interactions, and allowed their respective coefficients to be freely estimated (**Model Revision**). Here is the code for executing those models:
+To evaluate the HOMR Model, we followed the procedure outlined in [Vergouwe et al (2016)](https://doi.org/10.1002/sim.7179) and estimated four logistic regression models. The first included the HOMR linear predictor, with its coefficient set equal to 1, and intercept set to zero (**the original HOMR model**). The second model allowed the intercept to be freely estimated (**Recalibration in the Large**). The third then allowed the coefficient on the HOMR linear predictor to be freely estimated as well (**Logistic Recalibration**). Finally, the fourth model included the complete set variables used in the HOMR model, including the same transformations and interactions, and allowed their respective coefficients to be freely estimated (**Model Revision**). Here is the code for executing those models:
 
 ```{r models, echo = TRUE}
 
@@ -337,14 +337,14 @@ Finally, this is the code for making the calibration plots (`rms::val.plot` will
 
 ```
 
-**Figure 3.** Calibration plots for **Recalibration in the Large**
+**Figure 3.** Calibration plot for **Recalibration in the Large**
 ```{r figure_2, echo = FALSE}
 
   x <- cal_plot(m2, "Recalibration in the Large", "m2_pred")
 
 ```
 
-**Figure 4.** Calibration plots for **Model Revision**
+**Figure 4.** Calibration plot for **Model Revision**
 ```{r figure_3, echo = FALSE}
 
   x <- cal_plot(m4, "Model Revision", "m4_pred")

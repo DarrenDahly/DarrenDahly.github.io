@@ -209,7 +209,7 @@
 
     <div class="article-style" itemprop="articleBody">
       <p>This is a tutorial on how to use R to evaluate a previously published prediction tool in a new dataset. Most of the good ideas came from <a href="https://twitter.com/MaartenvSmeden">Maarten van Smedan</a>, and any mistakes are surely mine. This post is not intended to explain they <em>why</em> one might do what follows, but rather <em>how</em> to do it in R.</p>
-<p>It is based on a recent analysis we published (In Press) that validated the <a href="http://dx.doi.org/10.1016/j.jclinepi.2014.05.003">HOMR</a> model to predict all-cause mortality within one-year of a hospitalization in a cohort of patients aged 65 years or older that were under the care of geriatric medicine service at Cork University Hospital (2013-01-01 to 2015-03-06). The predictors used in the HOMR model were generally things that are easy enough to collect during hospitalization. You can read all about it in the paper linked above.</p>
+<p>It is based on a recent analysis we published (in press) that validated the <a href="http://dx.doi.org/10.1016/j.jclinepi.2014.05.003">HOMR</a> model to predict all-cause mortality within one-year of a hospitalization in a cohort of patients aged 65 years or older that were under the care of geriatric medicine service at Cork University Hospital (2013-01-01 to 2015-03-06). The predictors used in the HOMR model were generally things that are easy enough to collect during hospitalization. You can read all about it in the paper linked above.</p>
 <p>All materials for the analysis can be found on the <a href="https://osf.io/tv26k/">project’s OSF page</a>.</p>
 <pre class="r"><code>  data &lt;- read_csv(&quot;https://crfcsdau.github.io/public/homr_data.csv&quot;) 
   data$alive &lt;- factor(data$alive, levels = c(&quot;Yes&quot;, &quot;No&quot;))</code></pre>
@@ -227,7 +227,7 @@
 </div>
 <div id="evaluating-the-model-overview" class="section level2">
 <h2>Evaluating the model: Overview</h2>
-<p>To evaluate the HOMR Model, we followed the procedure outlined in <a href="https://doi.org/10.1002/sim.7179">Vergouwe e t al (2016)</a> and estimated four logistic regression models. The first included the HOMR linear predictor, with its coefficient set equal to 1, and intercept set to zero (<strong>the original HOMR model</strong>). The second model allowed the intercept to be freely estimated (<strong>Recalibration in the Large</strong>). The third then allowed the coefficient on the HOMR linear predictor to be freely estimated as well (<strong>Logistic Recalibration</strong>). Finally, the fourth model included the complete set variables used in the HOMR model, including the same transformations and interactions, and allowed their respective coefficients to be freely estimated (<strong>Model Revision</strong>). Here is the code for executing those models:</p>
+<p>To evaluate the HOMR Model, we followed the procedure outlined in <a href="https://doi.org/10.1002/sim.7179">Vergouwe et al (2016)</a> and estimated four logistic regression models. The first included the HOMR linear predictor, with its coefficient set equal to 1, and intercept set to zero (<strong>the original HOMR model</strong>). The second model allowed the intercept to be freely estimated (<strong>Recalibration in the Large</strong>). The third then allowed the coefficient on the HOMR linear predictor to be freely estimated as well (<strong>Logistic Recalibration</strong>). Finally, the fourth model included the complete set variables used in the HOMR model, including the same transformations and interactions, and allowed their respective coefficients to be freely estimated (<strong>Model Revision</strong>). Here is the code for executing those models:</p>
 <pre class="r"><code># HOMR (intercept = 0 and beta = 1)
   m1 &lt;- glm(alive ~ -1 + offset(z_homr), data = data, family = binomial)
 # Recalibration in the Large (estimate intercept, beta = 1)
@@ -598,8 +598,8 @@
 <p><strong>Figure 2.</strong> Calibration plot for the HOMR model in a sample of 1409 patients aged 65 years or older that were under the care of geriatric medicine service at Cork University Hospital (2013-01-01 to 2015-03-06)</p>
 <pre class="r"><code>  x &lt;- cal_plot(m1, &quot;HOMR model&quot;, &quot;m1_pred&quot;)</code></pre>
 <p><img src="/post/homr_files/figure-html/figure_1-1.svg" width="768" /></p>
-<p><strong>Figure 3.</strong> Calibration plots for <strong>Recalibration in the Large</strong> <img src="/post/homr_files/figure-html/figure_2-1.svg" width="768" /></p>
-<p><strong>Figure 4.</strong> Calibration plots for <strong>Model Revision</strong> <img src="/post/homr_files/figure-html/figure_3-1.svg" width="768" /></p>
+<p><strong>Figure 3.</strong> Calibration plot for <strong>Recalibration in the Large</strong> <img src="/post/homr_files/figure-html/figure_2-1.svg" width="768" /></p>
+<p><strong>Figure 4.</strong> Calibration plot for <strong>Model Revision</strong> <img src="/post/homr_files/figure-html/figure_3-1.svg" width="768" /></p>
 </div>
 <div id="other-stuff" class="section level2">
 <h2>Other stuff</h2>
